@@ -8,7 +8,7 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
-# 
+#
 # This option supports custom types so lessons can be branded
 # and themed with your own logo and alt-text (see `carpentry_description`)
 # See https://carpentries.github.io/sandpaper-docs/editing.html#adding-a-custom-logo
@@ -21,14 +21,14 @@ carpentry_description: 'Lesson Description'
 title: 'Coding with AI: Opportunities and Responsibilities for Researchers'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 2026-09-01 
+created: 2026-09-01
 
 # Comma-separated list of keywords for the lesson
-keywords: 'AI, GPT, LLM, software' 
+keywords: 'AI, GPT, LLM, software'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' 
+life_cycle: 'pre-alpha'
 
 # License of the lesson
 license: 'CC-BY 4.0'
@@ -40,7 +40,7 @@ source: 'https://github.com/carpentries/workbench-template-md' # FIXME
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'p.k.broadbent@soton.ac.uk' 
+contact: 'p.k.broadbent@soton.ac.uk'
 
 # Navigation ------------------------------------------------
 #
@@ -65,17 +65,20 @@ contact: 'p.k.broadbent@soton.ac.uk'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
-- introduction.md
+episodes:
+#- introduction.md
+- 1-ai-landscape.md
+- 2-ai-assisted-coding.md
+- 3-ethics-reliability-and-security.md
 
 # Information for Learners
-learners: 
+learners:
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #
