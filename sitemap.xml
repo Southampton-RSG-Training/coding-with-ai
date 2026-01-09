@@ -4,6 +4,15 @@
     <loc>https://carpentries.github.io/workbench-template-md/01-introduction.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/workbench-template-md/1-ai-landscape.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/2-ai-assisted-coding.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/3-ethics-reliability-and-security.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/workbench-template-md/404.html</loc>
   </url>
   <url>
@@ -26,6 +35,15 @@
   </url>
   <url>
     <loc>https://carpentries.github.io/workbench-template-md/instructor/01-introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/instructor/1-ai-landscape.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/instructor/2-ai-assisted-coding.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/instructor/3-ethics-reliability-and-security.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/workbench-template-md/instructor/404.html</loc>

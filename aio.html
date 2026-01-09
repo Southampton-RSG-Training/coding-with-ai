@@ -244,7 +244,31 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="1-ai-landscape.html">1. The AI Landscape</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="2-ai-assisted-coding.html">2. AI-Assisted Coding</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="3-ethics-reliability-and-security.html">3. Ethics, Reliability and Security Considerations</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -307,11 +331,11 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-introduction"><p>Content from <a href="introduction.html">Using Markdown</a></p>
+<section id="aio-1-ai-landscape"><p>Content from <a href="1-ai-landscape.html">The AI Landscape</a></p>
 <hr>
-<p>Last updated on 2025-07-11 |
+<p>Last updated on 2026-01-09 |
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/1-ai-landscape.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -323,8 +347,10 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>Where does generative AI fit within the broader historical and
+technical landscape of AI systems?</li>
+<li>How do large language models generate text, code, or explanations
+without understanding meaning in a human sense?</li>
 </ul>
 </div>
 </div>
@@ -334,152 +360,191 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Recall key milestones in the historical development of artificial
+intelligence</li>
+<li>Describe where ChatGPT and similar large language models fit within
+the broader AI landscape.</li>
+<li>Explain, at a conceptual level, what generative AI and ChatGPT are
+and how they differ from other AI approaches.</li>
+<li>Compare generative AI models with other types of AI systems in terms
+of capabilities and limitations.</li>
+<li>Summarize the primary functions and intended use cases of common AI
+coding assistants.</li>
+<li>Analyze how different AI tools support distinct stages of the
+software development and research workflow.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="history-and-landscape-of-ai">History and Landscape of AI<a class="anchor" aria-label="anchor" href="#history-and-landscape-of-ai"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="demystifying-generative-ai">Demystifying Generative AI<a class="anchor" aria-label="anchor" href="#demystifying-generative-ai"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="overview-of-ai-coding-assistants">Overview of AI Coding Assistants<a class="anchor" aria-label="anchor" href="#overview-of-ai-coding-assistants"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
-<div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<span class="callout-header">Key Points</span>
-<div class="callout-inner">
-<div class="callout-content">
-<ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul>
-</div>
-</div>
-</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</section></section>
+ --></section></section><section id="aio-2-ai-assisted-coding"><p>Content from <a href="2-ai-assisted-coding.html">AI-Assisted Coding</a></p>
+<hr>
+<p>Last updated on 2026-01-09 |
+
+        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/2-ai-assisted-coding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can AI be used effectively as a reference or learning aid rather
+than a substitute for problem-solving?</li>
+<li>What types of coding tasks benefit most from AI assistance?</li>
+<li>How should developers evaluate and validate AI-generated code,
+explanations, or fixes?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain why delegating full software development to AI without
+understanding the solution introduces technical, ethical, and
+reliability risks.</li>
+<li>Describe appropriate roles for AI tools as assistants rather than
+autonomous developers.</li>
+<li>Use ChatGPT as a reference tool to locate, summarize, and clarify
+technical information more precisely than traditional search
+methods.</li>
+<li>Apply AI tools to explain unfamiliar code to support learning.</li>
+<li>Use AI-generated suggestions to debug code and resolve errors, while
+validating the proposed fixes.</li>
+<li>Generate boilerplate code and perform basic refactoring tasks using
+AI assistance.</li>
+<li>Use AI tools to draft technical documentation.</li>
+<li>Translate code between programming languages using AI
+assistance.</li>
+<li>Evaluate AI-generated code and explanations for correctness,
+efficiency, and alignment with project requirements.</li>
+<li>Analyze when AI assistance enhances productivity versus when it may
+obscure understanding or introduce errors.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="why-understanding-still-matters-the-limits-of-ai-driven-software-development">Why Understanding Still Matters: The Limits of AI-Driven Software
+Development<a class="anchor" aria-label="anchor" href="#why-understanding-still-matters-the-limits-of-ai-driven-software-development"></a>
+</h2>
+<hr class="half-width">
+<p>Why you shouldn’t delegate the whole software development to AI
+without fully understanding the solution</p>
+</section><section><h2 class="section-heading" id="ai-as-an-intelligent-reference">AI as an Intelligent Reference<a class="anchor" aria-label="anchor" href="#ai-as-an-intelligent-reference"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="using-ai-to-understand-unfamiliar-code">Using AI to Understand Unfamiliar Code<a class="anchor" aria-label="anchor" href="#using-ai-to-understand-unfamiliar-code"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="debugging-and-error-analysis">Debugging and Error Analysis<a class="anchor" aria-label="anchor" href="#debugging-and-error-analysis"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="code-generation-and-refactoring-writing-boilerplate-improving-efficiency">Code Generation and Refactoring: Writing Boilerplate, Improving
+Efficiency<a class="anchor" aria-label="anchor" href="#code-generation-and-refactoring-writing-boilerplate-improving-efficiency"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="using-ai-to-support-technical-documentation">Using AI to Support Technical Documentation<a class="anchor" aria-label="anchor" href="#using-ai-to-support-technical-documentation"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="translating-code-with-ai">Translating Code with AI<a class="anchor" aria-label="anchor" href="#translating-code-with-ai"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="integrating-ai-tools-into-ides">Integrating AI Tools into IDEs<a class="anchor" aria-label="anchor" href="#integrating-ai-tools-into-ides"></a>
+</h2>
+<hr class="half-width">
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ --></section></section><section id="aio-3-ethics-reliability-and-security"><p>Content from <a href="3-ethics-reliability-and-security.html">Ethics, Reliability and Security Considerations</a></p>
+<hr>
+<p>Last updated on 2026-01-09 |
+
+        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-ethics-reliability-and-security.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What are some risks of biased, inaccurate, or unreliable
+AI-generated outputs?</li>
+<li>How can the use of AI tools compromise data privacy, security, or
+confidentiality in research and software development?</li>
+<li>What intellectual property and authorship issues emerge when AI
+contributes to code or written work?</li>
+<li>What are the long-term consequences of researchers relying on AI
+without developing core coding skills?</li>
+<li>What best practices can ensure that AI is used responsibly,
+ethically, and transparently in research workflows?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Describe common sources of bias, inaccuracy, and unreliability in
+AI-generated outputs.</li>
+<li>Explain data privacy, confidentiality, and security risks associated
+with using AI tools in coding and research contexts.</li>
+<li>Summarize intellectual property, authorship, and citation
+considerations related to AI-generated code and text.</li>
+<li>Analyze the potential long-term consequences of researchers relying
+on AI tools without developing foundational coding skills.</li>
+<li>Examine ethical challenges introduced by AI-assisted research,
+including accountability, transparency, and reproducibility.</li>
+<li>Assess the appropriateness of AI tool usage in specific research or
+coding scenarios.</li>
+<li>Apply best practices to mitigate ethical, security, and
+skills-related risks when using AI in research.</li>
+<li>Develop personal or team-level guidelines for responsible and
+ethical AI use in coding and data analysis workflows.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="accuracy-and-reliability-of-ai-generated-outputs">Accuracy and Reliability of AI-Generated Outputs<a class="anchor" aria-label="anchor" href="#accuracy-and-reliability-of-ai-generated-outputs"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="data-privacy-security-risks-and-confidentiality">Data Privacy, Security Risks, and Confidentiality<a class="anchor" aria-label="anchor" href="#data-privacy-security-risks-and-confidentiality"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="intellectual-property-authorship-and-citation-of-ai-generated-code-and-text">Intellectual Property, Authorship, and Citation of AI-Generated Code
+and Text<a class="anchor" aria-label="anchor" href="#intellectual-property-authorship-and-citation-of-ai-generated-code-and-text"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="ethical-considerations-in-ai-assisted-research">Ethical Considerations in AI-Assisted Research<a class="anchor" aria-label="anchor" href="#ethical-considerations-in-ai-assisted-research"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="de-skilling-and-overdependence-on-ai-in-research-computing">De-skilling and Overdependence on AI in Research Computing<a class="anchor" aria-label="anchor" href="#de-skilling-and-overdependence-on-ai-in-research-computing"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="mitigating-risks-best-practices-for-responsible-ai-use-in-research">Mitigating Risks: Best Practices for Responsible AI Use in
+Research<a class="anchor" aria-label="anchor" href="#mitigating-risks-best-practices-for-responsible-ai-use-in-research"></a>
+</h2>
+<hr class="half-width">
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ --></section></section>
 </div>
     </main>
 </div>
