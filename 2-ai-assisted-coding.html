@@ -228,11 +228,9 @@
       <div class="accordion-body">
         <ul><li><a href="#why-understanding-still-matters-the-limits-of-ai-driven-software-development">Why Understanding Still Matters: The Limits of AI-Driven Software
 Development</a></li>
-<li><a href="#ai-as-an-intelligent-reference">AI as an Intelligent Reference</a></li>
-<li><a href="#using-ai-to-understand-unfamiliar-code">Using AI to Understand Unfamiliar Code</a></li>
+<li><a href="#using-ai-to-understand-code-and-technical-concepts">Using AI to Understand Code and Technical Concepts</a></li>
 <li><a href="#debugging-and-error-analysis">Debugging and Error Analysis</a></li>
-<li><a href="#code-generation-and-refactoring-writing-boilerplate-improving-efficiency">Code Generation and Refactoring: Writing Boilerplate, Improving
-Efficiency</a></li>
+<li><a href="#code-generation-and-refactoring">Code Generation and Refactoring</a></li>
 <li><a href="#using-ai-to-support-technical-documentation">Using AI to Support Technical Documentation</a></li>
 <li><a href="#translating-code-with-ai">Translating Code with AI</a></li>
 <li><a href="#integrating-ai-tools-into-ides">Integrating AI Tools into IDEs</a></li>
@@ -309,7 +307,7 @@ Efficiency</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>AI-Assisted Coding</h1>
-        <p>Last updated on 2026-01-09 |
+        <p>Last updated on 2026-01-15 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/2-ai-assisted-coding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -367,20 +365,191 @@ obscure understanding or introduce errors.</li>
 </div>
 <section><h2 class="section-heading" id="why-understanding-still-matters-the-limits-of-ai-driven-software-development">Why Understanding Still Matters: The Limits of AI-Driven Software
 Development<a class="anchor" aria-label="anchor" href="#why-understanding-still-matters-the-limits-of-ai-driven-software-development"></a></h2>
-<hr class="half-width"><p>Why you shouldn’t delegate the whole software development to AI
-without fully understanding the solution</p>
-</section><section><h2 class="section-heading" id="ai-as-an-intelligent-reference">AI as an Intelligent Reference<a class="anchor" aria-label="anchor" href="#ai-as-an-intelligent-reference"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="using-ai-to-understand-unfamiliar-code">Using AI to Understand Unfamiliar Code<a class="anchor" aria-label="anchor" href="#using-ai-to-understand-unfamiliar-code"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="debugging-and-error-analysis">Debugging and Error Analysis<a class="anchor" aria-label="anchor" href="#debugging-and-error-analysis"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="code-generation-and-refactoring-writing-boilerplate-improving-efficiency">Code Generation and Refactoring: Writing Boilerplate, Improving
-Efficiency<a class="anchor" aria-label="anchor" href="#code-generation-and-refactoring-writing-boilerplate-improving-efficiency"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="using-ai-to-support-technical-documentation">Using AI to Support Technical Documentation<a class="anchor" aria-label="anchor" href="#using-ai-to-support-technical-documentation"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="translating-code-with-ai">Translating Code with AI<a class="anchor" aria-label="anchor" href="#translating-code-with-ai"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="integrating-ai-tools-into-ides">Integrating AI Tools into IDEs<a class="anchor" aria-label="anchor" href="#integrating-ai-tools-into-ides"></a></h2>
-<hr class="half-width"><!--
+<hr class="half-width"><p>(Why you shouldn’t delegate the whole software development to AI
+without fully understanding the solution)</p>
+<p>Scenario</p>
+<p>You’ve collected some data on the animal species found within plots
+of land at a study site. Your colleague wants some plots of the data as
+quickly as possible so that she can present them at an upcoming seminar.
+You know that matplotlib is a plotting library in python but you’re not
+quite sure how to use it, so you decide to ask AI to make the plot for
+you.</p>
+<p>Open an AI chat interface and prompt the AI to ‘Generate some code to
+create a plot of hindfoot_length vs weight, colour by species_id.
+Include only species with over 100 observations. The data is in a csv
+file called animals.csv. Use python and matplotlib.’</p>
+<p>Open anaconda navigator and launch jupyter notebooks.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>TODO: where this data comes from</p>
+</div>
+</div>
+</div>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Think about problems with this approach and write them in the shared
+document.</p>
+</div>
+</div>
+</div>
+<p>Artificial intelligence tools can generate code quickly and often
+convincingly. For researchers who are new to programming, this can be
+appealing: it may seem efficient to delegate the entire task of software
+development to an AI system. However, doing so without understanding the
+solution introduces significant technical, ethical, and reliability
+risks.</p>
+<div class="section level3">
+<h3 id="technical-risks">Technical Risks<a class="anchor" aria-label="anchor" href="#technical-risks"></a></h3>
+<p>AI-generated code may appear correct but can contain subtle errors.
+These errors are particularly dangerous because:</p>
+<ul><li>They may not cause obvious failures.</li>
+<li>They can produce plausible but incorrect results.</li>
+<li>They may only appear under specific conditions or data sets.</li>
+</ul><p>Without understanding how the code works, a researcher cannot:</p>
+<ul><li>Verify that the implementation matches the intended analysis.</li>
+<li>Detect incorrect assumptions or inappropriate methods.</li>
+<li>Adapt or debug the code when results look suspicious.</li>
+</ul><p>In a research context, this undermines the validity and
+reproducibility of results.</p>
+</div>
+<div class="section level3">
+<h3 id="reliability-and-reproducibility-risks">Reliability and Reproducibility Risks<a class="anchor" aria-label="anchor" href="#reliability-and-reproducibility-risks"></a></h3>
+<p>AI systems do not reason about your research goals in the way a human
+collaborator would. They generate outputs based on patterns in training
+data, not on an understanding of your experiment, theory, or domain
+constraints.</p>
+<p>As a result:</p>
+<ul><li>The same prompt may produce different solutions at different
+times.</li>
+<li>Generated code may rely on undocumented assumptions.</li>
+<li>Dependencies, versions, or defaults may change without warning.</li>
+<li>If you cannot explain how your software works, you cannot reliably
+defend or reproduce your findings, an essential requirement of
+research.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="ethical-and-academic-integrity-risks">Ethical and Academic Integrity Risks<a class="anchor" aria-label="anchor" href="#ethical-and-academic-integrity-risks"></a></h3>
+<p>Researchers remain fully responsible for the work they submit,
+publish, or use to inform decisions. Delegating development entirely to
+AI raises several ethical concerns:</p>
+<ul><li>
+<strong>Accountability</strong>: You cannot attribute errors or
+misconduct to an AI system.</li>
+<li>
+<strong>Transparency</strong>: Reviewers and collaborators may
+expect you to explain your methods.</li>
+<li>
+<strong>Misrepresentation</strong>: Using code you do not understand
+may amount to overstating your expertise or control over the research
+process.</li>
+</ul><p>Relying heavily on AI may also conflict with institutional policies
+on research integrity or responsible use of AI.</p>
+</div>
+<div class="section level3">
+<h3 id="appropriate-roles-for-ai-when-writing-research-code">Appropriate Roles for AI when Writing Research Code<a class="anchor" aria-label="anchor" href="#appropriate-roles-for-ai-when-writing-research-code"></a></h3>
+<p>AI tools can be highly valuable when used correctly, as a tool to
+assist you with your research. The key principle is that they should
+function as assistants, not autonomous developers.</p>
+<p>Appropriate uses of AI include:</p>
+<ul><li>Explaining unfamiliar concepts, terminology or programming
+frameworks.</li>
+<li>Helping you to spot bugs (problems) in your code and suggesting
+possible fixes.</li>
+<li>Helping to translate ideas into a starting implementation</li>
+<li>Writing boilerplate code (standard structures for functions, modules
+etc.)</li>
+<li>Supporting you to write technical documentation.</li>
+</ul><p>In the rest of this episode, we’ll walk through these ways that AI
+can assist you with coding.</p>
+</div>
+</section><section><h2 class="section-heading" id="using-ai-to-understand-code-and-technical-concepts">Using AI to Understand Code and Technical Concepts<a class="anchor" aria-label="anchor" href="#using-ai-to-understand-code-and-technical-concepts"></a></h2>
+<hr class="half-width"><p>AI tools like ChatGPT can serve as an interactive reference and
+tutor, helping researchers understand unfamiliar coding constructs,
+libraries, or data analysis techniques. Unlike traditional search
+engines, AI can summarize and clarify technical information in context,
+tailored to your specific dataset, code, or research question.</p>
+<div class="section level3">
+<h3 id="use-ai-as-a-reference-tool">Use AI as a Reference Tool<a class="anchor" aria-label="anchor" href="#use-ai-as-a-reference-tool"></a></h3>
+<ul><li>
+<strong>Locate technical information quickly</strong>: Instead of
+reading through multiple documentation pages, you can ask AI to find the
+relevant function, argument, or method for your task.</li>
+<li>
+<strong>Summarize key concepts</strong>: AI can condense long
+documentation into concise, understandable explanations.</li>
+<li>
+<strong>Clarify ambiguous points</strong>: You can follow up
+iteratively, asking AI to rephrase explanations, provide examples, or
+highlight potential pitfalls.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="use-ai-to-explain-unfamiliar-code">Use AI to Explain Unfamiliar Code<a class="anchor" aria-label="anchor" href="#use-ai-to-explain-unfamiliar-code"></a></h3>
+<ul><li>
+<strong>Code comprehension</strong>: Paste code generated by AI or
+colleagues and ask for line-by-line explanations.</li>
+<li>
+<strong>Contextual learning</strong>: Ask why certain functions or
+methods are used, what alternatives exist, and best practices.</li>
+</ul><p>Using AI to explain code and programming concepts can be beneficial
+as it can:</p>
+<ul><li>Help you to access and summarise technical information faster than
+traditional web searches.</li>
+<li>Help you to learn new coding techniques by having unfamiliar code
+explained in context.</li>
+<li>Reduce cognitive load when learning new techniques by explaining
+code and library functions in clear, step-by-step terms, tailored to
+your code and dataset.</li>
+</ul><div id="up-skill-rather-than-de-skill-with-ai" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="up-skill-rather-than-de-skill-with-ai" class="callout-inner">
+<h3 class="callout-title">Up-skill rather than De-skill with AI</h3>
+<div class="callout-content">
+<ol style="list-style-type: decimal"><li><p>Rather than asking AI to actually generate the code for the
+weight vs hindfoot length plot, instead ask for a step-by-step
+explanation of how you would do it with your preferred technologies and
+packages. e.g. “Explain how to filter a DataFrame in Python to include
+only species with more than 100 observations, and then plot
+hindfoot_length vs weight colored by species using MatplotLib.”</p></li>
+<li><p>Take the code generated in the our example (plotting
+hindfoot_length vs weight) and ask AI: “Explain what each line of this
+Python code does and why it is needed.” Try iteratively refining
+questions: if a term or method is still unclear, ask AI to provide an
+example, an analogy, or reference documentation.</p></li>
+</ol></div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="debugging-and-error-analysis">Debugging and Error Analysis<a class="anchor" aria-label="anchor" href="#debugging-and-error-analysis"></a></h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="code-generation-and-refactoring">Code Generation and Refactoring<a class="anchor" aria-label="anchor" href="#code-generation-and-refactoring"></a></h2>
+<hr class="half-width"><p>In which situations can is it appropriate for AI to generate
+code.</p>
+</section><section><h2 class="section-heading" id="using-ai-to-support-technical-documentation">Using AI to Support Technical Documentation<a class="anchor" aria-label="anchor" href="#using-ai-to-support-technical-documentation"></a></h2>
+<hr class="half-width"><p>Write a docstring for the function</p>
+</section><section><h2 class="section-heading" id="translating-code-with-ai">Translating Code with AI<a class="anchor" aria-label="anchor" href="#translating-code-with-ai"></a></h2>
+<hr class="half-width"><p>Translate from python to R</p>
+</section><section><h2 class="section-heading" id="integrating-ai-tools-into-ides">Integrating AI Tools into IDEs<a class="anchor" aria-label="anchor" href="#integrating-ai-tools-into-ides"></a></h2>
+<hr class="half-width"><p>Brief paragraph on how AI tools can be integrated into IDEs and the
+benefits of this. To learn more about this you can take the training on
+developing research software with AI.</p>
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></div> <!-- / div.lesson-content -->
+ -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="1-ai-landscape.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="3-ethics-reliability-and-security.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -440,8 +609,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/2-ai-assisted-coding.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/2-ai-assisted-coding.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-09",
-  "datePublished": "2026-01-09"
+  "dateModified": "2026-01-15",
+  "datePublished": "2026-01-15"
 }
 
   </script><script>
