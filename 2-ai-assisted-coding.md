@@ -29,15 +29,16 @@ exercises: 2 # exercise time in minutes
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Why Understanding Still Matters: The Limits of AI-Driven Software Development
-(Why you shouldn't delegate the whole software development to AI without fully understanding the solution)
 
-Scenario
+**Scenario**: You've collected some data on the animal species found within plots of land at a study site.  Your colleague wants some plots of the data as quickly as possible so that she can present them at an upcoming seminar.  You know that matplotlib is a plotting library in python but you're not quite sure how to use it, so you decide to ask AI to make the plot for you. 
 
-You've collected some data on the animal species found within plots of land at a study site.  Your colleague wants some plots of the data as quickly as possible so that she can present them at an upcoming seminar.  You know that matplotlib is a plotting library in python but you're not quite sure how to use it, so you decide to ask AI to make the plot for you. 
+Open an AI chat interface and prompt the AI to 'Generate some code to create a plot of hindfoot_length vs weight, colour by species_id. Include only species with over 100 observations. The data is in a csv file called animals.csv.  Use Python and Matplotlib.' 
 
-Open an AI chat interface and prompt the AI to 'Generate some code to create a plot of hindfoot_length vs weight, colour by species_id. Include only species with over 100 observations. The data is in a csv file called animals.csv.  Use python and matplotlib.' 
-
-Open anaconda navigator and launch jupyter notebooks. 
+- Open anaconda navigator and launch jupyter notebooks. 
+- Navigate to the folder where you will save your Jupyter notebook.
+- Drag and drop animals.csv into this folder.
+- Create a new jupyter notebook in this folder.
+- Paste the AI-generated code into a code chunk in the Jupyter notebook and run the code.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -145,22 +146,386 @@ Try iteratively refining questions: if a term or method is still unclear, ask AI
 
 ## Debugging and Error Analysis
 
+Scenario
+A researcher has written the following Python code to plot weight vs hindfoot length by species using Matplotlib. When they try to run it, the code fails with an error.
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data
+df = pd.read_csv("animals.csv")
+
+# Count observations per species
+species_counts = df["species_id"].value_counts()
+
+# Keep only species with >100 observations
+valid_species = species_counts[species_counts > 100].index
+df_filtered = df[df["species_id"].isin(valid_species)]
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+
+for species, group in df_filtered.groupby("species_id"):
+    plt.scatter(
+        group["weight"],
+        group["hindfoot_lenght"],
+        label=species,
+        alpha=0.7
+    )
+
+plt.xlabel("Weight")
+plt.ylabel("Hindfoot Length")
+plt.title("Hindfoot Length vs Weight (Species with >100 Observations)")
+plt.legend(title="Species ID")
+plt.tight_layout()
+plt.show()
+
+```
+
+```output
+KeyError: 'hindfoot_lenght'
+```
+
+Rather than asking AI to “fix the code,” the researcher could use it as a debugging assistant. 
+
+For example, the researcher could enter the prompt “I am getting a KeyError: 'hindfoot_lenght' when running the following Python code that uses pandas and matplotlib. Can you help me understand what this error means and how to diagnose it?”
+
+This wording of the prompt will result in explanation rather than just a correction and substitution of the code and will help the researcher learn how to diagnose similar problems in future rather than becoming reliant on AI. 
+
+In this example, AI might explain that:
+
+- A KeyError in pandas means a column name does not exist
+- The issue is likely a mismatch between the dataset’s column names and those referenced in the code
+
+At this point, the researcher should verify this claim independently by:
+- Inspecting df_clean.columns
+- Comparing column names visually
+- Checking for spelling inconsistencies
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## AI as a Dubugging Assistant
+
+The code below contains a different bug. Use AI to help you debug the code, then apply the fix and verify that the code runs as expected. 
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data
+df = pd.read_csv("animal.csv")
+
+# Count observations per species
+species_counts = df["species_id"].value_counts()
+
+# Keep only species with >100 observations
+valid_species = species_counts[species_counts > 100].index
+df_filtered = df[df["species_id"].isin(valid_species)]
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+
+for species, group in df_filtered.groupby("species_id"):
+    plt.scatter(
+        group["weight"],
+        group["hindfoot_length"],
+        label=species,
+        alpha=0.7
+    )
+
+plt.xlabel("Weight")
+plt.ylabel("Hindfoot Length")
+plt.title("Hindfoot Length vs Weight (Species with >100 Observations)")
+plt.legend(title="Species ID")
+plt.tight_layout()
+plt.show()
+
+```
+:::::::::::::::::::::::: solution 
+
+```output
+FileNotFoundError: [Errno 2] No such file or directory: 'animal.csv'
+```
+
+Prompt: I am getting the error: FileNotFoundError: [Errno 2] No such file or directory: 'animal.csv'. Can you help me understand what this error means and how to diagnose it?
+
+The AI's output may include:
+- This error is raised by Python when your code attempts to open a file that the operating system cannot locate at the specified path.
+- The most common causes - the file is not in the current working directory, the filename is misspelled, the file path is incorrect, the file has not been created.
+
+In this case the filename is misspelled as 'animal.csv' rather than 'animals.csv'.  
+
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ## Code Generation and Refactoring
 
-In which situations can is it appropriate for AI to generate code.
+### Boilerplate
+
+Boilerplate code is a term used to describe standard code structures that are repeated in multiple places with little variation. Examples of boilerplate code across a few different contexts include:
+
+- Templates for function/class definitions
+- Bash script skeleton
+- Web page structure in HTML
+- Functional component in Reach
+- Unit test template
+
+Using AI to generate boilerplate code can save researchers time with minimal risk, allowing them to spend their time and effort focusing on the intent of the analysis rather than the programming language's syntax. 
+
+For example:
+"Generate boilerplate code for a scatterplot using Matplotlib"
+
+```python
+import matplotlib.pyplot as plt
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [5, 4, 3, 2, 1]
+
+# Create scatter plot
+plt.scatter(x, y, color='blue', marker='o', label='Data Points')
+
+# Add labels and title
+plt.xlabel('X-axis Label')
+plt.ylabel('Y-axis Label')
+plt.title('Scatter Plot Example')
+
+# Show legend
+plt.legend()
+
+# Display the plot
+plt.show()
+```
+
+After generating the boilerplate, researchers should:
+
+- Change the variable names to match their dataset
+- Confirm that they understand what the code is doing and check it matches their intent
+- Treat the generated code as a starting point to build on, not a final solution
 
 
-## Using AI to Support Technical Documentation
 
-Write a docstring for the function
+### Refactoring
+
+Code refactoring describes restructuring existing source code, making small, incremental changes to improve its internal design, readability, and maintainability, without changing its external behaviour or functionality.
+
+For example, once the hindfoot length vs weight plotting code is working, the researcher may notice opportunities to improve it. At the moment our code filters the data to include only species with over 100 observations.  If the researcher wanted to change the threshold for observations, the would have to edit the script directly, which is problematic for reusability of the code and reproducibility of the outputs.  Instead, they could extract the filtering code into it's own function. 
+
+Recognising these opportunities for refactoring is a human judgment task. AI is only applied after the goal is clear.
+
+Rather than asking ChatGPT to “rewrite the code,” you have more control over the output if you use a prompt that's specific and constrained, for example:
+
+“Can you refactor this code to move the species-filtering logic into a small function, without changing its behavior?”
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data
+df = pd.read_csv("animals.csv")
+
+# Function to filter species by minimum count
+def filter_species_by_count(df, species_col, min_count=100):
+    """
+    Returns a DataFrame containing only species with at least min_count observations.
+    
+    Parameters:
+        df (pd.DataFrame): Input DataFrame
+        species_col (str): Name of the column containing species IDs
+        min_count (int): Minimum number of observations required for a species to be kept
+    
+    Returns:
+        pd.DataFrame: Filtered DataFrame
+    """
+    species_counts = df[species_col].value_counts()
+    valid_species = species_counts[species_counts > min_count].index
+    return df[df[species_col].isin(valid_species)]
+
+# Filter the DataFrame
+df_filtered = filter_species_by_count(df, "species_id", min_count=100)
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+
+for species, group in df_filtered.groupby("species_id"):
+    plt.scatter(
+        group["weight"],
+        group["hindfoot_length"],
+        label=species,
+        alpha=0.7
+    )
+
+plt.xlabel("Weight")
+plt.ylabel("Hindfoot Length")
+plt.title("Hindfoot Length vs Weight (Species with >100 Observations)")
+plt.legend(title="Species ID")
+plt.tight_layout()
+plt.show()
+```
+
+### Using AI to Support Technical Documentation
+
+You may have noticed that when the AI generated the filter_species_by_count function, it also included documentation (a docstring) for the function. 
+
+Documenting code comprehensively can be time consuming and this is one of the reasons code is left undocumented and will be difficult to understand for others (or yourself in the future).  AI can be used to generate code documentation, making it quicker for you to ensure your code is well-documented and easy for others to understand. However, just as with any other AI-generated output, it's important to check the documentation and make sure it matches exactly what your function is doing. 
+
+For example, say we have extracted our plotting code into another function 'plot_species_scatter'.  We could use AI to generate a docstring for the function. 
+
+```python
+def plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hindfoot_length", min_count=100):
+    df_filtered = filter_species_by_count(df, species_col, min_count)
+    
+    plt.figure(figsize=(10, 6))
+    
+    for species, group in df_filtered.groupby(species_col):
+        plt.scatter(
+            group[x_col],
+            group[y_col],
+            label=species,
+            alpha=0.7
+        )
+    
+    plt.xlabel(x_col.capitalize())
+    plt.ylabel(y_col.replace("_", " ").capitalize())
+    plt.title(f"{y_col.replace('_', ' ').capitalize()} vs {x_col.capitalize()} (Species with >{min_count} Observations)")
+    plt.legend(title=species_col)
+    plt.tight_layout()
+    plt.show()
+```
 
 
-## Translating Code with AI
 
-Translate from python to R
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Generate a Docstring
+
+Use AI to generate a docstring for the 'plot_species_scatter' function.
+
+- If you know Python, verify that the docstring accurately represents what the code does.
+- If you don't know Python, read through the docstring and use it to help you understand what the function does.  
+
+
+:::::::::::::::::::::::: solution 
+
+Prompt: Generate a docstring for the following function: 
+
+```python
+def plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hindfoot_length", min_count=100):
+    df_filtered = filter_species_by_count(df, species_col, min_count)
+    
+    plt.figure(figsize=(10, 6))
+    
+    for species, group in df_filtered.groupby(species_col):
+        plt.scatter(
+            group[x_col],
+            group[y_col],
+            label=species,
+            alpha=0.7
+        )
+    
+    plt.xlabel(x_col.capitalize())
+    plt.ylabel(y_col.replace("_", " ").capitalize())
+    plt.title(f"{y_col.replace('_', ' ').capitalize()} vs {x_col.capitalize()} (Species with >{min_count} Observations)")
+    plt.legend(title=species_col)
+    plt.tight_layout()
+    plt.show()
+```
+
+Example AI - generated docstring:
+
+```python
+    """
+    Creates a scatter plot of two numerical variables for species with a minimum number of observations.
+    
+    The function filters the input DataFrame to include only species that have more than `min_count`
+    observations, then plots `x_col` vs `y_col` for each species as separate scatter points with a legend.
+
+    Parameters:
+        df (pd.DataFrame): The input DataFrame containing the data.
+        species_col (str, optional): Column name representing species IDs. Defaults to "species_id".
+        x_col (str, optional): Column name for the x-axis values. Defaults to "weight".
+        y_col (str, optional): Column name for the y-axis values. Defaults to "hindfoot_length".
+        min_count (int, optional): Minimum number of observations required for a species to be included. Defaults to 100.
+
+    Returns:
+        None. Displays a matplotlib scatter plot.
+    
+    Example:
+        >>> plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hindfoot_length", min_count=50)
+    """
+```
+
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Translating Code with AI
+
+**Scenario**: A collaborator would like to build on the weight vs hindfoot length plotting code but he works primarily using the programming language R. Translating the code manually from python to R could be a time-intensive and error-prone task.  This is another instance where AI could be used with massive time-saving benefits:
+
+Prompt: 'Translate this code from Python to R.'
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data
+df = pd.read_csv("animals.csv")
+
+# Count observations per species
+species_counts = df["species_id"].value_counts()
+
+# Keep only species with >100 observations
+valid_species = species_counts[species_counts > 100].index
+df_filtered = df[df["species_id"].isin(valid_species)]
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+
+for species, group in df_filtered.groupby("species_id"):
+    plt.scatter(
+        group["weight"],
+        group["hindfoot_length"],
+        label=species,
+        alpha=0.7
+    )
+
+plt.xlabel("Weight")
+plt.ylabel("Hindfoot Length")
+plt.title("Hindfoot Length vs Weight (Species with >100 Observations)")
+plt.legend(title="Species ID")
+plt.tight_layout()
+plt.show()
+
+```
+
+However, there are a few important factors to bear in mind when using AI to translate code:
+
+1. AI might suggest a translation using a package you are unfamiliar with. Verify that it is appropriate and installed.
+2. Differences in data structures can lead to subtle errors. For example, pandas.DataFrame indexing differs from R’s data.frame. Check that filters, groupings, and calculations (e.g., counting observations per species) give the same results in R as in Python.
+3. Avoid blindly copying the AI output. Make sure you understand the translation so that you can troubleshoot, extend, or adapt it safely for future analyses.
+4. To maintain reproducibility, keep track of both the original Python code and the AI-generated R translation. Document any changes or assumptions made during translation.
+5. Be aware of AI limitations - AI can only translate syntax and structure, it cannot verify the scientific correctness of the analysis.
+
 
 ## Integrating AI Tools into IDEs
 
-Brief paragraph on how AI tools can be integrated into IDEs and the benefits of this.  To learn more about this you can take the training on developing research software with AI.
+In this episode, we have used seperate interfaces to interact with AI and to run our code.  As of 2025 this was the most common way that researchers interacted with AI for coding assistance.  However, it is also possible to integrate AI into an environment you use to write and run code (known as an Integrated Development Environment or IDE).  For example, an AI assistant called GitHub Copilot can be integrated IDEs such as Visual Studio Code.  There are some advantages and disadvantages to this integrated approach: 
+
+### Advantages of using an IDE-Integrated AI Assistant
+
+- **Context awareness**: Integrated AI can access the files and project structure in your IDE, making suggestions that are relevant to your current codebase.
+- **Immediate feedback and autocompletion**: As well as the AI chat tool that we've been using in this session, IDE-integrated AI also offers autocompletion and code suggestions as you're typing. 
+- **Seamless workflow**: You don't have to switch between windows or copy-paste code. Everything happens in one environment, which can reduce cognitive load.
+
+### Disadvantages of using an IDE-Integrated AI Assistant
+
+- **Limited explanation**: Unlike a standalone AI like ChatGPT, IDE-integrated AI often provides suggestions without detailed reasoning. This can reduce researchers' understanding of AI-generated code
+- **Potential over-reliance**: It can be very tempting to accept AI code suggestions that appear to work, without fully understanding them, and this can lead to errors or misunderstandings about what your code does.
+- **Privacy and security risks**: The AI may send code snippets to cloud services for processing. Sensitive data or unpublished research could be exposed if this is not carefully managed.
+
+
+For training on IDE-integrated AI assistants see 'Developing Research Software with AI Tools'[link to course materials].  
