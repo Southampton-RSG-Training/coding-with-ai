@@ -217,9 +217,11 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#history-and-landscape-of-ai">History and Landscape of AI</a></li>
+        <ul><li><a href="#history-of-ai">History of AI</a></li>
+<li><a href="#current-landscape-of-ai">Current Landscape of AI</a></li>
 <li><a href="#demystifying-generative-ai">Demystifying Generative AI</a></li>
-<li><a href="#overview-of-ai-coding-assistants">Overview of AI Coding Assistants</a></li>
+<li><a href="#overview-of-ai-tools-that-can-support-research-coding">Overview of AI tools that can support research coding</a></li>
+<li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -302,7 +304,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>The AI Landscape</h1>
-        <p>Last updated on 2026-01-09 |
+        <p>Last updated on 2026-01-21 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/1-ai-landscape.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -336,23 +338,291 @@ without understanding meaning in a human sense?</li>
 intelligence</li>
 <li>Describe where ChatGPT and similar large language models fit within
 the broader AI landscape.</li>
-<li>Explain, at a conceptual level, what generative AI and ChatGPT are
-and how they differ from other AI approaches.</li>
-<li>Compare generative AI models with other types of AI systems in terms
-of capabilities and limitations.</li>
+<li>Explain, at a conceptual level, what generative AI and ChatGPT
+are.</li>
 <li>Summarize the primary functions and intended use cases of common AI
 coding assistants.</li>
-<li>Analyze how different AI tools support distinct stages of the
-software development and research workflow.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="history-and-landscape-of-ai">History and Landscape of AI<a class="anchor" aria-label="anchor" href="#history-and-landscape-of-ai"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="demystifying-generative-ai">Demystifying Generative AI<a class="anchor" aria-label="anchor" href="#demystifying-generative-ai"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="overview-of-ai-coding-assistants">Overview of AI Coding Assistants<a class="anchor" aria-label="anchor" href="#overview-of-ai-coding-assistants"></a></h2>
-<hr class="half-width"><!--
+<div class="section level3">
+<h3 id="framing-the-question-what-do-we-mean-by-ai">Framing the Question: “What Do We Mean by AI?”<a class="anchor" aria-label="anchor" href="#framing-the-question-what-do-we-mean-by-ai"></a></h3>
+<p>“Any sufficiently advanced technology is indistinguishable from
+magic.” - Arthur C. Clarke, a British science fiction writer, futurist,
+and inventor (1962)</p>
+<p>Current AI tools, like ChatGPT and Copilot, can appear almost
+magical. They can generate fluent text, write code and respond to
+conversations in a way that seems almost human. Arthur Clarke’s
+observation is a reminder that this appearance of magic is not evidence
+of mystery or sentience but of technological complexity. These systems
+are built on decades of research in mathematics, statistics and computer
+science.</p>
+<p>The aim of this episode is to place AI tools in their historical and
+technical context, clarify what they can and cannot do, and demystify
+the ‘magic’ of AI.</p>
+<div id="when-you-hear-the-term-artificial-intelligence-what-comes-to-mind" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="when-you-hear-the-term-artificial-intelligence-what-comes-to-mind" class="callout-inner">
+<h3 class="callout-title">When you hear the term “artificial
+intelligence”, what comes to mind?</h3>
+<div class="callout-content">
+<p>Write your answer in the shared document. There are no right or wrong
+answers!</p>
+</div>
+</div>
+</div>
+<p>“Artificial intelligence (AI) is the capability of a machine or
+software system to perform tasks that would normally require human
+intelligence, such as learning from data, recognising patterns, making
+decisions, or generating outputs.” - Merriam-Webster Dictionary.</p>
+</div>
+<section><h2 class="section-heading" id="history-of-ai">History of AI<a class="anchor" aria-label="anchor" href="#history-of-ai"></a></h2>
+<hr class="half-width"><p>Artificial intelligence is best understood not as a single capability
+or system, but as a broad collection of techniques and approaches for
+solving different kinds of problems. These techniques have been
+developed over the past 70 years. Let’s consider a timeline of major AI
+developments to put the current AI tools in historical context:</p>
+<ul><li><p><strong>1950s–1970s: Symbolic AI and early expert
+systems</strong>: AI research begins with symbolic, rule-based
+approaches focused on logic, search, and reasoning. Key moments include
+Alan Turing’s 1950 paper “Computing Machinery and Intelligence” and the
+1956 Dartmouth Conference, where the term “artificial intelligence” was
+coined. Systems relied on explicitly encoded rules and struggled outside
+narrowly defined domains.</p></li>
+<li><p><strong>1980s–early 1990s: Expert systems and the first AI boom
+(and bust)</strong>: Rule-based expert systems are adopted in industry
+(e.g. medical diagnosis, configuration systems). Progress stalls due to
+high development costs, limited scalability, and lack of data, leading
+to periods known as “AI winters”.</p></li>
+<li><p><strong>Mid-1990s–2000s: Shift to data-driven machine
+learning</strong>: AI research moves toward statistical and data-driven
+methods. Machine learning models learn patterns from data rather than
+relying on hard-coded rules. Common applications include classification,
+prediction, clustering, and recommendation systems. Increased
+availability of digital data and improved computing infrastructure drive
+adoption.</p></li>
+<li><p><strong>2010–2015: Deep learning resurgence</strong>: Advances in
+neural networks, combined with GPUs and large labelled datasets, lead to
+major breakthroughs in computer vision, speech recognition, and natural
+language processing. Deep learning becomes the dominant paradigm for
+many AI tasks.</p></li>
+<li><p><strong>2017: Transformer architecture introduced</strong>: The
+transformer model is proposed, enabling more effective handling of
+long-range context in language tasks and laying the foundation for
+modern large language models (Transformer is the ‘T’ in
+chatGPT)</p></li>
+<li><p><strong>2018: GPT-1 and the emergence of large language
+models</strong>: GPT-1 demonstrates that transformer-based models
+trained on large text corpora can perform a wide range of language tasks
+through pre-training and fine-tuning, influencing subsequent research
+and development.</p></li>
+<li><p><strong>2020–2021: Scaling of large language models</strong>:
+Models such as GPT-3 show that increasing model size and training data
+leads to qualitatively new capabilities, including few-shot learning and
+more fluent text generation.</p></li>
+<li><p><strong>2022: ChatGPT and mainstream adoption of generative
+AI</strong>: ChatGPT introduces large language models to a broad public
+and professional audience through a conversational interface</p></li>
+<li><p><strong>2023–2024: Integration of generative AI into mainstream
+software and research infrastructure</strong>: Following the public
+release of ChatGPT, large language models are rapidly embedded into
+widely used tools and platforms, including code editors, office
+software, search engines, and data analysis environments (e.g. AI
+“copilots”). This period marks a shift from experimental or standalone
+use of generative AI to routine, workflow-integrated assistance in
+research, coding, writing, and analysis.</p></li>
+</ul></section><section><h2 class="section-heading" id="current-landscape-of-ai">Current Landscape of AI<a class="anchor" aria-label="anchor" href="#current-landscape-of-ai"></a></h2>
+<hr class="half-width"><p>In recent years, one particular type of AI system, generative AI, has
+dominated public and professional interaction with artificial
+intelligence. While highly visible, generative AI represents only one
+approach within a much broader AI landscape. Most AI systems are
+designed for specific purposes, and understanding what a system is built
+to do is more useful than understanding its internal technical
+details.</p>
+<p>At a high level, today’s AI systems can be grouped into three broad
+categories:</p>
+<ol style="list-style-type: decimal"><li><p><strong>Rule-Based and Decision Systems</strong>: These systems
+operate using explicitly defined rules, logic, or constraints. Their
+behavior is deterministic and transparent, which makes them reliable in
+stable, well-defined environments. Rule-based systems are still widely
+used in areas such as compliance, governance, and safety-critical
+decision-making. However, they are limited in their ability to handle
+ambiguity, novelty, or rapidly changing conditions.</p></li>
+<li><p><strong>Predictive and Analytical Systems</strong>: These systems
+learn patterns from data to make predictions, classifications, or risk
+estimates. Rather than following fixed rules, they use statistical
+models to answer questions such as What category does this belong to? or
+How likely is this outcome? Predictive AI systems are common in research
+and operational settings, including data analysis, diagnostics, and
+forecasting. Their outputs support decisions but do not create new
+content.</p></li>
+<li><p><strong>Generative Systems</strong>: Generative AI systems are
+designed to produce new outputs that resemble the data on which they
+were trained. This includes generating text, code, images, or other
+media. GPT and ChatGPT fall into this category, specializing in language
+and code generation. These systems are optimized for producing fluent
+and contextually appropriate responses, not for verifying truth or
+making authoritative decisions.</p></li>
+</ol><p>Most AI systems in use today are narrow, task-specific tools. Some
+are designed to enforce rules, others to analyze data and make
+predictions, and a smaller but increasingly visible group, generative
+systems, are designed to produce new content. Generative AI systems are
+powerful and influential, but they are not representative of AI as a
+whole. Understanding these broad categories helps researchers set
+appropriate expectations and prepares us to examine generative AI in
+more detail.</p>
+</section><section><h2 class="section-heading" id="demystifying-generative-ai">Demystifying Generative AI<a class="anchor" aria-label="anchor" href="#demystifying-generative-ai"></a></h2>
+<hr class="half-width"><div class="section level3">
+<h3 id="what-is-gpt">What Is GPT?<a class="anchor" aria-label="anchor" href="#what-is-gpt"></a></h3>
+<p>GPT is a type of Large Language Model (LLM). This is a neural network
+trained on massive amounts of text data to predict and generate
+human-like language.</p>
+<p>GPT stands for Generative Pre-trained Transformer:</p>
+<ul><li>
+<strong>Generative</strong>: GPT is designed to generate new
+content. Rather than retrieving fixed answers from a database, it
+produces original outputs, such as text or code.</li>
+<li>
+<strong>Pre-trained</strong>: it is trained on vast amounts of data
+before deployment.</li>
+<li>
+<strong>Transformer</strong>: it uses a neural network architecture
+optimised for understanding context and sequence.</li>
+</ul><div id="what-is-a-transformer" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="what-is-a-transformer" class="callout-inner">
+<h3 class="callout-title">What is a transformer?</h3>
+<div class="callout-content">
+<p>A transformer is a type of neural network architecture designed
+specifically to work with sequences, such as sentences, paragraphs, or
+lines of code. Its key strength is the ability to consider context, that
+is, how different parts of a sequence relate to one another—when
+processing or generating information.</p>
+<p>Traditional language-processing systems handled text one word at a
+time, in order. This made it difficult for them to keep track of
+long-range relationships, such as how a word at the start of a sentence
+relates to one at the end. Transformers address this limitation by
+processing all parts of a text sequence simultaneously, allowing the
+model to identify patterns and relationships across an entire passage at
+once.</p>
+<p>The central mechanism that enables this is called attention.
+Attention allows the model to assign different levels of importance to
+different words in a sentence depending on the context. For example,
+when interpreting the meaning of a pronoun such as “it,” the transformer
+can look back across the sentence or paragraph to determine which
+earlier word is most relevant. This makes the model far more effective
+at handling complex language structures. For example, consider the
+sentence “The cat ate the mouse because it was hungry.” Attention helps
+the model see that “it” refers to “the cat”, not “the mouse,” by
+focusing on the most relevant word in the sentence.</p>
+<p>In practical terms, the transformer architecture is what enables
+systems like GPT to produce fluent, context-aware text, maintain
+coherence over long responses, and adapt their output to different tasks
+using the same underlying model. However, despite their apparent
+sophistication, transformers do not reason or understand language; they
+identify and reproduce patterns based on statistical relationships
+learned during training.</p>
+</div>
+</div>
+</div>
+<p>GPT generates content token by token (or one piece at a time) rather
+than producing an entire sentence all at once. A token can be a word,
+part of a word, or a punctuation mark. When you enter a prompt into
+GPT:</p>
+<ol style="list-style-type: decimal"><li>The model looks at the input text (the prompt) and calculates the
+probability of what the next token should be.</li>
+<li>It selects the most likely next token.</li>
+<li>That token is added to the growing output.</li>
+<li>The model then considers the updated sequence, including the new
+token, and predicts the following token.</li>
+<li>Steps 2–4 repeat until the model produces a complete response.</li>
+</ol><p>This sequential token generation allows GPT to produce coherent and
+contextually relevant text because each new token is generated based on
+all previous tokens in the sequence. It’s like writing a sentence one
+word at a time, making sure each word fits with everything written
+before it.</p>
+<p>This is why GPT can generate flexible and novel outputs, rather than
+just retrieving pre-written sentences, it literally builds the content
+step by step.</p>
+</div>
+<div class="section level3">
+<h3 id="how-a-gpt-model-is-trained">How a GPT Model is Trained<a class="anchor" aria-label="anchor" href="#how-a-gpt-model-is-trained"></a></h3>
+<ol style="list-style-type: decimal"><li>
+<strong>Data collection</strong> - A large amount of text is
+gathered to train the AI model on.</li>
+<li>
+<strong>Model architecture design</strong> - The neural network
+architecture is designed to best suit the purpose of the AI</li>
+<li>
+<strong>Pre-training</strong> - The AI model is trained on the
+collected text.</li>
+<li>
+<strong>Fine-tuning</strong> - Further training the model on
+specific datasets and tasks related to its purpose e.g. if it is going
+to be a code assistant it will be trained on tasks related to code
+generation.</li>
+<li>
+<strong>Evaluation and iteration</strong> - Testing the AI in a
+variety of use cases, getting feedback and iterating the model
+architecture to improve performance.</li>
+</ol></div>
+<div class="section level3">
+<h3 id="chatgpt-vs-gpt">ChatGPT vs GPT<a class="anchor" aria-label="anchor" href="#chatgpt-vs-gpt"></a></h3>
+<p>ChatGPT is an application built on top of GPT models. It provides a
+user-friendly, conversational interface to interact with the GPT
+model.</p>
+<p>ChatGPT is one of many tools that use GPT.</p>
+<p>GPT is also integrated into software products such as Microsoft’s
+copilot, search engines, and coding environments.</p>
+</div>
+</section><section><h2 class="section-heading" id="overview-of-ai-tools-that-can-support-research-coding">Overview of AI tools that can support research coding<a class="anchor" aria-label="anchor" href="#overview-of-ai-tools-that-can-support-research-coding"></a></h2>
+<hr class="half-width"><ol style="list-style-type: decimal"><li><p><strong>ChatGPT</strong> – A conversational large language model
+by OpenAI that can generate code, explain programming concepts, assist
+with debugging, and support data analysis workflows.</p></li>
+<li><p><strong>GitHub Copilot</strong> – AI-powered coding assistant
+integrated into code editors, suggesting code completions, functions,
+and boilerplate across multiple programming languages.</p></li>
+<li><p><strong>Google Gemini</strong> – Google’s AI platform for
+research and coding assistance, capable of generating code, providing
+explanations, and supporting data analysis and workflow tasks.</p></li>
+<li><p><strong>Claude</strong> – A conversational AI by Anthropic
+designed to assist with coding, writing, and research tasks, providing
+explanations, summaries, and code generation support.</p></li>
+<li><p><strong>Microsoft Copilot</strong> – Integrated into Microsoft
+tools like Word, Excel, and Visual Studio, this AI assistant helps with
+code generation, data analysis, and workflow automation.</p></li>
+</ol><div id="which-tools-are-most-commonly-used-by-researchers" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="which-tools-are-most-commonly-used-by-researchers" class="callout-inner">
+<h3 class="callout-title">Which tools are most commonly used by
+researchers?</h3>
+<div class="callout-content">
+<p>In a study of 868 scientists who code as part of their research,
+ChatGPT was by far the most common tool used to assist with research
+coding, used by 64% of participants, followed by GitHub Copilot, used by
+12% of participants.</p>
+<p>(O’Brien, G., Parker, A., Eisty, N., &amp; Carver, J. (2025). More
+code, less validation: Risk factors for over-reliance on AI coding tools
+among scientists. arXiv preprint arXiv:2512.19644.)</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><ul><li><a href="https://arxiv.org/abs/2512.19644" class="external-link">O’Brien, G., Parker, A.,
+Eisty, N., &amp; Carver, J. (2025). More code, less validation: Risk
+factors for over-reliance on AI coding tools among scientists.</a></li>
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></div> <!-- / div.lesson-content -->
@@ -415,8 +685,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/1-ai-landscape.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/1-ai-landscape.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-09",
-  "datePublished": "2026-01-20"
+  "dateModified": "2026-01-21",
+  "datePublished": "2026-01-21"
 }
 
   </script><script>
