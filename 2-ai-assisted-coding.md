@@ -318,7 +318,7 @@ Recognising these opportunities for refactoring is a human judgment task. AI is 
 
 Rather than asking ChatGPT to “rewrite the code,” you have more control over the output if you use a prompt that's specific and constrained, for example:
 
-“Can you refactor this code to move the species-filtering logic into a small function, without changing its behavior?”
+“Can you refactor this code to move the species-filtering logic into a small function, without changing its behaviour?”
 
 ```python
 import pandas as pd

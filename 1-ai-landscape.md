@@ -82,7 +82,7 @@ In recent years, one particular type of AI system, generative AI, has dominated 
 
 At a high level, today’s AI systems can be grouped into three broad categories:
 
-1. **Rule-Based and Decision Systems**: These systems operate using explicitly defined rules, logic, or constraints. Their behavior is deterministic and transparent, which makes them reliable in stable, well-defined environments. Rule-based systems are still widely used in areas such as compliance, governance, and safety-critical decision-making. However, they are limited in their ability to handle ambiguity, novelty, or rapidly changing conditions.
+1. **Rule-Based and Decision Systems**: These systems operate using explicitly defined rules, logic, or constraints. Their behaviour is deterministic and transparent, which makes them reliable in stable, well-defined environments. Rule-based systems are still widely used in areas such as compliance, governance, and safety-critical decision-making. However, they are limited in their ability to handle ambiguity, novelty, or rapidly changing conditions.
 
 2. **Predictive and Analytical Systems**: These systems learn patterns from data to make predictions, classifications, or risk estimates. Rather than following fixed rules, they use statistical models to answer questions such as What category does this belong to? or How likely is this outcome? Predictive AI systems are common in research and operational settings, including data analysis, diagnostics, and forecasting. Their outputs support decisions but do not create new content.
 
