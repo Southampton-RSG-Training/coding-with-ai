@@ -235,7 +235,7 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#accuracy-and-reliability-of-ai-generated-outputs">Accuracy and Reliability of AI-Generated Outputs</a></li>
+        <ul><li><a href="#accuracy-and-reliability-of-ai-generated-code">Accuracy and Reliability of AI-Generated Code</a></li>
 <li><a href="#data-privacy-security-risks-and-confidentiality">Data Privacy, Security Risks, and Confidentiality</a></li>
 <li><a href="#intellectual-property-authorship-and-citation-of-ai-generated-code-and-text">Intellectual Property, Authorship, and Citation of AI-Generated Code
 and Text</a></li>
@@ -243,6 +243,7 @@ and Text</a></li>
 <li><a href="#de-skilling-and-overdependence-on-ai-in-research-computing">De-skilling and Overdependence on AI in Research Computing</a></li>
 <li><a href="#mitigating-risks-best-practices-for-responsible-ai-use-in-research">Mitigating Risks: Best Practices for Responsible AI Use in
 Research</a></li>
+<li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -307,7 +308,7 @@ Research</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Ethics, Reliability and Security Considerations</h1>
-        <p>Last updated on 2026-01-09 |
+        <p>Last updated on 2026-01-21 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-ethics-reliability-and-security.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -364,15 +365,148 @@ ethical AI use in coding and data analysis workflows.</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="accuracy-and-reliability-of-ai-generated-outputs">Accuracy and Reliability of AI-Generated Outputs<a class="anchor" aria-label="anchor" href="#accuracy-and-reliability-of-ai-generated-outputs"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="data-privacy-security-risks-and-confidentiality">Data Privacy, Security Risks, and Confidentiality<a class="anchor" aria-label="anchor" href="#data-privacy-security-risks-and-confidentiality"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="intellectual-property-authorship-and-citation-of-ai-generated-code-and-text">Intellectual Property, Authorship, and Citation of AI-Generated Code
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>When using AI for coding assistance, you can imagine an AI tool as
+being like a fresh computer science graduate with so much enthusiasm
+they will never say ‘I can’t do it’, but no practical experience or
+broad understanding.</p>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="accuracy-and-reliability-of-ai-generated-code">Accuracy and Reliability of AI-Generated Code<a class="anchor" aria-label="anchor" href="#accuracy-and-reliability-of-ai-generated-code"></a></h2>
+<hr class="half-width"><p>For researchers, relying on AI-generated code carries significant
+risks. Incorrect code can lead to flawed results, which may compromise
+the validity of your research, damage your professional reputation, and
+even necessitate a paper retraction.</p>
+<p>AI coding assistants can produce both random and systematic errors,
+threatening the reliability and reproducibility of your work. For
+instance, a <a href="https://arxiv.org/pdf/2304.10778" class="external-link">study conducted
+by researchers at Bilkent University</a> found that GitHub Copilot
+generated correct code only 46.3% of the time. This underscores the
+danger of depending solely on AI tools for critical research tasks
+without careful review.</p>
+<p><strong>Outdated Results</strong> If the AI model’s training data
+does not contain recent developments, AI-generated code can be outdated.
+This can be particularly problematic in fields such as software
+development and scientific research, where current knowledge is
+critical.</p>
+<p>For example, an AI might suggest a function from an open-source
+library that hasn’t been well-maintained over the past few years. If the
+library has unpatched security flaws, these could propagate into the
+project.</p>
+<p><strong>Unreliable Results</strong> AI models sometimes “hallucinate”
+information. In the absence of relevant training data, a GPT model will
+fabricate information rather than saying it doesn’t know.</p>
+<p>For example, an artificial intelligence might suggest an optimisation
+that causes a memory leak or a system crash that, if unchecked by the
+developer, could lead to serious system failures in production
+environments.</p>
+<p><strong>Transparency and Explainability</strong>: Many AI coding
+assistants function as “black boxes,” offering code suggestions without
+explaining the reasoning behind them. Without this insight, researchers
+may find it difficult to verify or trust the proposed solutions,
+increasing the risk of undetected errors propagating into experimental
+results.</p>
+<p>This lack of transparency has direct implications for research
+reproducibility. If the logic behind AI-generated code is unclear, other
+researchers may be unable to replicate your methods or results, even if
+the code appears to run correctly. There may be subtle errors or
+undocumented assumptions embedded in AI-generated solutions, which can
+lead to inconsistencies across experiments or datasets, leading to
+different results and undermining confidence in your findings.</p>
+<p>While AI can accelerate coding, researchers must critically evaluate
+every output, verify results against established methods, and remain
+vigilant to subtle errors that could compromise both research validity
+and professional credibility.</p>
+<div id="vibe-coding" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="vibe-coding" class="callout-inner">
+<h3 class="callout-title">Vibe Coding</h3>
+<div class="callout-content">
+<p>Vibe Coding is a term used to describe AI-assisted coding without a
+structured plan, proper design, or architectural considerations.
+Decisions are made on the fly, often based on intuition or immediate
+needs rather than a thoughtful development strategy.</p>
+<p>This can be fantastic for developing a quite prototype or trying out
+an idea. However, coding in this way can also lead to some major
+problems:</p>
+<ul><li>Without planning the structure of your code at the start, programs
+are likely to become messy and confusing, and this can introduce
+mistakes into the code.</li>
+<li>Outputs are likely to appear mostly correct and, while obvious
+errors are usually caught, the subtle mistakes are easy to miss.</li>
+<li>This approach is likely to lead to problems being discovered only
+during the build or runtime phase instead of during design, which makes
+them more time-consuming and costly to fix.</li>
+</ul></div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="data-privacy-security-risks-and-confidentiality">Data Privacy, Security Risks, and Confidentiality<a class="anchor" aria-label="anchor" href="#data-privacy-security-risks-and-confidentiality"></a></h2>
+<hr class="half-width"><p><strong>Data Privacy and Confidentiality</strong></p>
+<p>AI tools such as chatGPT process and may retain user inputs.
+Therefore, it’s really important to be cautious that you don’t
+accidentally share confidential code, sensitive datasets or proprietary
+research methods. Depending on the settings of your AI tool, the
+information you enter may be reused to improve the AI model and/or could
+resurface in future outputs, creating risks around intellectual property
+leakage, confidentiality breaches, or non-compliance with data
+protection regulations.</p>
+<p>When AI tools run in the cloud, your code or data may be transmitted
+to external servers. This increases the risk of exposure during transfer
+or through storage breaches. Even if data is anonymised, code structure
+and comments can still reveal sensitive details about research methods
+or system design.</p>
+<p><strong>Insecure AI-Generated Code</strong></p>
+<p>AI assistants learn from large volumes of existing code—both good and
+bad. As a result, they may suggest insecure or outdated practices. A <a href="https://arxiv.org/pdf/2211.03622" class="external-link">2023 Stanford University
+study</a> found that programmers who used AI assistants often produced
+less secure code but at the same time, felt more confident that it was
+secure - a risky combination!</p>
+<p>For example, an AI tool might generate code that fails to properly
+validate user input, leaving the system open to issues like SQL
+injection or cross-site scripting. Because the code “looks right,” these
+problems can be missed.</p>
+<p><strong>Hidden Dependencies and Security Gaps</strong></p>
+<p>AI tools will often generate code that includes external libraries or
+frameworks without checking whether they are secure and appropriate for
+your use case. This could lead to vulnerabilities in your code,
+licensing issues, or compatibility problems, which can cause problems
+later and be difficult to untangle or debug.</p>
+<p><strong>Adversarial Attacks</strong></p>
+<p>AI systems can also be targets for people with bad intentions.
+Attackers may try to influence training data or how the AI interprets
+user inputs so that AI tools suggest insecure patterns. If these
+patterns are reused across many projects, insecure practices can spread
+quickly.</p>
+</section><section><h2 class="section-heading" id="intellectual-property-authorship-and-citation-of-ai-generated-code-and-text">Intellectual Property, Authorship, and Citation of AI-Generated Code
 and Text<a class="anchor" aria-label="anchor" href="#intellectual-property-authorship-and-citation-of-ai-generated-code-and-text"></a></h2>
 <hr class="half-width"></section><section><h2 class="section-heading" id="ethical-considerations-in-ai-assisted-research">Ethical Considerations in AI-Assisted Research<a class="anchor" aria-label="anchor" href="#ethical-considerations-in-ai-assisted-research"></a></h2>
 <hr class="half-width"></section><section><h2 class="section-heading" id="de-skilling-and-overdependence-on-ai-in-research-computing">De-skilling and Overdependence on AI in Research Computing<a class="anchor" aria-label="anchor" href="#de-skilling-and-overdependence-on-ai-in-research-computing"></a></h2>
 <hr class="half-width"></section><section><h2 class="section-heading" id="mitigating-risks-best-practices-for-responsible-ai-use-in-research">Mitigating Risks: Best Practices for Responsible AI Use in
 Research<a class="anchor" aria-label="anchor" href="#mitigating-risks-best-practices-for-responsible-ai-use-in-research"></a></h2>
-<hr class="half-width"><!--
+<hr class="half-width"></section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><ul><li><a href="https://carpentries-incubator.github.io/gen-ai-coding/3-ethical-and-security-considerations.html" class="external-link">AI-Assisted
+Coding with Codium, Ethical and Security Considerations</a></li>
+<li><a href="https://arxiv.org/pdf/2211.03622" class="external-link">Perry, N., Srivastava,
+M., Kumar, D., &amp; Boneh, D. (2023, November). Do users write more
+insecure code with ai assistants?. In Proceedings of the 2023 ACM SIGSAC
+conference on computer and communications security
+(pp. 2785-2799)</a></li>
+<li><a href="https://arxiv.org/pdf/2304.10778" class="external-link">Yetiştiren, B., Özsoy,
+I., Ayerdem, M., &amp; Tüzün, E. (2023). Evaluating the code quality of
+ai-assisted code generation tools: An empirical study on github copilot,
+amazon codewhisperer, and chatgpt. arXiv preprint
+arXiv:2304.10778.</a></li>
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></div> <!-- / div.lesson-content -->
@@ -435,7 +569,7 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/3-ethics-reliability-and-security.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/3-ethics-reliability-and-security.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-09",
+  "dateModified": "2026-01-21",
   "datePublished": "2026-01-21"
 }
 
