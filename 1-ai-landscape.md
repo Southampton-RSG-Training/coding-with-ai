@@ -19,6 +19,18 @@ exercises: 2 # exercise time in minutes
 - Summarize the primary functions and intended use cases of common AI coding assistants.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+## Introduction
+
+Software is increasingly critical to research - the national Software Sustainability Institute found that more than 92% of academics use research software, and 56% develop their own software. 
+
+For many researchers, writing code for data analysis or software development can be boring, frustrating, or intimidating.  Most researchers would rather be thinking about and researching their subject matter rather than spending lots of time learning a programming language and writing code. Therefore, with easy access to AI tools, it can be very tempting to ask AI to write your research code for you.
+
+This workshop aims to:
+
+- Demonstrate how AI can assist in coding.
+- Raise researchers’ awareness of the potential risks associated with AI-assisted coding.
+- Provide researchers with the knowledge and understanding to critically assess when it is appropriate to use AI for coding assistance.
+
 
 ### Framing the Question: “What Do We Mean by AI?”
 
@@ -174,3 +186,4 @@ In a study of 868 scientists who code as part of their research, ChatGPT was by 
 ## References
 
 - [O'Brien, G., Parker, A., Eisty, N., & Carver, J. (2025). More code, less validation: Risk factors for over-reliance on AI coding tools among scientists.](https://arxiv.org/abs/2512.19644)
+-[S.J. Hettrick et al, UK Research Software Survey 2014](https://zenodo.org/records/1183562)
