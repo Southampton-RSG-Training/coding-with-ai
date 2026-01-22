@@ -308,7 +308,7 @@ Research</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Ethics, Reliability and Security Considerations</h1>
-        <p>Last updated on 2026-01-21 |
+        <p>Last updated on 2026-01-22 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-ethics-reliability-and-security.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -491,8 +491,126 @@ patterns are reused across many projects, insecure practices can spread
 quickly.</p>
 </section><section><h2 class="section-heading" id="intellectual-property-authorship-and-citation-of-ai-generated-code-and-text">Intellectual Property, Authorship, and Citation of AI-Generated Code
 and Text<a class="anchor" aria-label="anchor" href="#intellectual-property-authorship-and-citation-of-ai-generated-code-and-text"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="ethical-considerations-in-ai-assisted-research">Ethical Considerations in AI-Assisted Research<a class="anchor" aria-label="anchor" href="#ethical-considerations-in-ai-assisted-research"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="de-skilling-and-overdependence-on-ai-in-research-computing">De-skilling and Overdependence on AI in Research Computing<a class="anchor" aria-label="anchor" href="#de-skilling-and-overdependence-on-ai-in-research-computing"></a></h2>
+<hr class="half-width"><div class="section level3">
+<h3 id="intellectual-property-and-ownership">Intellectual Property and Ownership<a class="anchor" aria-label="anchor" href="#intellectual-property-and-ownership"></a></h3>
+<p>Intellectual property rights (legal rights that protect creations of
+the mind) for AI-generated code are currently evolving.</p>
+<p>Currently in the UK, if AI is used to assist a human creator, the
+content is the human’s own intellectual creation and the copyright
+belongs to the human creator.</p>
+<p>If there is no human author, the “author” for copyright purposes is
+the person “by whom the arrangements necessary for the creation of the
+work are undertaken.” For AI-generated code, this means that if the code
+is truly without human creative input (for example produced entirely by
+an AI tool in response to a prompt without the author shaping or
+selecting the output creatively), the law would treat the person who set
+up the process (for example the user or developer who provided the
+prompts and triggered the AI) as the “author” of that computer-generated
+work.</p>
+<p>However, there’s ongoing debate about how this practically applies to
+many forms of AI outputs, including software code, because:</p>
+<ul><li>The statutory language was drafted long before modern AI and may not
+map cleanly to current AI models.</li>
+<li>UK authorities are actively consulting on whether to adjust or
+clarify how AI-generated works should be treated in copyright law.</li>
+<li>Ownership can depend on contractual terms (such as developer
+agreements, employment contracts, or AI tool terms of service), which
+may assign rights to an employer or platform rather than the individual
+user.</li>
+</ul><p>Separately from ownership of new AI outputs, generating code that
+replicates or contains substantial parts of copyrighted works without
+permission, such as code copied from existing proprietary systems, can
+infringe the copyright of others. AI models are trained on a vast amount
+of data that may include copyrighted material. While outputs from AI
+tools are typically novel, there is a risk that generated code or text
+may closely resemble existing sources. This could lead to copyright
+infringement claims, particularly in commercial or open-source contexts.
+If you use AI assistance with coding, you’ll need to be cautious about
+the potential for this to occur.</p>
+</div>
+<div class="section level3">
+<h3 id="authorship-and-academic-credit">Authorship and Academic Credit<a class="anchor" aria-label="anchor" href="#authorship-and-academic-credit"></a></h3>
+<p>AI tools can influence research outputs, so to what extent should
+their contribution be acknowledged? AI systems can’t be authors but not
+disclosing their use can misrepresent the nature of the researchers’
+work and raise academic integrity questions.</p>
+<p>Many journals, conferences and funding bodies now require for any use
+of AI to be disclosed. Being transparent about the use of AI may also
+increase trust in the research community and support reproducibility of
+research.</p>
+</div>
+<div class="section level3">
+<h3 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a></h3>
+<p>The outputs of AI aren’t stable, they’re likely to vary depending on
+prompt wording and the AI model version among other factors, so that
+can’t be reliably cited in the same way as you would cite a research
+paper or software package.</p>
+<p>Several universities and libraries recommend citing the tool used
+including version and date, describe how it was used and clearly
+distinguish between AI and human contributions.</p>
+</div>
+<div class="section level3">
+<h3 id="implications-for-open-source-and-reuse">Implications for Open Source and Reuse<a class="anchor" aria-label="anchor" href="#implications-for-open-source-and-reuse"></a></h3>
+<p>If AI-generated code is added to an open-source project, a licensing
+conflict may be accidentally introduced if the patterns or structures in
+the code are derived from software with incompatible licences. Check the
+project’s licence and contribution guidelines before making any
+AI-assisted contributions.</p>
+</div>
+</section><section><h2 class="section-heading" id="ethical-considerations-in-ai-assisted-research">Ethical Considerations in AI-Assisted Research<a class="anchor" aria-label="anchor" href="#ethical-considerations-in-ai-assisted-research"></a></h2>
+<hr class="half-width"><div class="section level3">
+<h3 id="bias-in-ai-systems">Bias in AI Systems<a class="anchor" aria-label="anchor" href="#bias-in-ai-systems"></a></h3>
+<p>AI coding and research assistants can perpetuate or amplify biases
+present in their training data. This may result in outputs that:</p>
+<ul><li>Favour certain demographic groups over others</li>
+<li>Encode biased assumptions into code or analysis</li>
+<li>Fail to meet ethical, legal, or regulatory standards</li>
+</ul></div>
+<div class="section level3">
+<h3 id="avoid-over-trust-in-ai-and-keep-humans-in-control">Avoid Over-Trust in AI and Keep Humans in Control<a class="anchor" aria-label="anchor" href="#avoid-over-trust-in-ai-and-keep-humans-in-control"></a></h3>
+<p>One of the most common, and least discussed, biases in AI use is the
+tendency to over-value AI-generated outputs. Outputs from GPT systems
+often have an authoritative tone, influencing the extent to which you
+believe them, but it’s important to remember that they do not possess
+understanding, intent, or ethical awareness. Human judgement must remain
+at the centre of research, with AI tools used to support humans rather
+than override them.</p>
+<p>Researchers should avoid placing AI “on a pedestal” and instead:</p>
+<ul><li>Treat AI outputs as suggestions, not truths</li>
+<li>Emphasise the role of human creativity and critical thinking</li>
+<li>Remember that the researcher should take responsibility for an
+AI-generated code or other content they use</li>
+</ul></div>
+<div class="section level3">
+<h3 id="ethical-ai-framework">Ethical AI Framework<a class="anchor" aria-label="anchor" href="#ethical-ai-framework"></a></h3>
+<p>Vilas Dhar, a social entrepreneur focused on the ethical use of AI
+and president of the Patrick J. McGovern Foundation, proposed an Ethical
+AI Framework built on three pillars:</p>
+<ol style="list-style-type: decimal"><li>Responsible data practices</li>
+</ol><p>AI systems are only as ethical as the data they are trained on.
+Researchers should consider:</p>
+<ul><li>Where the training data comes from</li>
+<li>Whether it reflects historical or societal biases</li>
+<li>Whether those biases could be reproduced or amplified in AI
+outputs</li>
+</ul><ol start="2" style="list-style-type: decimal"><li>Boundaries around safe and appropriate use</li>
+</ol><p>Not all tasks are suitable for AI assistance. Ethical use requires
+clear boundaries around:</p>
+<ul><li>What decisions AI tools are allowed to influence</li>
+<li>What decisions must remain under human control</li>
+<li>How AI outputs are reviewed before being acted upon</li>
+<li>Whether the AI tool is appropriate for the task at hand</li>
+</ul><p>AI should support research, not replace human responsibility or
+accountability.</p>
+<ol start="3" style="list-style-type: decimal"><li>Ethical AI use depends on understanding how tools generate their
+recommendations. When AI systems operate as black boxes, it becomes
+difficult to assess validity, fairness, or risk. Researchers should
+ask:</li>
+</ol><ul><li>How did the tool arrive at this suggestion?</li>
+<li>What assumptions or patterns might be influencing the output?</li>
+<li>Can the result be independently validated?</li>
+</ul></div>
+</section><section><h2 class="section-heading" id="de-skilling-and-overdependence-on-ai-in-research-computing">De-skilling and Overdependence on AI in Research Computing<a class="anchor" aria-label="anchor" href="#de-skilling-and-overdependence-on-ai-in-research-computing"></a></h2>
 <hr class="half-width"></section><section><h2 class="section-heading" id="mitigating-risks-best-practices-for-responsible-ai-use-in-research">Mitigating Risks: Best Practices for Responsible AI Use in
 Research<a class="anchor" aria-label="anchor" href="#mitigating-risks-best-practices-for-responsible-ai-use-in-research"></a></h2>
 <hr class="half-width"></section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -508,6 +626,18 @@ I., Ayerdem, M., &amp; Tüzün, E. (2023). Evaluating the code quality of
 ai-assisted code generation tools: An empirical study on github copilot,
 amazon codewhisperer, and chatgpt. arXiv preprint
 arXiv:2304.10778.</a></li>
+<li><a href="https://www.gov.uk/government/consultations/copyright-and-artificial-intelligence/copyright-and-artificial-intelligence?utm_source=chatgpt.com" class="external-link">UK
+Government Consultation on Copyright and Artificial
+Intelligence</a></li>
+<li><a href="https://guides.library.duke.edu/citing/AI?utm_source=chatgpt.com" class="external-link">Duke
+University Libraries guide to citing artificial intelligence</a></li>
+<li><a href="https://cgsandesh.medium.com/ethical-ai-framework-by-vilas-dhar-6c3b243d587c" class="external-link">Ethical
+AI Framework by Vilas Dhar</a></li>
+<li><a href="https://www.linkedin.com/learning/what-is-generative-ai" class="external-link">What is
+Generative AI? - LinkedIn Learning</a></li>
+<li><a href="https://www.unep.org/news-and-stories/story/ai-has-environmental-problem-heres-what-world-can-do-about" class="external-link">AI
+has an environmental problem. Here’s what the world can do about
+that</a></li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -549,7 +679,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.18.3" class="external-link">sandpaper (0.18.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.9" class="external-link">varnish (1.0.9)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.18.4" class="external-link">sandpaper (0.18.4)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.9" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -571,8 +701,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/instructor/3-ethics-reliability-and-security.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/3-ethics-reliability-and-security.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-21",
-  "datePublished": "2026-01-21"
+  "dateModified": "2026-01-22",
+  "datePublished": "2026-01-22"
 }
 
   </script><script>
