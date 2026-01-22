@@ -511,6 +511,9 @@ However, there are a few important factors to bear in mind when using AI to tran
 5. Be aware of AI limitations - AI can only translate syntax and structure, it cannot verify the scientific correctness of the analysis.
 
 
+TODO: Challenge - which tasks will you use AI tools for when you next have to write some code for data analysis or software development?
+
+
 ## Integrating AI Tools into IDEs
 
 In this episode, we have used seperate interfaces to interact with AI and to run our code.  As of 2025 this was the most common way that researchers interacted with AI for coding assistance.  However, it is also possible to integrate AI into an environment you use to write and run code (known as an Integrated Development Environment or IDE).  For example, an AI assistant called GitHub Copilot can be integrated IDEs such as Visual Studio Code.  There are some advantages and disadvantages to this integrated approach: 
@@ -529,3 +532,5 @@ In this episode, we have used seperate interfaces to interact with AI and to run
 
 
 For training on IDE-integrated AI assistants see 'Developing Research Software with AI Tools'[link to course materials].  
+
+

@@ -97,10 +97,89 @@ AI systems can also be targets for people with bad intentions. Attackers may try
 
 ## Intellectual Property, Authorship, and Citation of AI-Generated Code and Text
 
+### Intellectual Property and Ownership
+
+Intellectual property rights (legal rights that protect creations of the mind) for AI-generated code are currently evolving. 
+
+Currently in the UK, if AI is used to assist a human creator, the content is the human's own intellectual creation and the copyright belongs to the human creator.
+
+If there is no human author, the “author” for copyright purposes is the person “by whom the arrangements necessary for the creation of the work are undertaken.” For AI-generated code, this means that if the code is truly without human creative input (for example produced entirely by an AI tool in response to a prompt without the author shaping or selecting the output creatively), the law would treat the person who set up the process (for example the user or developer who provided the prompts and triggered the AI) as the “author” of that computer-generated work.
+
+However, there's ongoing debate about how this practically applies to many forms of AI outputs, including software code, because:
+
+- The statutory language was drafted long before modern AI and may not map cleanly to current AI models.
+- UK authorities are actively consulting on whether to adjust or clarify how AI-generated works should be treated in copyright law.
+- Ownership can depend on contractual terms (such as developer agreements, employment contracts, or AI tool terms of service), which may assign rights to an employer or platform rather than the individual user.
+
+
+Separately from ownership of new AI outputs, generating code that replicates or contains substantial parts of copyrighted works without permission, such as code copied from existing proprietary systems, can infringe the copyright of others. AI models are trained on a vast amount of data that may include copyrighted material. While outputs from AI tools are typically novel, there is a risk that generated code or text may closely resemble existing sources. This could lead to copyright infringement claims, particularly in commercial or open-source contexts. If you use AI assistance with coding, you'll need to be cautious about the potential for this to occur. 
+
+### Authorship and Academic Credit
+
+AI tools can influence research outputs, so to what extent should their contribution be acknowledged? AI systems can't be authors but not disclosing their use can misrepresent the nature of the researchers' work and raise academic integrity questions.  
+
+Many journals, conferences and funding bodies now require for any use of AI to be disclosed.  Being transparent about the use of AI may also increase trust in the research community and support reproducibility of research.
+
+
+### Citation
+
+The outputs of AI aren't stable, they're likely to vary depending on prompt wording and the AI model version among other factors, so that can't be reliably cited in the same way as you would cite a research paper or software package. 
+
+Several universities and libraries recommend citing the tool used including version and date, describe how it was used and clearly distinguish between AI and human contributions.
+
+### Implications for Open Source and Reuse
+
+If AI-generated code is added to an open-source project, a licensing conflict may be accidentally introduced if the patterns or structures in the code are derived from software with incompatible licences.  Check the project's licence and contribution guidelines before making any AI-assisted contributions.
 
 
 ## Ethical Considerations in AI-Assisted Research
 
+### Bias in AI Systems
+
+AI coding and research assistants can perpetuate or amplify biases present in their training data. This may result in outputs that:
+
+- Favour certain demographic groups over others
+- Encode biased assumptions into code or analysis
+- Fail to meet ethical, legal, or regulatory standards
+
+### Avoid Over-Trust in AI and Keep Humans in Control
+
+One of the most common, and least discussed, biases in AI use is the tendency to over-value AI-generated outputs. Outputs from GPT systems often have an authoritative tone, influencing the extent to which you believe them, but it's important to remember that they do not possess understanding, intent, or ethical awareness.  Human judgement must remain at the centre of research, with AI tools used to support humans rather than override them.
+
+Researchers should avoid placing AI “on a pedestal” and instead:
+
+- Treat AI outputs as suggestions, not truths
+- Emphasise the role of human creativity and critical thinking
+- Remember that the researcher should take responsibility for an AI-generated code or other content they use
+
+### Ethical AI Framework
+
+Vilas Dhar, a social entrepreneur focused on the ethical use of AI and president of the Patrick J. McGovern Foundation, proposed an Ethical AI Framework built on three pillars:
+
+1. Responsible data practices
+
+AI systems are only as ethical as the data they are trained on. Researchers should consider:
+
+- Where the training data comes from
+- Whether it reflects historical or societal biases
+- Whether those biases could be reproduced or amplified in AI outputs
+
+2. Boundaries around safe and appropriate use
+
+Not all tasks are suitable for AI assistance. Ethical use requires clear boundaries around:
+
+- What decisions AI tools are allowed to influence
+- What decisions must remain under human control
+- How AI outputs are reviewed before being acted upon
+- Whether the AI tool is appropriate for the task at hand
+
+AI should support research, not replace human responsibility or accountability.
+
+3. Ethical AI use depends on understanding how tools generate their recommendations. When AI systems operate as black boxes, it becomes difficult to assess validity, fairness, or risk. Researchers should ask:
+
+- How did the tool arrive at this suggestion?
+- What assumptions or patterns might be influencing the output?
+- Can the result be independently validated?
 
 
 ## De-skilling and Overdependence on AI in Research Computing
@@ -117,4 +196,8 @@ AI systems can also be targets for people with bad intentions. Attackers may try
 - [AI-Assisted Coding with Codium, Ethical and Security Considerations](https://carpentries-incubator.github.io/gen-ai-coding/3-ethical-and-security-considerations.html)
 - [Perry, N., Srivastava, M., Kumar, D., & Boneh, D. (2023, November). Do users write more insecure code with ai assistants?. In Proceedings of the 2023 ACM SIGSAC conference on computer and communications security (pp. 2785-2799)](https://arxiv.org/pdf/2211.03622)
 - [Yetiştiren, B., Özsoy, I., Ayerdem, M., & Tüzün, E. (2023). Evaluating the code quality of ai-assisted code generation tools: An empirical study on github copilot, amazon codewhisperer, and chatgpt. arXiv preprint arXiv:2304.10778.](https://arxiv.org/pdf/2304.10778)
-
+- [UK Government Consultation on Copyright and Artificial Intelligence](https://www.gov.uk/government/consultations/copyright-and-artificial-intelligence/copyright-and-artificial-intelligence?utm_source=chatgpt.com)
+- [Duke University Libraries guide to citing artificial intelligence](https://guides.library.duke.edu/citing/AI?utm_source=chatgpt.com)
+- [Ethical AI Framework by Vilas Dhar](https://cgsandesh.medium.com/ethical-ai-framework-by-vilas-dhar-6c3b243d587c)
+- [What is Generative AI? - LinkedIn Learning](https://www.linkedin.com/learning/what-is-generative-ai)
+- [AI has an environmental problem.  Here's what the world can do about that](https://www.unep.org/news-and-stories/story/ai-has-environmental-problem-heres-what-world-can-do-about)
