@@ -11,6 +11,16 @@ Download the dataset we will work with by clicking here: [animals.csv](../episod
 
 Save it to your desktop or another easily accessible location. 
 
+::::::::::::::::::::::::::::::::::::: callout
+
+## Where does the data come from?
+
+The data we're working with comes from the [Portal Project](https://portal.weecology.org/), a long-term ecological study being conducted near Portal, Arizona. Since 1977, the site has been used to study interactions between rodents, ants and plants.
+
+For this workshop, we use a CSV file that is a subset of the teaching-focused Portal dataset. This version has been simplified by removing some of the complexities of the full dataset, making it more suitable for computational training and learning exercises.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Software Setup
 
 ### AI Tool
@@ -21,7 +31,7 @@ You need to be able to access an AI Chat tool such as [ChatGPT](https://chatgpt.
 
 To run the code examples used in this workshop, you will need a way to execute Python code on your computer.
 
-The instructor will be using **Jupyter Notebooks via Anaconda Navigator**. Unless you already have a preferred Python setup, we recommend installing **Anaconda Navigator** and running the examples using **Jupyter Notebooks** from within it. This provides a simple, self-contained environment with all required tools pre-installed.  Setup for University of Southampton computers and personal computers are in the blocks below:
+The instructor will be using **Jupyter Notebooks via Anaconda Navigator**. Unless you already have a preferred Python setup, we recommend installing **Anaconda Navigator** and running the examples using **Jupyter Notebooks** from within it. This provides a simple, self-contained environment with all required tools pre-installed.  Instructions to install Anaconda Navigator on University of Southampton computers and personal computers are in the blocks below:
 
 
 :::::::::::::::: spoiler
