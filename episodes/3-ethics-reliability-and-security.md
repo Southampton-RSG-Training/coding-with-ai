@@ -108,15 +108,12 @@ Note: Including security expectations in prompts requires knowledge of relevant 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Hidden Dependencies and Security Gaps
+
+### Third-Party Dependency Risks in AI-Generated Code
 
 AI tools will often generate code that includes external libraries or frameworks without checking whether they are secure and appropriate for your use case. This could lead to vulnerabilities in your code, licensing issues, or compatibility problems, which can cause problems later and be difficult to untangle or debug. 
 
-### Adversarial Attacks
-
-AI systems can also be targets for people with bad intentions. Attackers may try to influence training data or how the AI interprets user inputs so that AI tools suggest insecure patterns.  If these patterns are reused across many projects, insecure practices can spread quickly.
-
-
+AI hallucinations of third-party libraries can also be a security risk.  ChatGPT sometimes hallucinates non-existent coding libraries in its outputs. A [study by the security company Vulcan](https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/) identified a cyberattack technique where criminals could hijack these fake libraries by publishing a malicious package in place of the library and hoping developers would install the infected library based on the AI tool’s recommendation.
 
 
 ## Intellectual Property, Authorship, and Citation of AI-Generated Code and Text
@@ -279,3 +276,4 @@ Your guidelines could include:
 - [Ethical AI Framework by Vilas Dhar](https://cgsandesh.medium.com/ethical-ai-framework-by-vilas-dhar-6c3b243d587c)
 - [What is Generative AI? - LinkedIn Learning](https://www.linkedin.com/learning/what-is-generative-ai)
 - [Security Focused Guide for AI Code Assistant Instructions](https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions)
+- [ChatGPT Hallucinations Can Be Exploited to Distribute Malicious Code Packages](https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/)
