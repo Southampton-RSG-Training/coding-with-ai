@@ -39,17 +39,21 @@ For researchers, relying on AI-generated code carries significant risks. Incorre
 
 AI coding assistants can produce both random and systematic errors, threatening the reliability and reproducibility of your work. For instance, a [study conducted by researchers at Bilkent University](https://arxiv.org/pdf/2304.10778) found that GitHub Copilot generated correct code only 46.3% of the time. This underscores the danger of depending solely on AI tools for critical research tasks without careful review.
 
-**Outdated Results**
+### Outdated Results
+
 If the AI model's training data does not contain recent developments, AI-generated code can be outdated. This can be particularly problematic in fields such as software development and scientific research, where current knowledge is critical.
 
 For example, an AI might suggest a function from an open-source library that hasn't been well-maintained over the past few years. If the library has unpatched security flaws, these could propagate into the project.
 
-**Unreliable Results**
+### Unreliable Results
+
 AI models sometimes “hallucinate” information.  In the absence of relevant training data, a GPT model will fabricate information rather than saying it doesn't know. 
 
 For example, an artificial intelligence might suggest an optimisation that causes a memory leak or a system crash that, if unchecked by the developer, could lead to serious system failures in production environments.
 
-**Transparency and Explainability**: Many AI coding assistants function as “black boxes,” offering code suggestions without explaining the reasoning behind them. Without this insight, researchers may find it difficult to verify or trust the proposed solutions, increasing the risk of undetected errors propagating into experimental results.
+### Transparency and Explainability
+
+Many AI coding assistants function as “black boxes,” offering code suggestions without explaining the reasoning behind them. Without this insight, researchers may find it difficult to verify or trust the proposed solutions, increasing the risk of undetected errors propagating into experimental results.
 
 This lack of transparency has direct implications for research reproducibility. If the logic behind AI-generated code is unclear, other researchers may be unable to replicate your methods or results, even if the code appears to run correctly. There may be subtle errors or undocumented assumptions embedded in AI-generated solutions, which can lead to inconsistencies across experiments or datasets, leading to different results and undermining confidence in your findings.
 
@@ -73,23 +77,23 @@ This can be fantastic for developing a quite prototype or trying out an idea. Ho
 
 ## Data Privacy, Security Risks, and Confidentiality
 
-**Data Privacy and Confidentiality**
+### Data Privacy and Confidentiality
 
 AI tools such as chatGPT process and may retain user inputs.  Therefore, it's really important to be cautious that you don't accidentally share confidential code, sensitive datasets or proprietary research methods. Depending on the settings of your AI tool, the information you enter may be reused to improve the AI model and/or could resurface in future outputs, creating risks around intellectual property leakage, confidentiality breaches, or non-compliance with data protection regulations.
 
 When AI tools run in the cloud, your code or data may be transmitted to external servers. This increases the risk of exposure during transfer or through storage breaches. Even if data is anonymised, code structure and comments can still reveal sensitive details about research methods or system design.
 
-**Insecure AI-Generated Code**
+### Insecure AI-Generated Code
 
-AI assistants learn from large volumes of existing code—both good and bad. As a result, they may suggest insecure or outdated practices. A [2023 Stanford University study](https://arxiv.org/pdf/2211.03622) found that programmers who used AI assistants often produced less secure code but at the same time, felt more confident that it was secure - a risky combination!
+AI assistants learn from large volumes of existing code, and this code can contain both good and bad coding practices. As a result, they may suggest insecure or outdated practices. A [2023 Stanford University study](https://arxiv.org/pdf/2211.03622) found that programmers who used AI assistants often produced less secure code but at the same time, felt more confident that it was secure - a risky combination!
 
-For example, an AI tool might generate code that fails to properly validate user input, leaving the system open to issues like SQL injection or cross-site scripting. Because the code “looks right,” these problems can be missed.
+For example, an AI tool might generate code that fails to properly validate user input, leaving the system open to issues like SQL injection or cross-site scripting. This might be difficult to spot, and because the code looks right on the surface, these problems can be missed.
 
-**Hidden Dependencies and Security Gaps**
+### Hidden Dependencies and Security Gaps
 
 AI tools will often generate code that includes external libraries or frameworks without checking whether they are secure and appropriate for your use case. This could lead to vulnerabilities in your code, licensing issues, or compatibility problems, which can cause problems later and be difficult to untangle or debug. 
 
-**Adversarial Attacks**
+### Adversarial Attacks
 
 AI systems can also be targets for people with bad intentions. Attackers may try to influence training data or how the AI interprets user inputs so that AI tools suggest insecure patterns.  If these patterns are reused across many projects, insecure practices can spread quickly.
 
@@ -131,7 +135,6 @@ Several universities and libraries recommend citing the tool used including vers
 
 If AI-generated code is added to an open-source project, a licensing conflict may be accidentally introduced if the patterns or structures in the code are derived from software with incompatible licences.  Check the project's licence and contribution guidelines before making any AI-assisted contributions.
 
-
 ## Ethical Considerations in AI-Assisted Research
 
 ### Bias in AI Systems
@@ -146,7 +149,7 @@ AI coding and research assistants can perpetuate or amplify biases present in th
 
 One of the most common, and least discussed, biases in AI use is the tendency to over-value AI-generated outputs. Outputs from GPT systems often have an authoritative tone, influencing the extent to which you believe them, but it's important to remember that they do not possess understanding, intent, or ethical awareness.  Human judgement must remain at the centre of research, with AI tools used to support humans rather than override them.
 
-Researchers should avoid placing AI “on a pedestal” and instead:
+Researchers should avoid placing AI on a pedestal and instead:
 
 - Treat AI outputs as suggestions, not truths
 - Emphasise the role of human creativity and critical thinking
@@ -175,7 +178,7 @@ Not all tasks are suitable for AI assistance. Ethical use requires clear boundar
 
 AI should support research, not replace human responsibility or accountability.
 
-3. Ethical AI use depends on understanding how tools generate their recommendations. When AI systems operate as black boxes, it becomes difficult to assess validity, fairness, or risk. Researchers should ask:
+3. Ethical AI use depends on understanding how tools generate their recommendations. When AI systems operate as black boxes, it becomes difficult to assess validity, fairness, or risk. Humans should ask:
 
 - How did the tool arrive at this suggestion?
 - What assumptions or patterns might be influencing the output?
@@ -184,12 +187,67 @@ AI should support research, not replace human responsibility or accountability.
 
 ## De-skilling and Overdependence on AI in Research Computing
 
+AI tools can significantly enhance productivity in research computing, but excessive reliance on them introduces risks to research quality, integrity, and long-term capability.
 
+### Risks of De-skilling
 
+Over-reliance on AI for coding can lead researchers to lose, or fail to develop, core technical skills. When you do not fully understand the code you use, you can't reliably verify whether AI-generated outputs are correct, robust, or appropriate for their research context. As a result, this may reduce confidence in the validity of published findings. 
+
+In addition to technical skills, excessive use of AI may also reduce your critical evaluation skills. AI-generated code often appears plausible, confident and well-structured, which can encourage blind acceptance. This means that subtle errors, hidden assumptions, or inappropriate methods may go unnoticed, particularly when your code gets more complex.
+
+There are also long-term implications for the research community. If researchers become dependent on AI tools for fundamental software development tasks, institutions risk losing the collective ability to design, build, and maintain research software independently. This creates problem if tools become unavailable, restricted, or unsuitable for specific research needs.
+
+### AI as a Tool, Not a Replacement
+
+AI should be understood as a productivity tool that can accelerate routine tasks and support problem-solving. Used thoughtfully, AI can help explore ideas, generate boilerplate code, or suggest alternative approaches.
+
+However, maintaining human creativity and judgement is especially critical in research, where novelty, insight, and deep understanding often matter more than speed. AI can assist, but it cannot define research questions, interpret results, or make ethical and methodological decisions.
 
 ## Mitigating Risks: Best Practices for Responsible AI Use in Research
 
+Responsible use of AI coding assistants requires a combination of ethical awareness, technical safeguards, and disciplined research practice. Here are some examples of ethical best practices, practices to support research reproducibility and scientific validity, and some security measures that you may put in place when using AI to assist with research coding.
 
+### Ethical Best Practices
+
+- **Maintain human oversight:** Researchers must critically evaluate all AI-generated outputs, remaining alert to potential bias, errors, or inappropriate assumptions.
+- **Test and validate rigorously:** AI-generated code should be treated as untrusted by default. Apply thorough testing and validation to ensure correctness, reliability, and fitness for purpose.
+- **Protect sensitive data:** Avoid submitting proprietary code, confidential data, or sensitive research materials to online AI tools. If you use these materials for your research and have decided to use AI, you may want to investigate locally hosted or offline AI assistants to reduce data exposure risks.
+- **Define clear usage guidelines:** Establish and follow explicit policies for AI use in research computing. These may draw on recognised frameworks such as the [ACM Code of Ethics](https://www.acm.org/code-of-ethics) or the [European Commission’s Ethical Guidelines on AI](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai), alongside institution-specific policies.
+
+### Supporting Reproducibility and Scientific Validity
+
+To maintain transparency, reproducibility, and scientific validity when using AI tools, researchers should:
+
+- **Document AI involvement:** Record when, how, and why AI-generated suggestions were used or modified.
+- **Validate against known results:** Test AI-generated code using benchmarks, reference datasets, or established methods before integration.
+- **Combine AI with domain expertise:** Use AI to support human judgement and subject-matter knowledge, rather than replacing them.
+
+### Security Measures
+
+- **Mandatory code review:** Review all AI-generated code, ideally using standard code review processes, to identify vulnerabilities, logic errors, or unsafe practices.
+- **Secure development practices:** If you're working on a larger piece of research software, integrate security testing tools into development workflows and ensure researchers are trained in secure coding principles.
+- **Protect access and data:** Use access controls and encryption to safeguard codebases and datasets from unauthorised access by AI tools.
+
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Personal Ethics and Security Policy
+
+Write a short personal policy outlining how you will use AI tools responsibly when coding. Include at least **three clear guidelines**.
+
+:::::::::::::::::::::::: solution 
+Your guidelines could include:
+
+- Always document when and how AI tools are used.
+- Make sure I understand any code generated by AI before using it for my research.
+- Never input sensitive, personal, or proprietary data into AI systems.
+- Take full responsibility for my research code, even when it is AI generated. 
+- Maintain my critical thinking and decision making skills, never allow AI to do these things for me.
+
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ## References
