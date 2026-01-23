@@ -89,6 +89,25 @@ AI assistants learn from large volumes of existing code, and this code can conta
 
 For example, an AI tool might generate code that fails to properly validate user input, leaving the system open to issues like SQL injection or cross-site scripting. This might be difficult to spot, and because the code looks right on the surface, these problems can be missed.
 
+If you are aware of security considerations relevant to your code, include them in your prompt to help ensure the AI generates more secure code.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## Embed a 'security conscience' into the AI
+
+A Security-Focused Guide for AI Code Assistant Instructions was written by the OpenSSF Best Practices and the AI/ML Working Groups.  The guide suggests ways that you can improve the security of AI-generated code by deliberately embedding security expectations into the prompts.  These might include:
+
+- Secure coding best practices that are relevant for your code (e.g. Input validation and output encoding, error handling and logging, secure defaults and configurations, testing for security)
+- Reminders of software supply chain security (i.e. security of suggested third-party libraries and dependencies)
+- Address relevant platform and runtime security considerations (e.g. operating system, deployment considerations, mobile app security)
+- Language-specific security considerations
+- Pointing the AI toward relevant security standards and frameworks
+
+Note: Including security expectations in prompts requires knowledge of relevant software security practices, so is outside the scope of this novice course.  However, it's worth bearing in mind if you're interested in developing research software. 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ### Hidden Dependencies and Security Gaps
 
 AI tools will often generate code that includes external libraries or frameworks without checking whether they are secure and appropriate for your use case. This could lead to vulnerabilities in your code, licensing issues, or compatibility problems, which can cause problems later and be difficult to untangle or debug. 
@@ -96,6 +115,7 @@ AI tools will often generate code that includes external libraries or frameworks
 ### Adversarial Attacks
 
 AI systems can also be targets for people with bad intentions. Attackers may try to influence training data or how the AI interprets user inputs so that AI tools suggest insecure patterns.  If these patterns are reused across many projects, insecure practices can spread quickly.
+
 
 
 
@@ -258,4 +278,4 @@ Your guidelines could include:
 - [Duke University Libraries guide to citing artificial intelligence](https://guides.library.duke.edu/citing/AI?utm_source=chatgpt.com)
 - [Ethical AI Framework by Vilas Dhar](https://cgsandesh.medium.com/ethical-ai-framework-by-vilas-dhar-6c3b243d587c)
 - [What is Generative AI? - LinkedIn Learning](https://www.linkedin.com/learning/what-is-generative-ai)
-- [AI has an environmental problem.  Here's what the world can do about that](https://www.unep.org/news-and-stories/story/ai-has-environmental-problem-heres-what-world-can-do-about)
+- [Security Focused Guide for AI Code Assistant Instructions](https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions)
