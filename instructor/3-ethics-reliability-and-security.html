@@ -489,6 +489,40 @@ validate user input, leaving the system open to issues like SQL
 injection or cross-site scripting. This might be difficult to spot, and
 because the code looks right on the surface, these problems can be
 missed.</p>
+<p>If you are aware of security considerations relevant to your code,
+include them in your prompt to help ensure the AI generates more secure
+code.</p>
+<div id="embed-a-security-conscience-into-the-ai" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="embed-a-security-conscience-into-the-ai" class="callout-inner">
+<h3 class="callout-title">Embed a ‘security conscience’ into the AI</h3>
+<div class="callout-content">
+<p>A Security-Focused Guide for AI Code Assistant Instructions was
+written by the OpenSSF Best Practices and the AI/ML Working Groups. The
+guide suggests ways that you can improve the security of AI-generated
+code by deliberately embedding security expectations into the prompts.
+These might include:</p>
+<ul><li>Secure coding best practices that are relevant for your code
+(e.g. Input validation and output encoding, error handling and logging,
+secure defaults and configurations, testing for security)</li>
+<li>Reminders of software supply chain security (i.e. security of
+suggested third-party libraries and dependencies)</li>
+<li>Address relevant platform and runtime security considerations
+(e.g. operating system, deployment considerations, mobile app
+security)</li>
+<li>Language-specific security considerations</li>
+<li>Pointing the AI toward relevant security standards and
+frameworks</li>
+</ul><p>Note: Including security expectations in prompts requires knowledge
+of relevant software security practices, so is outside the scope of this
+novice course. However, it’s worth bearing in mind if you’re interested
+in developing research software.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="hidden-dependencies-and-security-gaps">Hidden Dependencies and Security Gaps<a class="anchor" aria-label="anchor" href="#hidden-dependencies-and-security-gaps"></a></h3>
@@ -745,7 +779,7 @@ guidelines</strong>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Your guidelines could include:</p>
 <ul><li>Always document when and how AI tools are used.</li>
@@ -784,9 +818,8 @@ University Libraries guide to citing artificial intelligence</a></li>
 AI Framework by Vilas Dhar</a></li>
 <li><a href="https://www.linkedin.com/learning/what-is-generative-ai" class="external-link">What is
 Generative AI? - LinkedIn Learning</a></li>
-<li><a href="https://www.unep.org/news-and-stories/story/ai-has-environmental-problem-heres-what-world-can-do-about" class="external-link">AI
-has an environmental problem. Here’s what the world can do about
-that</a></li>
+<li><a href="https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions" class="external-link">Security
+Focused Guide for AI Code Assistant Instructions</a></li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
