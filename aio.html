@@ -705,7 +705,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-2-ai-assisted-coding"><p>Content from <a href="2-ai-assisted-coding.html">AI-Assisted Coding</a></p>
 <hr>
-<p>Last updated on 2026-01-22 |
+<p>Last updated on 2026-01-23 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/2-ai-assisted-coding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -763,16 +763,104 @@ obscure understanding or introduce errors.</li>
 Development<a class="anchor" aria-label="anchor" href="#why-understanding-still-matters-the-limits-of-ai-driven-software-development"></a>
 </h2>
 <hr class="half-width">
-<p><strong>Scenario</strong>: You’ve collected some data on the animal
-species found within plots of land at a study site. Your colleague wants
-some plots of the data as quickly as possible so that she can present
-them at an upcoming seminar. You know that matplotlib is a plotting
-library in python but you’re not quite sure how to use it, so you decide
-to ask AI to make the plot for you.</p>
-<p>Open an AI chat interface and prompt the AI to ‘Generate some code to
-create a plot of hindfoot_length vs weight, colour by species_id.
-Include only species with over 100 observations. The data is in a csv
-file called animals.csv. Use Python and Matplotlib.’</p>
+<p><strong>Scenario</strong>: Imagine, your research team has collected
+some data on the animal species found within plots of land at a study
+site.</p>
+<p>Download the data from here: <a href="data/animals.csv">animals.csv</a></p>
+<p>The dataset is stored as a comma separated value (CSV) file. You can
+open the csv file in excel or a similar spreadsheet tool and have a look
+at the data. You’ll see the variable names in the top row of the
+spreadsheet. Each row holds information for a single animal, and the
+columns represent:</p>
+<table class="table">
+<thead><tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>record_id</td>
+<td>Unique id for the observation</td>
+</tr>
+<tr class="even">
+<td>month</td>
+<td>month of observation</td>
+</tr>
+<tr class="odd">
+<td>day</td>
+<td>day of observation</td>
+</tr>
+<tr class="even">
+<td>year</td>
+<td>year of observation</td>
+</tr>
+<tr class="odd">
+<td>plot_id</td>
+<td>ID of a particular plot</td>
+</tr>
+<tr class="even">
+<td>species_id</td>
+<td>2-letter code</td>
+</tr>
+<tr class="odd">
+<td>sex</td>
+<td>sex of animal (“M”, “F”)</td>
+</tr>
+<tr class="even">
+<td>hindfoot_length</td>
+<td>length of the hindfoot in mm</td>
+</tr>
+<tr class="odd">
+<td>weight</td>
+<td>weight of the animal in grams</td>
+</tr>
+<tr class="even">
+<td>genus</td>
+<td>genus of animal</td>
+</tr>
+<tr class="odd">
+<td>species</td>
+<td>species of animal</td>
+</tr>
+<tr class="even">
+<td>taxon</td>
+<td>e.g. Rodent, Reptile, Bird, Rabbit</td>
+</tr>
+<tr class="odd">
+<td>plot_type</td>
+<td>type of plot</td>
+</tr>
+</tbody>
+</table>
+<div id="where-does-the-data-come-from" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="where-does-the-data-come-from" class="callout-inner">
+<h3 class="callout-title">Where does the data come from?</h3>
+<div class="callout-content">
+<p>The data we’re working with comes from the <a href="https://portal.weecology.org/" class="external-link">Portal Project</a>, a long-term
+ecological study being conducted near Portal, Arizona. Since 1977, the
+site has been used to study interactions between rodents, ants and
+plants.</p>
+<p>For this scenario, we use a CSV file that is a subset of the
+teaching-focused Portal dataset. This version has been simplified by
+removing some of the complexities of the full dataset, making it more
+suitable for computational training and learning exercises.</p>
+</div>
+</div>
+</div>
+<p>Your colleague wants some plots of the data as quickly as possible so
+that she can present them at an upcoming seminar. You know that
+matplotlib is a plotting library in python but you’re not quite sure how
+to use it, so you decide to ask AI to make the plot for you.</p>
+<p>Open an AI chat interface (such as ChatGPT or Microsoft CoPilot) and
+prompt the AI to:</p>
+<p>‘Generate some code to create a plot of hindfoot_length vs weight,
+colour by species_id. Include only species with over 100 observations.
+The data is in a csv file called animals.csv. Use Python and
+Matplotlib.’</p>
 <ul>
 <li>Open anaconda navigator and launch jupyter notebooks.</li>
 <li>Navigate to the folder where you will save your Jupyter
@@ -782,22 +870,11 @@ notebook.</li>
 <li>Paste the AI-generated code into a code chunk in the Jupyter
 notebook and run the code.</li>
 </ul>
-<div id="callout1" class="callout">
+<div id="challenge1" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>TODO: where this data comes from</p>
-</div>
-</div>
-</div>
-<div id="discussion1" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
+<span class="callout-header">Challenge</span>
 <div class="callout-inner">
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
@@ -806,6 +883,13 @@ document.</p>
 </div>
 </div>
 </div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
 <p>Artificial intelligence tools can generate code quickly and often
 convincingly. For researchers who are new to programming, this can be
 appealing: it may seem efficient to delegate the entire task of software
@@ -869,6 +953,10 @@ process.</li>
 </ul>
 <p>Relying heavily on AI may also conflict with institutional policies
 on research integrity or responsible use of AI.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="appropriate-roles-for-ai-when-writing-research-code">Appropriate Roles for AI when Writing Research Code<a class="anchor" aria-label="anchor" href="#appropriate-roles-for-ai-when-writing-research-code"></a>
@@ -1073,12 +1161,12 @@ code, then apply the fix and verify that the code runs as expected.</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1282,12 +1370,12 @@ help you understand what the function does.</li>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Prompt: Generate a docstring for the following function:</p>
 <div class="codewrapper sourceCode" id="cb8">
