@@ -308,7 +308,7 @@ Research</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Ethics, Reliability and Security Considerations</h1>
-        <p>Last updated on 2026-01-22 |
+        <p>Last updated on 2026-01-23 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-ethics-reliability-and-security.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -391,28 +391,34 @@ by researchers at Bilkent University</a> found that GitHub Copilot
 generated correct code only 46.3% of the time. This underscores the
 danger of depending solely on AI tools for critical research tasks
 without careful review.</p>
-<p><strong>Outdated Results</strong> If the AI model’s training data
-does not contain recent developments, AI-generated code can be outdated.
-This can be particularly problematic in fields such as software
-development and scientific research, where current knowledge is
-critical.</p>
+<div class="section level3">
+<h3 id="outdated-results">Outdated Results<a class="anchor" aria-label="anchor" href="#outdated-results"></a></h3>
+<p>If the AI model’s training data does not contain recent developments,
+AI-generated code can be outdated. This can be particularly problematic
+in fields such as software development and scientific research, where
+current knowledge is critical.</p>
 <p>For example, an AI might suggest a function from an open-source
 library that hasn’t been well-maintained over the past few years. If the
 library has unpatched security flaws, these could propagate into the
 project.</p>
-<p><strong>Unreliable Results</strong> AI models sometimes “hallucinate”
-information. In the absence of relevant training data, a GPT model will
-fabricate information rather than saying it doesn’t know.</p>
+</div>
+<div class="section level3">
+<h3 id="unreliable-results">Unreliable Results<a class="anchor" aria-label="anchor" href="#unreliable-results"></a></h3>
+<p>AI models sometimes “hallucinate” information. In the absence of
+relevant training data, a GPT model will fabricate information rather
+than saying it doesn’t know.</p>
 <p>For example, an artificial intelligence might suggest an optimisation
 that causes a memory leak or a system crash that, if unchecked by the
 developer, could lead to serious system failures in production
 environments.</p>
-<p><strong>Transparency and Explainability</strong>: Many AI coding
-assistants function as “black boxes,” offering code suggestions without
-explaining the reasoning behind them. Without this insight, researchers
-may find it difficult to verify or trust the proposed solutions,
-increasing the risk of undetected errors propagating into experimental
-results.</p>
+</div>
+<div class="section level3">
+<h3 id="transparency-and-explainability">Transparency and Explainability<a class="anchor" aria-label="anchor" href="#transparency-and-explainability"></a></h3>
+<p>Many AI coding assistants function as “black boxes,” offering code
+suggestions without explaining the reasoning behind them. Without this
+insight, researchers may find it difficult to verify or trust the
+proposed solutions, increasing the risk of undetected errors propagating
+into experimental results.</p>
 <p>This lack of transparency has direct implications for research
 reproducibility. If the logic behind AI-generated code is unclear, other
 researchers may be unable to replicate your methods or results, even if
@@ -450,8 +456,10 @@ them more time-consuming and costly to fix.</li>
 </ul></div>
 </div>
 </div>
+</div>
 </section><section><h2 class="section-heading" id="data-privacy-security-risks-and-confidentiality">Data Privacy, Security Risks, and Confidentiality<a class="anchor" aria-label="anchor" href="#data-privacy-security-risks-and-confidentiality"></a></h2>
-<hr class="half-width"><p><strong>Data Privacy and Confidentiality</strong></p>
+<hr class="half-width"><div class="section level3">
+<h3 id="data-privacy-and-confidentiality">Data Privacy and Confidentiality<a class="anchor" aria-label="anchor" href="#data-privacy-and-confidentiality"></a></h3>
 <p>AI tools such as chatGPT process and may retain user inputs.
 Therefore, it’s really important to be cautious that you don’t
 accidentally share confidential code, sensitive datasets or proprietary
@@ -465,28 +473,37 @@ to external servers. This increases the risk of exposure during transfer
 or through storage breaches. Even if data is anonymised, code structure
 and comments can still reveal sensitive details about research methods
 or system design.</p>
-<p><strong>Insecure AI-Generated Code</strong></p>
-<p>AI assistants learn from large volumes of existing code—both good and
-bad. As a result, they may suggest insecure or outdated practices. A <a href="https://arxiv.org/pdf/2211.03622" class="external-link">2023 Stanford University
+</div>
+<div class="section level3">
+<h3 id="insecure-ai-generated-code">Insecure AI-Generated Code<a class="anchor" aria-label="anchor" href="#insecure-ai-generated-code"></a></h3>
+<p>AI assistants learn from large volumes of existing code, and this
+code can contain both good and bad coding practices. As a result, they
+may suggest insecure or outdated practices. A <a href="https://arxiv.org/pdf/2211.03622" class="external-link">2023 Stanford University
 study</a> found that programmers who used AI assistants often produced
 less secure code but at the same time, felt more confident that it was
 secure - a risky combination!</p>
 <p>For example, an AI tool might generate code that fails to properly
 validate user input, leaving the system open to issues like SQL
-injection or cross-site scripting. Because the code “looks right,” these
-problems can be missed.</p>
-<p><strong>Hidden Dependencies and Security Gaps</strong></p>
+injection or cross-site scripting. This might be difficult to spot, and
+because the code looks right on the surface, these problems can be
+missed.</p>
+</div>
+<div class="section level3">
+<h3 id="hidden-dependencies-and-security-gaps">Hidden Dependencies and Security Gaps<a class="anchor" aria-label="anchor" href="#hidden-dependencies-and-security-gaps"></a></h3>
 <p>AI tools will often generate code that includes external libraries or
 frameworks without checking whether they are secure and appropriate for
 your use case. This could lead to vulnerabilities in your code,
 licensing issues, or compatibility problems, which can cause problems
 later and be difficult to untangle or debug.</p>
-<p><strong>Adversarial Attacks</strong></p>
+</div>
+<div class="section level3">
+<h3 id="adversarial-attacks">Adversarial Attacks<a class="anchor" aria-label="anchor" href="#adversarial-attacks"></a></h3>
 <p>AI systems can also be targets for people with bad intentions.
 Attackers may try to influence training data or how the AI interprets
 user inputs so that AI tools suggest insecure patterns. If these
 patterns are reused across many projects, insecure practices can spread
 quickly.</p>
+</div>
 </section><section><h2 class="section-heading" id="intellectual-property-authorship-and-citation-of-ai-generated-code-and-text">Intellectual Property, Authorship, and Citation of AI-Generated Code
 and Text<a class="anchor" aria-label="anchor" href="#intellectual-property-authorship-and-citation-of-ai-generated-code-and-text"></a></h2>
 <hr class="half-width"><div class="section level3">
@@ -573,7 +590,7 @@ believe them, but it’s important to remember that they do not possess
 understanding, intent, or ethical awareness. Human judgement must remain
 at the centre of research, with AI tools used to support humans rather
 than override them.</p>
-<p>Researchers should avoid placing AI “on a pedestal” and instead:</p>
+<p>Researchers should avoid placing AI on a pedestal and instead:</p>
 <ul><li>Treat AI outputs as suggestions, not truths</li>
 <li>Emphasise the role of human creativity and critical thinking</li>
 <li>Remember that the researcher should take responsibility for an
@@ -602,16 +619,148 @@ clear boundaries around:</p>
 accountability.</p>
 <ol start="3" style="list-style-type: decimal"><li>Ethical AI use depends on understanding how tools generate their
 recommendations. When AI systems operate as black boxes, it becomes
-difficult to assess validity, fairness, or risk. Researchers should
-ask:</li>
+difficult to assess validity, fairness, or risk. Humans should ask:</li>
 </ol><ul><li>How did the tool arrive at this suggestion?</li>
 <li>What assumptions or patterns might be influencing the output?</li>
 <li>Can the result be independently validated?</li>
 </ul></div>
 </section><section><h2 class="section-heading" id="de-skilling-and-overdependence-on-ai-in-research-computing">De-skilling and Overdependence on AI in Research Computing<a class="anchor" aria-label="anchor" href="#de-skilling-and-overdependence-on-ai-in-research-computing"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="mitigating-risks-best-practices-for-responsible-ai-use-in-research">Mitigating Risks: Best Practices for Responsible AI Use in
+<hr class="half-width"><p>AI tools can significantly enhance productivity in research
+computing, but excessive reliance on them introduces risks to research
+quality, integrity, and long-term capability.</p>
+<div class="section level3">
+<h3 id="risks-of-de-skilling">Risks of De-skilling<a class="anchor" aria-label="anchor" href="#risks-of-de-skilling"></a></h3>
+<p>Over-reliance on AI for coding can lead researchers to lose, or fail
+to develop, core technical skills. When you do not fully understand the
+code you use, you can’t reliably verify whether AI-generated outputs are
+correct, robust, or appropriate for their research context. As a result,
+this may reduce confidence in the validity of published findings.</p>
+<p>In addition to technical skills, excessive use of AI may also reduce
+your critical evaluation skills. AI-generated code often appears
+plausible, confident and well-structured, which can encourage blind
+acceptance. This means that subtle errors, hidden assumptions, or
+inappropriate methods may go unnoticed, particularly when your code gets
+more complex.</p>
+<p>There are also long-term implications for the research community. If
+researchers become dependent on AI tools for fundamental software
+development tasks, institutions risk losing the collective ability to
+design, build, and maintain research software independently. This
+creates problem if tools become unavailable, restricted, or unsuitable
+for specific research needs.</p>
+</div>
+<div class="section level3">
+<h3 id="ai-as-a-tool-not-a-replacement">AI as a Tool, Not a Replacement<a class="anchor" aria-label="anchor" href="#ai-as-a-tool-not-a-replacement"></a></h3>
+<p>AI should be understood as a productivity tool that can accelerate
+routine tasks and support problem-solving. Used thoughtfully, AI can
+help explore ideas, generate boilerplate code, or suggest alternative
+approaches.</p>
+<p>However, maintaining human creativity and judgement is especially
+critical in research, where novelty, insight, and deep understanding
+often matter more than speed. AI can assist, but it cannot define
+research questions, interpret results, or make ethical and
+methodological decisions.</p>
+</div>
+</section><section><h2 class="section-heading" id="mitigating-risks-best-practices-for-responsible-ai-use-in-research">Mitigating Risks: Best Practices for Responsible AI Use in
 Research<a class="anchor" aria-label="anchor" href="#mitigating-risks-best-practices-for-responsible-ai-use-in-research"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><p>Responsible use of AI coding assistants requires a combination of
+ethical awareness, technical safeguards, and disciplined research
+practice. Here are some examples of ethical best practices, practices to
+support research reproducibility and scientific validity, and some
+security measures that you may put in place when using AI to assist with
+research coding.</p>
+<div class="section level3">
+<h3 id="ethical-best-practices">Ethical Best Practices<a class="anchor" aria-label="anchor" href="#ethical-best-practices"></a></h3>
+<ul><li>
+<strong>Maintain human oversight:</strong> Researchers must
+critically evaluate all AI-generated outputs, remaining alert to
+potential bias, errors, or inappropriate assumptions.</li>
+<li>
+<strong>Test and validate rigorously:</strong> AI-generated code
+should be treated as untrusted by default. Apply thorough testing and
+validation to ensure correctness, reliability, and fitness for
+purpose.</li>
+<li>
+<strong>Protect sensitive data:</strong> Avoid submitting
+proprietary code, confidential data, or sensitive research materials to
+online AI tools. If you use these materials for your research and have
+decided to use AI, you may want to investigate locally hosted or offline
+AI assistants to reduce data exposure risks.</li>
+<li>
+<strong>Define clear usage guidelines:</strong> Establish and follow
+explicit policies for AI use in research computing. These may draw on
+recognised frameworks such as the <a href="https://www.acm.org/code-of-ethics" class="external-link">ACM Code of Ethics</a> or the
+<a href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai" class="external-link">European
+Commission’s Ethical Guidelines on AI</a>, alongside
+institution-specific policies.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="supporting-reproducibility-and-scientific-validity">Supporting Reproducibility and Scientific Validity<a class="anchor" aria-label="anchor" href="#supporting-reproducibility-and-scientific-validity"></a></h3>
+<p>To maintain transparency, reproducibility, and scientific validity
+when using AI tools, researchers should:</p>
+<ul><li>
+<strong>Document AI involvement:</strong> Record when, how, and why
+AI-generated suggestions were used or modified.</li>
+<li>
+<strong>Validate against known results:</strong> Test AI-generated
+code using benchmarks, reference datasets, or established methods before
+integration.</li>
+<li>
+<strong>Combine AI with domain expertise:</strong> Use AI to support
+human judgement and subject-matter knowledge, rather than replacing
+them.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="security-measures">Security Measures<a class="anchor" aria-label="anchor" href="#security-measures"></a></h3>
+<ul><li>
+<strong>Mandatory code review:</strong> Review all AI-generated
+code, ideally using standard code review processes, to identify
+vulnerabilities, logic errors, or unsafe practices.</li>
+<li>
+<strong>Secure development practices:</strong> If you’re working on
+a larger piece of research software, integrate security testing tools
+into development workflows and ensure researchers are trained in secure
+coding principles.</li>
+<li>
+<strong>Protect access and data:</strong> Use access controls and
+encryption to safeguard codebases and datasets from unauthorised access
+by AI tools.</li>
+</ul><div id="personal-ethics-and-security-policy" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="personal-ethics-and-security-policy" class="callout-inner">
+<h3 class="callout-title">Personal Ethics and Security Policy</h3>
+<div class="callout-content">
+<p>Write a short personal policy outlining how you will use AI tools
+responsibly when coding. Include at least <strong>three clear
+guidelines</strong>.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Your guidelines could include:</p>
+<ul><li>Always document when and how AI tools are used.</li>
+<li>Make sure I understand any code generated by AI before using it for
+my research.</li>
+<li>Never input sensitive, personal, or proprietary data into AI
+systems.</li>
+<li>Take full responsibility for my research code, even when it is AI
+generated.</li>
+<li>Maintain my critical thinking and decision making skills, never
+allow AI to do these things for me.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
 <hr class="half-width"><ul><li><a href="https://carpentries-incubator.github.io/gen-ai-coding/3-ethical-and-security-considerations.html" class="external-link">AI-Assisted
 Coding with Codium, Ethical and Security Considerations</a></li>
 <li><a href="https://arxiv.org/pdf/2211.03622" class="external-link">Perry, N., Srivastava,
@@ -699,8 +848,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/3-ethics-reliability-and-security.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/3-ethics-reliability-and-security.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-22",
-  "datePublished": "2026-01-22"
+  "dateModified": "2026-01-23",
+  "datePublished": "2026-01-23"
 }
 
   </script><script>
