@@ -135,9 +135,9 @@ Appropriate uses of AI include:
 
 - Explaining unfamiliar concepts, terminology or programming frameworks.
 - Helping you to spot bugs (problems) in your code and suggesting possible fixes.
-- Helping to translate ideas into a starting implementation
 - Writing boilerplate code (standard structures for functions, modules etc.)
 - Supporting you to write technical documentation. 
+- Helping to translate ideas into a starting implementation or prototype
 
 In the rest of this episode, we'll walk through these ways that AI can assist you with coding. 
 
@@ -297,16 +297,19 @@ In this case the filename is misspelled as 'animal.csv' rather than 'animals.csv
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## Code Generation and Refactoring
+## Code Generation
+
 
 ### Boilerplate
+
+AI can be particularly useful for some coding tasks that are tedious and repetitive such as writing boilerplate code, restructuring code into functions, and generating code documentation.
 
 Boilerplate code is a term used to describe standard code structures that are repeated in multiple places with little variation. Examples of boilerplate code across a few different contexts include:
 
 - Templates for function/class definitions
 - Bash script skeleton
 - Web page structure in HTML
-- Functional component in Reach
+- Functional component in React
 - Unit test template
 
 Using AI to generate boilerplate code can save researchers time with minimal risk, allowing them to spend their time and effort focusing on the intent of the analysis rather than the programming language's syntax. 
@@ -497,6 +500,111 @@ Example AI - generated docstring:
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Code Generation for Rapid Prototyping
+
+AI can allow you to generate first drafts or prototypes of code very quickly.  You can treat these as a starting point but make sure to validate everything and handcraft the final product carefully. 
+
+It's important to write prompts that are specific and context-rich. Clearly define your requirements, including any libraries, frameworks, or constraints.
+
+AI coding tools lack human intuition and situational awareness, so they can only produce the intended results when given detailed, explicit instructions.
+
+It can be helpful to use an iterative process when generating code with AI tools to ensure you get the most relevant output.  This process may include:
+
+- Breaking your task down into steps
+- Creating a specific prompt
+- Generating the code
+- Reviewing the generated code
+- If you’re not happy with the code, editing the prompt and repeating steps 3-5
+
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Generating code prototypes specifically and iteratively
+
+Imagine you'd like to explore the animals dataset by visualising some other variables of your data.  You could use AI to generate first drafts of these plots quickly, before spending more time investigating the variables of interest. 
+
+Using the animals data, create a line plot of the number of observations per year for each genus. (note: the relevant column names are `year` and `genus`).
+
+Generate the code for a first draft of this plot.  Remember:
+
+- Break the task down into steps.
+- Craft a specific prompt including all your requirements and the libraries you want to use. 
+- Review the code and run it.  
+- If necessary, edit the prompt and re-generate. 
+
+:::::::::::::::::::::::: solution 
+
+**Break the task down into steps**
+
+- Load the data
+- Count the number of observations of each genus in each year
+- Produce a line plot of the data
+
+**Create a specific prompt**
+
+"Generate code in Python, using the packages Pandas and MatplotLib, that will do the following: Load the data from animals.csv which is in the same folder as the code. Count the number of observations of each genus in each year. The names of these columns are 'genus' and 'year'. Produce a line plot of the number of observations of each genus, with year on the x axis and number of observations on the y axis. Each line should represent a different genus and should be differently coloured, according to a colourblind-friendly colour palette. Show the plot."
+
+**Review and run the code**
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the CSV file in the same directory
+df = pd.read_csv("animals.csv")
+
+# Count the number of observations for each genus in each year
+counts = (
+    df.groupby(["year", "genus"])
+      .size()
+      .unstack(fill_value=0)
+      .sort_index()
+)
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+
+# Use a colorblind-friendly palette (matplotlib's 'tab10')
+color_cycle = plt.get_cmap("tab10").colors
+
+for i, genus in enumerate(counts.columns):
+    plt.plot(
+        counts.index,
+        counts[genus],
+        label=genus,
+        color=color_cycle[i % len(color_cycle)]
+    )
+
+# Add labels, title, and legend
+plt.xlabel("Year")
+plt.ylabel("Number of Observations")
+plt.title("Number of Observations per Genus by Year")
+plt.legend(title="Genus")
+
+# Improve layout
+plt.tight_layout()
+
+# Save the plot as a PNG image
+plt.savefig("observations_by_genus_over_time.png", dpi=300)
+
+# Show the plot
+plt.show()
+
+```
+
+![](fig/observations_by_genus_over_time.png){alt="Line plot of observations by genus over time"}
+
+The plots looks good but I'd like to save it as well.
+
+**Edit the prompt and re-generate**
+
+'Generate code in Python, using the packages Pandas and MatplotLib, that will do the following: Load the data from animals.csv which is in the same folder as the code. Count the number of observations of each genus in each year. The names of these columns are 'genus' and 'year'. Produce a line plot of the number of observations of each genus, with year on the x axis and number of observations on the y axis. Each line should represent a different genus and should be differently coloured, according to a colourblind-friendly colour palette. Show the plot and **also save the plot as a .png image**.'
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 
 ### Translating Code with AI
 
