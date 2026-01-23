@@ -523,20 +523,19 @@ in developing research software.</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="hidden-dependencies-and-security-gaps">Hidden Dependencies and Security Gaps<a class="anchor" aria-label="anchor" href="#hidden-dependencies-and-security-gaps"></a></h3>
+<h3 id="third-party-dependency-risks-in-ai-generated-code">Third-Party Dependency Risks in AI-Generated Code<a class="anchor" aria-label="anchor" href="#third-party-dependency-risks-in-ai-generated-code"></a></h3>
 <p>AI tools will often generate code that includes external libraries or
 frameworks without checking whether they are secure and appropriate for
 your use case. This could lead to vulnerabilities in your code,
 licensing issues, or compatibility problems, which can cause problems
 later and be difficult to untangle or debug.</p>
-</div>
-<div class="section level3">
-<h3 id="adversarial-attacks">Adversarial Attacks<a class="anchor" aria-label="anchor" href="#adversarial-attacks"></a></h3>
-<p>AI systems can also be targets for people with bad intentions.
-Attackers may try to influence training data or how the AI interprets
-user inputs so that AI tools suggest insecure patterns. If these
-patterns are reused across many projects, insecure practices can spread
-quickly.</p>
+<p>AI hallucinations of third-party libraries can also be a security
+risk. ChatGPT sometimes hallucinates non-existent coding libraries in
+its outputs. A <a href="https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/" class="external-link">study
+by the security company Vulcan</a> identified a cyberattack technique
+where criminals could hijack these fake libraries by publishing a
+malicious package in place of the library and hoping developers would
+install the infected library based on the AI tool’s recommendation.</p>
 </div>
 </section><section><h2 class="section-heading" id="intellectual-property-authorship-and-citation-of-ai-generated-code-and-text">Intellectual Property, Authorship, and Citation of AI-Generated Code
 and Text<a class="anchor" aria-label="anchor" href="#intellectual-property-authorship-and-citation-of-ai-generated-code-and-text"></a></h2>
@@ -777,7 +776,7 @@ guidelines</strong>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Your guidelines could include:</p>
 <ul><li>Always document when and how AI tools are used.</li>
@@ -818,6 +817,9 @@ AI Framework by Vilas Dhar</a></li>
 Generative AI? - LinkedIn Learning</a></li>
 <li><a href="https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions" class="external-link">Security
 Focused Guide for AI Code Assistant Instructions</a></li>
+<li><a href="https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/" class="external-link">ChatGPT
+Hallucinations Can Be Exploited to Distribute Malicious Code
+Packages</a></li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.

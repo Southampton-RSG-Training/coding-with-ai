@@ -970,10 +970,11 @@ function as assistants, not autonomous developers.</p>
 frameworks.</li>
 <li>Helping you to spot bugs (problems) in your code and suggesting
 possible fixes.</li>
-<li>Helping to translate ideas into a starting implementation</li>
 <li>Writing boilerplate code (standard structures for functions, modules
 etc.)</li>
 <li>Supporting you to write technical documentation.</li>
+<li>Helping to translate ideas into a starting implementation or
+prototype</li>
 </ul>
 <p>In the rest of this episode, we’ll walk through these ways that AI
 can assist you with coding.</p>
@@ -1187,12 +1188,15 @@ path is incorrect, the file has not been created.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="code-generation-and-refactoring">Code Generation and Refactoring<a class="anchor" aria-label="anchor" href="#code-generation-and-refactoring"></a>
+</section><section><h2 class="section-heading" id="code-generation">Code Generation<a class="anchor" aria-label="anchor" href="#code-generation"></a>
 </h2>
 <hr class="half-width">
 <div class="section level3">
 <h3 id="boilerplate">Boilerplate<a class="anchor" aria-label="anchor" href="#boilerplate"></a>
 </h3>
+<p>AI can be particularly useful for some coding tasks that are tedious
+and repetitive such as writing boilerplate code, restructuring code into
+functions, and generating code documentation.</p>
 <p>Boilerplate code is a term used to describe standard code structures
 that are repeated in multiple places with little variation. Examples of
 boilerplate code across a few different contexts include:</p>
@@ -1200,7 +1204,7 @@ boilerplate code across a few different contexts include:</p>
 <li>Templates for function/class definitions</li>
 <li>Bash script skeleton</li>
 <li>Web page structure in HTML</li>
-<li>Functional component in Reach</li>
+<li>Functional component in React</li>
 <li>Unit test template</li>
 </ul>
 <p>Using AI to generate boilerplate code can save researchers time with
@@ -1431,6 +1435,142 @@ help you understand what the function does.</li>
 </div>
 </div>
 <div class="section level3">
+<h3 id="code-generation-for-rapid-prototyping">Code Generation for Rapid Prototyping<a class="anchor" aria-label="anchor" href="#code-generation-for-rapid-prototyping"></a>
+</h3>
+<p>AI can allow you to generate first drafts or prototypes of code very
+quickly. You can treat these as a starting point but make sure to
+validate everything and handcraft the final product carefully.</p>
+<p>It’s important to write prompts that are specific and context-rich.
+Clearly define your requirements, including any libraries, frameworks,
+or constraints.</p>
+<p>AI coding tools lack human intuition and situational awareness, so
+they can only produce the intended results when given detailed, explicit
+instructions.</p>
+<p>It can be helpful to use an iterative process when generating code
+with AI tools to ensure you get the most relevant output. This process
+may include:</p>
+<ul>
+<li>Breaking your task down into steps</li>
+<li>Creating a specific prompt</li>
+<li>Generating the code</li>
+<li>Reviewing the generated code</li>
+<li>If you’re not happy with the code, editing the prompt and repeating
+steps 3-5</li>
+</ul>
+<div id="generating-code-prototypes-specifically-and-iteratively" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="generating-code-prototypes-specifically-and-iteratively" class="callout-inner">
+<h3 class="callout-title">Generating code prototypes specifically and
+iteratively</h3>
+<div class="callout-content">
+<p>Imagine you’d like to explore the animals dataset by visualising some
+other variables of your data. You could use AI to generate first drafts
+of these plots quickly, before spending more time investigating the
+variables of interest.</p>
+<p>Using the animals data, create a line plot of the number of
+observations per year for each genus. (note: the relevant column names
+are <code>year</code> and <code>genus</code>).</p>
+<p>Generate the code for a first draft of this plot. Remember:</p>
+<ul>
+<li>Break the task down into steps.</li>
+<li>Craft a specific prompt including all your requirements and the
+libraries you want to use.</li>
+<li>Review the code and run it.<br>
+</li>
+<li>If necessary, edit the prompt and re-generate.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div class="accordion-body">
+<p><strong>Break the task down into steps</strong></p>
+<ul>
+<li>Load the data</li>
+<li>Count the number of observations of each genus in each year</li>
+<li>Produce a line plot of the data</li>
+</ul>
+<p><strong>Create a specific prompt</strong></p>
+<p>“Generate code in Python, using the packages Pandas and MatplotLib,
+that will do the following: Load the data from animals.csv which is in
+the same folder as the code. Count the number of observations of each
+genus in each year. The names of these columns are ‘genus’ and ‘year’.
+Produce a line plot of the number of observations of each genus, with
+year on the x axis and number of observations on the y axis. Each line
+should represent a different genus and should be differently coloured,
+according to a colourblind-friendly colour palette. Show the plot.”</p>
+<p><strong>Review and run the code</strong></p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co"># Load the data from the CSV file in the same directory</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co"># Count the number of observations for each genus in each year</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>counts <span class="op">=</span> (</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>    df.groupby([<span class="st">"year"</span>, <span class="st">"genus"</span>])</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>      .size()</span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>      .unstack(fill_value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>      .sort_index()</span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>)</span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="co"># Create the plot</span></span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a><span class="co"># Use a colorblind-friendly palette (matplotlib's 'tab10')</span></span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a>color_cycle <span class="op">=</span> plt.get_cmap(<span class="st">"tab10"</span>).colors</span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a><span class="cf">for</span> i, genus <span class="kw">in</span> <span class="bu">enumerate</span>(counts.columns):</span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a>    plt.plot(</span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a>        counts.index,</span>
+<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a>        counts[genus],</span>
+<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a>        label<span class="op">=</span>genus,</span>
+<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a>        color<span class="op">=</span>color_cycle[i <span class="op">%</span> <span class="bu">len</span>(color_cycle)]</span>
+<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a>    )</span>
+<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a><span class="co"># Add labels, title, and legend</span></span>
+<span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb10-31"><a href="#cb10-31" tabindex="-1"></a>plt.ylabel(<span class="st">"Number of Observations"</span>)</span>
+<span id="cb10-32"><a href="#cb10-32" tabindex="-1"></a>plt.title(<span class="st">"Number of Observations per Genus by Year"</span>)</span>
+<span id="cb10-33"><a href="#cb10-33" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">"Genus"</span>)</span>
+<span id="cb10-34"><a href="#cb10-34" tabindex="-1"></a></span>
+<span id="cb10-35"><a href="#cb10-35" tabindex="-1"></a><span class="co"># Improve layout</span></span>
+<span id="cb10-36"><a href="#cb10-36" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb10-37"><a href="#cb10-37" tabindex="-1"></a></span>
+<span id="cb10-38"><a href="#cb10-38" tabindex="-1"></a><span class="co"># Save the plot as a PNG image</span></span>
+<span id="cb10-39"><a href="#cb10-39" tabindex="-1"></a>plt.savefig(<span class="st">"observations_by_genus_over_time.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb10-40"><a href="#cb10-40" tabindex="-1"></a></span>
+<span id="cb10-41"><a href="#cb10-41" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb10-42"><a href="#cb10-42" tabindex="-1"></a>plt.show()</span></code></pre>
+</div>
+<figure><img src="fig/observations_by_genus_over_time.png" alt="Line plot of observations by genus over time" class="figure mx-auto d-block"></figure><p>The plots looks good but I’d like to save it as well.</p>
+<p><strong>Edit the prompt and re-generate</strong></p>
+<p>‘Generate code in Python, using the packages Pandas and MatplotLib,
+that will do the following: Load the data from animals.csv which is in
+the same folder as the code. Count the number of observations of each
+genus in each year. The names of these columns are ’genus’ and ‘year’.
+Produce a line plot of the number of observations of each genus, with
+year on the x axis and number of observations on the y axis. Each line
+should represent a different genus and should be differently coloured,
+according to a colourblind-friendly colour palette. Show the plot and
+<strong>also save the plot as a .png image</strong>.’</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
 <h3 id="translating-code-with-ai">Translating Code with AI<a class="anchor" aria-label="anchor" href="#translating-code-with-ai"></a>
 </h3>
 <p><strong>Scenario</strong>: A collaborator would like to build on the
@@ -1439,39 +1579,39 @@ programming language R. Translating the code manually from python to R
 could be a time-intensive and error-prone task. This is another instance
 where AI could be used with massive time-saving benefits:</p>
 <p>Prompt: ‘Translate this code from Python to R.’</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co"># Load the data</span></span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co"># Count observations per species</span></span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>species_counts <span class="op">=</span> df[<span class="st">"species_id"</span>].value_counts()</span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="co"># Keep only species with &gt;100 observations</span></span>
-<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>valid_species <span class="op">=</span> species_counts[species_counts <span class="op">&gt;</span> <span class="dv">100</span>].index</span>
-<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>df_filtered <span class="op">=</span> df[df[<span class="st">"species_id"</span>].isin(valid_species)]</span>
-<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a></span>
-<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co"># Create the plot</span></span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a><span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(<span class="st">"species_id"</span>):</span>
-<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a>    plt.scatter(</span>
-<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a>        group[<span class="st">"weight"</span>],</span>
-<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a>        group[<span class="st">"hindfoot_length"</span>],</span>
-<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a>        label<span class="op">=</span>species,</span>
-<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a>        alpha<span class="op">=</span><span class="fl">0.7</span></span>
-<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a>    )</span>
-<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a></span>
-<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a>plt.xlabel(<span class="st">"Weight"</span>)</span>
-<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a>plt.ylabel(<span class="st">"Hindfoot Length"</span>)</span>
-<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a>plt.title(<span class="st">"Hindfoot Length vs Weight (Species with &gt;100 Observations)"</span>)</span>
-<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">"Species ID"</span>)</span>
-<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="co"># Load the data</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co"># Count observations per species</span></span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>species_counts <span class="op">=</span> df[<span class="st">"species_id"</span>].value_counts()</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a><span class="co"># Keep only species with &gt;100 observations</span></span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>valid_species <span class="op">=</span> species_counts[species_counts <span class="op">&gt;</span> <span class="dv">100</span>].index</span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>df_filtered <span class="op">=</span> df[df[<span class="st">"species_id"</span>].isin(valid_species)]</span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a><span class="co"># Create the plot</span></span>
+<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a><span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(<span class="st">"species_id"</span>):</span>
+<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a>    plt.scatter(</span>
+<span id="cb11-19"><a href="#cb11-19" tabindex="-1"></a>        group[<span class="st">"weight"</span>],</span>
+<span id="cb11-20"><a href="#cb11-20" tabindex="-1"></a>        group[<span class="st">"hindfoot_length"</span>],</span>
+<span id="cb11-21"><a href="#cb11-21" tabindex="-1"></a>        label<span class="op">=</span>species,</span>
+<span id="cb11-22"><a href="#cb11-22" tabindex="-1"></a>        alpha<span class="op">=</span><span class="fl">0.7</span></span>
+<span id="cb11-23"><a href="#cb11-23" tabindex="-1"></a>    )</span>
+<span id="cb11-24"><a href="#cb11-24" tabindex="-1"></a></span>
+<span id="cb11-25"><a href="#cb11-25" tabindex="-1"></a>plt.xlabel(<span class="st">"Weight"</span>)</span>
+<span id="cb11-26"><a href="#cb11-26" tabindex="-1"></a>plt.ylabel(<span class="st">"Hindfoot Length"</span>)</span>
+<span id="cb11-27"><a href="#cb11-27" tabindex="-1"></a>plt.title(<span class="st">"Hindfoot Length vs Weight (Species with &gt;100 Observations)"</span>)</span>
+<span id="cb11-28"><a href="#cb11-28" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">"Species ID"</span>)</span>
+<span id="cb11-29"><a href="#cb11-29" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb11-30"><a href="#cb11-30" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 <p>However, there are a few important factors to bear in mind when using
 AI to translate code:</p>
@@ -1779,22 +1919,20 @@ in developing research software.</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="hidden-dependencies-and-security-gaps">Hidden Dependencies and Security Gaps<a class="anchor" aria-label="anchor" href="#hidden-dependencies-and-security-gaps"></a>
+<h3 id="third-party-dependency-risks-in-ai-generated-code">Third-Party Dependency Risks in AI-Generated Code<a class="anchor" aria-label="anchor" href="#third-party-dependency-risks-in-ai-generated-code"></a>
 </h3>
 <p>AI tools will often generate code that includes external libraries or
 frameworks without checking whether they are secure and appropriate for
 your use case. This could lead to vulnerabilities in your code,
 licensing issues, or compatibility problems, which can cause problems
 later and be difficult to untangle or debug.</p>
-</div>
-<div class="section level3">
-<h3 id="adversarial-attacks">Adversarial Attacks<a class="anchor" aria-label="anchor" href="#adversarial-attacks"></a>
-</h3>
-<p>AI systems can also be targets for people with bad intentions.
-Attackers may try to influence training data or how the AI interprets
-user inputs so that AI tools suggest insecure patterns. If these
-patterns are reused across many projects, insecure practices can spread
-quickly.</p>
+<p>AI hallucinations of third-party libraries can also be a security
+risk. ChatGPT sometimes hallucinates non-existent coding libraries in
+its outputs. A <a href="https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/" class="external-link">study
+by the security company Vulcan</a> identified a cyberattack technique
+where criminals could hijack these fake libraries by publishing a
+malicious package in place of the library and hoping developers would
+install the infected library based on the AI tool’s recommendation.</p>
 </div>
 </section><section><h2 class="section-heading" id="intellectual-property-authorship-and-citation-of-ai-generated-code-and-text">Intellectual Property, Authorship, and Citation of AI-Generated Code
 and Text<a class="anchor" aria-label="anchor" href="#intellectual-property-authorship-and-citation-of-ai-generated-code-and-text"></a>
@@ -2079,7 +2217,7 @@ guidelines</strong>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Your guidelines could include:</p>
 <ul>
@@ -2125,6 +2263,9 @@ AI Framework by Vilas Dhar</a></li>
 Generative AI? - LinkedIn Learning</a></li>
 <li><a href="https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions" class="external-link">Security
 Focused Guide for AI Code Assistant Instructions</a></li>
+<li><a href="https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/" class="external-link">ChatGPT
+Hallucinations Can Be Exploited to Distribute Malicious Code
+Packages</a></li>
 </ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
