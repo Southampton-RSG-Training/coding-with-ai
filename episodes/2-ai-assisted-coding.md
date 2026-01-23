@@ -30,9 +30,44 @@ exercises: 2 # exercise time in minutes
 
 ## Why Understanding Still Matters: The Limits of AI-Driven Software Development
 
-**Scenario**: You've collected some data on the animal species found within plots of land at a study site.  Your colleague wants some plots of the data as quickly as possible so that she can present them at an upcoming seminar.  You know that matplotlib is a plotting library in python but you're not quite sure how to use it, so you decide to ask AI to make the plot for you. 
+**Scenario**: Imagine, your research team has collected some data on the animal species found within plots of land at a study site.  
 
-Open an AI chat interface and prompt the AI to 'Generate some code to create a plot of hindfoot_length vs weight, colour by species_id. Include only species with over 100 observations. The data is in a csv file called animals.csv.  Use Python and Matplotlib.' 
+Download the data from here: [animals.csv](data/animals.csv)
+
+The dataset is stored as a comma separated value (CSV) file. You can open the csv file in excel or a similar spreadsheet tool and have a look at the data. You'll see the variable names in the top row of the spreadsheet.   Each row holds information for a single animal, and the columns represent:
+
+
+| Column           | Description                        |
+| ---------------- | ---------------------------------- |
+| record\_id       | Unique id for the observation      |
+| month            | month of observation               |
+| day              | day of observation                 |
+| year             | year of observation                |
+| plot\_id         | ID of a particular plot            |
+| species\_id      | 2-letter code                      |
+| sex              | sex of animal (“M”, “F”)           |
+| hindfoot\_length | length of the hindfoot in mm       |
+| weight           | weight of the animal in grams      |
+| genus            | genus of animal                    |
+| species          | species of animal                  |
+| taxon            | e.g. Rodent, Reptile, Bird, Rabbit |
+| plot\_type       | type of plot                       |
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## Where does the data come from?
+
+The data we're working with comes from the [Portal Project](https://portal.weecology.org/), a long-term ecological study being conducted near Portal, Arizona. Since 1977, the site has been used to study interactions between rodents, ants and plants.
+
+For this scenario, we use a CSV file that is a subset of the teaching-focused Portal dataset. This version has been simplified by removing some of the complexities of the full dataset, making it more suitable for computational training and learning exercises.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+Your colleague wants some plots of the data as quickly as possible so that she can present them at an upcoming seminar.  You know that matplotlib is a plotting library in python but you're not quite sure how to use it, so you decide to ask AI to make the plot for you. 
+
+Open an AI chat interface (such as ChatGPT or Microsoft CoPilot) and prompt the AI to:
+
+'Generate some code to create a plot of hindfoot_length vs weight, colour by species_id. Include only species with over 100 observations. The data is in a csv file called animals.csv.  Use Python and Matplotlib.' 
 
 - Open anaconda navigator and launch jupyter notebooks. 
 - Navigate to the folder where you will save your Jupyter notebook.
@@ -40,18 +75,13 @@ Open an AI chat interface and prompt the AI to 'Generate some code to create a p
 - Create a new jupyter notebook in this folder.
 - Paste the AI-generated code into a code chunk in the Jupyter notebook and run the code.
 
-::::::::::::::::::::::::::::::::::::: callout
-
-TODO: where this data comes from
-
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
 Think about problems with this approach and write them in the shared document.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::: solution 
 
 Artificial intelligence tools can generate code quickly and often convincingly. For researchers who are new to programming, this can be appealing: it may seem efficient to delegate the entire task of software development to an AI system. However, doing so without understanding the solution introduces significant technical, ethical, and reliability risks.
 
@@ -89,6 +119,12 @@ Researchers remain fully responsible for the work they submit, publish, or use t
 - **Misrepresentation**: Using code you do not understand may amount to overstating your expertise or control over the research process.
 
 Relying heavily on AI may also conflict with institutional policies on research integrity or responsible use of AI.
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 
 
 ### Appropriate Roles for AI when Writing Research Code
