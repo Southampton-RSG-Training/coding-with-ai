@@ -677,4 +677,14 @@ In this episode, we have used seperate interfaces to interact with AI and to run
 
 For training on IDE-integrated AI assistants see 'Developing Research Software with AI Tools'[link to course materials].  
 
+::::::::::::::::::::::::::::::::::::: keypoints 
+- Delegating full software development to AI without understanding the code introduces technical, ethical, and reliability risks.  
+- AI tools should function as assistants, not autonomous developers, supporting learning, debugging, and code generation.  
+- AI can be used as a reference tool to locate, summarise, and clarify technical information more efficiently than traditional search.  
+- Researchers can use AI to explain unfamiliar code line by line, helping them understand programming constructs and libraries.  
+- AI can assist with debugging by explaining errors and suggesting possible fixes, but researchers should independently verify solutions.  
+- AI is useful for generating boilerplate code, performing basic refactoring, and drafting technical documentation, saving time on repetitive tasks.  
+- AI can translate code between programming languages, but outputs must be reviewed for correctness, compatibility, and reproducibility.  
+- Integrating AI into IDEs offers contextual suggestions and autocompletion, but carries risks of over-reliance, limited explanation, and potential privacy concerns.
 
+::::::::::::::::::::::::::::::::::::::::::::::::

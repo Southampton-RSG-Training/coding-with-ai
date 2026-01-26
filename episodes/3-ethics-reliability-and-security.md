@@ -266,6 +266,18 @@ Your guidelines could include:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: keypoints 
+- AI-generated code is not fully reliable: it may contain subtle errors, outdated functions, or fabricated solutions (hallucinations) that compromise research validity and reproducibility.  
+- Vibe coding (AI-assisted coding without planning) can produce messy, error-prone programs. Structured development and verification remain essential. 
+- Using AI tools can create data privacy, confidentiality, and security risks, especially when submitting sensitive datasets or proprietary code to cloud-based AI services.  
+- AI may suggest insecure or outdated coding practices. To mitigate the risk you could embed security expectations in prompts and review outputs critically.  
+- Be aware of the evolving issues surrounding intellectual property, authorship, and citation of AI-generated code.   
+- Over-reliance on AI can lead to de-skilling, reducing researchers’ coding proficiency, critical thinking, and long-term ability to maintain software.  
+- Ethical AI use requires human oversight, responsible data practices, defined boundaries, transparency, and validation of AI-generated outputs.  
+- It could be helpful for researchers to develop personal or team-level AI ethics and security policies.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## References
 - [AI-Assisted Coding with Codium, Ethical and Security Considerations](https://carpentries-incubator.github.io/gen-ai-coding/3-ethical-and-security-considerations.html)
