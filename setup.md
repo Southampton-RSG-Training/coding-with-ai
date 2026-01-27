@@ -84,10 +84,7 @@ Follow these steps to install **Anaconda Navigator** on your personal computer. 
 - **Linux**
   1. Open a terminal.
   2. Navigate to the folder containing the downloaded `.sh` file.
-  3. Run the installer:
-     ```bash
-     bash Anaconda3-*.sh
-     ```
+  3. Run the installer: `bash Anaconda3-*.sh`
   4. Follow the on-screen prompts and accept the defaults.
 
 ### Step 5: Launch Anaconda Navigator
