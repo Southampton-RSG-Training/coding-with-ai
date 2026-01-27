@@ -84,9 +84,26 @@ At a high level, today’s AI systems can be grouped into three broad categories
 
 1. **Rule-Based and Decision Systems**: These systems operate using explicitly defined rules, logic, or constraints. Their behaviour is deterministic and transparent, which makes them reliable in stable, well-defined environments. Rule-based systems are still widely used in areas such as compliance, governance, and safety-critical decision-making. However, they are limited in their ability to handle ambiguity, novelty, or rapidly changing conditions.
 
+For example, a laboratory safety interlock is an example of a rule-based system. It monitors the state of critical variables, such as door positions, pressure levels, temperature, radiation shielding, or airflow, and allows an action only if all safety conditions are met. For example, a high-power laser system may be physically prevented from firing unless the enclosure door is closed, warning lights are active, and emergency stops are disengaged. If any condition is violated, the system immediately shuts down or blocks operation.
+
+These systems are deterministic and transparent, in other words the same inputs always lead to the same outcome and the rules governing behaviour are explicitly defined. Unlike learning-based AI systems, laboratory safety interlocks do not adapt or infer, they exist to enforce safety rules reliably, even in the presence of human error.
+
+
 2. **Predictive and Analytical Systems**: These systems learn patterns from data to make predictions, classifications, or risk estimates. Rather than following fixed rules, they use statistical models to answer questions such as What category does this belong to? or How likely is this outcome? Predictive AI systems are common in research and operational settings, including data analysis, diagnostics, and forecasting. Their outputs support decisions but do not create new content.
 
+One example of a predictive AI system is a machine-learning model trained to automatically label features in microscope images, such as identifying specific cell types or structures.
+
+The model learns from large sets of images that have been annotated by experts, using statistical patterns like shape, texture, and intensity to distinguish between categories. Once trained, it can rapidly classify new images, allowing researchers to analyse large datasets more efficiently and consistently than manual methods.
+
+The system provides probabilities, rather than definitive answers, as outputs and does not generate new content or biological insight. The results must be validated and interpreted by researchers, as the model's performance depends heavily on the quality of the training data and imaging conditions.
+
 3. **Generative Systems**: Generative AI systems are designed to produce new outputs that resemble the data on which they were trained. This includes generating text, code, images, or other media. GPT and ChatGPT fall into this category, specializing in language and code generation. These systems are optimized for producing fluent and contextually appropriate responses, not for verifying truth or making authoritative decisions.
+
+Large language models (LLMs) are examples of generative AI systems.  They are designed to process and generate human-like language by learning patterns from vast amounts of text.
+
+They are trained to predict the next word or token in a sequence, which allows them to produce coherent text, answer questions, summarize documents, and generate code. LLMs do not possess understanding or intent. Instead, they rely on statistical associations learned during training to generate outputs. As a result, their outputs can be fluent and convincing while still being incomplete, outdated, or incorrect.
+
+LLMs are powerful tools for supporting research tasks such as drafting, coding, and exploration of ideas, but their outputs must always be interpreted and validated by humans, particularly in contexts where accuracy, reproducibility, and accountability matter. We'll talk a lot more about this throughout this workshop. 
 
 
 Most AI systems in use today are narrow, task-specific tools. Some are designed to enforce rules, others to analyze data and make predictions, and a smaller but increasingly visible group, generative systems, are designed to produce new content. Generative AI systems are powerful and influential, but they are not representative of AI as a whole. Understanding these broad categories helps researchers set appropriate expectations and prepares us to examine generative AI in more detail.
