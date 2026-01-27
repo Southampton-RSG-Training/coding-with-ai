@@ -155,7 +155,8 @@ This is why GPT can generate flexible and novel outputs, rather than just retrie
 2. **Model architecture design** - The neural network architecture is designed to best suit the purpose of the AI
 3. **Pre-training** - The AI model is trained on the collected text.
 4. **Fine-tuning** - Further training the model on specific datasets and tasks related to its purpose e.g. if it is going to be a code assistant it will be trained on tasks related to code generation. 
-5. **Evaluation and iteration** - Testing the AI in a variety of use cases, getting feedback and iterating the model architecture to improve performance. 
+5. **Alignment** – Guide the model so that its outputs are helpful, safe, and in line with human intentions. This often involves human feedback to encourage responses that are accurate, reliable, and appropriate.
+6. **Evaluation and iteration** - Testing the AI in a variety of use cases, getting feedback and iterating the model architecture to improve performance. 
 
 
 
