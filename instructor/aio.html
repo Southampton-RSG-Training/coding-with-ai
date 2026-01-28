@@ -992,10 +992,10 @@ matplotlib is a plotting library in python but you’re not quite sure how
 to use it, so you decide to ask AI to make the plot for you.</p>
 <p>Open an AI chat interface (such as ChatGPT or Microsoft CoPilot) and
 prompt the AI to:</p>
-<p>‘Generate some code to create a plot of hindfoot_length vs weight,
-colour by species_id. Include only species with over 100 observations.
-The data is in a csv file called animals.csv. Use Python and
-Matplotlib.’</p>
+<p>‘Generate some code to create a plot with weight on the x axis and
+hindfoot_length on the y axis, colour by species_id. Include only
+species with over 100 observations. The data is in a csv file called
+animals.csv. Use Python and Matplotlib.’</p>
 <ul>
 <li>Open anaconda navigator and launch jupyter notebooks.</li>
 <li>Navigate to the folder where you will save your Jupyter
@@ -1005,7 +1005,11 @@ notebook.</li>
 <li>Paste the AI-generated code into a code chunk in the Jupyter
 notebook and run the code.</li>
 </ul>
-<div id="challenge1" class="callout challenge">
+<p>We could even go one step further and upload the dataset to the AI
+chat so that the analysis can actually be run within the AI tool
+(depending on the features that you have access to with your AI
+tool).</p>
+<figure><img src="../fig/animals_plot_chatgpt.png" alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot" class="figure mx-auto d-block"></figure><div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -1013,8 +1017,10 @@ notebook and run the code.</li>
 <div class="callout-inner">
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
-<p>Think about problems with this approach and write them in the shared
-document.</p>
+<p>Think about problems with getting an AI tool to write your research
+code for you.</p>
+<p>Which additional problems are introduced when you also use AI to run
+the code?</p>
 </div>
 </div>
 </div>
@@ -1023,7 +1029,7 @@ document.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Artificial intelligence tools can generate code quickly and often
 convincingly. For researchers who are new to programming, this can be
@@ -1088,6 +1094,26 @@ process.</li>
 </ul>
 <p>Relying heavily on AI may also conflict with institutional policies
 on research integrity or responsible use of AI.</p>
+</div>
+<div class="section level3">
+<h3 id="additional-problems-with-ai-also-runs-the-code">Additional Problems with AI also Runs the Code<a class="anchor" aria-label="anchor" href="#additional-problems-with-ai-also-runs-the-code"></a>
+</h3>
+<ul>
+<li>When AI runs code for you, the execution environment (hardware,
+operating system, library versions) may be opaque, making results hard
+to interpret or reproduce.</li>
+<li>The AI can hide warnings, errors, or suspicious behavior, increasing
+the likelihood that flawed results go unnoticed.</li>
+<li>Uploading data or running code through AI systems can reduce your
+control over how data is handled, including where it is stored, whether
+it is logged or reused, and how long it is retained. Without clear
+guarantees, data may persist beyond its intended use, whether
+temporarily in memory, in logs, or in backups, creating risks for
+confidentiality, compliance, and ethical oversight.</li>
+<li>When AI both generates and executes code, researchers may be more
+likely to trust outputs uncritically, reducing independent verification
+and scrutiny.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1302,7 +1328,7 @@ code, then apply the fix and verify that the code runs as expected.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1547,7 +1573,7 @@ code logic.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Prompt: Generate a docstring for the following function:</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -1658,7 +1684,7 @@ libraries you want to use.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p><strong>Break the task down into steps</strong></p>
 <ul>
