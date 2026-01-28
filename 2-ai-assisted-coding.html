@@ -305,7 +305,7 @@ Development</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>AI-Assisted Coding</h1>
-        <p>Last updated on 2026-01-26 |
+        <p>Last updated on 2026-01-28 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/2-ai-assisted-coding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -847,18 +847,41 @@ a small function, without changing its behaviour?”</p>
 <h3 id="using-ai-to-support-technical-documentation">Using AI to Support Technical Documentation<a class="anchor" aria-label="anchor" href="#using-ai-to-support-technical-documentation"></a></h3>
 <p>You may have noticed that when the AI generated the
 filter_species_by_count function, it also included documentation (a
-docstring) for the function.</p>
-<p>Documenting code comprehensively can be time consuming and this is
-one of the reasons code is left undocumented and will be difficult to
-understand for others (or yourself in the future). AI can be used to
-generate code documentation, making it quicker for you to ensure your
-code is well-documented and easy for others to understand. However, just
-as with any other AI-generated output, it’s important to check the
-documentation and make sure it matches exactly what your function is
-doing.</p>
-<p>For example, say we have extracted our plotting code into another
-function ‘plot_species_scatter’. We could use AI to generate a docstring
-for the function.</p>
+docstring) for the function. A <strong>docstring</strong> in Python is a
+short note written at the start of a function that explains what it
+does, what inputs the function takes, and what the function outputs.</p>
+<p>Writing thorough code documentation can be time-consuming, which is
+why many scripts are left undocumented and can be hard to understand
+later, either by others or by yourself. AI can help by generating
+documentation automatically, making it faster to produce clear,
+understandable explanations of your code.</p>
+<p>However, just as with any other AI-generated output, it’s important
+to check the generated documentation.</p>
+<p>We can evaluate the correctness of an AI-generated output using
+<strong>triangulation</strong>, the practice of verifying something with
+multiple sources of evidence or methods. For AI-generated code or
+documentation, this means cross-checking outputs in several ways to
+ensure they match your expectations and requirements.</p>
+<p>In this example, triangulation could involve:</p>
+<ul><li>Asking: <em>“Does the docstring accurately describe what the
+function actually does?”</em><br></li>
+<li>Checking that the listed parameters match the function’s
+arguments.<br></li>
+<li>Confirming that any descriptions of functionality align with the
+actual code logic.</li>
+</ul><p>Triangulation is a simple but powerful way to catch errors that have
+been introduced by AI misinterpretation or by subtle bugs in the code.
+Treat an AI-generated docstring as a guide, not a guarantee, and always
+verify before relying on it. After all, it’s better to have no
+documentation than incorrect documentation!</p>
+<p>In short, triangulation is about <strong>not relying on a single
+source of truth</strong>, in this case the AI, but instead evaluating
+the results from multiple angles to reduce errors and improve
+reliability.</p>
+<p>For example, if we extract plotting code into a function like
+<code>plot_species_scatter</code>, we can use AI to generate a
+docstring, then manually check that it correctly reflects the function’s
+behaviour before using it.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -892,10 +915,15 @@ for the function.</p>
 <div class="callout-content">
 <p>Use AI to generate a docstring for the ‘plot_species_scatter’
 function.</p>
-<ul><li>If you know Python, verify that the docstring accurately represents
-what the code does.</li>
-<li>If you don’t know Python, read through the docstring and use it to
-help you understand what the function does.</li>
+<p>If you know Python, verify that the docstring accurately represents
+what the code does. If you don’t know Python, read through the docstring
+and use it to help you understand what the function does.</p>
+<ul><li>Ask: “Does the docstring accurately describe what the function
+actually does?”</li>
+<li>Check that the listed parameters match the function’s
+arguments.<br></li>
+<li>Confirm that any descriptions of functionality align with the actual
+code logic.</li>
 </ul></div>
 </div>
 </div>
@@ -1287,7 +1315,7 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/2-ai-assisted-coding.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/2-ai-assisted-coding.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-26",
+  "dateModified": "2026-01-28",
   "datePublished": "2026-01-28"
 }
 
