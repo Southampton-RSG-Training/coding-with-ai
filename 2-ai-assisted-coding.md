@@ -67,7 +67,7 @@ Your colleague wants some plots of the data as quickly as possible so that she c
 
 Open an AI chat interface (such as ChatGPT or Microsoft CoPilot) and prompt the AI to:
 
-'Generate some code to create a plot of hindfoot_length vs weight, colour by species_id. Include only species with over 100 observations. The data is in a csv file called animals.csv.  Use Python and Matplotlib.' 
+'Generate some code to create a plot with weight on the x axis and hindfoot_length on the y axis, colour by species_id. Include only species with over 100 observations. The data is in a csv file called animals.csv.  Use Python and Matplotlib.' 
 
 - Open anaconda navigator and launch jupyter notebooks. 
 - Navigate to the folder where you will save your Jupyter notebook.
@@ -75,11 +75,15 @@ Open an AI chat interface (such as ChatGPT or Microsoft CoPilot) and prompt the 
 - Create a new jupyter notebook in this folder.
 - Paste the AI-generated code into a code chunk in the Jupyter notebook and run the code.
 
+We could even go one step further and upload the dataset to the AI chat so that the analysis can actually be run within the AI tool (depending on the features that you have access to with your AI tool). 
 
+![](fig/animals_plot_chatgpt.png){alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot"}
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-Think about problems with this approach and write them in the shared document.
+Think about problems with getting an AI tool to write your research code for you. 
+
+Which additional problems are introduced when you also use AI to run the code?
 
 :::::::::::::::::::::::: solution 
 
@@ -120,6 +124,12 @@ Researchers remain fully responsible for the work they submit, publish, or use t
 
 Relying heavily on AI may also conflict with institutional policies on research integrity or responsible use of AI.
 
+### Additional Problems with AI also Runs the Code
+
+- When AI runs code for you, the execution environment (hardware, operating system, library versions) may be opaque, making results hard to interpret or reproduce.
+- The AI can hide warnings, errors, or suspicious behavior, increasing the likelihood that flawed results go unnoticed.
+- Uploading data or running code through AI systems can reduce your control over how data is handled, including where it is stored, whether it is logged or reused, and how long it is retained. Without clear guarantees, data may persist beyond its intended use, whether temporarily in memory, in logs, or in backups, creating risks for confidentiality, compliance, and ethical oversight.
+- When AI both generates and executes code, researchers may be more likely to trust outputs uncritically, reducing independent verification and scrutiny.
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
