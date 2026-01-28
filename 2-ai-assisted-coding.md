@@ -407,11 +407,26 @@ plt.show()
 
 ### Using AI to Support Technical Documentation
 
-You may have noticed that when the AI generated the filter_species_by_count function, it also included documentation (a docstring) for the function. 
+You may have noticed that when the AI generated the filter_species_by_count function, it also included documentation (a docstring) for the function. A **docstring** in Python is a short note written at the start of a function that explains what it does, what inputs the function takes, and what the function outputs.
 
-Documenting code comprehensively can be time consuming and this is one of the reasons code is left undocumented and will be difficult to understand for others (or yourself in the future).  AI can be used to generate code documentation, making it quicker for you to ensure your code is well-documented and easy for others to understand. However, just as with any other AI-generated output, it's important to check the documentation and make sure it matches exactly what your function is doing. 
+Writing thorough code documentation can be time-consuming, which is why many scripts are left undocumented and can be hard to understand later, either by others or by yourself. AI can help by generating documentation automatically, making it faster to produce clear, understandable explanations of your code.
 
-For example, say we have extracted our plotting code into another function 'plot_species_scatter'.  We could use AI to generate a docstring for the function. 
+However, just as with any other AI-generated output, it's important to check the generated documentation.
+
+We can evaluate the correctness of an AI-generated output using **triangulation**, the practice of verifying something with multiple sources of evidence or methods. For AI-generated code or documentation, this means cross-checking outputs in several ways to ensure they match your expectations and requirements.  
+
+In this example, triangulation could involve:  
+
+- Asking: *"Does the docstring accurately describe what the function actually does?"*  
+- Checking that the listed parameters match the function’s arguments.  
+- Confirming that any descriptions of functionality align with the actual code logic.  
+
+Triangulation is a simple but powerful way to catch errors that have been introduced by AI misinterpretation or by subtle bugs in the code. Treat an AI-generated docstring as a guide, not a guarantee, and always verify before relying on it.  After all, it's better to have no documentation than incorrect documentation!
+
+In short, triangulation is about **not relying on a single source of truth**, in this case the AI, but instead evaluating the results from multiple angles to reduce errors and improve reliability.  
+
+For example, if we extract plotting code into a function like `plot_species_scatter`, we can use AI to generate a docstring, then manually check that it correctly reflects the function’s behaviour before using it.
+
 
 ```python
 def plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hindfoot_length", min_count=100):
@@ -443,9 +458,11 @@ def plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hi
 
 Use AI to generate a docstring for the 'plot_species_scatter' function.
 
-- If you know Python, verify that the docstring accurately represents what the code does.
-- If you don't know Python, read through the docstring and use it to help you understand what the function does.  
+If you know Python, verify that the docstring accurately represents what the code does.  If you don't know Python, read through the docstring and use it to help you understand what the function does.  
 
+- Ask: "Does the docstring accurately describe what the function actually does?"
+- Check that the listed parameters match the function’s arguments.  
+- Confirm that any descriptions of functionality align with the actual code logic.  
 
 :::::::::::::::::::::::: solution 
 
