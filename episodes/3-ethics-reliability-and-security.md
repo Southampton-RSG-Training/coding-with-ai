@@ -49,9 +49,17 @@ For example, an AI might suggest a function from an open-source library that has
 
 ### Unreliable Results
 
-AI models sometimes “hallucinate” information.  In the absence of relevant training data, a GPT model will fabricate information rather than saying it doesn't know. 
+AI coding assistants can sometimes produce outputs that are **plausible but incorrect**, a phenomenon often called “hallucination.” When the model lacks relevant training data or encounters an unfamiliar task, it may **invent code or logic** rather than responding with uncertainty. For example, GPT might suggest using `df.fillna(0)` to handle missing values, which runs without error, but replacing missing values with zero could bias statistical analyses, producing misleading results without triggering any warnings.
 
-For example, an artificial intelligence might suggest an optimisation that causes a memory leak or a system crash that, if unchecked by the developer, could lead to serious system failures in production environments.
+Another source of error comes from the **training data itself**. Many large language models have been trained on vast amounts of publicly available code, some of which contains mistakes. As a result, AI-generated code can **inherit these errors** without any indication that they exist.
+
+GPT generates code **one token at a time**, predicting each piece based on the preceding context. Even small token-level mistakes, like a misspelled function name, a missing argument, or an incorrect operator, can produce code that looks correct but fails when executed. For instance:
+- Generating `read_csvs()` instead of `read_csv()` will break a script.  
+- Omitting a critical argument like `header=None` may silently misread a dataset.  
+- Misplaced punctuation or parentheses can introduce subtle bugs that propagate through downstream calculations.
+
+Unchecked token-level errors can escalate into serious problems, including **memory leaks, crashes, or flawed analyses**, which in turn can compromise research results and reproducibility. This underscores the importance of **careful review, testing, and human understanding** of every piece of AI-generated code before it is integrated into a research workflow.
+
 
 ### Transparency and Explainability
 
