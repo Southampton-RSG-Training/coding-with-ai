@@ -305,7 +305,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>The AI Landscape</h1>
-        <p>Last updated on 2026-01-27 |
+        <p>Last updated on 2026-01-28 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/1-ai-landscape.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -596,25 +596,69 @@ learned during training.</p>
 </div>
 </div>
 </div>
-<p>GPT generates content token by token (or one piece at a time) rather
-than producing an entire sentence all at once. A token can be a word,
-part of a word, or a punctuation mark. When you enter a prompt into
-GPT:</p>
-<ol style="list-style-type: decimal"><li>The model looks at the input text (the prompt) and calculates the
-probability of what the next token should be.</li>
-<li>It selects the most likely next token.</li>
-<li>That token is added to the growing output.</li>
-<li>The model then considers the updated sequence, including the new
-token, and predicts the following token.</li>
+<p>GPT generates content <strong>token by token</strong>, rather than
+producing an entire sentence all at once. A token can be a word, part of
+a word, or a punctuation mark. When you enter a prompt into GPT:</p>
+<ol style="list-style-type: decimal"><li>The model looks at the input text (the prompt) and splits it into
+tokens.</li>
+<li>It predicts the probability of each possible next token based on all
+previous tokens.</li>
+<li>A token is chosen based on the model’s predicted probabilities.
+Either the most likely token is selected, or one is sampled from the
+distribution of probable tokens to allow more varied or creative
+outputs.</li>
+<li>The token is added to the growing output sequence.</li>
 <li>Steps 2–4 repeat until the model produces a complete response.</li>
+<li>The tokens are decoded back into human-readable text.</li>
 </ol><p>This sequential token generation allows GPT to produce coherent and
-contextually relevant text because each new token is generated based on
-all previous tokens in the sequence. It’s like writing a sentence one
-word at a time, making sure each word fits with everything written
-before it.</p>
-<p>This is why GPT can generate flexible and novel outputs, rather than
-just retrieving pre-written sentences, it literally builds the content
-step by step.</p>
+contextually relevant text because each new token is generated in the
+context of all previous tokens. It’s like writing a sentence one word at
+a time, making sure each word fits with everything written before
+it.</p>
+<p>As you can now understand, GPT doesn’t simply retrieve pre-written
+sentences, but instead builds content step by step and this is why it
+can generate such flexible and novel outputs.</p>
+<div id="what-is-a-token" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="what-is-a-token" class="callout-inner">
+<h3 class="callout-title">What is a token?</h3>
+<div class="callout-content">
+<p>A <strong>token</strong> is the basic unit of text that a GPT model
+processes and generates. Tokens are not always whole words. They may be
+a full word (e.g. <code>data</code>), part of a word
+(e.g. <code>clean</code> + <code>ed</code>), numbers, symbols, or
+punctuation (e.g. <code>.</code>, <code>,</code>, <code>(</code>).</p>
+<p>Consider the sentence:</p>
+<p><em>“The dataset was cleaned.”</em></p>
+<p>Internally, the model might split this into tokens such
+as:<code>The</code>| <code>data</code> | <code>set</code> |
+<code>was</code> | <code>clean</code> | <code>ed</code> |
+<code>.</code></p>
+<p>Large language models do not decide how to split words dynamically.
+Instead, tokenisation is fixed in advance by a tokeniser created before
+training. Most GPT-style models use subword tokenisation methods such as
+Byte Pair Encoding (BPE) or similar approaches, which merge frequently
+occurring character sequences until a fixed vocabulary size is
+reached.</p>
+<p>Common words are typically single tokens (e.g. <code>data</code>),
+while less common or more complex words are split into subword tokens
+(e.g. <code>token</code> + <code>isation</code>). This allows the model
+to handle new or rare words by recombining familiar pieces rather than
+requiring a unique token for every word.</p>
+<p>Tokens do not necessarily align with meaning or syllables because
+tokenisation is <strong>statistical</strong> rather than
+<strong>linguistic</strong>. This explains why prompts that seem similar
+to us humans can produce very different outputs.</p>
+<p>Understanding tokenisation allows us to appreciate a key limitation
+of GPT: the model optimises for what is <strong>likely</strong> to
+follow, not for what is <strong>correct</strong>, so early token-level
+errors can influence the rest of the response.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="how-a-gpt-model-is-trained">How a GPT Model is Trained<a class="anchor" aria-label="anchor" href="#how-a-gpt-model-is-trained"></a></h3>
@@ -789,8 +833,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/instructor/1-ai-landscape.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/1-ai-landscape.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-27",
-  "datePublished": "2026-01-27"
+  "dateModified": "2026-01-28",
+  "datePublished": "2026-01-28"
 }
 
   </script><script>

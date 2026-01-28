@@ -308,7 +308,7 @@ Research</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Ethics, Reliability and Security Considerations</h1>
-        <p>Last updated on 2026-01-27 |
+        <p>Last updated on 2026-01-28 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-ethics-reliability-and-security.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -410,13 +410,36 @@ project.</p>
 </div>
 <div class="section level3">
 <h3 id="unreliable-results">Unreliable Results<a class="anchor" aria-label="anchor" href="#unreliable-results"></a></h3>
-<p>AI models sometimes “hallucinate” information. In the absence of
-relevant training data, a GPT model will fabricate information rather
-than saying it doesn’t know.</p>
-<p>For example, an artificial intelligence might suggest an optimisation
-that causes a memory leak or a system crash that, if unchecked by the
-developer, could lead to serious system failures in production
-environments.</p>
+<p>AI coding assistants can sometimes produce outputs that are
+<strong>plausible but incorrect</strong>, a phenomenon often called
+“hallucination.” When the model lacks relevant training data or
+encounters an unfamiliar task, it may <strong>invent code or
+logic</strong> rather than responding with uncertainty. For example, GPT
+might suggest using <code>df.fillna(0)</code> to handle missing values,
+which runs without error, but replacing missing values with zero could
+bias statistical analyses, producing misleading results without
+triggering any warnings.</p>
+<p>Another source of error comes from the <strong>training data
+itself</strong>. Many large language models have been trained on vast
+amounts of publicly available code, some of which contains mistakes. As
+a result, AI-generated code can <strong>inherit these errors</strong>
+without any indication that they exist.</p>
+<p>GPT generates code <strong>one token at a time</strong>, predicting
+each piece based on the preceding context. Even small token-level
+mistakes, like a misspelled function name, a missing argument, or an
+incorrect operator, can produce code that looks correct but fails when
+executed. For instance: - Generating <code>read_csvs()</code> instead of
+<code>read_csv()</code> will break a script.<br>
+- Omitting a critical argument like <code>header=None</code> may
+silently misread a dataset.<br>
+- Misplaced punctuation or parentheses can introduce subtle bugs that
+propagate through downstream calculations.</p>
+<p>Unchecked token-level errors can escalate into serious problems,
+including <strong>memory leaks, crashes, or flawed analyses</strong>,
+which in turn can compromise research results and reproducibility. This
+underscores the importance of <strong>careful review, testing, and human
+understanding</strong> of every piece of AI-generated code before it is
+integrated into a research workflow.</p>
 </div>
 <div class="section level3">
 <h3 id="transparency-and-explainability">Transparency and Explainability<a class="anchor" aria-label="anchor" href="#transparency-and-explainability"></a></h3>
@@ -921,8 +944,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/3-ethics-reliability-and-security.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/3-ethics-reliability-and-security.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-27",
-  "datePublished": "2026-01-27"
+  "dateModified": "2026-01-28",
+  "datePublished": "2026-01-28"
 }
 
   </script><script>
