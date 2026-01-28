@@ -136,17 +136,40 @@ In practical terms, the transformer architecture is what enables systems like GP
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-GPT generates content token by token (or one piece at a time) rather than producing an entire sentence all at once.  A token can be a word, part of a word, or a punctuation mark. When you enter a prompt into GPT:
+GPT generates content **token by token**, rather than producing an entire sentence all at once. A token can be a word, part of a word, or a punctuation mark. When you enter a prompt into GPT:
 
-1. The model looks at the input text (the prompt) and calculates the probability of what the next token should be.
-2. It selects the most likely next token.
-3. That token is added to the growing output.
-4. The model then considers the updated sequence, including the new token, and predicts the following token.
+1. The model looks at the input text (the prompt) and splits it into tokens.
+2. It predicts the probability of each possible next token based on all previous tokens.
+3. A token is chosen based on the model’s predicted probabilities. Either the most likely token is selected, or one is sampled from the distribution of probable tokens to allow more varied or creative outputs.
+4. The token is added to the growing output sequence.
 5. Steps 2–4 repeat until the model produces a complete response.
+6. The tokens are decoded back into human-readable text.
 
-This sequential token generation allows GPT to produce coherent and contextually relevant text because each new token is generated based on all previous tokens in the sequence. It’s like writing a sentence one word at a time, making sure each word fits with everything written before it.
+This sequential token generation allows GPT to produce coherent and contextually relevant text because each new token is generated in the context of all previous tokens. It’s like writing a sentence one word at a time, making sure each word fits with everything written before it.
 
-This is why GPT can generate flexible and novel outputs, rather than just retrieving pre-written sentences, it literally builds the content step by step.
+As you can now understand, GPT doesn't simply retrieve pre-written sentences, but instead builds content step by step and this is why it can generate such flexible and novel outputs. 
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## What is a token?
+
+A **token** is the basic unit of text that a GPT model processes and generates. Tokens are not always whole words. They may be a full word (e.g. `data`), part of a word (e.g. `clean` + `ed`), numbers, symbols, or punctuation (e.g. `.`, `,`, `(`).
+
+Consider the sentence:
+
+*“The dataset was cleaned.”*
+
+Internally, the model might split this into tokens such as:`The`| ` data` | `set` | ` was` | ` clean` | `ed` | `.`
+
+Large language models do not decide how to split words dynamically. Instead, tokenisation is fixed in advance by a tokeniser created before training. Most GPT-style models use subword tokenisation methods such as Byte Pair Encoding (BPE) or similar approaches, which merge frequently occurring character sequences until a fixed vocabulary size is reached.
+
+Common words are typically single tokens (e.g. `data`), while less common or more complex words are split into subword tokens (e.g. `token` + `isation`). This allows the model to handle new or rare words by recombining familiar pieces rather than requiring a unique token for every word.
+
+Tokens do not necessarily align with meaning or syllables because tokenisation is **statistical** rather than **linguistic**. This explains why prompts that seem similar to us humans can produce very different outputs. 
+
+Understanding tokenisation allows us to appreciate a key limitation of GPT: the model optimises for what is **likely** to follow, not for what is **correct**, so early token-level errors can influence the rest of the response.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ### How a GPT Model is Trained
