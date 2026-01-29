@@ -65,16 +65,11 @@ Artificial intelligence is best understood not as a single capability or system,
 
 - **2010–2015: Deep learning resurgence**: Advances in neural networks, combined with GPUs and large labelled datasets, lead to major breakthroughs in computer vision, speech recognition, and natural language processing. Deep learning becomes the dominant paradigm for many AI tasks.
 
-- **2017: Transformer architecture introduced**: The transformer model is proposed, enabling more effective handling of long-range context in language tasks and laying the foundation for modern large language models (Transformer is the 'T' in chatGPT)
+- **2017-2021: The emergence and scaling of large language models**: The transformer model is proposed in 2017, laying the foundation for modern large language models (Transformer is the 'T' in chatGPT). In 2018, GPT-1 demonstrates that transformer-based models trained on large text corpora can perform a wide range of language tasks through pre-training and fine-tuning.  In 2020, more fluent text generation.
 
-- **2018: GPT-1 and the emergence of large language models**: GPT-1 demonstrates that transformer-based models trained on large text corpora can perform a wide range of language tasks through pre-training and fine-tuning, influencing subsequent research and development.
+- **2022-present: ChatGPT and mainstream adoption of generative AI**: In November 2022, ChatGPT introduces large language models to a broad public and professional audience through a conversational interface. Following the public release of ChatGPT, large language models are rapidly embedded into widely used tools and platforms, including code editors, office software, search engines, and data analysis environments (e.g. AI “copilots”). 
 
-- **2020–2021: Scaling of large language models**: Models such as GPT-3 show that increasing model size and training data leads to qualitatively new capabilities, including few-shot learning and more fluent text generation.
-
-- **2022: ChatGPT and mainstream adoption of generative AI**: ChatGPT introduces large language models to a broad public and professional audience through a conversational interface
-
-- **2023–2024: Integration of generative AI into mainstream software and research infrastructure**: Following the public release of ChatGPT, large language models are rapidly embedded into widely used tools and platforms, including code editors, office software, search engines, and data analysis environments (e.g. AI “copilots”). This period marks a shift from experimental or standalone use of generative AI to routine, workflow-integrated assistance in research, coding, writing, and analysis.
-
+![](fig/timeline.png){alt='timeline of key events in AI development'}
 
 ## Current Landscape of AI
 
@@ -105,8 +100,23 @@ They are trained to predict the next word or token in a sequence, which allows t
 
 LLMs are powerful tools for supporting research tasks such as drafting, coding, and exploration of ideas, but their outputs must always be interpreted and validated by humans, particularly in contexts where accuracy, reproducibility, and accountability matter. We'll talk a lot more about this throughout this workshop. 
 
-
 Most AI systems in use today are narrow, task-specific tools. Some are designed to enforce rules, others to analyze data and make predictions, and a smaller but increasingly visible group, generative systems, are designed to produce new content. Generative AI systems are powerful and influential, but they are not representative of AI as a whole. Understanding these broad categories helps researchers set appropriate expectations and prepares us to examine generative AI in more detail.
+
+| **AI System Type** | **What the system does** | **Strengths** | **Limitations** |
+|-------------------|-------------------------|---------------|----------------|
+| **Rule-Based & Decision Systems** | Follows clearly defined rules to allow, block, or trigger actions | Predictable and transparent; behaves the same way every time; well suited to safety-critical or regulated settings | Cannot adapt to new situations or handle uncertainty |
+|  **Predictive & Analytical Systems** | Uses data to estimate categories, trends, or likelihoods | Can analyse large datasets efficiently; supports consistent analysis and forecasting | Results depend on data quality; outputs are probabilities, not final answers |
+| **Generative Systems** | Creates new text, code, images, or other content | Flexible and easy to interact with; useful for drafting, coding, and exploring ideas | Outputs can sound confident but be incomplete or wrong |
+
+
+**Human Oversight Across AI Types** 
+
+Human responsibility increases from rule-based to predictive to generative systems because more judgment, interpretation, and accountability must be carried by people rather than the system itself. 
+
+- Rule-based systems behave exactly as specified and therefore the responsibility is mostly in system design, not in day-to-day interpretation.
+- Predictive systems give estimates, not decisions and the responsibility lies with humans for interpretation and validation.
+- Generative systems require the highest human responsibility at the point of use.  For example, when a researcher uses generative AI to draft text, summarise literature, or generate code, the responsibility for correctness remains entirely with the human.
+
 
 
 ## Demystifying Generative AI
