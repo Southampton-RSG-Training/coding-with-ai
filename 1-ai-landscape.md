@@ -21,7 +21,7 @@ exercises: 2 # exercise time in minutes
 ::::::::::::::::::::::::::::::::::::::::::::::::
 ## Introduction
 
-Software is increasingly critical to research - the national Software Sustainability Institute found that more than 92% of academics use research software, and 56% develop their own software. 
+Software is critical to research - the Software Sustainability Institute's UK Research Software Survey found that more than 92% of academics use research software, and 56% write their own code. 
 
 For many researchers, writing code for data analysis or software development can be boring, frustrating, or intimidating.  Most researchers would rather be thinking about and researching their subject matter rather than spending lots of time learning a programming language and writing code. Therefore, with easy access to AI tools, it can be very tempting to ask AI to write your research code for you.
 
@@ -270,5 +270,10 @@ In a study of 868 scientists who code as part of their research, ChatGPT was by 
 ## References
 
 -[S.J. Hettrick et al, UK Research Software Survey 2014](https://zenodo.org/records/1183562)
+- [He, R., Cao, J., & Tan, T. (2025). Generative artificial intelligence: a historical perspective. National Science Review, 12(5), nwaf050.](https://doi.org/10.1093/nsr/nwaf050)
+- [Introduction to Generative AI for Researchers](https://www.lse.ac.uk/DSI/AI/AI-Research/Introduction-to-Generative-AI-for-researchers?entryId=2319c173-7bdc-45d3-9a69-d12fd54340d7&nodeId=e2e64854-5d30-44fa-a289-a5ef76104f3e)
 - [O'Brien, G., Parker, A., Eisty, N., & Carver, J. (2025). More code, less validation: Risk factors for over-reliance on AI coding tools among scientists.](https://arxiv.org/abs/2512.19644)
+- [AI-assisted Coding with Codium Carpentries Course](https://carpentries-incubator.github.io/gen-ai-coding/)
 - [Getting started with AI for Coding by Oxford AI Competency Centre](https://oerc.ox.ac.uk/ai-centre/ai-guides/getting-started-with-ai-for-coding)
+- [Olson, P. (2024). Supremacy: AI, ChatGPT, and the Race that Will Change the World. St. Martin's Press.](https://en.wikipedia.org/wiki/Supremacy_(book))
+

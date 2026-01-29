@@ -532,7 +532,7 @@ Example AI - generated docstring:
 
 ### Code Generation for Rapid Prototyping
 
-AI can allow you to generate first drafts or prototypes of code very quickly.  You can treat these as a starting point but make sure to validate everything and handcraft the final product carefully. 
+Earlier in the episode, we discussed lots of risks associated with getting AI to generate all of your code for you.  However, there are some situations where this can be appropriate.  For example, AI can allow you to generate first drafts or prototypes of code very quickly.  You can treat these as a starting point but make sure to validate everything and handcraft the final product carefully. 
 
 It's important to write prompts that are specific and context-rich. Clearly define your requirements, including any libraries, frameworks, or constraints.
 
