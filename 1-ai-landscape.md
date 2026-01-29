@@ -215,6 +215,25 @@ GPT is also integrated into software products such as Microsoft’s copilot, sea
 
 5. **Microsoft Copilot** – Integrated into Microsoft tools like Word, Excel, and Visual Studio, this AI assistant helps with code generation, data analysis, and workflow automation.
 
+
+The [Oxford AI Competency Centre](https://oerc.ox.ac.uk/ai-centre/ai-guides/getting-started-with-ai-for-coding) suggest thinking about AI-Assisted Coding as existing in four levels of differing complexity and capability. 
+
+**Level 1: Code Snippets (Copy and Paste)**
+A Large Language Model inside a chatbot generates code that you copy and paste into files or environments you manage yourself. Examples: ChatGPT, Claude, Gemini, GitHub Copilot Chat
+
+**Level 2: Canvas and Artifacts (Integrated Execution)** 
+LLM writes code inside a chatbot and immediately runs it within the chat interface, creating interactive applications you can use and modify in real-time. Examples: Google Gemini, Claude Artifacts, ChatGPT Canvas
+
+**Level 3: Agentic App Builders (Full Application Development)**
+LLM-powered services that plan and execute the entire development process, from concept to deployed application, handling multiple files, frameworks, and deployment automatically. Examples: Lovable, Bolt, v0 by Vercel, Google AI Studio
+
+**Level 4: Agentic IDEs (Professional Development)**
+AI-powered development environments that assist with complex, multi-file projects, handling entire codebases, version control, and sophisticated development workflows. Examples: Cursor, GitHub Copilot, Claude Code, Google Colab
+
+
+This workshop will stick to Level 1. Our intermediate course 'Developing Research Software with AI Tools' addresses how you would work within Level 4. 
+
+
 ::::::::::::::::::::::::::::::::::::: callout
 
 ## Which tools are most commonly used by researchers?
@@ -250,5 +269,6 @@ In a study of 868 scientists who code as part of their research, ChatGPT was by 
 
 ## References
 
-- [O'Brien, G., Parker, A., Eisty, N., & Carver, J. (2025). More code, less validation: Risk factors for over-reliance on AI coding tools among scientists.](https://arxiv.org/abs/2512.19644)
 -[S.J. Hettrick et al, UK Research Software Survey 2014](https://zenodo.org/records/1183562)
+- [O'Brien, G., Parker, A., Eisty, N., & Carver, J. (2025). More code, less validation: Risk factors for over-reliance on AI coding tools among scientists.](https://arxiv.org/abs/2512.19644)
+- [Getting started with AI for Coding by Oxford AI Competency Centre](https://oerc.ox.ac.uk/ai-centre/ai-guides/getting-started-with-ai-for-coding)
