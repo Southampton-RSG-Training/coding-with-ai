@@ -813,6 +813,30 @@ explanations, summaries, and code generation support.</p></li>
 tools like Word, Excel, and Visual Studio, this AI assistant helps with
 code generation, data analysis, and workflow automation.</p></li>
 </ol>
+<p>The <a href="https://oerc.ox.ac.uk/ai-centre/ai-guides/getting-started-with-ai-for-coding" class="external-link">Oxford
+AI Competency Centre</a> suggest thinking about AI-Assisted Coding as
+existing in four levels of differing complexity and capability.</p>
+<p><strong>Level 1: Code Snippets (Copy and Paste)</strong> A Large
+Language Model inside a chatbot generates code that you copy and paste
+into files or environments you manage yourself. Examples: ChatGPT,
+Claude, Gemini, GitHub Copilot Chat</p>
+<p><strong>Level 2: Canvas and Artifacts (Integrated Execution)</strong>
+LLM writes code inside a chatbot and immediately runs it within the chat
+interface, creating interactive applications you can use and modify in
+real-time. Examples: Google Gemini, Claude Artifacts, ChatGPT Canvas</p>
+<p><strong>Level 3: Agentic App Builders (Full Application
+Development)</strong> LLM-powered services that plan and execute the
+entire development process, from concept to deployed application,
+handling multiple files, frameworks, and deployment automatically.
+Examples: Lovable, Bolt, v0 by Vercel, Google AI Studio</p>
+<p><strong>Level 4: Agentic IDEs (Professional Development)</strong>
+AI-powered development environments that assist with complex, multi-file
+projects, handling entire codebases, version control, and sophisticated
+development workflows. Examples: Cursor, GitHub Copilot, Claude Code,
+Google Colab</p>
+<p>This workshop will stick to Level 1. Our intermediate course
+‘Developing Research Software with AI Tools’ addresses how you would
+work within Level 4.</p>
 <div id="which-tools-are-most-commonly-used-by-researchers" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -870,18 +894,16 @@ search engines, and coding environments.</li>
 </section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
 <hr class="half-width">
-<ul>
-<li>
-<a href="https://arxiv.org/abs/2512.19644" class="external-link">O’Brien, G., Parker, A.,
-Eisty, N., &amp; Carver, J. (2025). More code, less validation: Risk
-factors for over-reliance on AI coding tools among scientists.</a> -<a href="https://zenodo.org/records/1183562" class="external-link">S.J. Hettrick et al, UK
-Research Software Survey 2014</a>
-</li>
-</ul>
+<p>-<a href="https://zenodo.org/records/1183562" class="external-link">S.J. Hettrick et al, UK
+Research Software Survey 2014</a> - <a href="https://arxiv.org/abs/2512.19644" class="external-link">O’Brien, G., Parker, A., Eisty,
+N., &amp; Carver, J. (2025). More code, less validation: Risk factors
+for over-reliance on AI coding tools among scientists.</a> - <a href="https://oerc.ox.ac.uk/ai-centre/ai-guides/getting-started-with-ai-for-coding" class="external-link">Getting
+started with AI for Coding by Oxford AI Competency Centre</a></p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-2-ai-assisted-coding"><p>Content from <a href="2-ai-assisted-coding.html">AI-Assisted Coding</a></p>
+ -->
+</section></section><section id="aio-2-ai-assisted-coding"><p>Content from <a href="2-ai-assisted-coding.html">AI-Assisted Coding</a></p>
 <hr>
 <p>Last updated on 2026-01-29 |
 
@@ -1073,7 +1095,7 @@ the code?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Artificial intelligence tools can generate code quickly and often
 convincingly. For researchers who are new to programming, this can be
@@ -1372,7 +1394,7 @@ code, then apply the fix and verify that the code runs as expected.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1620,7 +1642,7 @@ code logic.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Prompt: Generate a docstring for the following function:</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -1731,7 +1753,7 @@ libraries you want to use.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p><strong>Break the task down into steps</strong></p>
 <ul>
