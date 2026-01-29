@@ -335,7 +335,7 @@
         
 <section id="aio-1-ai-landscape"><p>Content from <a href="1-ai-landscape.html">The AI Landscape</a></p>
 <hr>
-<p>Last updated on 2026-01-28 |
+<p>Last updated on 2026-01-29 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/1-ai-landscape.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -466,32 +466,22 @@ neural networks, combined with GPUs and large labelled datasets, lead to
 major breakthroughs in computer vision, speech recognition, and natural
 language processing. Deep learning becomes the dominant paradigm for
 many AI tasks.</p></li>
-<li><p><strong>2017: Transformer architecture introduced</strong>: The
-transformer model is proposed, enabling more effective handling of
-long-range context in language tasks and laying the foundation for
-modern large language models (Transformer is the ‘T’ in
-chatGPT)</p></li>
-<li><p><strong>2018: GPT-1 and the emergence of large language
-models</strong>: GPT-1 demonstrates that transformer-based models
+<li><p><strong>2017-2021: The emergence and scaling of large language
+models</strong>: The transformer model is proposed in 2017, laying the
+foundation for modern large language models (Transformer is the ‘T’ in
+chatGPT). In 2018, GPT-1 demonstrates that transformer-based models
 trained on large text corpora can perform a wide range of language tasks
-through pre-training and fine-tuning, influencing subsequent research
-and development.</p></li>
-<li><p><strong>2020–2021: Scaling of large language models</strong>:
-Models such as GPT-3 show that increasing model size and training data
-leads to qualitatively new capabilities, including few-shot learning and
-more fluent text generation.</p></li>
-<li><p><strong>2022: ChatGPT and mainstream adoption of generative
-AI</strong>: ChatGPT introduces large language models to a broad public
-and professional audience through a conversational interface</p></li>
-<li><p><strong>2023–2024: Integration of generative AI into mainstream
-software and research infrastructure</strong>: Following the public
-release of ChatGPT, large language models are rapidly embedded into
-widely used tools and platforms, including code editors, office
-software, search engines, and data analysis environments (e.g. AI
-“copilots”). This period marks a shift from experimental or standalone
-use of generative AI to routine, workflow-integrated assistance in
-research, coding, writing, and analysis.</p></li>
-</ul></section><section><h2 class="section-heading" id="current-landscape-of-ai">Current Landscape of AI<a class="anchor" aria-label="anchor" href="#current-landscape-of-ai"></a>
+through pre-training and fine-tuning. In 2020, more fluent text
+generation.</p></li>
+<li><p><strong>2022-present: ChatGPT and mainstream adoption of
+generative AI</strong>: In November 2022, ChatGPT introduces large
+language models to a broad public and professional audience through a
+conversational interface. Following the public release of ChatGPT, large
+language models are rapidly embedded into widely used tools and
+platforms, including code editors, office software, search engines, and
+data analysis environments (e.g. AI “copilots”).</p></li>
+</ul>
+<figure><img src="../fig/timeline.png" alt="timeline of key events in AI development" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="current-landscape-of-ai">Current Landscape of AI<a class="anchor" aria-label="anchor" href="#current-landscape-of-ai"></a>
 </h2>
 <hr class="half-width">
 <p>In recent years, one particular type of AI system, generative AI, has
@@ -582,7 +572,61 @@ powerful and influential, but they are not representative of AI as a
 whole. Understanding these broad categories helps researchers set
 appropriate expectations and prepares us to examine generative AI in
 more detail.</p>
-</section><section><h2 class="section-heading" id="demystifying-generative-ai">Demystifying Generative AI<a class="anchor" aria-label="anchor" href="#demystifying-generative-ai"></a>
+<table class="table">
+<colgroup>
+<col width="25%">
+<col width="33%">
+<col width="20%">
+<col width="21%">
+</colgroup>
+<thead><tr class="header">
+<th><strong>AI System Type</strong></th>
+<th><strong>What the system does</strong></th>
+<th><strong>Strengths</strong></th>
+<th><strong>Limitations</strong></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Rule-Based &amp; Decision Systems</strong></td>
+<td>Follows clearly defined rules to allow, block, or trigger
+actions</td>
+<td>Predictable and transparent; behaves the same way every time; well
+suited to safety-critical or regulated settings</td>
+<td>Cannot adapt to new situations or handle uncertainty</td>
+</tr>
+<tr class="even">
+<td><strong>Predictive &amp; Analytical Systems</strong></td>
+<td>Uses data to estimate categories, trends, or likelihoods</td>
+<td>Can analyse large datasets efficiently; supports consistent analysis
+and forecasting</td>
+<td>Results depend on data quality; outputs are probabilities, not final
+answers</td>
+</tr>
+<tr class="odd">
+<td><strong>Generative Systems</strong></td>
+<td>Creates new text, code, images, or other content</td>
+<td>Flexible and easy to interact with; useful for drafting, coding, and
+exploring ideas</td>
+<td>Outputs can sound confident but be incomplete or wrong</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Human Oversight Across AI Types</strong></p>
+<p>Human responsibility increases from rule-based to predictive to
+generative systems because more judgment, interpretation, and
+accountability must be carried by people rather than the system
+itself.</p>
+<ul>
+<li>Rule-based systems behave exactly as specified and therefore the
+responsibility is mostly in system design, not in day-to-day
+interpretation.</li>
+<li>Predictive systems give estimates, not decisions and the
+responsibility lies with humans for interpretation and validation.</li>
+<li>Generative systems require the highest human responsibility at the
+point of use. For example, when a researcher uses generative AI to draft
+text, summarise literature, or generate code, the responsibility for
+correctness remains entirely with the human.</li>
+</ul></section><section><h2 class="section-heading" id="demystifying-generative-ai">Demystifying Generative AI<a class="anchor" aria-label="anchor" href="#demystifying-generative-ai"></a>
 </h2>
 <hr class="half-width">
 <div class="section level3">
@@ -839,7 +883,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-2-ai-assisted-coding"><p>Content from <a href="2-ai-assisted-coding.html">AI-Assisted Coding</a></p>
 <hr>
-<p>Last updated on 2026-01-28 |
+<p>Last updated on 2026-01-29 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/2-ai-assisted-coding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -1029,7 +1073,7 @@ the code?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Artificial intelligence tools can generate code quickly and often
 convincingly. For researchers who are new to programming, this can be
@@ -1328,7 +1372,7 @@ code, then apply the fix and verify that the code runs as expected.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1397,14 +1441,17 @@ Matplotlib”</p>
 <span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="co"># Display the plot</span></span>
 <span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
-<p>After generating the boilerplate, researchers should:</p>
+<p>After generating the boilerplate, you would:</p>
 <ul>
-<li>Change the variable names to match their dataset</li>
-<li>Confirm that they understand what the code is doing and check it
-matches their intent</li>
+<li>Change the variable names to match your dataset</li>
+<li>Confirm that you understand what the code is doing and check it
+matches your intent</li>
 <li>Treat the generated code as a starting point to build on, not a
 final solution</li>
 </ul>
+<p>For example, to produce a plot of ….</p>
+<p>TODO: Example editing boilerplate code to produce another plot in
+jupyter notebooks</p>
 </div>
 <div class="section level3">
 <h3 id="refactoring">Refactoring<a class="anchor" aria-label="anchor" href="#refactoring"></a>
@@ -1573,7 +1620,7 @@ code logic.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Prompt: Generate a docstring for the following function:</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -1684,7 +1731,7 @@ libraries you want to use.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p><strong>Break the task down into steps</strong></p>
 <ul>
@@ -2623,8 +2670,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-28",
-  "datePublished": "2026-01-28"
+  "dateModified": "2026-01-29",
+  "datePublished": "2026-01-29"
 }
 
   </script><script>
