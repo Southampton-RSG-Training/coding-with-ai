@@ -349,13 +349,15 @@ plt.legend()
 plt.show()
 ```
 
-After generating the boilerplate, researchers should:
+After generating the boilerplate, you would:
 
-- Change the variable names to match their dataset
-- Confirm that they understand what the code is doing and check it matches their intent
+- Change the variable names to match your dataset
+- Confirm that you understand what the code is doing and check it matches your intent
 - Treat the generated code as a starting point to build on, not a final solution
 
+For example, to produce a plot of ....
 
+TODO: Example editing boilerplate code to produce another plot in jupyter notebooks
 
 ### Refactoring
 
