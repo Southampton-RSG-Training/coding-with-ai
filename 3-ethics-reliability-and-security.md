@@ -290,6 +290,7 @@ Your guidelines could include:
 
 
 ## References
+
 - [AI-Assisted Coding with Codium, Ethical and Security Considerations](https://carpentries-incubator.github.io/gen-ai-coding/3-ethical-and-security-considerations.html)
 - [Perry, N., Srivastava, M., Kumar, D., & Boneh, D. (2023, November). Do users write more insecure code with ai assistants?. In Proceedings of the 2023 ACM SIGSAC conference on computer and communications security (pp. 2785-2799)](https://arxiv.org/pdf/2211.03622)
 - [Yetiştiren, B., Özsoy, I., Ayerdem, M., & Tüzün, E. (2023). Evaluating the code quality of ai-assisted code generation tools: An empirical study on github copilot, amazon codewhisperer, and chatgpt. arXiv preprint arXiv:2304.10778.](https://arxiv.org/pdf/2304.10778)
