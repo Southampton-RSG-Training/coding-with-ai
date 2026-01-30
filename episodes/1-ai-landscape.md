@@ -83,8 +83,11 @@ For example, a laboratory safety interlock is an example of a rule-based system.
 
 These systems are deterministic and transparent, in other words the same inputs always lead to the same outcome and the rules governing behaviour are explicitly defined. Unlike learning-based AI systems, laboratory safety interlocks do not adapt or infer, they exist to enforce safety rules reliably, even in the presence of human error.
 
+Rule-based chat AI systems existed.  An AI chatbot ELIZA was introduced in 1966 to act as a psychotherapist.  ELIZA processes inputted text and gives a response based on the pre-programmed rules. However, for real-world applications there will always be situations outside the pre-designed rules, which a rule-based AI will not have the capability to respond to. 
 
-2. **Predictive and Analytical Systems**: These systems learn patterns from data to make predictions, classifications, or risk estimates. Rather than following fixed rules, they use statistical models to answer questions such as What category does this belong to? or How likely is this outcome? Predictive AI systems are common in research and operational settings, including data analysis, diagnostics, and forecasting. Their outputs support decisions but do not create new content.
+
+
+2. **Predictive and Analytical Systems**: These systems learn patterns from data to make predictions, classifications, or risk estimates. Rather than following fixed rules, they use statistical models to answer questions such as 'What category does this belong to?' or 'How likely is this outcome?' Predictive AI systems are common in research and operational settings, including data analysis, diagnostics, and forecasting. Their outputs support decisions but do not create new content.
 
 One example of a predictive AI system is a machine-learning model trained to automatically label features in microscope images, such as identifying specific cell types or structures.
 
@@ -92,7 +95,7 @@ The model learns from large sets of images that have been annotated by experts, 
 
 The system provides probabilities, rather than definitive answers, as outputs and does not generate new content or biological insight. The results must be validated and interpreted by researchers, as the model's performance depends heavily on the quality of the training data and imaging conditions.
 
-3. **Generative Systems**: Generative AI systems are designed to produce new outputs that resemble the data on which they were trained. This includes generating text, code, images, or other media. GPT and ChatGPT fall into this category, specializing in language and code generation. These systems are optimized for producing fluent and contextually appropriate responses, not for verifying truth or making authoritative decisions.
+3. **Generative Systems**: Generative AI systems are designed to produce new outputs that resemble the data on which they were trained. This includes generating text, code, images, or other media. The current AI systems that we are familiar with, such as ChatGPT, fall into this category. These systems are optimised for producing fluent and contextually appropriate responses, not for verifying truth or making authoritative decisions.
 
 Large language models (LLMs) are examples of generative AI systems.  They are designed to process and generate human-like language by learning patterns from vast amounts of text.
 
@@ -100,7 +103,7 @@ They are trained to predict the next word or token in a sequence, which allows t
 
 LLMs are powerful tools for supporting research tasks such as drafting, coding, and exploration of ideas, but their outputs must always be interpreted and validated by humans, particularly in contexts where accuracy, reproducibility, and accountability matter. We'll talk a lot more about this throughout this workshop. 
 
-Most AI systems in use today are narrow, task-specific tools. Some are designed to enforce rules, others to analyze data and make predictions, and a smaller but increasingly visible group, generative systems, are designed to produce new content. Generative AI systems are powerful and influential, but they are not representative of AI as a whole. Understanding these broad categories helps researchers set appropriate expectations and prepares us to examine generative AI in more detail.
+Most AI systems in use today are narrow, task-specific tools. Some are designed to enforce rules, others to analyze data and make predictions, and a smaller but increasingly visible group, generative systems, are designed to produce new content. Generative AI systems are powerful and influential, but they are not representative of AI as a whole. Hopefully, understanding these broad categories helps us to set appropriate expectations for AI and prepares us to examine generative AI in more detail.
 
 | **AI System Type** | **What the system does** | **Strengths** | **Limitations** |
 |-------------------|-------------------------|---------------|----------------|
@@ -123,13 +126,29 @@ Human responsibility increases from rule-based to predictive to generative syste
 
 ### What Is GPT?
 
-GPT is a type of Large Language Model (LLM). This is a neural network trained on massive amounts of text data to predict and generate human-like language.
+GPT is a computer model designed to work with written language. It can produce text that reads as coherent and context-aware, such as explanations, summaries, or responses to questions.
+
+Systems like GPT belong to a group called Large Language Models (LLMs). An LLM is a program that learns how language works by analysing very large collections of text. It does not store facts in a database or follow pre-programmed rules. Instead, it learns patterns in how words, sentences, and ideas tend to appear together.
+
+LLMs are built using neural networks. In this context, a neural network provides the underlying learning machinery that allows the system to absorb information from large amounts of text and improve its predictions over time.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## What is a neural network?
+
+A neural network is a type of computational model inspired by how the human brain processes information. The name comes from its loose resemblance to brain cells (called neurons), but it is not a biological model of the brain.
+
+Instead, a neural network is built from many simple processing units, called neurons, that pass information to one another in stages. Each neuron receives inputs, applies a simple rule to transform them, and then passes the result forward. By stacking many of these stages on top of each other, the system can learn complex patterns in data.
+
+Learning in a neural network happens gradually as the network adjusts how strongly the neurons influence each other so that its outputs become more accurate over time.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 GPT stands for Generative Pre-trained Transformer:
 
 - **Generative**: GPT is designed to generate new content. Rather than retrieving fixed answers from a database, it produces original outputs, such as text or code.
 - **Pre-trained**: it is trained on vast amounts of data before deployment.
-- **Transformer**: it uses a neural network architecture optimised for understanding context and sequence.
+- **Transformer**: this refers to the internal design of the neural network that helps the system keep track of context across longer pieces of text.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
