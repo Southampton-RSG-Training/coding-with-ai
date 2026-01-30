@@ -149,14 +149,44 @@ Separately from ownership of new AI outputs, generating code that replicates or 
 
 AI tools can influence research outputs, so to what extent should their contribution be acknowledged? AI systems can't be authors but not disclosing their use can misrepresent the nature of the researchers' work and raise academic integrity questions.  
 
-Many journals, conferences and funding bodies now require for any use of AI to be disclosed.  Being transparent about the use of AI may also increase trust in the research community and support reproducibility of research.
+Most publishers agree that AI tools do not qualify for authorship and that human authors are fully accountable for the content they produce.  Publishers are also broadly in agreement that AI use should be disclosed.  
+
+Being transparent about the use of AI may also increase trust in the research community and support reproducibility of research.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## Publisher's Stance on AI Use in Academic Research
+
+Summarised from - Rana, N. K. (2025). Generative AI and academic research: A review of the policies from selected HEIs.
+
+- **Cambridge University Press (CUP):** AI tools cannot be credited as authors, and authors remain fully responsible for the accuracy, integrity, and originality of their work.
+
+- **Nature Portfolio (Springer Nature):** AI tools are not permitted as authors, their use must be transparently disclosed, and AI-generated images are generally prohibited due to unresolved legal and ethical concerns. Nature requires disclosure of LLM use in the Methods section (or an equivalent section), rather than in acknowledgements or citations.
+
+- **APA / Chicago / MLA:** These referencing style authorities require transparent citation of AI tools used in scholarly work, without recognising them as authors, typically in the 'Acknowledgements' section.
+
+- **Elsevier:** Elsevier allows AI-assisted tools for writing support, limited to improving clarity and readability. However, core scholarly activities, such as generating scientific insights, drawing conclusions, or making recommendations, must remain human-led. Elsevier requires authors to declare any AI tool usage and does not allow AI tools to be listed as authors. 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
 ### Citation
 
 The outputs of AI aren't stable, they're likely to vary depending on prompt wording and the AI model version among other factors, so that can't be reliably cited in the same way as you would cite a research paper or software package. 
 
-Several universities and libraries recommend citing the tool used including version and date, describe how it was used and clearly distinguish between AI and human contributions.
+Several universities and libraries recommend citing the tool used including the version and date, describing how it was used and clearly distinguishing between AI and human contributions.
+
+[Duke University Libraries](https://guides.library.duke.edu/citing/AI?utm_source=chatgpt.com) gives the following guidance on how to cite an AI Chat and AI Tool in several different referencing styles.  For example, the APA style would be:
+
+**AI Chat**: AI Company Name. (Year, Month Day). Title of chat [Description, such as Generative AI chat]. Tool Name/Model. URL of the chat.
+
+Example: OpenAI. (2025, August 21). *High school grammar concepts* [Generative AI chat]. ChatGPT. https://chatgpt.com/share/68a77b60-0ee4-800c-9acc-cd3fd573c311
+
+**AI Tool**: AI Company Name. (Year). Tool Name/Model [Description: e.g., Large language model]. URL of the tool
+
+Example: OpenAI. (2025). *ChatGPT* [Large language model]. https://chatgpt.com/
 
 ### Implications for Open Source and Reuse
 
@@ -295,6 +325,7 @@ Your guidelines could include:
 - [Perry, N., Srivastava, M., Kumar, D., & Boneh, D. (2023, November). Do users write more insecure code with ai assistants?. In Proceedings of the 2023 ACM SIGSAC conference on computer and communications security (pp. 2785-2799)](https://arxiv.org/pdf/2211.03622)
 - [Yetiştiren, B., Özsoy, I., Ayerdem, M., & Tüzün, E. (2023). Evaluating the code quality of ai-assisted code generation tools: An empirical study on github copilot, amazon codewhisperer, and chatgpt. arXiv preprint arXiv:2304.10778.](https://arxiv.org/pdf/2304.10778)
 - [UK Government Consultation on Copyright and Artificial Intelligence](https://www.gov.uk/government/consultations/copyright-and-artificial-intelligence/copyright-and-artificial-intelligence?utm_source=chatgpt.com)
+- [Rana, N. K. (2025). Generative AI and academic research: A review of the policies from selected HEIs. Higher Education for the Future, 12(1), 97-113.](https://journals.sagepub.com/doi/full/10.1177/23476311241303800?casa_token=-dV5W8PZZxgAAAAA%3AqIIeQvYk9BeLbYg7K1kNa04fue-7bu62xdGeeaCMovWdJxa3YZ7NsruZkuwdrboBpAjktY1AlIU)
 - [Duke University Libraries guide to citing artificial intelligence](https://guides.library.duke.edu/citing/AI?utm_source=chatgpt.com)
 - [Ethical AI Framework by Vilas Dhar](https://cgsandesh.medium.com/ethical-ai-framework-by-vilas-dhar-6c3b243d587c)
 - [What is Generative AI? - LinkedIn Learning](https://www.linkedin.com/learning/what-is-generative-ai)
