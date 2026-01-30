@@ -1161,7 +1161,7 @@ the code?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Artificial intelligence tools can generate code quickly and often
 convincingly. For researchers who are new to programming, this can be
@@ -1347,9 +1347,9 @@ example, an analogy, or reference documentation.</p></li>
 </section><section><h2 class="section-heading" id="debugging-and-error-analysis">Debugging and Error Analysis<a class="anchor" aria-label="anchor" href="#debugging-and-error-analysis"></a>
 </h2>
 <hr class="half-width">
-<p>Scenario A researcher has written the following Python code to plot
-weight vs hindfoot length by species using Matplotlib. When they try to
-run it, the code fails with an error.</p>
+<p><strong>Scenario</strong>: A researcher has written the following
+Python code to plot weight vs hindfoot length by species using
+Matplotlib. When they try to run it, the code fails with an error.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1460,7 +1460,7 @@ code, then apply the fix and verify that the code runs as expected.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1500,10 +1500,9 @@ boilerplate code across a few different contexts include:</p>
 <li>Functional component in React</li>
 <li>Unit test template</li>
 </ul>
-<p>Using AI to generate boilerplate code can save researchers time with
-minimal risk, allowing them to spend their time and effort focusing on
-the intent of the analysis rather than the programming language’s
-syntax.</p>
+<p>Using AI to generate boilerplate code can save you time with minimal
+risk, allowing you to spend your time and effort focusing on the intent
+of the analysis rather than the programming language’s syntax.</p>
 <p>For example: “Generate boilerplate code to load a csv file and create
 a histogram of one column”</p>
 <div class="codewrapper sourceCode" id="cb5">
@@ -1584,14 +1583,14 @@ you uexpect</li>
 small, incremental changes to improve its internal design, readability,
 and maintainability, without changing its external behaviour or
 functionality.</p>
-<p>For example, once the hindfoot length vs weight plotting code is
-working, the researcher may notice opportunities to improve it. At the
-moment our code filters the data to include only species with over 100
-observations. If the researcher wanted to change the threshold for
-observations, the would have to edit the script directly, which is
-problematic for reusability of the code and reproducibility of the
-outputs. Instead, they could extract the filtering code into it’s own
-function.</p>
+<p>For example, in our scenario from earlier, once the hindfoot length
+vs weight plotting code is working, the researcher may notice
+opportunities to improve it. At the moment our code filters the data to
+include only species with over 100 observations. If the researcher
+wanted to change the threshold for observations, the would have to edit
+the script directly, which is problematic for reusability of the code
+and reproducibility of the outputs. Instead, they could extract the
+filtering code into it’s own function.</p>
 <div id="functions" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1764,7 +1763,7 @@ code logic.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Prompt: Generate a docstring for the following function:</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -1878,7 +1877,7 @@ libraries you want to use.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p><strong>Break the task down into steps</strong></p>
 <ul>
@@ -2754,7 +2753,7 @@ guidelines</strong>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Your guidelines could include:</p>
 <ul>
