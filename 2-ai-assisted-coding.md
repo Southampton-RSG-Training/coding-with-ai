@@ -325,45 +325,86 @@ Boilerplate code is a term used to describe standard code structures that are re
 Using AI to generate boilerplate code can save researchers time with minimal risk, allowing them to spend their time and effort focusing on the intent of the analysis rather than the programming language's syntax. 
 
 For example:
-"Generate boilerplate code for a scatterplot using Matplotlib"
+"Generate boilerplate code to load a csv file and create a histogram of one column"
 
 ```python
+import pandas as pd
 import matplotlib.pyplot as plt
 
-# Sample data
-x = [1, 2, 3, 4, 5]
-y = [5, 4, 3, 2, 1]
+# --- Configuration ---
+csv_file = 'data.csv'      # Path to your CSV file
+column_name = 'column1'    # Column you want to plot
 
-# Create scatter plot
-plt.scatter(x, y, color='blue', marker='o', label='Data Points')
+# --- Load CSV ---
+df = pd.read_csv(csv_file)
 
-# Add labels and title
-plt.xlabel('X-axis Label')
-plt.ylabel('Y-axis Label')
-plt.title('Scatter Plot Example')
+# --- Check if column exists ---
+if column_name not in df.columns:
+    raise ValueError(f"Column '{column_name}' not found in CSV.")
 
-# Show legend
-plt.legend()
-
-# Display the plot
+# --- Plot histogram ---
+plt.figure(figsize=(8, 6))
+plt.hist(df[column_name].dropna(), bins=20, color='skyblue', edgecolor='black')
+plt.title(f'Histogram of {column_name}')
+plt.xlabel(column_name)
+plt.ylabel('Frequency')
+plt.grid(axis='y', alpha=0.75)
 plt.show()
 ```
 
 After generating the boilerplate, you would:
 
-- Change the variable names to match your dataset
 - Confirm that you understand what the code is doing and check it matches your intent
+- Change the variable names to match your dataset
 - Treat the generated code as a starting point to build on, not a final solution
 
-For example, to produce a plot of ....
+For example, to produce a histogram of you might weight:
 
-TODO: Example editing boilerplate code to produce another plot in jupyter notebooks
+- Read through the generated boilerplate to make sure it's doing what you uexpect
+- Change the csv file name to `animals.csv`
+- change the column_name to `weight`
+- Change the colour of the bar plot to match your colour scheme
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# --- Configuration ---
+csv_file = 'animals.csv'      # Path to your CSV file
+column_name = 'weight'    # Column you want to plot
+
+# --- Load CSV ---
+df = pd.read_csv(csv_file)
+
+# --- Check if column exists ---
+if column_name not in df.columns:
+    raise ValueError(f"Column '{column_name}' not found in CSV.")
+
+# --- Plot histogram ---
+plt.figure(figsize=(8, 6))
+plt.hist(df[column_name].dropna(), bins=20, color='green', edgecolor='black')
+plt.title(f'Histogram of {column_name}')
+plt.xlabel(column_name)
+plt.ylabel('Frequency')
+plt.grid(axis='y', alpha=0.75)
+plt.show()
+```
 
 ### Refactoring
 
 Code refactoring describes restructuring existing source code, making small, incremental changes to improve its internal design, readability, and maintainability, without changing its external behaviour or functionality.
 
 For example, once the hindfoot length vs weight plotting code is working, the researcher may notice opportunities to improve it. At the moment our code filters the data to include only species with over 100 observations.  If the researcher wanted to change the threshold for observations, the would have to edit the script directly, which is problematic for reusability of the code and reproducibility of the outputs.  Instead, they could extract the filtering code into it's own function. 
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## Functions
+
+A function is a named block of code that performs a specific task. Instead of writing the same steps over and over, you put them in a function and “call” it whenever you need it. Functions can take inputs (called arguments), do something with them, and return outputs. They make code easier to read, reuse, and maintain.
+
+For example, instead of changing the filtering threshold directly in the script each time, you can put the filtering steps in a function that accepts the threshold as an input. Then you can reuse it with any threshold without rewriting the code.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 Recognising these opportunities for refactoring is a human judgment task. AI is only applied after the goal is clear.
 
