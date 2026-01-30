@@ -167,30 +167,42 @@ Summarised from - Rana, N. K. (2025). Generative AI and academic research: A rev
 
 - **Elsevier:** Elsevier allows AI-assisted tools for writing support, limited to improving clarity and readability. However, core scholarly activities, such as generating scientific insights, drawing conclusions, or making recommendations, must remain human-led. Elsevier requires authors to declare any AI tool usage and does not allow AI tools to be listed as authors. 
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
 
 
 ### Citation
 
 The outputs of AI aren't stable, they're likely to vary depending on prompt wording and the AI model version among other factors, so that can't be reliably cited in the same way as you would cite a research paper or software package. 
 
-Several universities and libraries recommend citing the tool used including the version and date, describing how it was used and clearly distinguishing between AI and human contributions.
+Several universities and libraries recommend citing the tool used including the version and date, describing how it was used and clearly distinguishing between AI and human contributions.  Many AI tools now allow chats to be shared through URLs, meaning that specific chats can be cited if that would be appropriate and helpful to readers of the research.
 
 [Duke University Libraries](https://guides.library.duke.edu/citing/AI?utm_source=chatgpt.com) gives the following guidance on how to cite an AI Chat and AI Tool in several different referencing styles.  For example, the APA style would be:
 
-**AI Chat**: AI Company Name. (Year, Month Day). Title of chat [Description, such as Generative AI chat]. Tool Name/Model. URL of the chat.
+**AI Chat**
+ 
+AI Company Name. (Year, Month Day). Title of chat [Description, such as Generative AI chat]. Tool Name/Model. URL of the chat.
 
 Example: OpenAI. (2025, August 21). *High school grammar concepts* [Generative AI chat]. ChatGPT. https://chatgpt.com/share/68a77b60-0ee4-800c-9acc-cd3fd573c311
 
-**AI Tool**: AI Company Name. (Year). Tool Name/Model [Description: e.g., Large language model]. URL of the tool
+**AI Tool**
+ 
+AI Company Name. (Year). Tool Name/Model [Description: e.g., Large language model]. URL of the tool
 
 Example: OpenAI. (2025). *ChatGPT* [Large language model]. https://chatgpt.com/
 
 ### Implications for Open Source and Reuse
 
 If AI-generated code is added to an open-source project, a licensing conflict may be accidentally introduced if the patterns or structures in the code are derived from software with incompatible licences.  Check the project's licence and contribution guidelines before making any AI-assisted contributions.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## No AI-generated Code Policy for Open-Source Project Cloud Hypervisor
+
+Cloud Hypervisor is an open-source software project that helps large computing systems run multiple programs safely and efficiently at the same time, which is a common requirement in cloud services (services provided over the internet rather than from a local computer). It is maintained by a community of organisations and developers and is made freely available under an open licence. In 2025, the project’s maintainers implemented a no AI-generated code policy for contributions, out of concern that such code might unintentionally include material derived from other software with incompatible licences, creating legal risks for the project and its users. 
+
+In a [post on GitHub](https://github.com/cloud-hypervisor/cloud-hypervisor/blob/v48.0/CONTRIBUTING.md), Cloud Hypervisor's maintainers said: 'Our policy is to decline any contributions known to contain contents generated or derived from using Large Language Models (LLMs). This includes ChatGPT, Gemini, Claude, Copilot and similar tools,” the open source project maintainers explained in a GitHub post.'
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Ethical Considerations in AI-Assisted Research
 
@@ -327,6 +339,7 @@ Your guidelines could include:
 - [UK Government Consultation on Copyright and Artificial Intelligence](https://www.gov.uk/government/consultations/copyright-and-artificial-intelligence/copyright-and-artificial-intelligence?utm_source=chatgpt.com)
 - [Rana, N. K. (2025). Generative AI and academic research: A review of the policies from selected HEIs. Higher Education for the Future, 12(1), 97-113.](https://journals.sagepub.com/doi/full/10.1177/23476311241303800?casa_token=-dV5W8PZZxgAAAAA%3AqIIeQvYk9BeLbYg7K1kNa04fue-7bu62xdGeeaCMovWdJxa3YZ7NsruZkuwdrboBpAjktY1AlIU)
 - [Duke University Libraries guide to citing artificial intelligence](https://guides.library.duke.edu/citing/AI?utm_source=chatgpt.com)
+- [Cloud Hypervisor says no to AI code - but it probably won't help in this day and age](https://www.techradar.com/pro/cloud-hypervisor-says-no-to-ai-code-but-it-probably-wont-help-in-this-day-and-age?utm_source=chatgpt.com)
 - [Ethical AI Framework by Vilas Dhar](https://cgsandesh.medium.com/ethical-ai-framework-by-vilas-dhar-6c3b243d587c)
 - [What is Generative AI? - LinkedIn Learning](https://www.linkedin.com/learning/what-is-generative-ai)
 - [Security Focused Guide for AI Code Assistant Instructions](https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions)
