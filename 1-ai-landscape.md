@@ -43,12 +43,10 @@ The aim of this episode is to place AI tools in their historical and technical c
 ::::::::::::::::::::::::::::::::::::: challenge 
 
 ## When you hear the term “artificial intelligence”, what comes to mind?
+
 Write your answer in the shared document.  There are no right or wrong answers!
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-
 
 "Artificial intelligence (AI) is the capability of a machine or software system to perform tasks that would normally require human intelligence, such as learning from data, recognising patterns, making decisions, or generating outputs." - Merriam-Webster Dictionary.
 
