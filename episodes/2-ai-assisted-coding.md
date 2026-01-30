@@ -136,7 +136,6 @@ Relying heavily on AI may also conflict with institutional policies on research 
 
 
 
-
 ### Appropriate Roles for AI when Writing Research Code
 
 AI tools can be highly valuable when used correctly, as a tool to assist you with your research. The key principle is that they should function as assistants, not autonomous developers.
@@ -160,8 +159,6 @@ AI tools like ChatGPT can serve as an interactive reference and tutor, helping r
 - **Locate technical information quickly**: Instead of reading through multiple documentation pages, you can ask AI to find the relevant function, argument, or method for your task.
 - **Summarize key concepts**: AI can condense long documentation into concise, understandable explanations.
 - **Clarify ambiguous points**: You can follow up iteratively, asking AI to rephrase explanations, provide examples, or highlight potential pitfalls.
-
-
 
 ### Use AI to Explain Unfamiliar Code
 
@@ -192,7 +189,7 @@ Try iteratively refining questions: if a term or method is still unclear, ask AI
 
 ## Debugging and Error Analysis
 
-Scenario
+**Scenario**:
 A researcher has written the following Python code to plot weight vs hindfoot length by species using Matplotlib. When they try to run it, the code fails with an error.
 
 ```python
@@ -322,7 +319,7 @@ Boilerplate code is a term used to describe standard code structures that are re
 - Functional component in React
 - Unit test template
 
-Using AI to generate boilerplate code can save researchers time with minimal risk, allowing them to spend their time and effort focusing on the intent of the analysis rather than the programming language's syntax. 
+Using AI to generate boilerplate code can save you time with minimal risk, allowing you to spend your time and effort focusing on the intent of the analysis rather than the programming language's syntax. 
 
 For example:
 "Generate boilerplate code to load a csv file and create a histogram of one column"
@@ -394,7 +391,7 @@ plt.show()
 
 Code refactoring describes restructuring existing source code, making small, incremental changes to improve its internal design, readability, and maintainability, without changing its external behaviour or functionality.
 
-For example, once the hindfoot length vs weight plotting code is working, the researcher may notice opportunities to improve it. At the moment our code filters the data to include only species with over 100 observations.  If the researcher wanted to change the threshold for observations, the would have to edit the script directly, which is problematic for reusability of the code and reproducibility of the outputs.  Instead, they could extract the filtering code into it's own function. 
+For example, in our scenario from earlier, once the hindfoot length vs weight plotting code is working, the researcher may notice opportunities to improve it. At the moment our code filters the data to include only species with over 100 observations.  If the researcher wanted to change the threshold for observations, the would have to edit the script directly, which is problematic for reusability of the code and reproducibility of the outputs.  Instead, they could extract the filtering code into it's own function. 
 
 ::::::::::::::::::::::::::::::::::::: callout
 
