@@ -36,6 +36,8 @@ This workshop aims to:
 
 “Any sufficiently advanced technology is indistinguishable from magic.” - Arthur C. Clarke, a British science fiction writer, futurist, and inventor (1962)
 
+![Arthur C. Clarke in 1965, ITU Pictures, CC BY 2.0, via Wikimedia Commons](fig/arthur_clarke.jpg){alt='photograph of Arthur C. Clarke in 1965'}
+
 Current AI tools, like ChatGPT and Copilot, can appear almost magical.  They can generate fluent text, write code and respond to conversations in a way that seems almost human. Arthur Clarke's observation is a reminder that this appearance of magic is not evidence of mystery or sentience but of technological complexity.  These systems are built on decades of research in mathematics, statistics and computer science. 
 
 The aim of this episode is to place AI tools in their historical and technical context, clarify what they can and cannot do, and demystify the 'magic' of AI. 
@@ -83,7 +85,7 @@ These systems are deterministic and transparent, in other words the same inputs 
 
 Rule-based chat AI systems existed.  An AI chatbot ELIZA was introduced in 1966 to act as a psychotherapist.  ELIZA processes inputted text and gives a response based on the pre-programmed rules. However, for real-world applications there will always be situations outside the pre-designed rules, which a rule-based AI will not have the capability to respond to. 
 
-
+![Public domain, via Wikimedia Commons](fig/ELIZA_conversation.png){alt='A conversation with the ELIZA chatbot.'}
 
 2. **Predictive and Analytical Systems**: These systems learn patterns from data to make predictions, classifications, or risk estimates. Rather than following fixed rules, they use statistical models to answer questions such as 'What category does this belong to?' or 'How likely is this outcome?' Predictive AI systems are common in research and operational settings, including data analysis, diagnostics, and forecasting. Their outputs support decisions but do not create new content.
 
@@ -93,13 +95,21 @@ The model learns from large sets of images that have been annotated by experts, 
 
 The system provides probabilities, rather than definitive answers, as outputs and does not generate new content or biological insight. The results must be validated and interpreted by researchers, as the model's performance depends heavily on the quality of the training data and imaging conditions.
 
+![A close-up microscope image of a growth plate, Robert M. Hunt, Public domain, via Wikimedia Commons](fig/micrograph.jpg){alt='Light micrograph of an undecalcified epiphyseal plate that is displaying the hypertrophic zone with its typical chondrocytes, matrix and three zones: maturation (top), degenerative (middle) and provisional calcification (bottom).'}
+
 3. **Generative Systems**: Generative AI systems are designed to produce new outputs that resemble the data on which they were trained. This includes generating text, code, images, or other media. The current AI systems that we are familiar with, such as ChatGPT, fall into this category. These systems are optimised for producing fluent and contextually appropriate responses, not for verifying truth or making authoritative decisions.
 
 Large language models (LLMs) are examples of generative AI systems.  They are designed to process and generate human-like language by learning patterns from vast amounts of text.
 
-They are trained to predict the next word or token in a sequence, which allows them to produce coherent text, answer questions, summarize documents, and generate code. LLMs do not possess understanding or intent. Instead, they rely on statistical associations learned during training to generate outputs. As a result, their outputs can be fluent and convincing while still being incomplete, outdated, or incorrect.
+Some examples of uses of LLMs:
+
+- The language learning app Duolingo uses generative AI to explain mistakes and practice conversations. The features are part of a new subscription tier called "Duolingo Max".
+- The education website Khan Academy is using generative AI for their tutoring chatbot called "Khanmigo"
+- An app called Be My Eyes helps people with visual impairments to identify objects and navigate their surroundings, by using the image recognition capabilities of GPT-4.
 
 LLMs are powerful tools for supporting research tasks such as drafting, coding, and exploration of ideas, but their outputs must always be interpreted and validated by humans, particularly in contexts where accuracy, reproducibility, and accountability matter. We'll talk a lot more about this throughout this workshop. 
+
+![Jernej Furman from Slovenia, CC BY 2.0, via Wikimedia Commons](fig/smartphone_with_chatGPT.jpg){alt='Smartphone with ChatGPT on the US dollar banknotes background'}
 
 Most AI systems in use today are narrow, task-specific tools. Some are designed to enforce rules, others to analyze data and make predictions, and a smaller but increasingly visible group, generative systems, are designed to produce new content. Generative AI systems are powerful and influential, but they are not representative of AI as a whole. Hopefully, understanding these broad categories helps us to set appropriate expectations for AI and prepares us to examine generative AI in more detail.
 
@@ -126,6 +136,12 @@ Human responsibility increases from rule-based to predictive to generative syste
 
 GPT is a computer model designed to work with written language. It can produce text that reads as coherent and context-aware, such as explanations, summaries, or responses to questions.
 
+GPT stands for Generative Pre-trained Transformer:
+
+- **Generative**: GPT is designed to generate new content. Rather than retrieving fixed answers from a database, it produces original outputs, such as text or code.
+- **Pre-trained**: it is trained on vast amounts of data before deployment.
+- **Transformer**: this refers to the internal design of the neural network that helps the system keep track of context across longer pieces of text.
+
 Systems like GPT belong to a group called Large Language Models (LLMs). An LLM is a program that learns how language works by analysing very large collections of text. It does not store facts in a database or follow pre-programmed rules. Instead, it learns patterns in how words, sentences, and ideas tend to appear together.
 
 LLMs are built using neural networks. In this context, a neural network provides the underlying learning machinery that allows the system to absorb information from large amounts of text and improve its predictions over time.
@@ -140,13 +156,12 @@ Instead, a neural network is built from many simple processing units, called neu
 
 Learning in a neural network happens gradually as the network adjusts how strongly the neurons influence each other so that its outputs become more accurate over time.
 
+![A simplified diagram of an artificial neural network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons](fig/artificial_neural_network.svg){alt='Artificial neural network with layer coloring'}
+ 
+![A diagram of a neuron. Egm4313.s12 at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons](fig/neuron.png){alt='Neuron and myelinated axon, with signal flow from inputs at dendrites to outputs at axon terminals.'}
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-GPT stands for Generative Pre-trained Transformer:
-
-- **Generative**: GPT is designed to generate new content. Rather than retrieving fixed answers from a database, it produces original outputs, such as text or code.
-- **Pre-trained**: it is trained on vast amounts of data before deployment.
-- **Transformer**: this refers to the internal design of the neural network that helps the system keep track of context across longer pieces of text.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -207,6 +222,8 @@ Understanding tokenisation allows us to appreciate a key limitation of GPT: the 
 4. **Fine-tuning** - Further training the model on specific datasets and tasks related to its purpose e.g. if it is going to be a code assistant it will be trained on tasks related to code generation. 
 5. **Alignment** – Guide the model so that its outputs are helpful, safe, and in line with human intentions. This often involves human feedback to encourage responses that are accurate, reliable, and appropriate.
 6. **Evaluation and iteration** - Testing the AI in a variety of use cases, getting feedback and iterating the model architecture to improve performance. 
+
+![](fig/model_training_process_cropped.png){alt='Diagram of the 6 steps for training a GPT model'}
 
 
 
@@ -286,7 +303,7 @@ In a study of 868 scientists who code as part of their research, ChatGPT was by 
 
 ## References
 
--[S.J. Hettrick et al, UK Research Software Survey 2014](https://zenodo.org/records/1183562)
+- [S.J. Hettrick et al, UK Research Software Survey 2014](https://zenodo.org/records/1183562)
 - [He, R., Cao, J., & Tan, T. (2025). Generative artificial intelligence: a historical perspective. National Science Review, 12(5), nwaf050.](https://doi.org/10.1093/nsr/nwaf050)
 - [Introduction to Generative AI for Researchers](https://www.lse.ac.uk/DSI/AI/AI-Research/Introduction-to-Generative-AI-for-researchers?entryId=2319c173-7bdc-45d3-9a69-d12fd54340d7&nodeId=e2e64854-5d30-44fa-a289-a5ef76104f3e)
 - [O'Brien, G., Parker, A., Eisty, N., & Carver, J. (2025). More code, less validation: Risk factors for over-reliance on AI coding tools among scientists.](https://arxiv.org/abs/2512.19644)
