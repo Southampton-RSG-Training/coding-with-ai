@@ -333,7 +333,7 @@
         
 <section id="aio-1-ai-landscape"><p>Content from <a href="1-ai-landscape.html">The AI Landscape</a></p>
 <hr>
-<p>Last updated on 2026-01-29 |
+<p>Last updated on 2026-01-30 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/1-ai-landscape.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -513,15 +513,21 @@ same inputs always lead to the same outcome and the rules governing
 behaviour are explicitly defined. Unlike learning-based AI systems,
 laboratory safety interlocks do not adapt or infer, they exist to
 enforce safety rules reliably, even in the presence of human error.</p>
+<p>Rule-based chat AI systems existed. An AI chatbot ELIZA was
+introduced in 1966 to act as a psychotherapist. ELIZA processes inputted
+text and gives a response based on the pre-programmed rules. However,
+for real-world applications there will always be situations outside the
+pre-designed rules, which a rule-based AI will not have the capability
+to respond to.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>
 <strong>Predictive and Analytical Systems</strong>: These systems
 learn patterns from data to make predictions, classifications, or risk
 estimates. Rather than following fixed rules, they use statistical
-models to answer questions such as What category does this belong to? or
-How likely is this outcome? Predictive AI systems are common in research
-and operational settings, including data analysis, diagnostics, and
-forecasting. Their outputs support decisions but do not create new
+models to answer questions such as ‘What category does this belong to?’
+or ‘How likely is this outcome?’ Predictive AI systems are common in
+research and operational settings, including data analysis, diagnostics,
+and forecasting. Their outputs support decisions but do not create new
 content.</li>
 </ol>
 <p>One example of a predictive AI system is a machine-learning model
@@ -542,10 +548,10 @@ imaging conditions.</p>
 <strong>Generative Systems</strong>: Generative AI systems are
 designed to produce new outputs that resemble the data on which they
 were trained. This includes generating text, code, images, or other
-media. GPT and ChatGPT fall into this category, specializing in language
-and code generation. These systems are optimized for producing fluent
-and contextually appropriate responses, not for verifying truth or
-making authoritative decisions.</li>
+media. The current AI systems that we are familiar with, such as
+ChatGPT, fall into this category. These systems are optimised for
+producing fluent and contextually appropriate responses, not for
+verifying truth or making authoritative decisions.</li>
 </ol>
 <p>Large language models (LLMs) are examples of generative AI systems.
 They are designed to process and generate human-like language by
@@ -566,9 +572,9 @@ are designed to enforce rules, others to analyze data and make
 predictions, and a smaller but increasingly visible group, generative
 systems, are designed to produce new content. Generative AI systems are
 powerful and influential, but they are not representative of AI as a
-whole. Understanding these broad categories helps researchers set
-appropriate expectations and prepares us to examine generative AI in
-more detail.</p>
+whole. Hopefully, understanding these broad categories helps us to set
+appropriate expectations for AI and prepares us to examine generative AI
+in more detail.</p>
 <table class="table">
 <colgroup>
 <col width="25%">
@@ -629,9 +635,41 @@ correctness remains entirely with the human.</li>
 <div class="section level3">
 <h3 id="what-is-gpt">What Is GPT?<a class="anchor" aria-label="anchor" href="#what-is-gpt"></a>
 </h3>
-<p>GPT is a type of Large Language Model (LLM). This is a neural network
-trained on massive amounts of text data to predict and generate
-human-like language.</p>
+<p>GPT is a computer model designed to work with written language. It
+can produce text that reads as coherent and context-aware, such as
+explanations, summaries, or responses to questions.</p>
+<p>Systems like GPT belong to a group called Large Language Models
+(LLMs). An LLM is a program that learns how language works by analysing
+very large collections of text. It does not store facts in a database or
+follow pre-programmed rules. Instead, it learns patterns in how words,
+sentences, and ideas tend to appear together.</p>
+<p>LLMs are built using neural networks. In this context, a neural
+network provides the underlying learning machinery that allows the
+system to absorb information from large amounts of text and improve its
+predictions over time.</p>
+<div id="what-is-a-neural-network" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="what-is-a-neural-network" class="callout-inner">
+<h3 class="callout-title">What is a neural network?</h3>
+<div class="callout-content">
+<p>A neural network is a type of computational model inspired by how the
+human brain processes information. The name comes from its loose
+resemblance to brain cells (called neurons), but it is not a biological
+model of the brain.</p>
+<p>Instead, a neural network is built from many simple processing units,
+called neurons, that pass information to one another in stages. Each
+neuron receives inputs, applies a simple rule to transform them, and
+then passes the result forward. By stacking many of these stages on top
+of each other, the system can learn complex patterns in data.</p>
+<p>Learning in a neural network happens gradually as the network adjusts
+how strongly the neurons influence each other so that its outputs become
+more accurate over time.</p>
+</div>
+</div>
+</div>
 <p>GPT stands for Generative Pre-trained Transformer:</p>
 <ul>
 <li>
@@ -642,8 +680,9 @@ produces original outputs, such as text or code.</li>
 <strong>Pre-trained</strong>: it is trained on vast amounts of data
 before deployment.</li>
 <li>
-<strong>Transformer</strong>: it uses a neural network architecture
-optimised for understanding context and sequence.</li>
+<strong>Transformer</strong>: this refers to the internal design of
+the neural network that helps the system keep track of context across
+longer pieces of text.</li>
 </ul>
 <div id="what-is-a-transformer" class="callout">
 <div class="callout-square">
@@ -1097,7 +1136,7 @@ the code?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Artificial intelligence tools can generate code quickly and often
 convincingly. For researchers who are new to programming, this can be
@@ -1396,7 +1435,7 @@ code, then apply the fix and verify that the code runs as expected.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1644,7 +1683,7 @@ code logic.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Prompt: Generate a docstring for the following function:</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -1758,7 +1797,7 @@ libraries you want to use.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p><strong>Break the task down into steps</strong></p>
 <ul>
@@ -2000,7 +2039,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-3-ethics-reliability-and-security"><p>Content from <a href="3-ethics-reliability-and-security.html">Ethics, Reliability and Security Considerations</a></p>
 <hr>
-<p>Last updated on 2026-01-28 |
+<p>Last updated on 2026-01-30 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-ethics-reliability-and-security.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2553,7 +2592,7 @@ guidelines</strong>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Your guidelines could include:</p>
 <ul>
@@ -2696,8 +2735,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/aio.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/aio.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-29",
-  "datePublished": "2026-01-29"
+  "dateModified": "2026-01-30",
+  "datePublished": "2026-01-30"
 }
 
   </script><script>
