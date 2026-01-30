@@ -2214,11 +2214,15 @@ reviewing the outputs.</p>
 <p>If the AI model’s training data does not contain recent developments,
 AI-generated code can be outdated. This can be particularly problematic
 in fields such as software development and scientific research, where
-current knowledge is critical.</p>
-<p>For example, an AI might suggest a function from an open-source
-library that hasn’t been well-maintained over the past few years. If the
-library has unpatched security flaws, these could propagate into the
-project.</p>
+current knowledge is critical. An AI might suggest a function from an
+open-source library that hasn’t been well-maintained over the past few
+years. If the library has unpatched security flaws, these could
+propagate into the project.</p>
+<p>For example, an AI might recommend using Python’s urllib module for
+web requests, because it appears in its training data. However, recent
+best practices favor the requests library, which is more secure, easier
+to use, and better maintained. Relying on the outdated suggestion could
+lead to fragile code or missed features.</p>
 </div>
 <div class="section level3">
 <h3 id="unreliable-results">Unreliable Results<a class="anchor" aria-label="anchor" href="#unreliable-results"></a>
@@ -2269,10 +2273,6 @@ the code appears to run correctly. There may be subtle errors or
 undocumented assumptions embedded in AI-generated solutions, which can
 lead to inconsistencies across experiments or datasets, leading to
 different results and undermining confidence in your findings.</p>
-<p>While AI can accelerate coding, researchers must critically evaluate
-every output, verify results against established methods, and remain
-vigilant to subtle errors that could compromise both research validity
-and professional credibility.</p>
 <div id="vibe-coding" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -2285,6 +2285,16 @@ and professional credibility.</p>
 structured plan, proper design, or architectural considerations.
 Decisions are made on the fly, often based on intuition or immediate
 needs rather than a thoughtful development strategy.</p>
+<p><a href="https://en.wikipedia.org/wiki/Andrej_Karpathy" class="external-link">Andrej
+Karpathy</a>, co-founder of OpenAI and one of Time Magazine’s 100 Most
+Influential People in AI in 2024, has said about vibe coding: “There’s a
+new kind of coding, I call ‘vibe coding’, where you fully give in to the
+vibes, embrace exponentials, and forget that the code even exists. It’s
+possible because the LLMs … are getting too good.</p>
+<p>“When I get error messages I just copy [and] paste them in with no
+comment, usually that fixes it … I’m building a project or web app, but
+it’s not really coding – I just see stuff, say stuff, run stuff, and
+copy paste stuff, and it mostly works.”</p>
 <p>This can be fantastic for developing a quite prototype or trying out
 an idea. However, coding in this way can also lead to some major
 problems:</p>
@@ -2386,8 +2396,14 @@ risk. ChatGPT sometimes hallucinates non-existent coding libraries in
 its outputs. A <a href="https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/" class="external-link">study
 by the security company Vulcan</a> identified a cyberattack technique
 where criminals could hijack these fake libraries by publishing a
-malicious package in place of the library and hoping developers would
-install the infected library based on the AI tool’s recommendation.</p>
+malicious package under the name of the non-existent library and hoping
+developers would install the infected library based on the AI tool’s
+recommendation.</p>
+<p>This practice has become known as ‘slopsquatting’, a combination of
+‘AI Slop’ and ‘typosquatting’ (the practice of registering domain names
+or software package names that are slightly misspelled versions of
+popular ones to trick users into visiting them or downloading malicious
+content).</p>
 </div>
 </section><section><h2 class="section-heading" id="intellectual-property-authorship-and-citation-of-ai-generated-code-and-text">Intellectual Property, Authorship, and Citation of AI-Generated Code
 and Text<a class="anchor" aria-label="anchor" href="#intellectual-property-authorship-and-citation-of-ai-generated-code-and-text"></a>
@@ -2401,15 +2417,15 @@ the mind) for AI-generated code are currently evolving.</p>
 <p>Currently in the UK, if AI is used to assist a human creator, the
 content is the human’s own intellectual creation and the copyright
 belongs to the human creator.</p>
-<p>If there is no human author, the “author” for copyright purposes is
+<p>If there is no human author, the “author”” for copyright purposes is
 the person “by whom the arrangements necessary for the creation of the
-work are undertaken.” For AI-generated code, this means that if the code
-is truly without human creative input (for example produced entirely by
-an AI tool in response to a prompt without the author shaping or
-selecting the output creatively), the law would treat the person who set
-up the process (for example the user or developer who provided the
-prompts and triggered the AI) as the “author” of that computer-generated
-work.</p>
+work are undertaken.”” For AI-generated code, this means that if the
+code is truly without human creative input (for example produced
+entirely by an AI tool in response to a prompt without the author
+shaping or selecting the output creatively), the law would treat the
+person who set up the process (for example the user or developer who
+provided the prompts and triggered the AI) as the “author” of that
+computer-generated work.</p>
 <p>However, there’s ongoing debate about how this practically applies to
 many forms of AI outputs, including software code, because:</p>
 <ul>
@@ -2581,43 +2597,28 @@ AI-generated code or other content they use</li>
 <div class="section level3">
 <h3 id="ethical-ai-framework">Ethical AI Framework<a class="anchor" aria-label="anchor" href="#ethical-ai-framework"></a>
 </h3>
-<p>Vilas Dhar, a social entrepreneur focused on the ethical use of AI
-and president of the Patrick J. McGovern Foundation, proposed an Ethical
-AI Framework built on three pillars:</p>
+<p>An Ethical AI Framework was proposed by <a href="https://en.wikipedia.org/wiki/Vilas_Dhar" class="external-link">Vilas Dhar</a>, a social
+entrepreneur focused on the ethical use of AI and president of the
+Patrick J. McGovern Foundation. The framework is built on three
+pillars:</p>
 <ol style="list-style-type: decimal">
 <li>Responsible data practices</li>
-</ol>
-<p>AI systems are only as ethical as the data they are trained on.
-Researchers should consider:</p>
-<ul>
-<li>Where the training data comes from</li>
-<li>Whether it reflects historical or societal biases</li>
-<li>Whether those biases could be reproduced or amplified in AI
-outputs</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
 <li>Boundaries around safe and appropriate use</li>
+<li>Understanding how tools generate their recommendations. When AI
+systems operate as black boxes, it becomes difficult to assess validity,
+fairness, or risk.</li>
 </ol>
-<p>Not all tasks are suitable for AI assistance. Ethical use requires
-clear boundaries around:</p>
-<ul>
-<li>What decisions AI tools are allowed to influence</li>
-<li>What decisions must remain under human control</li>
-<li>How AI outputs are reviewed before being acted upon</li>
-<li>Whether the AI tool is appropriate for the task at hand</li>
-</ul>
-<p>AI should support research, not replace human responsibility or
-accountability.</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Ethical AI use depends on understanding how tools generate their
-recommendations. When AI systems operate as black boxes, it becomes
-difficult to assess validity, fairness, or risk. Humans should ask:</li>
+<p>In a research setting applying this framework might look like:</p>
+<ol style="list-style-type: decimal">
+<li>Checking your data: AI reflects the datasets it learned from. For
+example, an AI trained on outdated species measurements might
+misclassify new observations.</li>
+<li>Setting boundaries on key decisions: Decide which tasks are
+appropriate for AI and which should always be done by humans.</li>
+<li>Understanding the AI’s reasoning: Ask how the AI arrived at its
+suggestion. If a statistical model or code snippet doesn’t make sense,
+investigate before using it.</li>
 </ol>
-<ul>
-<li>How did the tool arrive at this suggestion?</li>
-<li>What assumptions or patterns might be influencing the output?</li>
-<li>Can the result be independently validated?</li>
-</ul>
 </div>
 </section><section><h2 class="section-heading" id="de-skilling-and-overdependence-on-ai-in-research-computing">De-skilling and Overdependence on AI in Research Computing<a class="anchor" aria-label="anchor" href="#de-skilling-and-overdependence-on-ai-in-research-computing"></a>
 </h2>
@@ -2828,6 +2829,9 @@ I., Ayerdem, M., &amp; Tüzün, E. (2023). Evaluating the code quality of
 ai-assisted code generation tools: An empirical study on github copilot,
 amazon codewhisperer, and chatgpt. arXiv preprint
 arXiv:2304.10778.</a></li>
+<li><a href="https://www.theguardian.com/technology/2025/mar/16/ai-software-coding-programmer-expertise-jobs-threat" class="external-link">Now
+you don’t even need code to be a programmer. But you do still need
+expertise</a></li>
 <li><a href="https://www.gov.uk/government/consultations/copyright-and-artificial-intelligence/copyright-and-artificial-intelligence?utm_source=chatgpt.com" class="external-link">UK
 Government Consultation on Copyright and Artificial
 Intelligence</a></li>
