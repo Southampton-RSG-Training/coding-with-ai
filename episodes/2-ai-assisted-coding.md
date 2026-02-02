@@ -724,6 +724,13 @@ However, there are a few important factors to bear in mind when using AI to tran
 
 TODO: Challenge - which tasks will you use AI tools for when you next have to write some code for data analysis or software development?
 
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Discussion: Which coding tasks could AI help you with?
+
+When you next have to write some code for data analysis or software development, which tasks would you use AI tools to assist with? 
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Integrating AI Tools into IDEs
 
