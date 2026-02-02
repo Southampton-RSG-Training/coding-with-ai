@@ -305,7 +305,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>The AI Landscape</h1>
-        <p>Last updated on 2026-01-30 |
+        <p>Last updated on 2026-02-02 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/1-ai-landscape.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -358,7 +358,8 @@ researchers would rather be thinking about and researching their subject
 matter rather than spending lots of time learning a programming language
 and writing code. Therefore, with easy access to AI tools, it can be
 very tempting to ask AI to write your research code for you.</p>
-<p>This workshop aims to:</p>
+<figure><img src="fig/i_would_rather_not_behold.png" alt='Cartoon of an instructor gesturing enthusiastically to a screen full of R documentation saying "BEHOLD! An amazing function!" A skeptical looking student looks on, saying "I would rather not behold...' class="figure mx-auto d-block"><div class="figcaption">Artwork by <span class="citation">@allison_horst</span>, CC-BY</div>
+</figure><p>This workshop aims to:</p>
 <ul><li>Demonstrate how AI can assist in coding.</li>
 <li>Raise researchers’ awareness of the potential risks associated with
 AI-assisted coding.</li>
@@ -407,14 +408,22 @@ or system, but as a broad collection of techniques and approaches for
 solving different kinds of problems. These techniques have been
 developed over the past 70 years. Let’s consider a timeline of major AI
 developments to put the current AI tools in historical context:</p>
-<ul><li><p><strong>1950s–1970s: Symbolic AI and early expert
-systems</strong>: AI research begins with symbolic, rule-based
-approaches focused on logic, search, and reasoning. Key moments include
-Alan Turing’s 1950 paper “Computing Machinery and Intelligence” and the
-1956 Dartmouth Conference, where the term “artificial intelligence” was
-coined. Systems relied on explicitly encoded rules and struggled outside
-narrowly defined domains.</p></li>
-<li><p><strong>1980s–early 1990s: Expert systems and the first AI boom
+<ul><li>
+<strong>1950s–1970s: Symbolic AI and early expert systems</strong>:
+AI research begins with symbolic, rule-based approaches focused on
+logic, search, and reasoning. Key moments include Alan Turing’s 1950
+paper “Computing Machinery and Intelligence” and the 1956 Dartmouth
+Conference, where the term “artificial intelligence” was coined. Systems
+relied on explicitly encoded rules and struggled outside narrowly
+defined domains.</li>
+</ul><p>Rule-based chat AI systems existed. An AI chatbot ELIZA was
+introduced in 1966 to act as a psychotherapist. ELIZA processes inputted
+text and gives a response based on the pre-programmed rules. However,
+for real-world applications there will always be situations outside the
+pre-designed rules, which a rule-based AI will not have the capability
+to respond to.</p>
+<figure><img src="fig/ELIZA_conversation.png" alt="A conversation with the ELIZA chatbot." class="figure mx-auto d-block"><div class="figcaption">Public domain, via Wikimedia Commons</div>
+</figure><ul><li><p><strong>1980s–early 1990s: Expert systems and the first AI boom
 (and bust)</strong>: Rule-based expert systems are adopted in industry
 (e.g. medical diagnosis, configuration systems). Progress stalls due to
 high development costs, limited scalability, and lack of data, leading
@@ -463,27 +472,20 @@ stable, well-defined environments. Rule-based systems are still widely
 used in areas such as compliance, governance, and safety-critical
 decision-making. However, they are limited in their ability to handle
 ambiguity, novelty, or rapidly changing conditions.</li>
-</ol><p>For example, a laboratory safety interlock is an example of a
-rule-based system. It monitors the state of critical variables, such as
-door positions, pressure levels, temperature, radiation shielding, or
-airflow, and allows an action only if all safety conditions are met. For
-example, a high-power laser system may be physically prevented from
-firing unless the enclosure door is closed, warning lights are active,
-and emergency stops are disengaged. If any condition is violated, the
-system immediately shuts down or blocks operation.</p>
+</ol><p>A laboratory safety interlock is an example of a rule-based system.
+It monitors the state of critical variables, such as door positions,
+pressure levels, temperature, radiation shielding, or airflow, and
+allows an action only if all safety conditions are met. For example, a
+high-power laser system may be physically prevented from firing unless
+the enclosure door is closed, warning lights are active, and emergency
+stops are disengaged. If any condition is violated, the system
+immediately shuts down or blocks operation.</p>
 <p>These systems are deterministic and transparent, in other words the
 same inputs always lead to the same outcome and the rules governing
 behaviour are explicitly defined. Unlike learning-based AI systems,
 laboratory safety interlocks do not adapt or infer, they exist to
 enforce safety rules reliably, even in the presence of human error.</p>
-<p>Rule-based chat AI systems existed. An AI chatbot ELIZA was
-introduced in 1966 to act as a psychotherapist. ELIZA processes inputted
-text and gives a response based on the pre-programmed rules. However,
-for real-world applications there will always be situations outside the
-pre-designed rules, which a rule-based AI will not have the capability
-to respond to.</p>
-<figure><img src="fig/ELIZA_conversation.png" alt="A conversation with the ELIZA chatbot." class="figure mx-auto d-block"><div class="figcaption">Public domain, via Wikimedia Commons</div>
-</figure><ol start="2" style="list-style-type: decimal"><li>
+<ol start="2" style="list-style-type: decimal"><li>
 <strong>Predictive and Analytical Systems</strong>: These systems
 learn patterns from data to make predictions, classifications, or risk
 estimates. Rather than following fixed rules, they use statistical
@@ -515,10 +517,7 @@ media. The current AI systems that we are familiar with, such as
 ChatGPT, fall into this category. These systems are optimised for
 producing fluent and contextually appropriate responses, not for
 verifying truth or making authoritative decisions.</li>
-</ol><p>Large language models (LLMs) are examples of generative AI systems.
-They are designed to process and generate human-like language by
-learning patterns from vast amounts of text.</p>
-<p>Some examples of uses of LLMs:</p>
+</ol><p>Some examples of generative AI uses:</p>
 <ul><li>The language learning app Duolingo uses generative AI to explain
 mistakes and practice conversations. The features are part of a new
 subscription tier called “Duolingo Max”.</li>
@@ -527,19 +526,14 @@ tutoring chatbot called “Khanmigo”</li>
 <li>An app called Be My Eyes helps people with visual impairments to
 identify objects and navigate their surroundings, by using the image
 recognition capabilities of GPT-4.</li>
-</ul><p>LLMs are powerful tools for supporting research tasks such as
-drafting, coding, and exploration of ideas, but their outputs must
-always be interpreted and validated by humans, particularly in contexts
-where accuracy, reproducibility, and accountability matter. We’ll talk a
-lot more about this throughout this workshop.</p>
-<figure><img src="fig/smartphone_with_chatGPT.jpg" alt="Smartphone with ChatGPT on the US dollar banknotes background" class="figure mx-auto d-block"><div class="figcaption">Jernej Furman from Slovenia, CC BY 2.0, via
+</ul><figure><img src="fig/smartphone_with_chatGPT.jpg" alt="Smartphone with ChatGPT on the US dollar banknotes background" class="figure mx-auto d-block"><div class="figcaption">Jernej Furman from Slovenia, CC BY 2.0, via
 Wikimedia Commons</div>
 </figure><p>Most AI systems in use today are narrow, task-specific tools. Some
-are designed to enforce rules, others to analyze data and make
-predictions, and a smaller but increasingly visible group, generative
-systems, are designed to produce new content. Generative AI systems are
-powerful and influential, but they are not representative of AI as a
-whole. Hopefully, understanding these broad categories helps us to set
+are designed to enforce rules, others to analyse data and make
+predictions, and an increasingly visible group, generative systems, are
+designed to produce new content. Generative AI systems are powerful and
+influential, but they are not representative of AI as a whole.
+Hopefully, understanding these broad categories helps us to set
 appropriate expectations for AI and prepares us to examine generative AI
 in more detail.</p>
 <table class="table"><colgroup><col width="25%"><col width="33%"><col width="20%"><col width="21%"></colgroup><thead><tr class="header"><th><strong>AI System Type</strong></th>
@@ -580,8 +574,10 @@ correctness remains entirely with the human.</li>
 </ul></section><section><h2 class="section-heading" id="demystifying-generative-ai">Demystifying Generative AI<a class="anchor" aria-label="anchor" href="#demystifying-generative-ai"></a></h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="what-is-gpt">What Is GPT?<a class="anchor" aria-label="anchor" href="#what-is-gpt"></a></h3>
-<p>GPT is a computer model designed to work with written language. It
-can produce text that reads as coherent and context-aware, such as
+<p>The model of generative AI that has been widespread in recent years
+is GPT, a model designed to work with written language. It is the model
+underlying ChatGPT as well as lots of other AI applications. GPT can
+produce text that reads as coherent and context-aware, such as
 explanations, summaries, or responses to questions.</p>
 <p>GPT stands for Generative Pre-trained Transformer:</p>
 <ul><li>
@@ -595,7 +591,19 @@ before deployment.</li>
 <strong>Transformer</strong>: this refers to the internal design of
 the neural network that helps the system keep track of context across
 longer pieces of text.</li>
-</ul><p>Systems like GPT belong to a group called Large Language Models
+</ul></div>
+<div class="section level3">
+<h3 id="gpt-vs-chatgpt">GPT vs ChatGPT<a class="anchor" aria-label="anchor" href="#gpt-vs-chatgpt"></a></h3>
+<p>ChatGPT is an application built on top of GPT models. It provides a
+user-friendly, conversational interface to interact with the GPT
+model.</p>
+<p>ChatGPT is one of many tools that use GPT.</p>
+<p>GPT is also integrated into software products such as Microsoft’s
+Copilot, search engines, and coding environments.</p>
+</div>
+<div class="section level3">
+<h3 id="understanding-large-language-models">Understanding Large Language Models<a class="anchor" aria-label="anchor" href="#understanding-large-language-models"></a></h3>
+<p>Systems like GPT belong to a group called Large Language Models
 (LLMs). An LLM is a program that learns how language works by analysing
 very large collections of text. It does not store facts in a database or
 follow pre-programmed rules. Instead, it learns patterns in how words,
@@ -642,7 +650,7 @@ Wikipedia, CC BY-SA 3.0, via Wikimedia Commons</div>
 <p>A transformer is a type of neural network architecture designed
 specifically to work with sequences, such as sentences, paragraphs, or
 lines of code. Its key strength is the ability to consider context, that
-is, how different parts of a sequence relate to one another—when
+is, how different parts of a sequence relate to one another, when
 processing or generating information.</p>
 <p>Traditional language-processing systems handled text one word at a
 time, in order. This made it difficult for them to keep track of
@@ -673,7 +681,13 @@ learned during training.</p>
 </div>
 <p>GPT generates content <strong>token by token</strong>, rather than
 producing an entire sentence all at once. A token can be a word, part of
-a word, or a punctuation mark. When you enter a prompt into GPT:</p>
+a word, or a punctuation mark.</p>
+<p>This sequential token generation allows GPT to produce coherent and
+contextually relevant text because each new token is generated in the
+context of all previous tokens. It’s like writing a sentence one word at
+a time, making sure each word fits with everything written before
+it.</p>
+<p>When you enter a prompt into GPT:</p>
 <ol style="list-style-type: decimal"><li>The model looks at the input text (the prompt) and splits it into
 tokens.</li>
 <li>It predicts the probability of each possible next token based on all
@@ -685,12 +699,7 @@ outputs.</li>
 <li>The token is added to the growing output sequence.</li>
 <li>Steps 2–4 repeat until the model produces a complete response.</li>
 <li>The tokens are decoded back into human-readable text.</li>
-</ol><p>This sequential token generation allows GPT to produce coherent and
-contextually relevant text because each new token is generated in the
-context of all previous tokens. It’s like writing a sentence one word at
-a time, making sure each word fits with everything written before
-it.</p>
-<p>As you can now understand, GPT doesn’t simply retrieve pre-written
+</ol><p>As you can now understand, GPT doesn’t simply retrieve pre-written
 sentences, but instead builds content step by step and this is why it
 can generate such flexible and novel outputs.</p>
 <div id="what-is-a-token" class="callout">
@@ -761,17 +770,10 @@ appropriate.</li>
 variety of use cases, getting feedback and iterating the model
 architecture to improve performance.</li>
 </ol><figure><img src="fig/model_training_process_cropped.png" alt="Diagram of the 6 steps for training a GPT model" class="figure mx-auto d-block"></figure></div>
-<div class="section level3">
-<h3 id="chatgpt-vs-gpt">ChatGPT vs GPT<a class="anchor" aria-label="anchor" href="#chatgpt-vs-gpt"></a></h3>
-<p>ChatGPT is an application built on top of GPT models. It provides a
-user-friendly, conversational interface to interact with the GPT
-model.</p>
-<p>ChatGPT is one of many tools that use GPT.</p>
-<p>GPT is also integrated into software products such as Microsoft’s
-copilot, search engines, and coding environments.</p>
-</div>
 </section><section><h2 class="section-heading" id="overview-of-ai-tools-that-can-support-research-coding">Overview of AI tools that can support research coding<a class="anchor" aria-label="anchor" href="#overview-of-ai-tools-that-can-support-research-coding"></a></h2>
-<hr class="half-width"><ol style="list-style-type: decimal"><li><p><strong>ChatGPT</strong> – A conversational large language model
+<hr class="half-width"><div class="section level3">
+<h3 id="ai-assisted-coding-tools">AI-Assisted Coding Tools<a class="anchor" aria-label="anchor" href="#ai-assisted-coding-tools"></a></h3>
+<ol style="list-style-type: decimal"><li><p><strong>ChatGPT</strong> – A conversational large language model
 by OpenAI that can generate code, explain programming concepts, assist
 with debugging, and support data analysis workflows.</p></li>
 <li><p><strong>GitHub Copilot</strong> – AI-powered coding assistant
@@ -786,7 +788,10 @@ explanations, summaries, and code generation support.</p></li>
 <li><p><strong>Microsoft Copilot</strong> – Integrated into Microsoft
 tools like Word, Excel, and Visual Studio, this AI assistant helps with
 code generation, data analysis, and workflow automation.</p></li>
-</ol><p>The <a href="https://oerc.ox.ac.uk/ai-centre/ai-guides/getting-started-with-ai-for-coding" class="external-link">Oxford
+</ol></div>
+<div class="section level3">
+<h3 id="levels-of-ai-assisted-coding">Levels of AI-Assisted Coding<a class="anchor" aria-label="anchor" href="#levels-of-ai-assisted-coding"></a></h3>
+<p>The <a href="https://oerc.ox.ac.uk/ai-centre/ai-guides/getting-started-with-ai-for-coding" class="external-link">Oxford
 AI Competency Centre</a> suggest thinking about AI-Assisted Coding as
 existing in four levels of differing complexity and capability.</p>
 <p><strong>Level 1: Code Snippets (Copy and Paste)</strong> A Large
@@ -860,6 +865,7 @@ performance.</li>
 GPT itself is also integrated into other tools like Microsoft Copilot,
 search engines, and coding environments.</li>
 </ul></div>
+</div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -943,8 +949,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/1-ai-landscape.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/1-ai-landscape.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-01-30",
-  "datePublished": "2026-01-30"
+  "dateModified": "2026-02-02",
+  "datePublished": "2026-02-02"
 }
 
   </script><script>
