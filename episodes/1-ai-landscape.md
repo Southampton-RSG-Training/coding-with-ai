@@ -25,6 +25,8 @@ Software is critical to research - the Software Sustainability Institute's UK Re
 
 For many researchers, writing code for data analysis or software development can be boring, frustrating, or intimidating.  Most researchers would rather be thinking about and researching their subject matter rather than spending lots of time learning a programming language and writing code. Therefore, with easy access to AI tools, it can be very tempting to ask AI to write your research code for you.
 
+![Artwork by @allison_horst, CC-BY](fig/i_would_rather_not_behold.png){alt='Cartoon of an instructor gesturing enthusiastically to a screen full of R documentation saying "BEHOLD! An amazing function!" A skeptical looking student looks on, saying "I would rather not behold...'}
+
 This workshop aims to:
 
 - Demonstrate how AI can assist in coding.
@@ -59,6 +61,10 @@ Artificial intelligence is best understood not as a single capability or system,
 
 - **1950s–1970s: Symbolic AI and early expert systems**: AI research begins with symbolic, rule-based approaches focused on logic, search, and reasoning. Key moments include Alan Turing’s 1950 paper “Computing Machinery and Intelligence” and the 1956 Dartmouth Conference, where the term “artificial intelligence” was coined. Systems relied on explicitly encoded rules and struggled outside narrowly defined domains.
 
+Rule-based chat AI systems existed.  An AI chatbot ELIZA was introduced in 1966 to act as a psychotherapist.  ELIZA processes inputted text and gives a response based on the pre-programmed rules. However, for real-world applications there will always be situations outside the pre-designed rules, which a rule-based AI will not have the capability to respond to. 
+
+![Public domain, via Wikimedia Commons](fig/ELIZA_conversation.png){alt='A conversation with the ELIZA chatbot.'}
+
 - **1980s–early 1990s: Expert systems and the first AI boom (and bust)**: Rule-based expert systems are adopted in industry (e.g. medical diagnosis, configuration systems). Progress stalls due to high development costs, limited scalability, and lack of data, leading to periods known as “AI winters”.
 
 - **Mid-1990s–2000s: Shift to data-driven machine learning**: AI research moves toward statistical and data-driven methods. Machine learning models learn patterns from data rather than relying on hard-coded rules. Common applications include classification, prediction, clustering, and recommendation systems. Increased availability of digital data and improved computing infrastructure drive adoption.
@@ -79,13 +85,9 @@ At a high level, today’s AI systems can be grouped into three broad categories
 
 1. **Rule-Based and Decision Systems**: These systems operate using explicitly defined rules, logic, or constraints. Their behaviour is deterministic and transparent, which makes them reliable in stable, well-defined environments. Rule-based systems are still widely used in areas such as compliance, governance, and safety-critical decision-making. However, they are limited in their ability to handle ambiguity, novelty, or rapidly changing conditions.
 
-For example, a laboratory safety interlock is an example of a rule-based system. It monitors the state of critical variables, such as door positions, pressure levels, temperature, radiation shielding, or airflow, and allows an action only if all safety conditions are met. For example, a high-power laser system may be physically prevented from firing unless the enclosure door is closed, warning lights are active, and emergency stops are disengaged. If any condition is violated, the system immediately shuts down or blocks operation.
+A laboratory safety interlock is an example of a rule-based system. It monitors the state of critical variables, such as door positions, pressure levels, temperature, radiation shielding, or airflow, and allows an action only if all safety conditions are met. For example, a high-power laser system may be physically prevented from firing unless the enclosure door is closed, warning lights are active, and emergency stops are disengaged. If any condition is violated, the system immediately shuts down or blocks operation.
 
 These systems are deterministic and transparent, in other words the same inputs always lead to the same outcome and the rules governing behaviour are explicitly defined. Unlike learning-based AI systems, laboratory safety interlocks do not adapt or infer, they exist to enforce safety rules reliably, even in the presence of human error.
-
-Rule-based chat AI systems existed.  An AI chatbot ELIZA was introduced in 1966 to act as a psychotherapist.  ELIZA processes inputted text and gives a response based on the pre-programmed rules. However, for real-world applications there will always be situations outside the pre-designed rules, which a rule-based AI will not have the capability to respond to. 
-
-![Public domain, via Wikimedia Commons](fig/ELIZA_conversation.png){alt='A conversation with the ELIZA chatbot.'}
 
 2. **Predictive and Analytical Systems**: These systems learn patterns from data to make predictions, classifications, or risk estimates. Rather than following fixed rules, they use statistical models to answer questions such as 'What category does this belong to?' or 'How likely is this outcome?' Predictive AI systems are common in research and operational settings, including data analysis, diagnostics, and forecasting. Their outputs support decisions but do not create new content.
 
@@ -99,19 +101,15 @@ The system provides probabilities, rather than definitive answers, as outputs an
 
 3. **Generative Systems**: Generative AI systems are designed to produce new outputs that resemble the data on which they were trained. This includes generating text, code, images, or other media. The current AI systems that we are familiar with, such as ChatGPT, fall into this category. These systems are optimised for producing fluent and contextually appropriate responses, not for verifying truth or making authoritative decisions.
 
-Large language models (LLMs) are examples of generative AI systems.  They are designed to process and generate human-like language by learning patterns from vast amounts of text.
-
-Some examples of uses of LLMs:
+Some examples of generative AI uses:
 
 - The language learning app Duolingo uses generative AI to explain mistakes and practice conversations. The features are part of a new subscription tier called "Duolingo Max".
 - The education website Khan Academy is using generative AI for their tutoring chatbot called "Khanmigo"
 - An app called Be My Eyes helps people with visual impairments to identify objects and navigate their surroundings, by using the image recognition capabilities of GPT-4.
 
-LLMs are powerful tools for supporting research tasks such as drafting, coding, and exploration of ideas, but their outputs must always be interpreted and validated by humans, particularly in contexts where accuracy, reproducibility, and accountability matter. We'll talk a lot more about this throughout this workshop. 
-
 ![Jernej Furman from Slovenia, CC BY 2.0, via Wikimedia Commons](fig/smartphone_with_chatGPT.jpg){alt='Smartphone with ChatGPT on the US dollar banknotes background'}
 
-Most AI systems in use today are narrow, task-specific tools. Some are designed to enforce rules, others to analyze data and make predictions, and a smaller but increasingly visible group, generative systems, are designed to produce new content. Generative AI systems are powerful and influential, but they are not representative of AI as a whole. Hopefully, understanding these broad categories helps us to set appropriate expectations for AI and prepares us to examine generative AI in more detail.
+Most AI systems in use today are narrow, task-specific tools. Some are designed to enforce rules, others to analyse data and make predictions, and an increasingly visible group, generative systems, are designed to produce new content. Generative AI systems are powerful and influential, but they are not representative of AI as a whole. Hopefully, understanding these broad categories helps us to set appropriate expectations for AI and prepares us to examine generative AI in more detail.
 
 | **AI System Type** | **What the system does** | **Strengths** | **Limitations** |
 |-------------------|-------------------------|---------------|----------------|
@@ -134,13 +132,23 @@ Human responsibility increases from rule-based to predictive to generative syste
 
 ### What Is GPT?
 
-GPT is a computer model designed to work with written language. It can produce text that reads as coherent and context-aware, such as explanations, summaries, or responses to questions.
+The model of generative AI that has been widespread in recent years is GPT, a model designed to work with written language. It is the model underlying ChatGPT as well as lots of other AI applications.  GPT can produce text that reads as coherent and context-aware, such as explanations, summaries, or responses to questions.
 
 GPT stands for Generative Pre-trained Transformer:
 
 - **Generative**: GPT is designed to generate new content. Rather than retrieving fixed answers from a database, it produces original outputs, such as text or code.
 - **Pre-trained**: it is trained on vast amounts of data before deployment.
 - **Transformer**: this refers to the internal design of the neural network that helps the system keep track of context across longer pieces of text.
+
+### GPT vs ChatGPT 
+
+ChatGPT is an application built on top of GPT models. It provides a user-friendly, conversational interface to interact with the GPT model. 
+
+ChatGPT is one of many tools that use GPT. 
+
+GPT is also integrated into software products such as Microsoft’s Copilot, search engines, and coding environments. 
+
+### Understanding Large Language Models
 
 Systems like GPT belong to a group called Large Language Models (LLMs). An LLM is a program that learns how language works by analysing very large collections of text. It does not store facts in a database or follow pre-programmed rules. Instead, it learns patterns in how words, sentences, and ideas tend to appear together.
 
@@ -167,7 +175,7 @@ Learning in a neural network happens gradually as the network adjusts how strong
 
 ## What is a transformer?
 
-A transformer is a type of neural network architecture designed specifically to work with sequences, such as sentences, paragraphs, or lines of code. Its key strength is the ability to consider context, that is, how different parts of a sequence relate to one another—when processing or generating information.
+A transformer is a type of neural network architecture designed specifically to work with sequences, such as sentences, paragraphs, or lines of code. Its key strength is the ability to consider context, that is, how different parts of a sequence relate to one another, when processing or generating information.
 
 Traditional language-processing systems handled text one word at a time, in order. This made it difficult for them to keep track of long-range relationships, such as how a word at the start of a sentence relates to one at the end. Transformers address this limitation by processing all parts of a text sequence simultaneously, allowing the model to identify patterns and relationships across an entire passage at once.
 
@@ -178,7 +186,11 @@ In practical terms, the transformer architecture is what enables systems like GP
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-GPT generates content **token by token**, rather than producing an entire sentence all at once. A token can be a word, part of a word, or a punctuation mark. When you enter a prompt into GPT:
+GPT generates content **token by token**, rather than producing an entire sentence all at once. A token can be a word, part of a word, or a punctuation mark. 
+
+This sequential token generation allows GPT to produce coherent and contextually relevant text because each new token is generated in the context of all previous tokens. It’s like writing a sentence one word at a time, making sure each word fits with everything written before it.
+
+When you enter a prompt into GPT:
 
 1. The model looks at the input text (the prompt) and splits it into tokens.
 2. It predicts the probability of each possible next token based on all previous tokens.
@@ -186,8 +198,6 @@ GPT generates content **token by token**, rather than producing an entire senten
 4. The token is added to the growing output sequence.
 5. Steps 2–4 repeat until the model produces a complete response.
 6. The tokens are decoded back into human-readable text.
-
-This sequential token generation allows GPT to produce coherent and contextually relevant text because each new token is generated in the context of all previous tokens. It’s like writing a sentence one word at a time, making sure each word fits with everything written before it.
 
 As you can now understand, GPT doesn't simply retrieve pre-written sentences, but instead builds content step by step and this is why it can generate such flexible and novel outputs. 
 
@@ -226,17 +236,9 @@ Understanding tokenisation allows us to appreciate a key limitation of GPT: the 
 ![](fig/model_training_process_cropped.png){alt='Diagram of the 6 steps for training a GPT model'}
 
 
-
-### ChatGPT vs GPT
-
-ChatGPT is an application built on top of GPT models. It provides a user-friendly, conversational interface to interact with the GPT model. 
-
-ChatGPT is one of many tools that use GPT. 
-
-GPT is also integrated into software products such as Microsoft’s copilot, search engines, and coding environments. 
-
-
 ## Overview of AI tools that can support research coding
+
+### AI-Assisted Coding Tools
 
 
 1. **ChatGPT** – A conversational large language model by OpenAI that can generate code, explain programming concepts, assist with debugging, and support data analysis workflows.
@@ -249,6 +251,7 @@ GPT is also integrated into software products such as Microsoft’s copilot, sea
 
 5. **Microsoft Copilot** – Integrated into Microsoft tools like Word, Excel, and Visual Studio, this AI assistant helps with code generation, data analysis, and workflow automation.
 
+### Levels of AI-Assisted Coding
 
 The [Oxford AI Competency Centre](https://oerc.ox.ac.uk/ai-centre/ai-guides/getting-started-with-ai-for-coding) suggest thinking about AI-Assisted Coding as existing in four levels of differing complexity and capability. 
 
