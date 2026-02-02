@@ -27,13 +27,28 @@ exercises: 2 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Overview 
+
+It can be helpful to critically evaluate the risks and implications of AI so that we can feel confident and safe using AI tools to assist with coding in appropriate ways.  In this episode, we'll briefly consider issues related to:
+
+- Accuracy and Reliability of AI-Generated Code
+- Data Privacy, Security Risks, and Confidentiality
+- Intellectual Property, Authorship, and Citation of AI-Generated Code and Text
+- Ethical Considerations in AI-Assisted Research
+- De-skilling and Overdependence on AI in Research Computing
+- Mitigating Risks: Best Practices for Responsible AI Use in Research
+
+
+
+## Accuracy and Reliability of AI-Generated Code
+
 ::::::::::::::::::::::::::::::::::::: callout
+
+## AI as an Enthusiastic but Inexperienced Software Developer
 
 When using AI for coding assistance, you can imagine an AI tool as being like a fresh computer science graduate with so much enthusiasm they will never say ‘I can’t do it’, but no practical experience or broad understanding. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Accuracy and Reliability of AI-Generated Code
 
 For researchers, relying on AI-generated code carries significant risks. Incorrect code can lead to flawed results, which may compromise the validity of your research, damage your professional reputation, and even necessitate a paper retraction.
 
@@ -50,11 +65,12 @@ For example, an AI might recommend using Python’s urllib module for web reques
 
 ### Unreliable Results
 
-AI coding assistants can sometimes produce outputs that are **plausible but incorrect**, a phenomenon often called “hallucination.” When the model lacks relevant training data or encounters an unfamiliar task, it may **invent code or logic** rather than responding with uncertainty. For example, GPT might suggest using `df.fillna(0)` to handle missing values, which runs without error, but replacing missing values with zero could bias statistical analyses, producing misleading results without triggering any warnings.
+AI coding assistants can sometimes produce outputs that are **plausible but incorrect**, a phenomenon often called “hallucination.” When the model lacks relevant training data or encounters an unfamiliar task, it may **invent code or logic** rather than responding with uncertainty. 
 
 Another source of error comes from the **training data itself**. Many large language models have been trained on vast amounts of publicly available code, some of which contains mistakes. As a result, AI-generated code can **inherit these errors** without any indication that they exist.
 
 GPT generates code **one token at a time**, predicting each piece based on the preceding context. Even small token-level mistakes, like a misspelled function name, a missing argument, or an incorrect operator, can produce code that looks correct but fails when executed. For instance:
+
 - Generating `read_csvs()` instead of `read_csv()` will break a script.  
 - Omitting a critical argument like `header=None` may silently misread a dataset.  
 - Misplaced punctuation or parentheses can introduce subtle bugs that propagate through downstream calculations.
@@ -96,11 +112,20 @@ When AI tools run in the cloud, your code or data may be transmitted to external
 
 ### Insecure AI-Generated Code
 
-AI assistants learn from large volumes of existing code, and this code can contain both good and bad coding practices. As a result, they may suggest insecure or outdated practices. A [2023 Stanford University study](https://arxiv.org/pdf/2211.03622) found that programmers who used AI assistants often produced less secure code but at the same time, felt more confident that it was secure - a risky combination!
-
-For example, an AI tool might generate code that fails to properly validate user input, leaving the system open to issues like SQL injection or cross-site scripting. This might be difficult to spot, and because the code looks right on the surface, these problems can be missed.
+AI assistants learn from large volumes of existing code, and this code can contain both good and bad coding practices. As a result, they may suggest insecure or outdated practices.  For example, an AI tool might generate code that fails to properly validate user input, leaving the system open to issues like SQL injection or cross-site scripting. This might be difficult to spot, and because the code looks right on the surface, these problems can be missed.
 
 If you are aware of security considerations relevant to your code, include them in your prompt to help ensure the AI generates more secure code.
+
+A [2023 Stanford University study](https://arxiv.org/pdf/2211.03622) found that programmers who used AI assistants often produced less secure code but at the same time, felt more confident that it was secure - a risky combination!
+
+
+### Third-Party Dependency Risks in AI-Generated Code
+
+AI tools will often generate code that includes external libraries or frameworks without checking whether they are secure and appropriate for your use case. This could lead to vulnerabilities in your code, licensing issues, or compatibility problems, which can cause problems later and be difficult to untangle or debug. 
+
+AI hallucinations of third-party libraries can also be a security risk.  ChatGPT sometimes hallucinates non-existent coding libraries in its outputs. A [study by the security company Vulcan](https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/) identified a cyberattack technique where criminals could hijack these fake libraries by publishing a malicious package under the name of the non-existent library and hoping developers would install the infected library based on the AI tool’s recommendation.
+
+This practice has become known as 'slopsquatting', a combination of 'AI Slop' and 'typosquatting' (the practice of registering domain names or software package names that are slightly misspelled versions of popular ones to trick users into visiting them or downloading malicious content).
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -119,17 +144,7 @@ Note: Including security expectations in prompts requires knowledge of relevant 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-### Third-Party Dependency Risks in AI-Generated Code
-
-AI tools will often generate code that includes external libraries or frameworks without checking whether they are secure and appropriate for your use case. This could lead to vulnerabilities in your code, licensing issues, or compatibility problems, which can cause problems later and be difficult to untangle or debug. 
-
-AI hallucinations of third-party libraries can also be a security risk.  ChatGPT sometimes hallucinates non-existent coding libraries in its outputs. A [study by the security company Vulcan](https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/) identified a cyberattack technique where criminals could hijack these fake libraries by publishing a malicious package under the name of the non-existent library and hoping developers would install the infected library based on the AI tool’s recommendation.
-
-This practice has become known as 'slopsquatting', a combination of 'AI Slop' and 'typosquatting' (the practice of registering domain names or software package names that are slightly misspelled versions of popular ones to trick users into visiting them or downloading malicious content).
-
-
-## Intellectual Property, Authorship, and Citation of AI-Generated Code and Text
+## Intellectual Property, Authorship, and Citation of AI-Generated Code
 
 ### Intellectual Property and Ownership
 
@@ -137,7 +152,7 @@ Intellectual property rights (legal rights that protect creations of the mind) f
 
 Currently in the UK, if AI is used to assist a human creator, the content is the human's own intellectual creation and the copyright belongs to the human creator.
 
-If there is no human author, the "author"" for copyright purposes is the person "by whom the arrangements necessary for the creation of the work are undertaken."" For AI-generated code, this means that if the code is truly without human creative input (for example produced entirely by an AI tool in response to a prompt without the author shaping or selecting the output creatively), the law would treat the person who set up the process (for example the user or developer who provided the prompts and triggered the AI) as the “author” of that computer-generated work.
+If there is no human author, the "author" for copyright purposes is the person "by whom the arrangements necessary for the creation of the work are undertaken." For AI-generated code, this means that if the code is truly without human creative input (for example produced entirely by an AI tool in response to a prompt without the author shaping or selecting the output creatively), the law would treat the person who set up the process (for example the user or developer who provided the prompts and triggered the AI) as the “author” of that computer-generated work.
 
 However, there's ongoing debate about how this practically applies to many forms of AI outputs, including software code, because:
 
@@ -145,8 +160,21 @@ However, there's ongoing debate about how this practically applies to many forms
 - UK authorities are actively consulting on whether to adjust or clarify how AI-generated works should be treated in copyright law.
 - Ownership can depend on contractual terms (such as developer agreements, employment contracts, or AI tool terms of service), which may assign rights to an employer or platform rather than the individual user.
 
+### Implications for Open Source and Reuse
 
-Separately from ownership of new AI outputs, generating code that replicates or contains substantial parts of copyrighted works without permission, such as code copied from existing proprietary systems, can infringe the copyright of others. AI models are trained on a vast amount of data that may include copyrighted material. While outputs from AI tools are typically novel, there is a risk that generated code or text may closely resemble existing sources. This could lead to copyright infringement claims, particularly in commercial or open-source contexts. If you use AI assistance with coding, you'll need to be cautious about the potential for this to occur. 
+Separately from ownership of new AI outputs, you may accidentally infringe the copyright of others by generating code that replicates or contains substantial parts of copyrighted works without permission, such as code copied from existing proprietary systems.  AI models are trained on a vast amount of data that may include copyrighted material. While outputs from AI tools are typically novel, there is a risk that generated code or text may closely resemble existing sources. This could lead to copyright infringement claims, particularly in commercial or open-source contexts. If you use AI assistance with coding, you'll need to be cautious about the potential for this to occur. 
+
+If AI-generated code is added to an open-source project, a licensing conflict may be accidentally introduced if the patterns or structures in the code are derived from software with incompatible licences.  Check the project's licence and contribution guidelines before making any AI-assisted contributions.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## No AI-generated Code Policy for Open-Source Project Cloud Hypervisor
+
+Cloud Hypervisor is an open-source software project that helps large computing systems run multiple programs safely and efficiently at the same time, which is a common requirement in cloud services (services provided over the internet rather than from a local computer). It is maintained by a community of organisations and developers and is made freely available under an open licence. In 2025, the project’s maintainers implemented a no AI-generated code policy for contributions, out of concern that such code might unintentionally include material derived from other software with incompatible licences, creating legal risks for the project and its users. 
+
+In a [post on GitHub](https://github.com/cloud-hypervisor/cloud-hypervisor/blob/v48.0/CONTRIBUTING.md), Cloud Hypervisor's maintainers said: 'Our policy is to decline any contributions known to contain contents generated or derived from using Large Language Models (LLMs). This includes ChatGPT, Gemini, Claude, Copilot and similar tools.'
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Authorship and Academic Credit
 
@@ -154,7 +182,6 @@ AI tools can influence research outputs, so to what extent should their contribu
 
 Most publishers agree that AI tools do not qualify for authorship and that human authors are fully accountable for the content they produce.  Publishers are also broadly in agreement that AI use should be disclosed.  
 
-Being transparent about the use of AI may also increase trust in the research community and support reproducibility of research.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -165,8 +192,6 @@ Summarised from - Rana, N. K. (2025). Generative AI and academic research: A rev
 - **Cambridge University Press (CUP):** AI tools cannot be credited as authors, and authors remain fully responsible for the accuracy, integrity, and originality of their work.
 
 - **Nature Portfolio (Springer Nature):** AI tools are not permitted as authors, their use must be transparently disclosed, and AI-generated images are generally prohibited due to unresolved legal and ethical concerns. Nature requires disclosure of LLM use in the Methods section (or an equivalent section), rather than in acknowledgements or citations.
-
-- **APA / Chicago / MLA:** These referencing style authorities require transparent citation of AI tools used in scholarly work, without recognising them as authors, typically in the 'Acknowledgements' section.
 
 - **Elsevier:** Elsevier allows AI-assisted tools for writing support, limited to improving clarity and readability. However, core scholarly activities, such as generating scientific insights, drawing conclusions, or making recommendations, must remain human-led. Elsevier requires authors to declare any AI tool usage and does not allow AI tools to be listed as authors. 
 
@@ -193,29 +218,28 @@ AI Company Name. (Year). Tool Name/Model [Description: e.g., Large language mode
 
 Example: OpenAI. (2025). *ChatGPT* [Large language model]. https://chatgpt.com/
 
-### Implications for Open Source and Reuse
 
-If AI-generated code is added to an open-source project, a licensing conflict may be accidentally introduced if the patterns or structures in the code are derived from software with incompatible licences.  Check the project's licence and contribution guidelines before making any AI-assisted contributions.
-
-::::::::::::::::::::::::::::::::::::: callout
-
-## No AI-generated Code Policy for Open-Source Project Cloud Hypervisor
-
-Cloud Hypervisor is an open-source software project that helps large computing systems run multiple programs safely and efficiently at the same time, which is a common requirement in cloud services (services provided over the internet rather than from a local computer). It is maintained by a community of organisations and developers and is made freely available under an open licence. In 2025, the project’s maintainers implemented a no AI-generated code policy for contributions, out of concern that such code might unintentionally include material derived from other software with incompatible licences, creating legal risks for the project and its users. 
-
-In a [post on GitHub](https://github.com/cloud-hypervisor/cloud-hypervisor/blob/v48.0/CONTRIBUTING.md), Cloud Hypervisor's maintainers said: 'Our policy is to decline any contributions known to contain contents generated or derived from using Large Language Models (LLMs). This includes ChatGPT, Gemini, Claude, Copilot and similar tools,” the open source project maintainers explained in a GitHub post.'
-
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Ethical Considerations in AI-Assisted Research
 
 ### Bias in AI Systems
 
-AI coding and research assistants can perpetuate or amplify biases present in their training data. This may result in outputs that:
+AI model outputs reflect any biases present in their training data. This may result in outputs that:
 
 - Favour certain demographic groups over others
-- Encode biased assumptions into code or analysis
-- Fail to meet ethical, legal, or regulatory standards
+- Embedding biased assumptions into code or documentation
+
+An Ethical AI Framework was proposed by [Vilas Dhar](https://en.wikipedia.org/wiki/Vilas_Dhar), a social entrepreneur focused on the ethical use of AI and president of the Patrick J. McGovern Foundation.  The framework is built on three pillars:
+
+1. Responsible data practices
+2. Boundaries around safe and appropriate use
+3. Understand how tools generate their recommendations. When AI systems operate as black boxes, it becomes difficult to assess validity, fairness, or risk.
+
+In a research setting applying this framework might look like:
+
+1. Checking your data: AI reflects the datasets it learned from. For example, an AI trained on outdated species measurements might misclassify new observations.
+2. Setting boundaries on key decisions: Decide which tasks are appropriate for AI and which should always be done by humans.
+3. Understanding the AI’s reasoning: Ask how the AI arrived at its suggestion. If a statistical model or code snippet doesn’t make sense, investigate before using it.
 
 ### Avoid Over-Trust in AI and Keep Humans in Control
 
@@ -224,22 +248,8 @@ One of the most common, and least discussed, biases in AI use is the tendency to
 Researchers should avoid placing AI on a pedestal and instead:
 
 - Treat AI outputs as suggestions, not truths
-- Emphasise the role of human creativity and critical thinking
+- Value the role of human creativity and critical thinking
 - Remember that the researcher should take responsibility for an AI-generated code or other content they use
-
-### Ethical AI Framework
-
-An Ethical AI Framework was proposed by [Vilas Dhar](https://en.wikipedia.org/wiki/Vilas_Dhar), a social entrepreneur focused on the ethical use of AI and president of the Patrick J. McGovern Foundation.  The framework is built on three pillars:
-
-1. Responsible data practices
-2. Boundaries around safe and appropriate use
-3. Understanding how tools generate their recommendations. When AI systems operate as black boxes, it becomes difficult to assess validity, fairness, or risk.
-
-In a research setting applying this framework might look like:
-
-1. Checking your data: AI reflects the datasets it learned from. For example, an AI trained on outdated species measurements might misclassify new observations.
-2. Setting boundaries on key decisions: Decide which tasks are appropriate for AI and which should always be done by humans.
-3. Understanding the AI’s reasoning: Ask how the AI arrived at its suggestion. If a statistical model or code snippet doesn’t make sense, investigate before using it.
 
 
 ## De-skilling and Overdependence on AI in Research Computing
@@ -256,13 +266,13 @@ There are also long-term implications for the research community. If researchers
 
 ### AI as a Tool, Not a Replacement
 
-AI should be understood as a productivity tool that can accelerate routine tasks and support problem-solving. Used thoughtfully, AI can help explore ideas, generate boilerplate code, or suggest alternative approaches.
+It can be helpful to think of AI  as a tool that can help with and accelerate certain tasks. Used thoughtfully, AI can help explore ideas, generate boilerplate code, or suggest alternative approaches.
 
 However, maintaining human creativity and judgement is especially critical in research, where novelty, insight, and deep understanding often matter more than speed. AI can assist, but it cannot define research questions, interpret results, or make ethical and methodological decisions.
 
 ## Mitigating Risks: Best Practices for Responsible AI Use in Research
 
-Responsible use of AI coding assistants requires a combination of ethical awareness, technical safeguards, and disciplined research practice. Here are some examples of ethical best practices, practices to support research reproducibility and scientific validity, and some security measures that you may put in place when using AI to assist with research coding.
+Responsible use of AI for coding assistance requires a combination of ethical awareness, technical safeguards, and disciplined research practice. Here are some examples of ethical best practices, practices to support research reproducibility and scientific validity, and some security measures that you may put in place when using AI to assist with research coding.
 
 ### Ethical Best Practices
 
@@ -271,7 +281,7 @@ Responsible use of AI coding assistants requires a combination of ethical awaren
 - **Protect sensitive data:** Avoid submitting proprietary code, confidential data, or sensitive research materials to online AI tools. If you use these materials for your research and have decided to use AI, you may want to investigate locally hosted or offline AI assistants to reduce data exposure risks.
 - **Define clear usage guidelines:** Establish and follow explicit policies for AI use in research computing. These may draw on recognised frameworks such as the [ACM Code of Ethics](https://www.acm.org/code-of-ethics) or the [European Commission’s Ethical Guidelines on AI](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai), alongside institution-specific policies.
 
-### Supporting Reproducibility and Scientific Validity
+### Practices Supporting Reproducibility and Scientific Validity
 
 To maintain transparency, reproducibility, and scientific validity when using AI tools, researchers should:
 
@@ -281,7 +291,7 @@ To maintain transparency, reproducibility, and scientific validity when using AI
 
 ### Security Measures
 
-- **Mandatory code review:** Review all AI-generated code, ideally using standard code review processes, to identify vulnerabilities, logic errors, or unsafe practices.
+- **Code review:** Review all AI-generated code, ideally using standard code review processes, to identify vulnerabilities, logic errors, or unsafe practices.
 - **Secure development practices:** If you're working on a larger piece of research software, integrate security testing tools into development workflows and ensure researchers are trained in secure coding principles.
 - **Protect access and data:** Use access controls and encryption to safeguard codebases and datasets from unauthorised access by AI tools.
 
@@ -290,7 +300,7 @@ To maintain transparency, reproducibility, and scientific validity when using AI
 
 ## Personal Ethics and Security Policy
 
-Write a short personal policy outlining how you will use AI tools responsibly when coding. Include at least **three clear guidelines**.
+Write a short personal policy outlining how you will use AI tools responsibly to assist with coding. Include at least **three clear guidelines**.
 
 :::::::::::::::::::::::: solution 
 Your guidelines could include:
