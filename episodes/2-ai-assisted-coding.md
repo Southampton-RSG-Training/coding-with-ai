@@ -134,6 +134,16 @@ Relying heavily on AI may also conflict with institutional policies on research 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: callout
+
+## Reduce the Risk of your Data being Reused
+
+By default, generative AI platforms such as ChatGPT will often use your inputs to train the model and improve its performance.  
+
+To turn this off, click on your username in the lower left corner -> Settings -> Data Controls -> Improve the model for everyone -> Switch off
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
 ### Appropriate Roles for AI when Writing Research Code
@@ -721,8 +731,6 @@ However, there are a few important factors to bear in mind when using AI to tran
 4. To maintain reproducibility, keep track of both the original Python code and the AI-generated R translation. Document any changes or assumptions made during translation.
 5. Be aware of AI limitations - AI can only translate syntax and structure, it cannot verify the scientific correctness of the analysis.
 
-
-TODO: Challenge - which tasks will you use AI tools for when you next have to write some code for data analysis or software development?
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
