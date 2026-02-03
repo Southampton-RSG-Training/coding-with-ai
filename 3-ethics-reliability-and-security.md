@@ -106,7 +106,7 @@ This can be fantastic for developing a quite prototype or trying out an idea. Ho
 
 ### Data Privacy and Confidentiality
 
-AI tools such as chatGPT process and may retain user inputs.  Therefore, it's really important to be cautious that you don't accidentally share confidential code, sensitive datasets or proprietary research methods. Depending on the settings of your AI tool, the information you enter may be reused to improve the AI model and/or could resurface in future outputs, creating risks around intellectual property leakage, confidentiality breaches, or non-compliance with data protection regulations.
+AI tools such as ChatGPT process and may retain user inputs.  Therefore, it's really important to be cautious that you don't accidentally share confidential code, sensitive datasets or proprietary research methods. Depending on the settings of your AI tool, the information you enter may be reused to improve the AI model and/or could resurface in future outputs, creating risks around intellectual property leakage, confidentiality breaches, or non-compliance with data protection regulations.
 
 When AI tools run in the cloud, your code or data may be transmitted to external servers. This increases the risk of exposure during transfer or through storage breaches. Even if data is anonymised, code structure and comments can still reveal sensitive details about research methods or system design.
 
@@ -164,7 +164,7 @@ However, there's ongoing debate about how this practically applies to many forms
 
 Separately from ownership of new AI outputs, you may accidentally infringe the copyright of others by generating code that replicates or contains substantial parts of copyrighted works without permission, such as code copied from existing proprietary systems.  AI models are trained on a vast amount of data that may include copyrighted material. While outputs from AI tools are typically novel, there is a risk that generated code or text may closely resemble existing sources. This could lead to copyright infringement claims, particularly in commercial or open-source contexts. If you use AI assistance with coding, you'll need to be cautious about the potential for this to occur. 
 
-If AI-generated code is added to an open-source project, a licensing conflict may be accidentally introduced if the patterns or structures in the code are derived from software with incompatible licences.  Check the project's licence and contribution guidelines before making any AI-assisted contributions.
+If AI-generated code is added to an open-source project, a licensing conflict may be accidentally introduced due to patterns or structures in the code being derived from software with incompatible licences.  Check the project's licence and contribution guidelines before making any AI-assisted contributions.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -189,9 +189,9 @@ Most publishers agree that AI tools do not qualify for authorship and that human
 
 Summarised from - Rana, N. K. (2025). Generative AI and academic research: A review of the policies from selected HEIs.
 
-- **Cambridge University Press (CUP):** AI tools cannot be credited as authors, and authors remain fully responsible for the accuracy, integrity, and originality of their work.
+- **Cambridge University Press:** AI tools cannot be credited as authors, and authors remain fully responsible for the accuracy, integrity, and originality of their work.
 
-- **Nature Portfolio (Springer Nature):** AI tools are not permitted as authors, their use must be transparently disclosed, and AI-generated images are generally prohibited due to unresolved legal and ethical concerns. Nature requires disclosure of LLM use in the Methods section (or an equivalent section), rather than in acknowledgements or citations.
+- **Nature Portfolio:** AI tools are not permitted as authors, their use must be transparently disclosed, and AI-generated images are generally prohibited due to unresolved legal and ethical concerns. Nature requires disclosure of LLM use in the Methods section (or an equivalent section), rather than in acknowledgements or citations.
 
 - **Elsevier:** Elsevier allows AI-assisted tools for writing support, limited to improving clarity and readability. However, core scholarly activities, such as generating scientific insights, drawing conclusions, or making recommendations, must remain human-led. Elsevier requires authors to declare any AI tool usage and does not allow AI tools to be listed as authors. 
 
@@ -200,7 +200,7 @@ Summarised from - Rana, N. K. (2025). Generative AI and academic research: A rev
 
 ### Citation
 
-The outputs of AI aren't stable, they're likely to vary depending on prompt wording and the AI model version among other factors, so that can't be reliably cited in the same way as you would cite a research paper or software package. 
+The outputs of AI aren't stable, they're likely to vary depending on prompt wording and the AI model version among other factors.  Therefore, they can't be reliably cited in the same way as you would cite a research paper or software package. 
 
 Several universities and libraries recommend citing the tool used including the version and date, describing how it was used and clearly distinguishing between AI and human contributions.  Many AI tools now allow chats to be shared through URLs, meaning that specific chats can be cited if that would be appropriate and helpful to readers of the research.
 
@@ -243,7 +243,7 @@ In a research setting applying this framework might look like:
 
 ### Avoid Over-Trust in AI and Keep Humans in Control
 
-One of the most common, and least discussed, biases in AI use is the tendency to over-value AI-generated outputs. Outputs from GPT systems often have an authoritative tone, influencing the extent to which you believe them, but it's important to remember that they do not possess understanding, intent, or ethical awareness.  Human judgement must remain at the centre of research, with AI tools used to support humans rather than override them.
+One of the most common, and least discussed, biases in AI use is the tendency to over-value AI-generated outputs. Outputs from GPT systems often have an authoritative tone, influencing the extent to which you believe them, but it's important to remember that they do not possess understanding, intent, or ethical awareness.
 
 Researchers should avoid placing AI on a pedestal and instead:
 
@@ -258,7 +258,7 @@ AI tools can significantly enhance productivity in research computing, but exces
 
 ### Risks of De-skilling
 
-Over-reliance on AI for coding can lead researchers to lose, or fail to develop, core technical skills. When you do not fully understand the code you use, you can't reliably verify whether AI-generated outputs are correct, robust, or appropriate for their research context. As a result, this may reduce confidence in the validity of published findings. 
+Over-reliance on AI for coding can lead researchers to lose, or fail to develop, core technical skills. When you do not fully understand the code you use, you can't reliably verify whether your research results are correct and this may reduce confidence in the validity of published findings. 
 
 In addition to technical skills, excessive use of AI may also reduce your critical evaluation skills. AI-generated code often appears plausible, confident and well-structured, which can encourage blind acceptance. This means that subtle errors, hidden assumptions, or inappropriate methods may go unnoticed, particularly when your code gets more complex.
 
@@ -272,14 +272,14 @@ However, maintaining human creativity and judgement is especially critical in re
 
 ## Mitigating Risks: Best Practices for Responsible AI Use in Research
 
-Responsible use of AI for coding assistance requires a combination of ethical awareness, technical safeguards, and disciplined research practice. Here are some examples of ethical best practices, practices to support research reproducibility and scientific validity, and some security measures that you may put in place when using AI to assist with research coding.
+Responsible use of AI for coding assistance requires a combination of ethical awareness, technical safeguards, and disciplined research practice. Here are some examples of ethical best practices, practices to support research reproducibility and scientific validity, and some security measures that you may decide to put in place when using AI to assist with research coding.
 
 ### Ethical Best Practices
 
 - **Maintain human oversight:** Researchers must critically evaluate all AI-generated outputs, remaining alert to potential bias, errors, or inappropriate assumptions.
 - **Test and validate rigorously:** AI-generated code should be treated as untrusted by default. Apply thorough testing and validation to ensure correctness, reliability, and fitness for purpose.
 - **Protect sensitive data:** Avoid submitting proprietary code, confidential data, or sensitive research materials to online AI tools. If you use these materials for your research and have decided to use AI, you may want to investigate locally hosted or offline AI assistants to reduce data exposure risks.
-- **Define clear usage guidelines:** Establish and follow explicit policies for AI use in research computing. These may draw on recognised frameworks such as the [ACM Code of Ethics](https://www.acm.org/code-of-ethics) or the [European Commission’s Ethical Guidelines on AI](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai), alongside institution-specific policies.
+- **Define clear usage guidelines:** Establish and follow explicit policies for AI use in research computing. These may draw on recognised frameworks such as the [ACM Code of Ethics](https://www.acm.org/code-of-ethics) or the [European Commission’s Ethical Guidelines on AI](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai)
 
 ### Practices Supporting Reproducibility and Scientific Validity
 
