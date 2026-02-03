@@ -257,7 +257,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="2-ai-assisted-coding.html">2. AI-Assisted Coding</a>
+        <a href="2-ai-assisted-coding.html">2. AI-Assisted Coding Practical Skills</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -984,7 +984,7 @@ St. Martin’s Press.</a></li>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-2-ai-assisted-coding"><p>Content from <a href="2-ai-assisted-coding.html">AI-Assisted Coding</a></p>
+ --></section></section><section id="aio-2-ai-assisted-coding"><p>Content from <a href="2-ai-assisted-coding.html">AI-Assisted Coding Practical Skills</a></p>
 <hr>
 <p>Last updated on 2026-02-03 |
 
@@ -1134,10 +1134,13 @@ suitable for computational training and learning exercises.</p>
 </div>
 </div>
 <p>Your colleague wants some plots of the data as quickly as possible so
-that she can present them at an upcoming seminar. You know that
-matplotlib is a plotting library in python but you’re not quite sure how
-to use it, so you decide to ask AI to make the plot for you.</p>
-<p>Open an AI chat interface (such as ChatGPT or Microsoft CoPilot) and
+that she can present them at an upcoming seminar. First, she has
+requested a plot of hindfoot length vs weight to explore whether these
+two variables are correlated, including only species with over 100
+observations. You know that Matplotlib is a plotting library in python
+but you’re not quite sure how to use it, so you decide to ask AI to make
+the plot for you.</p>
+<p>Open an AI chat interface (such as ChatGPT or Microsoft Copilot) and
 prompt the AI to:</p>
 <p>‘Generate some code to create a plot with weight on the x axis and
 hindfoot_length on the y axis, colour by species_id. Include only
@@ -1145,10 +1148,11 @@ species with over 100 observations. The data is in a csv file called
 animals.csv. Use Python and Matplotlib.’</p>
 <ul>
 <li>Open anaconda navigator and launch jupyter notebooks.</li>
-<li>Navigate to the folder where you will save your Jupyter
-notebook.</li>
+<li>Create a new folder ‘animals_data_analysis’.</li>
+<li>Navigate to this folder.</li>
 <li>Drag and drop animals.csv into this folder.</li>
-<li>Create a new jupyter notebook in this folder.</li>
+<li>Create a new jupyter notebook in this folder called
+‘animals_plots’.</li>
 <li>Paste the AI-generated code into a code chunk in the Jupyter
 notebook and run the code.</li>
 </ul>
@@ -1164,10 +1168,11 @@ tool).</p>
 <div class="callout-inner">
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
-<p>Think about problems with getting an AI tool to write your research
-code for you.</p>
+<p>What are the problems with getting an AI tool to write your research
+code for you?</p>
 <p>Which additional problems are introduced when you also use AI to run
 the code?</p>
+<p>Write your thoughts in the shared document.</p>
 </div>
 </div>
 </div>
@@ -1307,9 +1312,9 @@ can assist you with coding.</p>
 </h2>
 <hr class="half-width">
 <p>AI tools like ChatGPT can serve as an interactive reference and
-tutor, helping researchers understand unfamiliar coding constructs,
+tutor, helping you to understand unfamiliar coding constructs,
 libraries, or data analysis techniques. Unlike traditional search
-engines, AI can summarize and clarify technical information in context,
+engines, AI can summarise and clarify technical information in context,
 tailored to your specific dataset, code, or research question.</p>
 <div class="section level3">
 <h3 id="use-ai-as-a-reference-tool">Use AI as a Reference Tool<a class="anchor" aria-label="anchor" href="#use-ai-as-a-reference-tool"></a>
@@ -1320,12 +1325,13 @@ tailored to your specific dataset, code, or research question.</p>
 reading through multiple documentation pages, you can ask AI to find the
 relevant function, argument, or method for your task.</li>
 <li>
-<strong>Summarize key concepts</strong>: AI can condense long
-documentation into concise, understandable explanations.</li>
+<strong>Summarise key concepts</strong>: AI can condense long
+documentation into concise, understandable explanations. You can even
+ask AI to tailor explanations to you code and dataset.</li>
 <li>
 <strong>Clarify ambiguous points</strong>: You can follow up
-iteratively, asking AI to rephrase explanations, provide examples, or
-highlight potential pitfalls.</li>
+iteratively, asking AI to rephrase explanations or provide
+examples.</li>
 </ul>
 </div>
 <div class="section level3">
@@ -1338,17 +1344,6 @@ colleagues and ask for line-by-line explanations.</li>
 <li>
 <strong>Contextual learning</strong>: Ask why certain functions or
 methods are used, what alternatives exist, and best practices.</li>
-</ul>
-<p>Using AI to explain code and programming concepts can be beneficial
-as it can:</p>
-<ul>
-<li>Help you to access and summarise technical information faster than
-traditional web searches.</li>
-<li>Help you to learn new coding techniques by having unfamiliar code
-explained in context.</li>
-<li>Reduce cognitive load when learning new techniques by explaining
-code and library functions in clear, step-by-step terms, tailored to
-your code and dataset.</li>
 </ul>
 <div id="up-skill-rather-than-de-skill-with-ai" class="callout discussion">
 <div class="callout-square">
@@ -1420,6 +1415,7 @@ Matplotlib. When they try to run it, the code fails with an error.</p>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="va">KeyError</span><span class="op">:</span> <span class="st">'hindfoot_lenght'</span></span></code></pre>
 </div>
+<p>Try running the code above to check you get the same error.</p>
 <p>Rather than asking AI to “fix the code,” the researcher could use it
 as a debugging assistant.</p>
 <p>For example, the researcher could enter the prompt “I am getting a
@@ -1430,6 +1426,7 @@ means and how to diagnose it?”</p>
 just a correction and substitution of the code and will help the
 researcher learn how to diagnose similar problems in future rather than
 becoming reliant on AI.</p>
+<p>Try it out using your AI tool.</p>
 <p>In this example, AI might explain that:</p>
 <ul>
 <li>A KeyError in pandas means a column name does not exist</li>
@@ -1437,8 +1434,8 @@ becoming reliant on AI.</p>
 and those referenced in the code</li>
 </ul>
 <p>At this point, the researcher should verify this claim independently
-by: - Inspecting df_clean.columns - Comparing column names visually -
-Checking for spelling inconsistencies</p>
+by inspecting the dataset’s column names and checking for spelling
+inconsistencies.</p>
 <div id="ai-as-a-dubugging-assistant" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1447,8 +1444,9 @@ Checking for spelling inconsistencies</p>
 <div id="ai-as-a-dubugging-assistant" class="callout-inner">
 <h3 class="callout-title">AI as a Dubugging Assistant</h3>
 <div class="callout-content">
-<p>The code below contains a different bug. Use AI to help you debug the
-code, then apply the fix and verify that the code runs as expected.</p>
+<p>The code below contains a different bug. Run the code, use AI to help
+you debug it, then apply the fix and verify that the code runs as
+expected.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1515,6 +1513,15 @@ path is incorrect, the file has not been created.</p>
 </section><section><h2 class="section-heading" id="code-generation">Code Generation<a class="anchor" aria-label="anchor" href="#code-generation"></a>
 </h2>
 <hr class="half-width">
+<p>Let’s have a look at a few coding tasks where it can be appropriate
+for AI to generate code or text for you:</p>
+<ul>
+<li>Boilerplate</li>
+<li>Refactoring</li>
+<li>Documentation</li>
+<li>Rapid prototyping</li>
+<li>Translating code</li>
+</ul>
 <div class="section level3">
 <h3 id="boilerplate">Boilerplate<a class="anchor" aria-label="anchor" href="#boilerplate"></a>
 </h3>
@@ -1534,51 +1541,36 @@ boilerplate code across a few different contexts include:</p>
 <p>Using AI to generate boilerplate code can save you time with minimal
 risk, allowing you to spend your time and effort focusing on the intent
 of the analysis rather than the programming language’s syntax.</p>
-<p>For example: “Generate boilerplate code to load a csv file and create
-a histogram of one column”</p>
+<p>For example let’s try entering the prompt: “Generate boilerplate code
+to load a csv file and create a histogram of one column”</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co"># --- Configuration ---</span></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>csv_file <span class="op">=</span> <span class="st">'data.csv'</span>      <span class="co"># Path to your CSV file</span></span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>column_name <span class="op">=</span> <span class="st">'column1'</span>    <span class="co"># Column you want to plot</span></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="co"># --- Load CSV ---</span></span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(csv_file)</span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="co"># --- Check if column exists ---</span></span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="cf">if</span> column_name <span class="kw">not</span> <span class="kw">in</span> df.columns:</span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Column '</span><span class="sc">{</span>column_name<span class="sc">}</span><span class="ss">' not found in CSV."</span>)</span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="co"># --- Plot histogram ---</span></span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a>plt.hist(df[column_name].dropna(), bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">'skyblue'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a>plt.title(<span class="ss">f'Histogram of </span><span class="sc">{</span>column_name<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>plt.xlabel(column_name)</span>
-<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
-<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, alpha<span class="op">=</span><span class="fl">0.75</span>)</span>
-<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a>plt.show()</span></code></pre>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co"># Load the CSV file</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data.csv"</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="co"># Create a histogram for a single column</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>plt.hist(df[<span class="st">"column_name"</span>], bins<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>plt.xlabel(<span class="st">"Column Values"</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>plt.ylabel(<span class="st">"Frequency"</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>plt.title(<span class="st">"Histogram of Column Name"</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
-<p>After generating the boilerplate, you would:</p>
+<p>When you have the boilerplate code, you can edit it to give the
+desired outcome. For example, to produce a histogram of weight:</p>
 <ul>
-<li>Confirm that you understand what the code is doing and check it
-matches your intent</li>
-<li>Change the variable names to match your dataset</li>
-<li>Treat the generated code as a starting point to build on, not a
-final solution</li>
-</ul>
-<p>For example, to produce a histogram of you might weight:</p>
-<ul>
+<li>Copy and paste the boilerplate into your jupyter notebook</li>
 <li>Read through the generated boilerplate to make sure it’s doing what
-you uexpect</li>
+you expect</li>
 <li>Change the csv file name to <code>animals.csv</code>
 </li>
-<li>change the column_name to <code>weight</code>
+<li>Change the column_name to <code>weight</code>
 </li>
-<li>Change the colour of the bar plot to match your colour scheme</li>
 </ul>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1586,25 +1578,17 @@ you uexpect</li>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="co"># --- Configuration ---</span></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>csv_file <span class="op">=</span> <span class="st">'animals.csv'</span>      <span class="co"># Path to your CSV file</span></span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>column_name <span class="op">=</span> <span class="st">'weight'</span>    <span class="co"># Column you want to plot</span></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co"># --- Load CSV ---</span></span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(csv_file)</span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="co"># --- Check if column exists ---</span></span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="cf">if</span> column_name <span class="kw">not</span> <span class="kw">in</span> df.columns:</span>
-<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Column '</span><span class="sc">{</span>column_name<span class="sc">}</span><span class="ss">' not found in CSV."</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a><span class="co"># --- Plot histogram ---</span></span>
-<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a>plt.hist(df[column_name].dropna(), bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">'green'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a>plt.title(<span class="ss">f'Histogram of </span><span class="sc">{</span>column_name<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a>plt.xlabel(column_name)</span>
-<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
-<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, alpha<span class="op">=</span><span class="fl">0.75</span>)</span>
-<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a>plt.show()</span></code></pre>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="co"># Load the CSV file</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="co"># Create a histogram for a single column</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>plt.hist(df[<span class="st">"weight"</span>], bins<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>plt.xlabel(<span class="st">"Column Values"</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>plt.ylabel(<span class="st">"Frequency"</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>plt.title(<span class="st">"Histogram of Column Name"</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1616,9 +1600,9 @@ and maintainability, without changing its external behaviour or
 functionality.</p>
 <p>For example, in our scenario from earlier, once the hindfoot length
 vs weight plotting code is working, the researcher may notice
-opportunities to improve it. At the moment our code filters the data to
+opportunities to improve it. At the moment, our code filters the data to
 include only species with over 100 observations. If the researcher
-wanted to change the threshold for observations, the would have to edit
+wanted to change the threshold for observations, they would have to edit
 the script directly, which is problematic for reusability of the code
 and reproducibility of the outputs. Instead, they could extract the
 filtering code into it’s own function.</p>
@@ -1643,10 +1627,10 @@ threshold without rewriting the code.</p>
 </div>
 </div>
 <p>Recognising these opportunities for refactoring is a human judgment
-task. AI is only applied after the goal is clear.</p>
+task and we’re only using AI after we’ve decided what to refactor.</p>
 <p>Rather than asking ChatGPT to “rewrite the code,” you have more
-control over the output if you use a prompt that’s specific and
-constrained, for example:</p>
+control over the if you use a prompt that’s specific and constrained,
+for example:</p>
 <p>“Can you refactor this code to move the species-filtering logic into
 a small function, without changing its behaviour?”</p>
 <div class="codewrapper sourceCode" id="cb7">
@@ -1701,10 +1685,11 @@ a small function, without changing its behaviour?”</p>
 <h3 id="using-ai-to-support-technical-documentation">Using AI to Support Technical Documentation<a class="anchor" aria-label="anchor" href="#using-ai-to-support-technical-documentation"></a>
 </h3>
 <p>You may have noticed that when the AI generated the
-filter_species_by_count function, it also included documentation (a
-docstring) for the function. A <strong>docstring</strong> in Python is a
-short note written at the start of a function that explains what it
-does, what inputs the function takes, and what the function outputs.</p>
+filter_species_by_count function, it may have also included
+documentation (a docstring) for the function. A
+<strong>docstring</strong> in Python is a short note written at the
+start of a function that explains what it does, what inputs the function
+takes, and what the function outputs.</p>
 <p>Writing thorough code documentation can be time-consuming, which is
 why many scripts are left undocumented and can be hard to understand
 later, either by others or by yourself. AI can help by generating
@@ -1712,35 +1697,13 @@ documentation automatically, making it faster to produce clear,
 understandable explanations of your code.</p>
 <p>However, just as with any other AI-generated output, it’s important
 to check the generated documentation.</p>
-<p>We can evaluate the correctness of an AI-generated output using
-<strong>triangulation</strong>, the practice of verifying something with
-multiple sources of evidence or methods. For AI-generated code or
-documentation, this means cross-checking outputs in several ways to
-ensure they match your expectations and requirements.</p>
-<p>In this example, triangulation could involve:</p>
-<ul>
-<li>Asking: <em>“Does the docstring accurately describe what the
-function actually does?”</em><br>
-</li>
-<li>Checking that the listed parameters match the function’s
-arguments.<br>
-</li>
-<li>Confirming that any descriptions of functionality align with the
-actual code logic.</li>
-</ul>
-<p>Triangulation is a simple but powerful way to catch errors that have
-been introduced by AI misinterpretation or by subtle bugs in the code.
-Treat an AI-generated docstring as a guide, not a guarantee, and always
-verify before relying on it. After all, it’s better to have no
-documentation than incorrect documentation!</p>
-<p>In short, triangulation is about <strong>not relying on a single
-source of truth</strong>, in this case the AI, but instead evaluating
-the results from multiple angles to reduce errors and improve
-reliability.</p>
 <p>For example, if we extract plotting code into a function like
-<code>plot_species_scatter</code>, we can use AI to generate a
-docstring, then manually check that it correctly reflects the function’s
-behaviour before using it.</p>
+<code>plot_species_scatter</code>, we can use AI to generate a docstring
+for the function.</p>
+<p>Note that there are a few different styles of docstring for python:
+Google style , Sphinx style , NumPy style , and Epytext style. If the
+code you’re working with follows a particular style, you can specify the
+style of docstring in your prompt.</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1772,20 +1735,15 @@ behaviour before using it.</p>
 <div id="generate-a-docstring" class="callout-inner">
 <h3 class="callout-title">Generate a Docstring</h3>
 <div class="callout-content">
-<p>Use AI to generate a docstring for the ‘plot_species_scatter’
+<p>Copy and paste <code>plot_species_scatter</code> function from above
+into your AI tools and ask the AI to generate a docstring for the
 function.</p>
 <p>If you know Python, verify that the docstring accurately represents
-what the code does. If you don’t know Python, read through the docstring
-and use it to help you understand what the function does.</p>
-<ul>
-<li>Ask: “Does the docstring accurately describe what the function
-actually does?”</li>
-<li>Check that the listed parameters match the function’s
-arguments.<br>
-</li>
-<li>Confirm that any descriptions of functionality align with the actual
-code logic.</li>
-</ul>
+what the code does. More specifically, you could check that the listed
+parameters match the function’s arguments and confirm that any
+descriptions of functionality align with the actual code logic.</p>
+<p>If you don’t know Python, read through the docstring and use it to
+help you understand what the function does.</p>
 </div>
 </div>
 </div>
@@ -1848,6 +1806,42 @@ code logic.</li>
 </div>
 </div>
 </div>
+<div id="triangulation" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="triangulation" class="callout-inner">
+<h3 class="callout-title">Triangulation</h3>
+<div class="callout-content">
+<p>We can evaluate the correctness of an AI-generated output using
+<strong>triangulation</strong>, the practice of verifying something with
+multiple sources of evidence or methods. For AI-generated code or
+documentation, this means cross-checking outputs in several ways to
+ensure they match your expectations and requirements.</p>
+<p>For the example above, triangulation could involve:</p>
+<ul>
+<li>Asking: <em>“Does the docstring accurately describe what the
+function actually does?”</em><br>
+</li>
+<li>Checking that the listed parameters match the function’s
+arguments.<br>
+</li>
+<li>Confirming that any descriptions of functionality align with the
+actual code logic.</li>
+</ul>
+<p>Triangulation can help you to catch errors that have been introduced
+by AI misinterpretation or by subtle bugs in the code. Treat an
+AI-generated docstring as a guide, not a guarantee, and always verify
+before relying on it. After all, it’s better to have no documentation
+than incorrect documentation!</p>
+<p>In short, triangulation is about <strong>not relying on a single
+source of truth</strong>, in this case the AI, but instead evaluating
+the results from multiple angles to reduce errors and improve
+reliability.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="code-generation-for-rapid-prototyping">Code Generation for Rapid Prototyping<a class="anchor" aria-label="anchor" href="#code-generation-for-rapid-prototyping"></a>
@@ -1855,15 +1849,12 @@ code logic.</li>
 <p>Earlier in the episode, we discussed lots of risks associated with
 getting AI to generate all of your code for you. However, there are some
 situations where this can be appropriate. For example, AI can allow you
-to generate first drafts or prototypes of code very quickly. You can
-treat these as a starting point but make sure to validate everything and
-handcraft the final product carefully.</p>
+to generate first drafts or prototypes of code very quickly</p>
 <p>It’s important to write prompts that are specific and context-rich.
 Clearly define your requirements, including any libraries, frameworks,
-or constraints.</p>
-<p>AI coding tools lack human intuition and situational awareness, so
-they can only produce the intended results when given detailed, explicit
-instructions.</p>
+or constraints. AI coding tools lack human intuition and situational
+awareness, so they can only produce the intended results when given
+detailed, explicit instructions.</p>
 <p>It can be helpful to use an iterative process when generating code
 with AI tools to ensure you get the most relevant output. This process
 may include:</p>
