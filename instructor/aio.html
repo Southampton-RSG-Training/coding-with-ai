@@ -1176,7 +1176,7 @@ the code?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Artificial intelligence tools can generate code quickly and often
 convincingly. For researchers who are new to programming, this can be
@@ -1491,7 +1491,7 @@ code, then apply the fix and verify that the code runs as expected.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1794,7 +1794,7 @@ code logic.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Prompt: Generate a docstring for the following function:</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -1908,7 +1908,7 @@ libraries you want to use.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p><strong>Break the task down into steps</strong></p>
 <ul>
@@ -2162,7 +2162,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-3-ethics-reliability-and-security"><p>Content from <a href="3-ethics-reliability-and-security.html">Ethics, Reliability and Security Considerations</a></p>
 <hr>
-<p>Last updated on 2026-01-30 |
+<p>Last updated on 2026-02-03 |
 
         <a href="https://github.com/Southampton-RSG-Training/coding-with-ai/edit/main/episodes/3-ethics-reliability-and-security.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -2218,12 +2218,33 @@ ethical AI use in coding and data analysis workflows.</li>
 </div>
 </div>
 </div>
-<div id="callout1" class="callout">
+<section><h2 class="section-heading" id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+</h2>
+<hr class="half-width">
+<p>It can be helpful to critically evaluate the risks and implications
+of AI so that we can feel confident and safe using AI tools to assist
+with coding in appropriate ways. In this episode, we’ll briefly consider
+issues related to:</p>
+<ul>
+<li>Accuracy and Reliability of AI-Generated Code</li>
+<li>Data Privacy, Security Risks, and Confidentiality</li>
+<li>Intellectual Property, Authorship, and Citation of AI-Generated Code
+and Text</li>
+<li>Ethical Considerations in AI-Assisted Research</li>
+<li>De-skilling and Overdependence on AI in Research Computing</li>
+<li>Mitigating Risks: Best Practices for Responsible AI Use in
+Research</li>
+</ul></section><section><h2 class="section-heading" id="accuracy-and-reliability-of-ai-generated-code">Accuracy and Reliability of AI-Generated Code<a class="anchor" aria-label="anchor" href="#accuracy-and-reliability-of-ai-generated-code"></a>
+</h2>
+<hr class="half-width">
+<div id="ai-as-an-enthusiastic-but-inexperienced-software-developer" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div class="callout-inner">
+<div id="ai-as-an-enthusiastic-but-inexperienced-software-developer" class="callout-inner">
+<h3 class="callout-title">AI as an Enthusiastic but Inexperienced
+Software Developer</h3>
 <div class="callout-content">
 <p>When using AI for coding assistance, you can imagine an AI tool as
 being like a fresh computer science graduate with so much enthusiasm
@@ -2232,9 +2253,6 @@ broad understanding.</p>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="accuracy-and-reliability-of-ai-generated-code">Accuracy and Reliability of AI-Generated Code<a class="anchor" aria-label="anchor" href="#accuracy-and-reliability-of-ai-generated-code"></a>
-</h2>
-<hr class="half-width">
 <p>For researchers, relying on AI-generated code carries significant
 risks. Incorrect code can lead to flawed results, which may compromise
 the validity of your research, damage your professional reputation, and
@@ -2275,11 +2293,7 @@ lead to fragile code or missed features.</p>
 <strong>plausible but incorrect</strong>, a phenomenon often called
 “hallucination.” When the model lacks relevant training data or
 encounters an unfamiliar task, it may <strong>invent code or
-logic</strong> rather than responding with uncertainty. For example, GPT
-might suggest using <code>df.fillna(0)</code> to handle missing values,
-which runs without error, but replacing missing values with zero could
-bias statistical analyses, producing misleading results without
-triggering any warnings.</p>
+logic</strong> rather than responding with uncertainty.</p>
 <p>Another source of error comes from the <strong>training data
 itself</strong>. Many large language models have been trained on vast
 amounts of publicly available code, some of which contains mistakes. As
@@ -2289,12 +2303,17 @@ without any indication that they exist.</p>
 each piece based on the preceding context. Even small token-level
 mistakes, like a misspelled function name, a missing argument, or an
 incorrect operator, can produce code that looks correct but fails when
-executed. For instance: - Generating <code>read_csvs()</code> instead of
+executed. For instance:</p>
+<ul>
+<li>Generating <code>read_csvs()</code> instead of
 <code>read_csv()</code> will break a script.<br>
-- Omitting a critical argument like <code>header=None</code> may
+</li>
+<li>Omitting a critical argument like <code>header=None</code> may
 silently misread a dataset.<br>
-- Misplaced punctuation or parentheses can introduce subtle bugs that
-propagate through downstream calculations.</p>
+</li>
+<li>Misplaced punctuation or parentheses can introduce subtle bugs that
+propagate through downstream calculations.</li>
+</ul>
 <p>Unchecked token-level errors can escalate into serious problems,
 including <strong>memory leaks, crashes, or flawed analyses</strong>,
 which in turn can compromise research results and reproducibility. This
@@ -2381,18 +2400,40 @@ or system design.</p>
 </h3>
 <p>AI assistants learn from large volumes of existing code, and this
 code can contain both good and bad coding practices. As a result, they
-may suggest insecure or outdated practices. A <a href="https://arxiv.org/pdf/2211.03622" class="external-link">2023 Stanford University
-study</a> found that programmers who used AI assistants often produced
-less secure code but at the same time, felt more confident that it was
-secure - a risky combination!</p>
-<p>For example, an AI tool might generate code that fails to properly
-validate user input, leaving the system open to issues like SQL
-injection or cross-site scripting. This might be difficult to spot, and
-because the code looks right on the surface, these problems can be
-missed.</p>
+may suggest insecure or outdated practices. For example, an AI tool
+might generate code that fails to properly validate user input, leaving
+the system open to issues like SQL injection or cross-site scripting.
+This might be difficult to spot, and because the code looks right on the
+surface, these problems can be missed.</p>
 <p>If you are aware of security considerations relevant to your code,
 include them in your prompt to help ensure the AI generates more secure
 code.</p>
+<p>A <a href="https://arxiv.org/pdf/2211.03622" class="external-link">2023 Stanford University
+study</a> found that programmers who used AI assistants often produced
+less secure code but at the same time, felt more confident that it was
+secure - a risky combination!</p>
+</div>
+<div class="section level3">
+<h3 id="third-party-dependency-risks-in-ai-generated-code">Third-Party Dependency Risks in AI-Generated Code<a class="anchor" aria-label="anchor" href="#third-party-dependency-risks-in-ai-generated-code"></a>
+</h3>
+<p>AI tools will often generate code that includes external libraries or
+frameworks without checking whether they are secure and appropriate for
+your use case. This could lead to vulnerabilities in your code,
+licensing issues, or compatibility problems, which can cause problems
+later and be difficult to untangle or debug.</p>
+<p>AI hallucinations of third-party libraries can also be a security
+risk. ChatGPT sometimes hallucinates non-existent coding libraries in
+its outputs. A <a href="https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/" class="external-link">study
+by the security company Vulcan</a> identified a cyberattack technique
+where criminals could hijack these fake libraries by publishing a
+malicious package under the name of the non-existent library and hoping
+developers would install the infected library based on the AI tool’s
+recommendation.</p>
+<p>This practice has become known as ‘slopsquatting’, a combination of
+‘AI Slop’ and ‘typosquatting’ (the practice of registering domain names
+or software package names that are slightly misspelled versions of
+popular ones to trick users into visiting them or downloading malicious
+content).</p>
 <div id="embed-a-security-conscience-into-the-ai" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -2427,30 +2468,8 @@ in developing research software.</p>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="third-party-dependency-risks-in-ai-generated-code">Third-Party Dependency Risks in AI-Generated Code<a class="anchor" aria-label="anchor" href="#third-party-dependency-risks-in-ai-generated-code"></a>
-</h3>
-<p>AI tools will often generate code that includes external libraries or
-frameworks without checking whether they are secure and appropriate for
-your use case. This could lead to vulnerabilities in your code,
-licensing issues, or compatibility problems, which can cause problems
-later and be difficult to untangle or debug.</p>
-<p>AI hallucinations of third-party libraries can also be a security
-risk. ChatGPT sometimes hallucinates non-existent coding libraries in
-its outputs. A <a href="https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/" class="external-link">study
-by the security company Vulcan</a> identified a cyberattack technique
-where criminals could hijack these fake libraries by publishing a
-malicious package under the name of the non-existent library and hoping
-developers would install the infected library based on the AI tool’s
-recommendation.</p>
-<p>This practice has become known as ‘slopsquatting’, a combination of
-‘AI Slop’ and ‘typosquatting’ (the practice of registering domain names
-or software package names that are slightly misspelled versions of
-popular ones to trick users into visiting them or downloading malicious
-content).</p>
-</div>
-</section><section><h2 class="section-heading" id="intellectual-property-authorship-and-citation-of-ai-generated-code-and-text">Intellectual Property, Authorship, and Citation of AI-Generated Code
-and Text<a class="anchor" aria-label="anchor" href="#intellectual-property-authorship-and-citation-of-ai-generated-code-and-text"></a>
+</section><section><h2 class="section-heading" id="intellectual-property-authorship-and-citation-of-ai-generated-code">Intellectual Property, Authorship, and Citation of AI-Generated
+Code<a class="anchor" aria-label="anchor" href="#intellectual-property-authorship-and-citation-of-ai-generated-code"></a>
 </h2>
 <hr class="half-width">
 <div class="section level3">
@@ -2461,15 +2480,15 @@ the mind) for AI-generated code are currently evolving.</p>
 <p>Currently in the UK, if AI is used to assist a human creator, the
 content is the human’s own intellectual creation and the copyright
 belongs to the human creator.</p>
-<p>If there is no human author, the “author”” for copyright purposes is
+<p>If there is no human author, the “author” for copyright purposes is
 the person “by whom the arrangements necessary for the creation of the
-work are undertaken.”” For AI-generated code, this means that if the
-code is truly without human creative input (for example produced
-entirely by an AI tool in response to a prompt without the author
-shaping or selecting the output creatively), the law would treat the
-person who set up the process (for example the user or developer who
-provided the prompts and triggered the AI) as the “author” of that
-computer-generated work.</p>
+work are undertaken.” For AI-generated code, this means that if the code
+is truly without human creative input (for example produced entirely by
+an AI tool in response to a prompt without the author shaping or
+selecting the output creatively), the law would treat the person who set
+up the process (for example the user or developer who provided the
+prompts and triggered the AI) as the “author” of that computer-generated
+work.</p>
 <p>However, there’s ongoing debate about how this practically applies to
 many forms of AI outputs, including software code, because:</p>
 <ul>
@@ -2482,16 +2501,52 @@ agreements, employment contracts, or AI tool terms of service), which
 may assign rights to an employer or platform rather than the individual
 user.</li>
 </ul>
-<p>Separately from ownership of new AI outputs, generating code that
-replicates or contains substantial parts of copyrighted works without
-permission, such as code copied from existing proprietary systems, can
-infringe the copyright of others. AI models are trained on a vast amount
-of data that may include copyrighted material. While outputs from AI
-tools are typically novel, there is a risk that generated code or text
-may closely resemble existing sources. This could lead to copyright
-infringement claims, particularly in commercial or open-source contexts.
-If you use AI assistance with coding, you’ll need to be cautious about
-the potential for this to occur.</p>
+</div>
+<div class="section level3">
+<h3 id="implications-for-open-source-and-reuse">Implications for Open Source and Reuse<a class="anchor" aria-label="anchor" href="#implications-for-open-source-and-reuse"></a>
+</h3>
+<p>Separately from ownership of new AI outputs, you may accidentally
+infringe the copyright of others by generating code that replicates or
+contains substantial parts of copyrighted works without permission, such
+as code copied from existing proprietary systems. AI models are trained
+on a vast amount of data that may include copyrighted material. While
+outputs from AI tools are typically novel, there is a risk that
+generated code or text may closely resemble existing sources. This could
+lead to copyright infringement claims, particularly in commercial or
+open-source contexts. If you use AI assistance with coding, you’ll need
+to be cautious about the potential for this to occur.</p>
+<p>If AI-generated code is added to an open-source project, a licensing
+conflict may be accidentally introduced if the patterns or structures in
+the code are derived from software with incompatible licences. Check the
+project’s licence and contribution guidelines before making any
+AI-assisted contributions.</p>
+<div id="no-ai-generated-code-policy-for-open-source-project-cloud-hypervisor" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="no-ai-generated-code-policy-for-open-source-project-cloud-hypervisor" class="callout-inner">
+<h3 class="callout-title">No AI-generated Code Policy for Open-Source
+Project Cloud Hypervisor</h3>
+<div class="callout-content">
+<p>Cloud Hypervisor is an open-source software project that helps large
+computing systems run multiple programs safely and efficiently at the
+same time, which is a common requirement in cloud services (services
+provided over the internet rather than from a local computer). It is
+maintained by a community of organisations and developers and is made
+freely available under an open licence. In 2025, the project’s
+maintainers implemented a no AI-generated code policy for contributions,
+out of concern that such code might unintentionally include material
+derived from other software with incompatible licences, creating legal
+risks for the project and its users.</p>
+<p>In a <a href="https://github.com/cloud-hypervisor/cloud-hypervisor/blob/v48.0/CONTRIBUTING.md" class="external-link">post
+on GitHub</a>, Cloud Hypervisor’s maintainers said: ‘Our policy is to
+decline any contributions known to contain contents generated or derived
+from using Large Language Models (LLMs). This includes ChatGPT, Gemini,
+Claude, Copilot and similar tools.’</p>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="authorship-and-academic-credit">Authorship and Academic Credit<a class="anchor" aria-label="anchor" href="#authorship-and-academic-credit"></a>
@@ -2504,8 +2559,6 @@ work and raise academic integrity questions.</p>
 that human authors are fully accountable for the content they produce.
 Publishers are also broadly in agreement that AI use should be
 disclosed.</p>
-<p>Being transparent about the use of AI may also increase trust in the
-research community and support reproducibility of research.</p>
 <div id="publishers-stance-on-ai-use-in-academic-research" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -2527,10 +2580,6 @@ AI-generated images are generally prohibited due to unresolved legal and
 ethical concerns. Nature requires disclosure of LLM use in the Methods
 section (or an equivalent section), rather than in acknowledgements or
 citations.</p></li>
-<li><p><strong>APA / Chicago / MLA:</strong> These referencing style
-authorities require transparent citation of AI tools used in scholarly
-work, without recognising them as authors, typically in the
-‘Acknowledgements’ section.</p></li>
 <li><p><strong>Elsevier:</strong> Elsevier allows AI-assisted tools for
 writing support, limited to improving clarity and readability. However,
 core scholarly activities, such as generating scientific insights,
@@ -2569,56 +2618,40 @@ concepts</em> [Generative AI chat]. ChatGPT. <a href="https://chatgpt.com/share/
 language model]. URL of the tool</p>
 <p>Example: OpenAI. (2025). <em>ChatGPT</em> [Large language model]. <a href="https://chatgpt.com/" class="external-link uri">https://chatgpt.com/</a></p>
 </div>
-<div class="section level3">
-<h3 id="implications-for-open-source-and-reuse">Implications for Open Source and Reuse<a class="anchor" aria-label="anchor" href="#implications-for-open-source-and-reuse"></a>
-</h3>
-<p>If AI-generated code is added to an open-source project, a licensing
-conflict may be accidentally introduced if the patterns or structures in
-the code are derived from software with incompatible licences. Check the
-project’s licence and contribution guidelines before making any
-AI-assisted contributions.</p>
-<div id="no-ai-generated-code-policy-for-open-source-project-cloud-hypervisor" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="no-ai-generated-code-policy-for-open-source-project-cloud-hypervisor" class="callout-inner">
-<h3 class="callout-title">No AI-generated Code Policy for Open-Source
-Project Cloud Hypervisor</h3>
-<div class="callout-content">
-<p>Cloud Hypervisor is an open-source software project that helps large
-computing systems run multiple programs safely and efficiently at the
-same time, which is a common requirement in cloud services (services
-provided over the internet rather than from a local computer). It is
-maintained by a community of organisations and developers and is made
-freely available under an open licence. In 2025, the project’s
-maintainers implemented a no AI-generated code policy for contributions,
-out of concern that such code might unintentionally include material
-derived from other software with incompatible licences, creating legal
-risks for the project and its users.</p>
-<p>In a <a href="https://github.com/cloud-hypervisor/cloud-hypervisor/blob/v48.0/CONTRIBUTING.md" class="external-link">post
-on GitHub</a>, Cloud Hypervisor’s maintainers said: ‘Our policy is to
-decline any contributions known to contain contents generated or derived
-from using Large Language Models (LLMs). This includes ChatGPT, Gemini,
-Claude, Copilot and similar tools,” the open source project maintainers
-explained in a GitHub post.’</p>
-</div>
-</div>
-</div>
-</div>
 </section><section><h2 class="section-heading" id="ethical-considerations-in-ai-assisted-research">Ethical Considerations in AI-Assisted Research<a class="anchor" aria-label="anchor" href="#ethical-considerations-in-ai-assisted-research"></a>
 </h2>
 <hr class="half-width">
 <div class="section level3">
 <h3 id="bias-in-ai-systems">Bias in AI Systems<a class="anchor" aria-label="anchor" href="#bias-in-ai-systems"></a>
 </h3>
-<p>AI coding and research assistants can perpetuate or amplify biases
-present in their training data. This may result in outputs that:</p>
+<p>AI model outputs reflect any biases present in their training data.
+This may result in outputs that:</p>
 <ul>
 <li>Favour certain demographic groups over others</li>
-<li>Encode biased assumptions into code or analysis</li>
-<li>Fail to meet ethical, legal, or regulatory standards</li>
+<li>Embedding biased assumptions into code or documentation</li>
 </ul>
+<p>An Ethical AI Framework was proposed by <a href="https://en.wikipedia.org/wiki/Vilas_Dhar" class="external-link">Vilas Dhar</a>, a social
+entrepreneur focused on the ethical use of AI and president of the
+Patrick J. McGovern Foundation. The framework is built on three
+pillars:</p>
+<ol style="list-style-type: decimal">
+<li>Responsible data practices</li>
+<li>Boundaries around safe and appropriate use</li>
+<li>Understand how tools generate their recommendations. When AI systems
+operate as black boxes, it becomes difficult to assess validity,
+fairness, or risk.</li>
+</ol>
+<p>In a research setting applying this framework might look like:</p>
+<ol style="list-style-type: decimal">
+<li>Checking your data: AI reflects the datasets it learned from. For
+example, an AI trained on outdated species measurements might
+misclassify new observations.</li>
+<li>Setting boundaries on key decisions: Decide which tasks are
+appropriate for AI and which should always be done by humans.</li>
+<li>Understanding the AI’s reasoning: Ask how the AI arrived at its
+suggestion. If a statistical model or code snippet doesn’t make sense,
+investigate before using it.</li>
+</ol>
 </div>
 <div class="section level3">
 <h3 id="avoid-over-trust-in-ai-and-keep-humans-in-control">Avoid Over-Trust in AI and Keep Humans in Control<a class="anchor" aria-label="anchor" href="#avoid-over-trust-in-ai-and-keep-humans-in-control"></a>
@@ -2633,36 +2666,10 @@ than override them.</p>
 <p>Researchers should avoid placing AI on a pedestal and instead:</p>
 <ul>
 <li>Treat AI outputs as suggestions, not truths</li>
-<li>Emphasise the role of human creativity and critical thinking</li>
+<li>Value the role of human creativity and critical thinking</li>
 <li>Remember that the researcher should take responsibility for an
 AI-generated code or other content they use</li>
 </ul>
-</div>
-<div class="section level3">
-<h3 id="ethical-ai-framework">Ethical AI Framework<a class="anchor" aria-label="anchor" href="#ethical-ai-framework"></a>
-</h3>
-<p>An Ethical AI Framework was proposed by <a href="https://en.wikipedia.org/wiki/Vilas_Dhar" class="external-link">Vilas Dhar</a>, a social
-entrepreneur focused on the ethical use of AI and president of the
-Patrick J. McGovern Foundation. The framework is built on three
-pillars:</p>
-<ol style="list-style-type: decimal">
-<li>Responsible data practices</li>
-<li>Boundaries around safe and appropriate use</li>
-<li>Understanding how tools generate their recommendations. When AI
-systems operate as black boxes, it becomes difficult to assess validity,
-fairness, or risk.</li>
-</ol>
-<p>In a research setting applying this framework might look like:</p>
-<ol style="list-style-type: decimal">
-<li>Checking your data: AI reflects the datasets it learned from. For
-example, an AI trained on outdated species measurements might
-misclassify new observations.</li>
-<li>Setting boundaries on key decisions: Decide which tasks are
-appropriate for AI and which should always be done by humans.</li>
-<li>Understanding the AI’s reasoning: Ask how the AI arrived at its
-suggestion. If a statistical model or code snippet doesn’t make sense,
-investigate before using it.</li>
-</ol>
 </div>
 </section><section><h2 class="section-heading" id="de-skilling-and-overdependence-on-ai-in-research-computing">De-skilling and Overdependence on AI in Research Computing<a class="anchor" aria-label="anchor" href="#de-skilling-and-overdependence-on-ai-in-research-computing"></a>
 </h2>
@@ -2694,10 +2701,9 @@ for specific research needs.</p>
 <div class="section level3">
 <h3 id="ai-as-a-tool-not-a-replacement">AI as a Tool, Not a Replacement<a class="anchor" aria-label="anchor" href="#ai-as-a-tool-not-a-replacement"></a>
 </h3>
-<p>AI should be understood as a productivity tool that can accelerate
-routine tasks and support problem-solving. Used thoughtfully, AI can
-help explore ideas, generate boilerplate code, or suggest alternative
-approaches.</p>
+<p>It can be helpful to think of AI as a tool that can help with and
+accelerate certain tasks. Used thoughtfully, AI can help explore ideas,
+generate boilerplate code, or suggest alternative approaches.</p>
 <p>However, maintaining human creativity and judgement is especially
 critical in research, where novelty, insight, and deep understanding
 often matter more than speed. AI can assist, but it cannot define
@@ -2708,7 +2714,7 @@ methodological decisions.</p>
 Research<a class="anchor" aria-label="anchor" href="#mitigating-risks-best-practices-for-responsible-ai-use-in-research"></a>
 </h2>
 <hr class="half-width">
-<p>Responsible use of AI coding assistants requires a combination of
+<p>Responsible use of AI for coding assistance requires a combination of
 ethical awareness, technical safeguards, and disciplined research
 practice. Here are some examples of ethical best practices, practices to
 support research reproducibility and scientific validity, and some
@@ -2743,7 +2749,7 @@ institution-specific policies.</li>
 </ul>
 </div>
 <div class="section level3">
-<h3 id="supporting-reproducibility-and-scientific-validity">Supporting Reproducibility and Scientific Validity<a class="anchor" aria-label="anchor" href="#supporting-reproducibility-and-scientific-validity"></a>
+<h3 id="practices-supporting-reproducibility-and-scientific-validity">Practices Supporting Reproducibility and Scientific Validity<a class="anchor" aria-label="anchor" href="#practices-supporting-reproducibility-and-scientific-validity"></a>
 </h3>
 <p>To maintain transparency, reproducibility, and scientific validity
 when using AI tools, researchers should:</p>
@@ -2766,9 +2772,9 @@ them.</li>
 </h3>
 <ul>
 <li>
-<strong>Mandatory code review:</strong> Review all AI-generated
-code, ideally using standard code review processes, to identify
-vulnerabilities, logic errors, or unsafe practices.</li>
+<strong>Code review:</strong> Review all AI-generated code, ideally
+using standard code review processes, to identify vulnerabilities, logic
+errors, or unsafe practices.</li>
 <li>
 <strong>Secure development practices:</strong> If you’re working on
 a larger piece of research software, integrate security testing tools
@@ -2788,7 +2794,7 @@ by AI tools.</li>
 <h3 class="callout-title">Personal Ethics and Security Policy</h3>
 <div class="callout-content">
 <p>Write a short personal policy outlining how you will use AI tools
-responsibly when coding. Include at least <strong>three clear
+responsibly to assist with coding. Include at least <strong>three clear
 guidelines</strong>.</p>
 </div>
 </div>
@@ -2951,8 +2957,8 @@ any links that you are not going to use.
   "url": "https://Southampton-RSG-Training.github.io/coding-with-ai/instructor/aio.html",
   "identifier": "https://Southampton-RSG-Training.github.io/coding-with-ai/instructor/aio.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-02-02",
-  "datePublished": "2026-02-02"
+  "dateModified": "2026-02-03",
+  "datePublished": "2026-02-03"
 }
 
   </script><script>
