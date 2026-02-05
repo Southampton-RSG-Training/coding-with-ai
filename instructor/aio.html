@@ -463,7 +463,7 @@ generative AI chatbots we know today such as ChatGPT, because it did not
 have the capability to respond to any inputs outside of its
 pre-programmed rules.</p>
 <figure><img src="../fig/ELIZA_conversation.png" alt="A conversation with the ELIZA chatbot." class="figure mx-auto d-block"><div class="figcaption">Public domain, via Wikimedia Commons</div>
-</figure>
+</figure><p>TODO:Add Deep Blue example</p>
 </div>
 <div class="section level3">
 <h3 id="mid-1990s2000s-shift-to-data-driven-machine-learning">Mid-1990s–2000s: Shift to Data-driven Machine Learning<a class="anchor" aria-label="anchor" href="#mid-1990s2000s-shift-to-data-driven-machine-learning"></a>
@@ -483,7 +483,7 @@ researchers to analyse large datasets more efficiently and consistently
 than manual methods.</p>
 <figure><img src="../fig/micrograph.jpg" alt="Light micrograph of an undecalcified epiphyseal plate that is displaying the hypertrophic zone with its typical chondrocytes, matrix and three zones: maturation (top), degenerative (middle) and provisional calcification (bottom)." class="figure mx-auto d-block"><div class="figcaption">A close-up microscope image of a growth plate,
 Robert M. Hunt, Public domain, via Wikimedia Commons</div>
-</figure><p>TODO:Add Deep Blue example</p>
+</figure>
 </div>
 <div class="section level3">
 <h3 id="present-the-emergence-and-scaling-of-generative-ai">2017-Present: The Emergence and Scaling of Generative AI<a class="anchor" aria-label="anchor" href="#present-the-emergence-and-scaling-of-generative-ai"></a>
@@ -757,9 +757,9 @@ AI-powered development environments that assist with complex, multi-file
 projects, handling entire codebases, version control, and sophisticated
 development workflows. Examples: Cursor, GitHub Copilot, Claude Code,
 Google Colab</p>
-<p>This workshop will stick to Level 1. The intermediate-level course
-‘Developing Research Software with AI Tools’ addresses how you would
-work within Level 4.</p>
+<p>This workshop will stick to Level 1. The intermediate-level course <a href="https://southampton-rsg-training.github.io/research-software-ai-tools/" class="external-link">Developing
+Research Software with AI Tools</a> addresses how you would work within
+Level 4.</p>
 <div id="what-is-your-experience-of-using-ai-tools-for-coding" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -896,9 +896,11 @@ obscure understanding or introduce errors.</li>
 Development<a class="anchor" aria-label="anchor" href="#why-understanding-still-matters-the-limits-of-ai-driven-software-development"></a>
 </h2>
 <hr class="half-width">
-<p><strong>Scenario</strong>: Imagine, your research team has collected
-some data on the animal species found within plots of land at a study
-site.</p>
+<div class="section level3">
+<h3 id="scenario">Scenario<a class="anchor" aria-label="anchor" href="#scenario"></a>
+</h3>
+<p>Imagine, your research team has collected some data on the animal
+species found within plots of land at a study site.</p>
 <p>Download the data from here: <a href="../data/animals.csv">animals.csv</a></p>
 <p>The dataset is stored as a comma separated value (CSV) file. You can
 open the csv file in excel or a similar spreadsheet tool and have a look
@@ -1009,8 +1011,9 @@ notebook and run the code.</li>
 </ul>
 <p>We could even go one step further and upload the dataset to the AI
 chat so that the analysis can actually be run within the AI tool
-(depending on the features that you have access to with your AI
-tool).</p>
+(depending on the features that you have access to with your AI tool).
+<strong>Note: we can only do this because this dataset is publicly
+available. Don’t upload any private or sensitive data.</strong></p>
 <figure><img src="../fig/animals_plot_chatgpt.png" alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot" class="figure mx-auto d-block"></figure><div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1020,7 +1023,12 @@ tool).</p>
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
 <p>What are the problems with getting an AI tool to write your research
-code for you?</p>
+code for you? Consider:</p>
+<ul>
+<li>Technical risks</li>
+<li>Reliability risks</li>
+<li>Ethical and academic integrity risks</li>
+</ul>
 <p>Which additional problems are introduced when you also use AI to run
 the code?</p>
 <p>Write your thoughts in the shared document.</p>
@@ -1032,7 +1040,7 @@ the code?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Artificial intelligence tools can generate code quickly and often
 convincingly. For researchers who are new to programming, this can be
@@ -1040,64 +1048,28 @@ appealing: it may seem efficient to delegate the entire task of software
 development to an AI system. However, doing so without understanding the
 solution introduces significant technical, ethical, and reliability
 risks.</p>
-<div class="section level3">
-<h3 id="technical-risks">Technical Risks<a class="anchor" aria-label="anchor" href="#technical-risks"></a>
-</h3>
-<p>AI-generated code may appear correct but can contain subtle errors.
-These errors are particularly dangerous because:</p>
 <ul>
-<li>They may not cause obvious failures.</li>
-<li>They can produce plausible but incorrect results.</li>
-<li>They may only appear under specific conditions or data sets.</li>
-</ul>
-<p>Without understanding how the code works, a researcher cannot:</p>
-<ul>
-<li>Verify that the implementation matches the intended analysis.</li>
-<li>Detect incorrect assumptions or inappropriate methods.</li>
-<li>Adapt or debug the code when results look suspicious.</li>
-</ul>
-<p>In a research context, this undermines the validity and
-reproducibility of results.</p>
-</div>
-<div class="section level3">
-<h3 id="reliability-and-reproducibility-risks">Reliability and Reproducibility Risks<a class="anchor" aria-label="anchor" href="#reliability-and-reproducibility-risks"></a>
-</h3>
-<p>AI systems do not reason about your research goals in the way a human
-collaborator would. They generate outputs based on patterns in training
-data, not on an understanding of your experiment, theory, or domain
-constraints.</p>
-<p>As a result:</p>
-<ul>
-<li>The same prompt may produce different solutions at different
-times.</li>
+<li>AI-generated code may appear correct but can contain subtle errors,
+which may only appear under certain conditions.</li>
+<li>If the researcher doesn’t understand the AI-generated code they
+can’t verify that the implementation matches the intended analysis and
+therefore they can’t comprehensively defend their findings.</li>
+<li>The same prompt may produce different solutions at different times,
+causing problems for reproducibility of your research.</li>
 <li>Generated code may rely on undocumented assumptions.</li>
-<li>Dependencies, versions, or defaults may change without warning.</li>
-<li>If you cannot explain how your software works, you cannot reliably
-defend or reproduce your findings, an essential requirement of
-research.</li>
+<li>Dependencies, versions, or defaults in AI-generated code may change
+without warning.</li>
+<li>The researcher rather than the AI system will be held accountable
+for any errors in AI-generated code. When you use AI-generated code you
+don’t fully understand, you risk being held accountable for any errors
+in that code.</li>
+<li>Using AI-generated code that you don’t fully understand limits
+research transparency, as you cannot explain your methods to reviewers
+and collaborators.</li>
+<li>Using code you do not understand may amount to overstating your
+expertise or control over the research process, and this
+misrepresentation is an academic integrity risk.</li>
 </ul>
-</div>
-<div class="section level3">
-<h3 id="ethical-and-academic-integrity-risks">Ethical and Academic Integrity Risks<a class="anchor" aria-label="anchor" href="#ethical-and-academic-integrity-risks"></a>
-</h3>
-<p>Researchers remain fully responsible for the work they submit,
-publish, or use to inform decisions. Delegating development entirely to
-AI raises several ethical concerns:</p>
-<ul>
-<li>
-<strong>Accountability</strong>: You cannot attribute errors or
-misconduct to an AI system.</li>
-<li>
-<strong>Transparency</strong>: Reviewers and collaborators may
-expect you to explain your methods.</li>
-<li>
-<strong>Misrepresentation</strong>: Using code you do not understand
-may amount to overstating your expertise or control over the research
-process.</li>
-</ul>
-<p>Relying heavily on AI may also conflict with institutional policies
-on research integrity or responsible use of AI.</p>
-</div>
 <div class="section level3">
 <h3 id="additional-problems-with-ai-also-runs-the-code">Additional Problems with AI also Runs the Code<a class="anchor" aria-label="anchor" href="#additional-problems-with-ai-also-runs-the-code"></a>
 </h3>
@@ -1138,6 +1110,7 @@ your inputs to train the model and improve its performance.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="section level3">
 <h3 id="appropriate-roles-for-ai-when-writing-research-code">Appropriate Roles for AI when Writing Research Code<a class="anchor" aria-label="anchor" href="#appropriate-roles-for-ai-when-writing-research-code"></a>
 </h3>
@@ -1167,9 +1140,6 @@ tutor, helping you to understand unfamiliar coding constructs,
 libraries, or data analysis techniques. Unlike traditional search
 engines, AI can summarise and clarify technical information in context,
 tailored to your specific dataset, code, or research question.</p>
-<div class="section level3">
-<h3 id="use-ai-as-a-reference-tool">Use AI as a Reference Tool<a class="anchor" aria-label="anchor" href="#use-ai-as-a-reference-tool"></a>
-</h3>
 <ul>
 <li>
 <strong>Locate technical information quickly</strong>: Instead of
@@ -1183,12 +1153,6 @@ ask AI to tailor explanations to you code and dataset.</li>
 <strong>Clarify ambiguous points</strong>: You can follow up
 iteratively, asking AI to rephrase explanations or provide
 examples.</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="use-ai-to-explain-unfamiliar-code">Use AI to Explain Unfamiliar Code<a class="anchor" aria-label="anchor" href="#use-ai-to-explain-unfamiliar-code"></a>
-</h3>
-<ul>
 <li>
 <strong>Code comprehension</strong>: Paste code generated by AI or
 colleagues and ask for line-by-line explanations.</li>
@@ -1217,7 +1181,6 @@ Python code does and why it is needed.” Try iteratively refining
 questions: if a term or method is still unclear, ask AI to provide an
 example, an analogy, or reference documentation.</p></li>
 </ol>
-</div>
 </div>
 </div>
 </div>
@@ -1340,7 +1303,7 @@ expected.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1364,30 +1327,18 @@ path is incorrect, the file has not been created.</p>
 </section><section><h2 class="section-heading" id="code-generation">Code Generation<a class="anchor" aria-label="anchor" href="#code-generation"></a>
 </h2>
 <hr class="half-width">
-<p>Let’s have a look at a few coding tasks where it can be appropriate
-for AI to generate code or text for you:</p>
-<ul>
-<li>Boilerplate</li>
-<li>Refactoring</li>
-<li>Documentation</li>
-<li>Rapid prototyping</li>
-<li>Translating code</li>
-</ul>
 <div class="section level3">
 <h3 id="boilerplate">Boilerplate<a class="anchor" aria-label="anchor" href="#boilerplate"></a>
 </h3>
 <p>AI can be particularly useful for some coding tasks that are tedious
-and repetitive such as writing boilerplate code, restructuring code into
-functions, and generating code documentation.</p>
+and repetitive such as writing boilerplate code.</p>
 <p>Boilerplate code is a term used to describe standard code structures
 that are repeated in multiple places with little variation. Examples of
 boilerplate code across a few different contexts include:</p>
 <ul>
-<li>Templates for function/class definitions</li>
-<li>Bash script skeleton</li>
-<li>Web page structure in HTML</li>
-<li>Functional component in React</li>
-<li>Unit test template</li>
+<li>Templates for function and class definitions</li>
+<li>Setup for plots in python or R</li>
+<li>Basic web page structure in HTML</li>
 </ul>
 <p>Using AI to generate boilerplate code can save you time with minimal
 risk, allowing you to spend your time and effort focusing on the intent
@@ -1443,118 +1394,73 @@ you expect</li>
 </div>
 </div>
 <div class="section level3">
-<h3 id="refactoring">Refactoring<a class="anchor" aria-label="anchor" href="#refactoring"></a>
+<h3 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
 </h3>
-<p>Code refactoring describes restructuring existing source code, making
-small, incremental changes to improve its internal design, readability,
-and maintainability, without changing its external behaviour or
-functionality.</p>
-<p>For example, in our scenario from earlier, once the hindfoot length
-vs weight plotting code is working, the researcher may notice
-opportunities to improve it. At the moment, our code filters the data to
-include only species with over 100 observations. If the researcher
-wanted to change the threshold for observations, they would have to edit
-the script directly, which is problematic for reusability of the code
-and reproducibility of the outputs. Instead, they could extract the
-filtering code into it’s own function.</p>
-<div id="functions" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="functions" class="callout-inner">
-<h3 class="callout-title">Functions</h3>
-<div class="callout-content">
-<p>A function is a named block of code that performs a specific task.
-Instead of writing the same steps over and over, you put them in a
-function and “call” it whenever you need it. Functions can take inputs
-(called arguments), do something with them, and return outputs. They
-make code easier to read, reuse, and maintain.</p>
-<p>For example, instead of changing the filtering threshold directly in
-the script each time, you can put the filtering steps in a function that
-accepts the threshold as an input. Then you can reuse it with any
-threshold without rewriting the code.</p>
-</div>
-</div>
-</div>
-<p>Recognising these opportunities for refactoring is a human judgment
-task and we’re only using AI after we’ve decided what to refactor.</p>
-<p>Rather than asking ChatGPT to “rewrite the code,” you have more
-control over the if you use a prompt that’s specific and constrained,
-for example:</p>
-<p>“Can you refactor this code to move the species-filtering logic into
-a small function, without changing its behaviour?”</p>
-<div class="codewrapper sourceCode" id="cb7">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="co"># Load the data</span></span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="co"># Function to filter species by minimum count</span></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="kw">def</span> filter_species_by_count(df, species_col, min_count<span class="op">=</span><span class="dv">100</span>):</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="co">    Returns a DataFrame containing only species with at least min_count observations.</span></span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="co">    Parameters:</span></span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="co">        df (pd.DataFrame): Input DataFrame</span></span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="co">        species_col (str): Name of the column containing species IDs</span></span>
-<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="co">        min_count (int): Minimum number of observations required for a species to be kept</span></span>
-<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a><span class="co">        pd.DataFrame: Filtered DataFrame</span></span>
-<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a>    species_counts <span class="op">=</span> df[species_col].value_counts()</span>
-<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a>    valid_species <span class="op">=</span> species_counts[species_counts <span class="op">&gt;</span> min_count].index</span>
-<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a>    <span class="cf">return</span> df[df[species_col].isin(valid_species)]</span>
-<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a></span>
-<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a><span class="co"># Filter the DataFrame</span></span>
-<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a>df_filtered <span class="op">=</span> filter_species_by_count(df, <span class="st">"species_id"</span>, min_count<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a></span>
-<span id="cb7-27"><a href="#cb7-27" tabindex="-1"></a><span class="co"># Create the plot</span></span>
-<span id="cb7-28"><a href="#cb7-28" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb7-29"><a href="#cb7-29" tabindex="-1"></a></span>
-<span id="cb7-30"><a href="#cb7-30" tabindex="-1"></a><span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(<span class="st">"species_id"</span>):</span>
-<span id="cb7-31"><a href="#cb7-31" tabindex="-1"></a>    plt.scatter(</span>
-<span id="cb7-32"><a href="#cb7-32" tabindex="-1"></a>        group[<span class="st">"weight"</span>],</span>
-<span id="cb7-33"><a href="#cb7-33" tabindex="-1"></a>        group[<span class="st">"hindfoot_length"</span>],</span>
-<span id="cb7-34"><a href="#cb7-34" tabindex="-1"></a>        label<span class="op">=</span>species,</span>
-<span id="cb7-35"><a href="#cb7-35" tabindex="-1"></a>        alpha<span class="op">=</span><span class="fl">0.7</span></span>
-<span id="cb7-36"><a href="#cb7-36" tabindex="-1"></a>    )</span>
-<span id="cb7-37"><a href="#cb7-37" tabindex="-1"></a></span>
-<span id="cb7-38"><a href="#cb7-38" tabindex="-1"></a>plt.xlabel(<span class="st">"Weight"</span>)</span>
-<span id="cb7-39"><a href="#cb7-39" tabindex="-1"></a>plt.ylabel(<span class="st">"Hindfoot Length"</span>)</span>
-<span id="cb7-40"><a href="#cb7-40" tabindex="-1"></a>plt.title(<span class="st">"Hindfoot Length vs Weight (Species with &gt;100 Observations)"</span>)</span>
-<span id="cb7-41"><a href="#cb7-41" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">"Species ID"</span>)</span>
-<span id="cb7-42"><a href="#cb7-42" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb7-43"><a href="#cb7-43" tabindex="-1"></a>plt.show()</span></code></pre>
-</div>
-</div>
-<div class="section level3">
-<h3 id="using-ai-to-support-technical-documentation">Using AI to Support Technical Documentation<a class="anchor" aria-label="anchor" href="#using-ai-to-support-technical-documentation"></a>
-</h3>
-<p>You may have noticed that when the AI generated the
-filter_species_by_count function, it may have also included
-documentation (a docstring) for the function. A
-<strong>docstring</strong> in Python is a short note written at the
-start of a function that explains what it does, what inputs the function
-takes, and what the function outputs.</p>
 <p>Writing thorough code documentation can be time-consuming, which is
 why many scripts are left undocumented and can be hard to understand
 later, either by others or by yourself. AI can help by generating
 documentation automatically, making it faster to produce clear,
 understandable explanations of your code.</p>
-<p>However, just as with any other AI-generated output, it’s important
-to check the generated documentation.</p>
 <p>For example, if we extract plotting code into a function like
 <code>plot_species_scatter</code>, we can use AI to generate a docstring
-for the function.</p>
+for the function. A <strong>docstring</strong> in Python is a short note
+written at the start of a function that explains what it does, what
+inputs the function takes, and what the function outputs.</p>
 <p>Note that there are a few different styles of docstring for python:
 Google style , Sphinx style , NumPy style , and Epytext style. If the
 code you’re working with follows a particular style, you can specify the
 style of docstring in your prompt.</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">def</span> plot_species_scatter(df, species_col<span class="op">=</span><span class="st">"species_id"</span>, x_col<span class="op">=</span><span class="st">"weight"</span>, y_col<span class="op">=</span><span class="st">"hindfoot_length"</span>, min_count<span class="op">=</span><span class="dv">100</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>    df_filtered <span class="op">=</span> filter_species_by_count(df, species_col, min_count)</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>    </span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>    </span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(species_col):</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>        plt.scatter(</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>            group[x_col],</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>            group[y_col],</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>            label<span class="op">=</span>species,</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>            alpha<span class="op">=</span><span class="fl">0.7</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>        )</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>    </span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>    plt.xlabel(x_col.capitalize())</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a>    plt.ylabel(y_col.replace(<span class="st">"_"</span>, <span class="st">" "</span>).capitalize())</span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a>    plt.title(<span class="ss">f"</span><span class="sc">{</span>y_col<span class="sc">.</span>replace(<span class="st">'_'</span>, <span class="st">' '</span>)<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>x_col<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> (Species with &gt;</span><span class="sc">{</span>min_count<span class="sc">}</span><span class="ss"> Observations)"</span>)</span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a>    plt.legend(title<span class="op">=</span>species_col)</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a>    plt.show()</span></code></pre>
+</div>
+<div id="generate-a-docstring" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="generate-a-docstring" class="callout-inner">
+<h3 class="callout-title">Generate a Docstring</h3>
+<div class="callout-content">
+<p>Copy and paste <code>plot_species_scatter</code> function from above
+into your AI tool and ask the AI to generate a docstring for the
+function.</p>
+<p>If you know Python, verify that the docstring accurately represents
+what the code does. More specifically, you could check that the listed
+parameters match the function’s arguments and confirm that any
+descriptions of functionality align with the actual code logic.</p>
+<p>If you don’t know Python, read through the docstring and use it to
+help you understand what the function does.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<p>Prompt: Generate a docstring for the following function:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1578,320 +1484,55 @@ style of docstring in your prompt.</p>
 <span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a>    plt.tight_layout()</span>
 <span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a>    plt.show()</span></code></pre>
 </div>
-<div id="generate-a-docstring" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="generate-a-docstring" class="callout-inner">
-<h3 class="callout-title">Generate a Docstring</h3>
-<div class="callout-content">
-<p>Copy and paste <code>plot_species_scatter</code> function from above
-into your AI tools and ask the AI to generate a docstring for the
-function.</p>
-<p>If you know Python, verify that the docstring accurately represents
-what the code does. More specifically, you could check that the listed
-parameters match the function’s arguments and confirm that any
-descriptions of functionality align with the actual code logic.</p>
-<p>If you don’t know Python, read through the docstring and use it to
-help you understand what the function does.</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
-</button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
-<div class="accordion-body">
-<p>Prompt: Generate a docstring for the following function:</p>
+<p>Example AI - generated docstring:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="kw">def</span> plot_species_scatter(df, species_col<span class="op">=</span><span class="st">"species_id"</span>, x_col<span class="op">=</span><span class="st">"weight"</span>, y_col<span class="op">=</span><span class="st">"hindfoot_length"</span>, min_count<span class="op">=</span><span class="dv">100</span>):</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>    df_filtered <span class="op">=</span> filter_species_by_count(df, species_col, min_count)</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>    </span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>    </span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>    <span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(species_col):</span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>        plt.scatter(</span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>            group[x_col],</span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>            group[y_col],</span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>            label<span class="op">=</span>species,</span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>            alpha<span class="op">=</span><span class="fl">0.7</span></span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>        )</span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a>    </span>
-<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>    plt.xlabel(x_col.capitalize())</span>
-<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>    plt.ylabel(y_col.replace(<span class="st">"_"</span>, <span class="st">" "</span>).capitalize())</span>
-<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a>    plt.title(<span class="ss">f"</span><span class="sc">{</span>y_col<span class="sc">.</span>replace(<span class="st">'_'</span>, <span class="st">' '</span>)<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>x_col<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> (Species with &gt;</span><span class="sc">{</span>min_count<span class="sc">}</span><span class="ss"> Observations)"</span>)</span>
-<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a>    plt.legend(title<span class="op">=</span>species_col)</span>
-<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a>    plt.tight_layout()</span>
-<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>    plt.show()</span></code></pre>
-</div>
-<p>Example AI - generated docstring:</p>
-<div class="codewrapper sourceCode" id="cb10">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="co">    Creates a scatter plot of two numerical variables for species with a minimum number of observations.</span></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co">    The function filters the input DataFrame to include only species that have more than `min_count`</span></span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co">    observations, then plots `x_col` vs `y_col` for each species as separate scatter points with a legend.</span></span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co">    Parameters:</span></span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co">        df (pd.DataFrame): The input DataFrame containing the data.</span></span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="co">        species_col (str, optional): Column name representing species IDs. Defaults to "species_id".</span></span>
-<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="co">        x_col (str, optional): Column name for the x-axis values. Defaults to "weight".</span></span>
-<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="co">        y_col (str, optional): Column name for the y-axis values. Defaults to "hindfoot_length".</span></span>
-<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="co">        min_count (int, optional): Minimum number of observations required for a species to be included. Defaults to 100.</span></span>
-<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a></span>
-<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="co">        None. Displays a matplotlib scatter plot.</span></span>
-<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a><span class="co">    Example:</span></span>
-<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hindfoot_length", min_count=50)</span></span>
-<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a><span class="co">    """</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="co">    Creates a scatter plot of two numerical variables for species with a minimum number of observations.</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co">    The function filters the input DataFrame to include only species that have more than `min_count`</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">    observations, then plots `x_col` vs `y_col` for each species as separate scatter points with a legend.</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="co">    Parameters:</span></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a><span class="co">        df (pd.DataFrame): The input DataFrame containing the data.</span></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a><span class="co">        species_col (str, optional): Column name representing species IDs. Defaults to "species_id".</span></span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="co">        x_col (str, optional): Column name for the x-axis values. Defaults to "weight".</span></span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="co">        y_col (str, optional): Column name for the y-axis values. Defaults to "hindfoot_length".</span></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="co">        min_count (int, optional): Minimum number of observations required for a species to be included. Defaults to 100.</span></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a><span class="co">        None. Displays a matplotlib scatter plot.</span></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a><span class="co">    Example:</span></span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hindfoot_length", min_count=50)</span></span>
+<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a><span class="co">    """</span></span></code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div id="triangulation" class="callout">
+<div id="which-other-coding-tasks-can-benefit-from-ai-assistance" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="triangulation" class="callout-inner">
-<h3 class="callout-title">Triangulation</h3>
+<div id="which-other-coding-tasks-can-benefit-from-ai-assistance" class="callout-inner">
+<h3 class="callout-title">Which other coding tasks can benefit from AI
+assistance?</h3>
 <div class="callout-content">
-<p>We can evaluate the correctness of an AI-generated output using
-<strong>triangulation</strong>, the practice of verifying something with
-multiple sources of evidence or methods. For AI-generated code or
-documentation, this means cross-checking outputs in several ways to
-ensure they match your expectations and requirements.</p>
-<p>For the example above, triangulation could involve:</p>
 <ul>
-<li>Asking: <em>“Does the docstring accurately describe what the
-function actually does?”</em><br>
-</li>
-<li>Checking that the listed parameters match the function’s
-arguments.<br>
-</li>
-<li>Confirming that any descriptions of functionality align with the
-actual code logic.</li>
-</ul>
-<p>Triangulation can help you to catch errors that have been introduced
-by AI misinterpretation or by subtle bugs in the code. Treat an
-AI-generated docstring as a guide, not a guarantee, and always verify
-before relying on it. After all, it’s better to have no documentation
-than incorrect documentation!</p>
-<p>In short, triangulation is about <strong>not relying on a single
-source of truth</strong>, in this case the AI, but instead evaluating
-the results from multiple angles to reduce errors and improve
-reliability.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="code-generation-for-rapid-prototyping">Code Generation for Rapid Prototyping<a class="anchor" aria-label="anchor" href="#code-generation-for-rapid-prototyping"></a>
-</h3>
-<p>Earlier in the episode, we discussed lots of risks associated with
-getting AI to generate all of your code for you. However, there are some
-situations where this can be appropriate. For example, AI can allow you
-to generate first drafts or prototypes of code very quickly</p>
-<p>It’s important to write prompts that are specific and context-rich.
-Clearly define your requirements, including any libraries, frameworks,
-or constraints. AI coding tools lack human intuition and situational
-awareness, so they can only produce the intended results when given
-detailed, explicit instructions.</p>
-<p>It can be helpful to use an iterative process when generating code
-with AI tools to ensure you get the most relevant output. This process
-may include:</p>
-<ul>
-<li>Breaking your task down into steps</li>
-<li>Creating a specific prompt</li>
-<li>Generating the code</li>
-<li>Reviewing the generated code</li>
-<li>If you’re not happy with the code, editing the prompt and repeating
-steps 3-5</li>
-</ul>
-<div id="generating-code-prototypes-specifically-and-iteratively" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="generating-code-prototypes-specifically-and-iteratively" class="callout-inner">
-<h3 class="callout-title">Generating code prototypes specifically and
-iteratively</h3>
-<div class="callout-content">
-<p>Imagine you’d like to explore the animals dataset by visualising some
-other variables of your data. You could use AI to generate first drafts
-of these plots quickly, before spending more time investigating the
-variables of interest.</p>
-<p>Using the animals data, create a line plot of the number of
-observations per year for each genus. (note: the relevant column names
-are <code>year</code> and <code>genus</code>).</p>
-<p>Generate the code for a first draft of this plot. Remember:</p>
-<ul>
-<li>Break the task down into steps.</li>
-<li>Craft a specific prompt including all your requirements and the
-libraries you want to use.</li>
-<li>Review the code and run it.<br>
-</li>
-<li>If necessary, edit the prompt and re-generate.</li>
+<li>Improving or optimising your code e.g. “Can you refactor this code
+to move the species-filtering logic into a small function, without
+changing its behaviour?”</li>
+<li>Generating first drafts or rapid prototypes</li>
+<li>Translating code between programming languages (Make sure you
+understand the translation so that you can troubleshoot, extend, or
+adapt it safely for future analyses!)</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
-  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
-</button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
-<div class="accordion-body">
-<p><strong>Break the task down into steps</strong></p>
-<ul>
-<li>Load the data</li>
-<li>Count the number of observations of each genus in each year</li>
-<li>Produce a line plot of the data</li>
-</ul>
-<p><strong>Create a specific prompt</strong></p>
-<p>“Generate code in Python, using the packages Pandas and MatplotLib,
-that will do the following: Load the data from animals.csv which is in
-the same folder as the code. Count the number of observations of each
-genus in each year. The names of these columns are ‘genus’ and ‘year’.
-Produce a line plot of the number of observations of each genus, with
-year on the x axis and number of observations on the y axis. Each line
-should represent a different genus and should be differently coloured,
-according to a colourblind-friendly colour palette. Show the plot.”</p>
-<p><strong>Review and run the code</strong></p>
-<div class="codewrapper sourceCode" id="cb11">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="co"># Load the data from the CSV file in the same directory</span></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co"># Count the number of observations for each genus in each year</span></span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>counts <span class="op">=</span> (</span>
-<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>    df.groupby([<span class="st">"year"</span>, <span class="st">"genus"</span>])</span>
-<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>      .size()</span>
-<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>      .unstack(fill_value<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>      .sort_index()</span>
-<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>)</span>
-<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a></span>
-<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a><span class="co"># Create the plot</span></span>
-<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a></span>
-<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a><span class="co"># Use a colorblind-friendly palette (matplotlib's 'tab10')</span></span>
-<span id="cb11-19"><a href="#cb11-19" tabindex="-1"></a>color_cycle <span class="op">=</span> plt.get_cmap(<span class="st">"tab10"</span>).colors</span>
-<span id="cb11-20"><a href="#cb11-20" tabindex="-1"></a></span>
-<span id="cb11-21"><a href="#cb11-21" tabindex="-1"></a><span class="cf">for</span> i, genus <span class="kw">in</span> <span class="bu">enumerate</span>(counts.columns):</span>
-<span id="cb11-22"><a href="#cb11-22" tabindex="-1"></a>    plt.plot(</span>
-<span id="cb11-23"><a href="#cb11-23" tabindex="-1"></a>        counts.index,</span>
-<span id="cb11-24"><a href="#cb11-24" tabindex="-1"></a>        counts[genus],</span>
-<span id="cb11-25"><a href="#cb11-25" tabindex="-1"></a>        label<span class="op">=</span>genus,</span>
-<span id="cb11-26"><a href="#cb11-26" tabindex="-1"></a>        color<span class="op">=</span>color_cycle[i <span class="op">%</span> <span class="bu">len</span>(color_cycle)]</span>
-<span id="cb11-27"><a href="#cb11-27" tabindex="-1"></a>    )</span>
-<span id="cb11-28"><a href="#cb11-28" tabindex="-1"></a></span>
-<span id="cb11-29"><a href="#cb11-29" tabindex="-1"></a><span class="co"># Add labels, title, and legend</span></span>
-<span id="cb11-30"><a href="#cb11-30" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
-<span id="cb11-31"><a href="#cb11-31" tabindex="-1"></a>plt.ylabel(<span class="st">"Number of Observations"</span>)</span>
-<span id="cb11-32"><a href="#cb11-32" tabindex="-1"></a>plt.title(<span class="st">"Number of Observations per Genus by Year"</span>)</span>
-<span id="cb11-33"><a href="#cb11-33" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">"Genus"</span>)</span>
-<span id="cb11-34"><a href="#cb11-34" tabindex="-1"></a></span>
-<span id="cb11-35"><a href="#cb11-35" tabindex="-1"></a><span class="co"># Improve layout</span></span>
-<span id="cb11-36"><a href="#cb11-36" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb11-37"><a href="#cb11-37" tabindex="-1"></a></span>
-<span id="cb11-38"><a href="#cb11-38" tabindex="-1"></a><span class="co"># Save the plot as a PNG image</span></span>
-<span id="cb11-39"><a href="#cb11-39" tabindex="-1"></a>plt.savefig(<span class="st">"observations_by_genus_over_time.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
-<span id="cb11-40"><a href="#cb11-40" tabindex="-1"></a></span>
-<span id="cb11-41"><a href="#cb11-41" tabindex="-1"></a><span class="co"># Show the plot</span></span>
-<span id="cb11-42"><a href="#cb11-42" tabindex="-1"></a>plt.show()</span></code></pre>
-</div>
-<figure><img src="../fig/observations_by_genus_over_time.png" alt="Line plot of observations by genus over time" class="figure mx-auto d-block"></figure><p>The plots looks good but I’d like to save it as well.</p>
-<p><strong>Edit the prompt and re-generate</strong></p>
-<p>‘Generate code in Python, using the packages Pandas and MatplotLib,
-that will do the following: Load the data from animals.csv which is in
-the same folder as the code. Count the number of observations of each
-genus in each year. The names of these columns are ’genus’ and ‘year’.
-Produce a line plot of the number of observations of each genus, with
-year on the x axis and number of observations on the y axis. Each line
-should represent a different genus and should be differently coloured,
-according to a colourblind-friendly colour palette. Show the plot and
-<strong>also save the plot as a .png image</strong>.’</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="translating-code-with-ai">Translating Code with AI<a class="anchor" aria-label="anchor" href="#translating-code-with-ai"></a>
-</h3>
-<p><strong>Scenario</strong>: A collaborator would like to build on the
-weight vs hindfoot length plotting code but he works primarily using the
-programming language R. Translating the code manually from python to R
-could be a time-intensive and error-prone task. This is another instance
-where AI could be used with massive time-saving benefits:</p>
-<p>Prompt: ‘Translate this code from Python to R.’</p>
-<div class="codewrapper sourceCode" id="cb12">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="co"># Load the data</span></span>
-<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
-<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="co"># Count observations per species</span></span>
-<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a>species_counts <span class="op">=</span> df[<span class="st">"species_id"</span>].value_counts()</span>
-<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a><span class="co"># Keep only species with &gt;100 observations</span></span>
-<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a>valid_species <span class="op">=</span> species_counts[species_counts <span class="op">&gt;</span> <span class="dv">100</span>].index</span>
-<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a>df_filtered <span class="op">=</span> df[df[<span class="st">"species_id"</span>].isin(valid_species)]</span>
-<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a></span>
-<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a><span class="co"># Create the plot</span></span>
-<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb12-16"><a href="#cb12-16" tabindex="-1"></a></span>
-<span id="cb12-17"><a href="#cb12-17" tabindex="-1"></a><span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(<span class="st">"species_id"</span>):</span>
-<span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a>    plt.scatter(</span>
-<span id="cb12-19"><a href="#cb12-19" tabindex="-1"></a>        group[<span class="st">"weight"</span>],</span>
-<span id="cb12-20"><a href="#cb12-20" tabindex="-1"></a>        group[<span class="st">"hindfoot_length"</span>],</span>
-<span id="cb12-21"><a href="#cb12-21" tabindex="-1"></a>        label<span class="op">=</span>species,</span>
-<span id="cb12-22"><a href="#cb12-22" tabindex="-1"></a>        alpha<span class="op">=</span><span class="fl">0.7</span></span>
-<span id="cb12-23"><a href="#cb12-23" tabindex="-1"></a>    )</span>
-<span id="cb12-24"><a href="#cb12-24" tabindex="-1"></a></span>
-<span id="cb12-25"><a href="#cb12-25" tabindex="-1"></a>plt.xlabel(<span class="st">"Weight"</span>)</span>
-<span id="cb12-26"><a href="#cb12-26" tabindex="-1"></a>plt.ylabel(<span class="st">"Hindfoot Length"</span>)</span>
-<span id="cb12-27"><a href="#cb12-27" tabindex="-1"></a>plt.title(<span class="st">"Hindfoot Length vs Weight (Species with &gt;100 Observations)"</span>)</span>
-<span id="cb12-28"><a href="#cb12-28" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">"Species ID"</span>)</span>
-<span id="cb12-29"><a href="#cb12-29" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb12-30"><a href="#cb12-30" tabindex="-1"></a>plt.show()</span></code></pre>
-</div>
-<p>However, there are a few important factors to bear in mind when using
-AI to translate code:</p>
-<ol style="list-style-type: decimal">
-<li>AI might suggest a translation using a package you are unfamiliar
-with. Verify that it is appropriate and installed.</li>
-<li>Differences in data structures can lead to subtle errors. For
-example, pandas.DataFrame indexing differs from R’s data.frame. Check
-that filters, groupings, and calculations (e.g., counting observations
-per species) give the same results in R as in Python.</li>
-<li>Avoid blindly copying the AI output. Make sure you understand the
-translation so that you can troubleshoot, extend, or adapt it safely for
-future analyses.</li>
-<li>To maintain reproducibility, keep track of both the original Python
-code and the AI-generated R translation. Document any changes or
-assumptions made during translation.</li>
-<li>Be aware of AI limitations - AI can only translate syntax and
-structure, it cannot verify the scientific correctness of the
-analysis.</li>
-</ol>
 <div id="discussion-which-coding-tasks-could-ai-help-you-with" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1910,7 +1551,7 @@ development, which tasks would you use AI tools to assist with?</p>
 </section><section><h2 class="section-heading" id="integrating-ai-tools-into-ides">Integrating AI Tools into IDEs<a class="anchor" aria-label="anchor" href="#integrating-ai-tools-into-ides"></a>
 </h2>
 <hr class="half-width">
-<p>In this episode, we have used seperate interfaces to interact with AI
+<p>In this episode, we have used separate interfaces to interact with AI
 and to run our code. As of 2025 this was the most common way that
 researchers interacted with AI for coding assistance. However, it is
 also possible to integrate AI into an environment you use to write and
@@ -2644,7 +2285,7 @@ guidelines</strong>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Your guidelines could include:</p>
 <ul>
