@@ -59,63 +59,40 @@ Write your answer in the shared document.  There are no right or wrong answers!
 Artificial intelligence is best understood not as a single capability or system, but as a broad collection of techniques and approaches for solving different kinds of problems. These techniques have been developed over the past 70 years.  Let's consider a timeline of major AI developments to put the current AI tools into historical context:
 
 
-- **1950s–1970s Symbolic AI and early expert systems**: AI research began with symbolic, rule-based approaches focused on logic, search, and reasoning. Key moments included Alan Turing’s 1950 paper “Computing Machinery and Intelligence” and the 1956 Dartmouth Conference, where the term “artificial intelligence” was coined. Systems relied on explicitly encoded rules and struggled outside narrowly defined domains.
+### 1950s–1970s: Rule-based Approaches
 
-Rule-based chat AI systems existed.  An AI chatbot ELIZA was introduced in 1966 to act as a psychotherapist.  ELIZA processed text inputs and gives a response based on the pre-programmed rules. However, for real-world applications there will always be situations outside the pre-designed rules, which a rule-based AI will not have the capability to respond to. 
+AI research began with rule-based approaches focused on logic. Rule-based systems are deterministic, in other words the same inputs always lead to the same outputs, and the rules governing behaviour are explicitly defined. The systems rely on explicitly encoded rules and struggled with anything outside of those rules. Some key milestones for early AI include Alan Turing’s 1950 paper on “Computing Machinery and Intelligence” and the 1956 Dartmouth Conference, where the term “artificial intelligence” was first introduced.
+
+Rule-based chat AI systems existed.  An AI chatbot ELIZA was introduced in 1966 to act as a psychotherapist among other purposes.  ELIZA processes text inputs and gives a response based on the pre-programmed rules. However, ELIZA differs drastically from the generative AI chatbots we know today such as ChatGPT, because it did not have the capability to respond to any inputs outside of its pre-programmed rules.
 
 ![Public domain, via Wikimedia Commons](fig/ELIZA_conversation.png){alt='A conversation with the ELIZA chatbot.'}
 
-- **1980s–early 1990s Expert systems and the first AI boom (and bust)**: Rule-based expert systems were adopted in industry (e.g. medical diagnosis, configuration systems). But progress stalled due to high development costs, limited scalability, and lack of data, leading to periods known as 'AI winters'.
+### Mid-1990s–2000s: Shift to Data-driven Machine Learning
 
-- **Mid-1990s–2000s Shift to data-driven machine learning**: AI research moves toward statistical and data-driven methods. Machine learning models learn patterns from data rather than relying on hard-coded rules. Common applications include classification, prediction, clustering, and recommendation systems. Increased availability of digital data and improved computing infrastructure drive wider adoption.
+AI research moves toward statistical and data-driven methods. Rather than following fixed rules, these systems use statistical models to learn patterns from data and make predictions, classifications or risk estimates.  Their outputs support decisions but do not create new content.
 
-- **2010–2015 Deep learning resurgence**: Advances in neural networks, combined with GPUs and large labelled datasets, led to major breakthroughs in computer vision, speech recognition, and natural language processing. Deep learning became the dominant paradigm for many AI tasks.
+One example of a predictive, data-driven system is a machine-learning model trained to automatically label features in microscope images, such as identifying specific cell types or structures.
 
-- **2017-2021 The emergence and scaling of large language models**: The transformer model was proposed in 2017, laying the foundation for modern large language models (Transformer is the 'T' in chatGPT). In 2018, GPT-1 demonstrated that transformer-based models trained on large amounts of text can perform a wide range of language tasks through pre-training and fine-tuning. 
-
-- **2022-present ChatGPT and mainstream adoption of generative AI**: In November 2022, ChatGPT introduced large language models to a broad public and professional audience through a conversational interface. Following the public release of ChatGPT, large language models became rapidly embedded into widely used tools and platforms, including code editors, office software, search engines, and data analysis environments (e.g. AI “copilots”). 
-
-![](fig/timeline.png){alt='timeline of key events in AI development'}
-
-## Current Landscape of AI
-
-In recent years, one particular type of AI system, generative AI, has dominated public and professional interaction with artificial intelligence. While highly visible, generative AI represents only one approach within a much broader AI landscape. 
-
-At a high level, today’s AI systems can be grouped into three broad categories:
-
-### 1. Rule-Based and Decision Systems
-
-These systems operate using explicitly defined rules, logic, or constraints. Their behaviour is deterministic and transparent, which makes them reliable in stable, well-defined environments. Rule-based systems are still widely used in areas such as compliance, governance, and safety-critical decision-making. However, they are limited in their ability to handle ambiguity, novelty, or rapidly changing conditions.
-
-A laboratory safety interlock is an example of a rule-based system. It monitors the state of critical variables, such as door positions, pressure levels, temperature, radiation shielding, or airflow, and allows an action only if all safety conditions are met. For example, a high-power laser system may be physically prevented from firing unless the enclosure door is closed, warning lights are active, and emergency stops are disengaged. If any condition is violated, the system immediately shuts down or blocks operation.
-
-These systems are deterministic and transparent, in other words the same inputs always lead to the same outcome and the rules governing behaviour are explicitly defined. Unlike learning-based AI systems, laboratory safety interlocks do not adapt or infer, they exist to enforce safety rules reliably, even in the presence of human error.
-
-### 2. Predictive and Analytical Systems
-
-These systems learn patterns from data to make predictions, classifications, or risk estimates. Rather than following fixed rules, they use statistical models to answer questions such as 'What category does this belong to?' or 'How likely is this outcome?' Predictive AI systems are common in research and operational settings, including data analysis, diagnostics, and forecasting. Their outputs support decisions but do not create new content.
-
-One example of a predictive AI system is a machine-learning model trained to automatically label features in microscope images, such as identifying specific cell types or structures.
-
-The model learns from large sets of images that have been annotated by experts, using statistical patterns like shape, texture, and intensity to distinguish between categories. Once trained, it can rapidly classify new images, allowing researchers to analyse large datasets more efficiently and consistently than manual methods.
-
-The system provides probabilities, rather than definitive answers, as outputs and does not generate new content or biological insight. The results must be validated and interpreted by researchers, as the model's performance depends heavily on the quality of the training data and imaging conditions.
+The model learns from large sets of images that have been annotated by experts, using features like shape and texture to distinguish between categories. Once trained, it can classify new images, allowing researchers to analyse large datasets more efficiently and consistently than manual methods.
 
 ![A close-up microscope image of a growth plate, Robert M. Hunt, Public domain, via Wikimedia Commons](fig/micrograph.jpg){alt='Light micrograph of an undecalcified epiphyseal plate that is displaying the hypertrophic zone with its typical chondrocytes, matrix and three zones: maturation (top), degenerative (middle) and provisional calcification (bottom).'}
 
-### 3. Generative Systems
 
-Generative AI systems are designed to produce new outputs that resemble the data on which they were trained. This includes generating text, code, images, or other media. The current AI systems that we are familiar with, such as ChatGPT, fall into this category. These systems are optimised for producing fluent and contextually appropriate responses, not for verifying truth or making authoritative decisions.
+### 2017-Present: The Emergence and Scaling of Generative AI
 
-Some examples of generative AI uses:
+The transformer model was proposed in 2017, laying the foundation for modern generative AI (Transformer is the 'T' in chatGPT). In 2018, GPT-1 demonstrated that transformer-based models trained on large amounts of text can perform a wide range of language tasks through pre-training and fine-tuning. 
 
-- The language learning app Duolingo uses generative AI to explain mistakes and practice conversations. The features are part of a new subscription tier called "Duolingo Max".
-- The education website Khan Academy is using generative AI for their tutoring chatbot called "Khanmigo"
-- An app called Be My Eyes helps people with visual impairments to identify objects and navigate their surroundings, by using the image recognition capabilities of GPT-4.
+In November 2022, ChatGPT was released by OpenAI and this introduced generative AI to a broad public audience through a conversational interface. Following the public release of ChatGPT, generative AI rapidly became embedded into widely used tools and platforms, including code editors, office software, search engines, and data analysis environments (e.g. AI “copilots”). 
+
+Generative AI systems are designed to produce new outputs that resemble the data on which they were trained. This includes generating text, code, images, or other media. It's important to note that generative AI systems are statistical models that work on probabilities.  Therefore, **the same input will not always produce the same output.** 
 
 ![Jernej Furman from Slovenia, CC BY 2.0, via Wikimedia Commons](fig/smartphone_with_chatGPT.jpg){alt='Smartphone with ChatGPT on the US dollar banknotes background'}
 
-Most AI systems in use today are narrow, task-specific tools. Some are designed to enforce rules, others to analyse data and make predictions, and an increasingly visible group, generative systems, are designed to produce new content. Generative AI systems are powerful and influential, but they are not representative of AI as a whole. Hopefully, understanding these broad categories helps us to set appropriate expectations for AI and prepares us to examine generative AI in more detail.
+
+## Current AI Landscape
+
+Rule-based, predictive, generative AI systems are all used today and each has strengths and limitations.
+
 
 | **AI System Type** | **What the system does** | **Strengths** | **Limitations** |
 |-------------------|-------------------------|---------------|----------------|
@@ -124,14 +101,13 @@ Most AI systems in use today are narrow, task-specific tools. Some are designed 
 | **Generative Systems** | Creates new text, code, images, or other content | Flexible and easy to interact with; useful for drafting, coding, and exploring ideas | Outputs can sound confident but be incomplete or wrong |
 
 
-**Human Oversight Across AI Types** 
+**Human Oversight Across AI Systems** 
 
 Human responsibility increases from rule-based to predictive to generative systems because more judgment, interpretation, and accountability must be carried by people rather than the system itself. 
 
 - Rule-based systems behave exactly as specified and therefore the responsibility is mostly in system design, not in day-to-day interpretation.
 - Predictive systems give estimates, not decisions and the responsibility lies with humans for interpretation and validation.
 - Generative systems require the highest human responsibility at the point of use.  For example, when a researcher uses generative AI to draft text, summarise literature, or generate code, the responsibility for correctness remains entirely with the human.
-
 
 
 ## Demystifying Generative AI
