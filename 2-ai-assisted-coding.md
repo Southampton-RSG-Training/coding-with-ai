@@ -30,7 +30,8 @@ exercises: 2 # exercise time in minutes
 
 ## Why Understanding Still Matters: The Limits of AI-Driven Software Development
 
-**Scenario**: Imagine, your research team has collected some data on the animal species found within plots of land at a study site.  
+### Scenario 
+Imagine, your research team has collected some data on the animal species found within plots of land at a study site.  
 
 Download the data from here: [animals.csv](data/animals.csv)
 
@@ -76,13 +77,17 @@ Open an AI chat interface (such as ChatGPT or Microsoft Copilot) and prompt the 
 - Create a new jupyter notebook in this folder called 'animals_plots'.
 - Paste the AI-generated code into a code chunk in the Jupyter notebook and run the code.
 
-We could even go one step further and upload the dataset to the AI chat so that the analysis can actually be run within the AI tool (depending on the features that you have access to with your AI tool). 
+We could even go one step further and upload the dataset to the AI chat so that the analysis can actually be run within the AI tool (depending on the features that you have access to with your AI tool). **Note: we can only do this because this dataset is publicly available. Don't upload any private or sensitive data.**
 
 ![](fig/animals_plot_chatgpt.png){alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot"}
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-What are the problems with getting an AI tool to write your research code for you?
+What are the problems with getting an AI tool to write your research code for you? Consider:
+
+- Technical risks
+- Reliability risks
+- Ethical and academic integrity risks
 
 Which additional problems are introduced when you also use AI to run the code?
 
@@ -92,40 +97,15 @@ Write your thoughts in the shared document.
 
 Artificial intelligence tools can generate code quickly and often convincingly. For researchers who are new to programming, this can be appealing: it may seem efficient to delegate the entire task of software development to an AI system. However, doing so without understanding the solution introduces significant technical, ethical, and reliability risks.
 
-### Technical Risks 
-AI-generated code may appear correct but can contain subtle errors. These errors are particularly dangerous because:
-
-- They may not cause obvious failures.
-- They can produce plausible but incorrect results.
-- They may only appear under specific conditions or data sets.
-
-Without understanding how the code works, a researcher cannot:
-
-- Verify that the implementation matches the intended analysis.
-- Detect incorrect assumptions or inappropriate methods.
-- Adapt or debug the code when results look suspicious.
-
-In a research context, this undermines the validity and reproducibility of results.
-
-### Reliability and Reproducibility Risks
-AI systems do not reason about your research goals in the way a human collaborator would. They generate outputs based on patterns in training data, not on an understanding of your experiment, theory, or domain constraints.
-
-As a result:
-
-- The same prompt may produce different solutions at different times.
+- AI-generated code may appear correct but can contain subtle errors, which may only appear under certain conditions. 
+- If the researcher doesn't understand the AI-generated code they can't verify that the implementation matches the intended analysis and therefore they can't comprehensively defend their findings. 
+- The same prompt may produce different solutions at different times, causing problems for reproducibility of your research.
 - Generated code may rely on undocumented assumptions.
-- Dependencies, versions, or defaults may change without warning.
-- If you cannot explain how your software works, you cannot reliably defend or reproduce your findings, an essential requirement of research.
+- Dependencies, versions, or defaults in AI-generated code may change without warning. 
+- The researcher rather than the AI system will be held accountable for any errors in AI-generated code. When you use AI-generated code you don't fully understand, you risk being held accountable for any errors in that code. 
+- Using AI-generated code that you don't fully understand limits research transparency, as you cannot explain your methods to reviewers and collaborators.
+- Using code you do not understand may amount to overstating your expertise or control over the research process, and this misrepresentation is an academic integrity risk. 
 
-### Ethical and Academic Integrity Risks 
-
-Researchers remain fully responsible for the work they submit, publish, or use to inform decisions. Delegating development entirely to AI raises several ethical concerns:
-
-- **Accountability**: You cannot attribute errors or misconduct to an AI system.
-- **Transparency**: Reviewers and collaborators may expect you to explain your methods.
-- **Misrepresentation**: Using code you do not understand may amount to overstating your expertise or control over the research process.
-
-Relying heavily on AI may also conflict with institutional policies on research integrity or responsible use of AI.
 
 ### Additional Problems with AI also Runs the Code
 
@@ -148,7 +128,6 @@ To turn this off, click on your username in the lower left corner -> Settings ->
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-
 ### Appropriate Roles for AI when Writing Research Code
 
 AI tools can be highly valuable when used correctly, as a tool to assist you with your research. The key principle is that they should function as assistants, not autonomous developers.
@@ -167,14 +146,10 @@ In the rest of this episode, we'll walk through these ways that AI can assist yo
 
 AI tools like ChatGPT can serve as an interactive reference and tutor, helping you to understand unfamiliar coding constructs, libraries, or data analysis techniques. Unlike traditional search engines, AI can summarise and clarify technical information in context, tailored to your specific dataset, code, or research question.
 
-### Use AI as a Reference Tool
 
 - **Locate technical information quickly**: Instead of reading through multiple documentation pages, you can ask AI to find the relevant function, argument, or method for your task.
 - **Summarise key concepts**: AI can condense long documentation into concise, understandable explanations. You can even ask AI to tailor explanations to you code and dataset. 
 - **Clarify ambiguous points**: You can follow up iteratively, asking AI to rephrase explanations or provide examples.
-
-### Use AI to Explain Unfamiliar Code
-
 - **Code comprehension**: Paste code generated by AI or colleagues and ask for line-by-line explanations.
 - **Contextual learning**: Ask why certain functions or methods are used, what alternatives exist, and best practices.
 
@@ -313,26 +288,16 @@ In this case the filename is misspelled as 'animal.csv' rather than 'animals.csv
 
 ## Code Generation
 
-Let's have a look at a few coding tasks where it can be appropriate for AI to generate code or text for you:
-
-- Boilerplate
-- Refactoring 
-- Documentation
-- Rapid prototyping
-- Translating code
-
 
 ### Boilerplate
 
-AI can be particularly useful for some coding tasks that are tedious and repetitive such as writing boilerplate code, restructuring code into functions, and generating code documentation.
+AI can be particularly useful for some coding tasks that are tedious and repetitive such as writing boilerplate code.
 
 Boilerplate code is a term used to describe standard code structures that are repeated in multiple places with little variation. Examples of boilerplate code across a few different contexts include:
 
-- Templates for function/class definitions
-- Bash script skeleton
-- Web page structure in HTML
-- Functional component in React
-- Unit test template
+- Templates for function and class definitions
+- Setup for plots in python or R
+- Basic web page structure in HTML
 
 Using AI to generate boilerplate code can save you time with minimal risk, allowing you to spend your time and effort focusing on the intent of the analysis rather than the programming language's syntax. 
 
@@ -380,83 +345,13 @@ plt.tight_layout()
 plt.show()
 ```
 
-### Refactoring
 
-Code refactoring describes restructuring existing source code, making small, incremental changes to improve its internal design, readability, and maintainability, without changing its external behaviour or functionality.
 
-For example, in our scenario from earlier, once the hindfoot length vs weight plotting code is working, the researcher may notice opportunities to improve it. At the moment, our code filters the data to include only species with over 100 observations.  If the researcher wanted to change the threshold for observations, they would have to edit the script directly, which is problematic for reusability of the code and reproducibility of the outputs.  Instead, they could extract the filtering code into it's own function. 
-
-::::::::::::::::::::::::::::::::::::: callout
-
-## Functions
-
-A function is a named block of code that performs a specific task. Instead of writing the same steps over and over, you put them in a function and “call” it whenever you need it. Functions can take inputs (called arguments), do something with them, and return outputs. They make code easier to read, reuse, and maintain.
-
-For example, instead of changing the filtering threshold directly in the script each time, you can put the filtering steps in a function that accepts the threshold as an input. Then you can reuse it with any threshold without rewriting the code.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-Recognising these opportunities for refactoring is a human judgment task and we're only using AI after we've decided what to refactor.
-
-Rather than asking ChatGPT to “rewrite the code,” you have more control over the if you use a prompt that's specific and constrained, for example:
-
-“Can you refactor this code to move the species-filtering logic into a small function, without changing its behaviour?”
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Load the data
-df = pd.read_csv("animals.csv")
-
-# Function to filter species by minimum count
-def filter_species_by_count(df, species_col, min_count=100):
-    """
-    Returns a DataFrame containing only species with at least min_count observations.
-    
-    Parameters:
-        df (pd.DataFrame): Input DataFrame
-        species_col (str): Name of the column containing species IDs
-        min_count (int): Minimum number of observations required for a species to be kept
-    
-    Returns:
-        pd.DataFrame: Filtered DataFrame
-    """
-    species_counts = df[species_col].value_counts()
-    valid_species = species_counts[species_counts > min_count].index
-    return df[df[species_col].isin(valid_species)]
-
-# Filter the DataFrame
-df_filtered = filter_species_by_count(df, "species_id", min_count=100)
-
-# Create the plot
-plt.figure(figsize=(10, 6))
-
-for species, group in df_filtered.groupby("species_id"):
-    plt.scatter(
-        group["weight"],
-        group["hindfoot_length"],
-        label=species,
-        alpha=0.7
-    )
-
-plt.xlabel("Weight")
-plt.ylabel("Hindfoot Length")
-plt.title("Hindfoot Length vs Weight (Species with >100 Observations)")
-plt.legend(title="Species ID")
-plt.tight_layout()
-plt.show()
-```
-
-### Using AI to Support Technical Documentation
-
-You may have noticed that when the AI generated the filter_species_by_count function, it may have also included documentation (a docstring) for the function. A **docstring** in Python is a short note written at the start of a function that explains what it does, what inputs the function takes, and what the function outputs.
+### Documentation
 
 Writing thorough code documentation can be time-consuming, which is why many scripts are left undocumented and can be hard to understand later, either by others or by yourself. AI can help by generating documentation automatically, making it faster to produce clear, understandable explanations of your code.
 
-However, just as with any other AI-generated output, it's important to check the generated documentation.
-
-For example, if we extract plotting code into a function like `plot_species_scatter`, we can use AI to generate a docstring for the function. 
+For example, if we extract plotting code into a function like `plot_species_scatter`, we can use AI to generate a docstring for the function. A **docstring** in Python is a short note written at the start of a function that explains what it does, what inputs the function takes, and what the function outputs.
 
 Note that there are a few different styles of docstring for python: Google style , Sphinx style , NumPy style , and Epytext style. If the code you're working with follows a particular style, you can specify the style of docstring in your prompt.
 
@@ -489,7 +384,7 @@ def plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hi
 
 ## Generate a Docstring
 
-Copy and paste `plot_species_scatter` function from above into your AI tools and ask the AI to generate a docstring for the function.
+Copy and paste `plot_species_scatter` function from above into your AI tool and ask the AI to generate a docstring for the function.
 
 If you know Python, verify that the docstring accurately represents what the code does.  More specifically, you could check that the listed parameters match the function’s arguments and confirm that any descriptions of functionality align with the actual code logic.  
 
@@ -552,172 +447,14 @@ Example AI - generated docstring:
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-## Triangulation
+## Which other coding tasks can benefit from AI assistance?
 
-We can evaluate the correctness of an AI-generated output using **triangulation**, the practice of verifying something with multiple sources of evidence or methods. For AI-generated code or documentation, this means cross-checking outputs in several ways to ensure they match your expectations and requirements.  
-
-For the example above, triangulation could involve:  
-
-- Asking: *"Does the docstring accurately describe what the function actually does?"*  
-- Checking that the listed parameters match the function’s arguments.  
-- Confirming that any descriptions of functionality align with the actual code logic.  
-
-Triangulation can help you to catch errors that have been introduced by AI misinterpretation or by subtle bugs in the code. Treat an AI-generated docstring as a guide, not a guarantee, and always verify before relying on it.  After all, it's better to have no documentation than incorrect documentation!
-
-In short, triangulation is about **not relying on a single source of truth**, in this case the AI, but instead evaluating the results from multiple angles to reduce errors and improve reliability.  
+- Improving or optimising your code e.g. "Can you refactor this code to move the species-filtering logic into a small function, without changing its behaviour?"
+- Generating first drafts or rapid prototypes
+- Translating code between programming languages (Make sure you understand the translation so that you can troubleshoot, extend, or adapt it safely for future analyses!)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Code Generation for Rapid Prototyping
-
-Earlier in the episode, we discussed lots of risks associated with getting AI to generate all of your code for you.  However, there are some situations where this can be appropriate.  For example, AI can allow you to generate first drafts or prototypes of code very quickly
-
-It's important to write prompts that are specific and context-rich. Clearly define your requirements, including any libraries, frameworks, or constraints. AI coding tools lack human intuition and situational awareness, so they can only produce the intended results when given detailed, explicit instructions.
-
-It can be helpful to use an iterative process when generating code with AI tools to ensure you get the most relevant output.  This process may include:
-
-- Breaking your task down into steps
-- Creating a specific prompt
-- Generating the code
-- Reviewing the generated code
-- If you’re not happy with the code, editing the prompt and repeating steps 3-5
-
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Generating code prototypes specifically and iteratively
-
-Imagine you'd like to explore the animals dataset by visualising some other variables of your data.  You could use AI to generate first drafts of these plots quickly, before spending more time investigating the variables of interest. 
-
-Using the animals data, create a line plot of the number of observations per year for each genus. (note: the relevant column names are `year` and `genus`).
-
-Generate the code for a first draft of this plot.  Remember:
-
-- Break the task down into steps.
-- Craft a specific prompt including all your requirements and the libraries you want to use. 
-- Review the code and run it.  
-- If necessary, edit the prompt and re-generate. 
-
-:::::::::::::::::::::::: solution 
-
-**Break the task down into steps**
-
-- Load the data
-- Count the number of observations of each genus in each year
-- Produce a line plot of the data
-
-**Create a specific prompt**
-
-"Generate code in Python, using the packages Pandas and MatplotLib, that will do the following: Load the data from animals.csv which is in the same folder as the code. Count the number of observations of each genus in each year. The names of these columns are 'genus' and 'year'. Produce a line plot of the number of observations of each genus, with year on the x axis and number of observations on the y axis. Each line should represent a different genus and should be differently coloured, according to a colourblind-friendly colour palette. Show the plot."
-
-**Review and run the code**
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Load the data from the CSV file in the same directory
-df = pd.read_csv("animals.csv")
-
-# Count the number of observations for each genus in each year
-counts = (
-    df.groupby(["year", "genus"])
-      .size()
-      .unstack(fill_value=0)
-      .sort_index()
-)
-
-# Create the plot
-plt.figure(figsize=(10, 6))
-
-# Use a colorblind-friendly palette (matplotlib's 'tab10')
-color_cycle = plt.get_cmap("tab10").colors
-
-for i, genus in enumerate(counts.columns):
-    plt.plot(
-        counts.index,
-        counts[genus],
-        label=genus,
-        color=color_cycle[i % len(color_cycle)]
-    )
-
-# Add labels, title, and legend
-plt.xlabel("Year")
-plt.ylabel("Number of Observations")
-plt.title("Number of Observations per Genus by Year")
-plt.legend(title="Genus")
-
-# Improve layout
-plt.tight_layout()
-
-# Save the plot as a PNG image
-plt.savefig("observations_by_genus_over_time.png", dpi=300)
-
-# Show the plot
-plt.show()
-
-```
-
-![](fig/observations_by_genus_over_time.png){alt="Line plot of observations by genus over time"}
-
-The plots looks good but I'd like to save it as well.
-
-**Edit the prompt and re-generate**
-
-'Generate code in Python, using the packages Pandas and MatplotLib, that will do the following: Load the data from animals.csv which is in the same folder as the code. Count the number of observations of each genus in each year. The names of these columns are 'genus' and 'year'. Produce a line plot of the number of observations of each genus, with year on the x axis and number of observations on the y axis. Each line should represent a different genus and should be differently coloured, according to a colourblind-friendly colour palette. Show the plot and **also save the plot as a .png image**.'
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-### Translating Code with AI
-
-**Scenario**: A collaborator would like to build on the weight vs hindfoot length plotting code but he works primarily using the programming language R. Translating the code manually from python to R could be a time-intensive and error-prone task.  This is another instance where AI could be used with massive time-saving benefits:
-
-Prompt: 'Translate this code from Python to R.'
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Load the data
-df = pd.read_csv("animals.csv")
-
-# Count observations per species
-species_counts = df["species_id"].value_counts()
-
-# Keep only species with >100 observations
-valid_species = species_counts[species_counts > 100].index
-df_filtered = df[df["species_id"].isin(valid_species)]
-
-# Create the plot
-plt.figure(figsize=(10, 6))
-
-for species, group in df_filtered.groupby("species_id"):
-    plt.scatter(
-        group["weight"],
-        group["hindfoot_length"],
-        label=species,
-        alpha=0.7
-    )
-
-plt.xlabel("Weight")
-plt.ylabel("Hindfoot Length")
-plt.title("Hindfoot Length vs Weight (Species with >100 Observations)")
-plt.legend(title="Species ID")
-plt.tight_layout()
-plt.show()
-
-```
-
-However, there are a few important factors to bear in mind when using AI to translate code:
-
-1. AI might suggest a translation using a package you are unfamiliar with. Verify that it is appropriate and installed.
-2. Differences in data structures can lead to subtle errors. For example, pandas.DataFrame indexing differs from R’s data.frame. Check that filters, groupings, and calculations (e.g., counting observations per species) give the same results in R as in Python.
-3. Avoid blindly copying the AI output. Make sure you understand the translation so that you can troubleshoot, extend, or adapt it safely for future analyses.
-4. To maintain reproducibility, keep track of both the original Python code and the AI-generated R translation. Document any changes or assumptions made during translation.
-5. Be aware of AI limitations - AI can only translate syntax and structure, it cannot verify the scientific correctness of the analysis.
 
 
 ::::::::::::::::::::::::::::::::::::: challenge 
@@ -730,7 +467,7 @@ When you next have to write some code for data analysis or software development,
 
 ## Integrating AI Tools into IDEs
 
-In this episode, we have used seperate interfaces to interact with AI and to run our code.  As of 2025 this was the most common way that researchers interacted with AI for coding assistance.  However, it is also possible to integrate AI into an environment you use to write and run code (known as an Integrated Development Environment or IDE).  For example, an AI assistant called GitHub Copilot can be integrated IDEs such as Visual Studio Code.  There are some advantages and disadvantages to this integrated approach: 
+In this episode, we have used separate interfaces to interact with AI and to run our code.  As of 2025 this was the most common way that researchers interacted with AI for coding assistance.  However, it is also possible to integrate AI into an environment you use to write and run code (known as an Integrated Development Environment or IDE).  For example, an AI assistant called GitHub Copilot can be integrated IDEs such as Visual Studio Code.  There are some advantages and disadvantages to this integrated approach: 
 
 ### Advantages of using an IDE-Integrated AI Assistant
 

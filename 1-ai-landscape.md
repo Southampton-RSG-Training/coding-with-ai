@@ -67,6 +67,8 @@ Rule-based chat AI systems existed.  An AI chatbot ELIZA was introduced in 1966 
 
 ![Public domain, via Wikimedia Commons](fig/ELIZA_conversation.png){alt='A conversation with the ELIZA chatbot.'}
 
+TODO:Add Deep Blue example
+
 ### Mid-1990s–2000s: Shift to Data-driven Machine Learning
 
 AI research moves toward statistical and data-driven methods. Rather than following fixed rules, these systems use statistical models to learn patterns from data and make predictions, classifications or risk estimates.  Their outputs support decisions but do not create new content.
@@ -76,9 +78,6 @@ One example of a predictive, data-driven system is a machine-learning model trai
 The model learns from large sets of images that have been annotated by experts, using features like shape and texture to distinguish between categories. Once trained, it can classify new images, allowing researchers to analyse large datasets more efficiently and consistently than manual methods.
 
 ![A close-up microscope image of a growth plate, Robert M. Hunt, Public domain, via Wikimedia Commons](fig/micrograph.jpg){alt='Light micrograph of an undecalcified epiphyseal plate that is displaying the hypertrophic zone with its typical chondrocytes, matrix and three zones: maturation (top), degenerative (middle) and provisional calcification (bottom).'}
-
-
-TODO:Add Deep Blue example
 
 
 ### 2017-Present: The Emergence and Scaling of Generative AI
@@ -218,7 +217,7 @@ LLM-powered services that plan and execute the entire development process, from 
 AI-powered development environments that assist with complex, multi-file projects, handling entire codebases, version control, and sophisticated development workflows. Examples: Cursor, GitHub Copilot, Claude Code, Google Colab
 
 
-This workshop will stick to Level 1. The intermediate-level course 'Developing Research Software with AI Tools' addresses how you would work within Level 4. 
+This workshop will stick to Level 1. The intermediate-level course [Developing Research Software with AI Tools](https://southampton-rsg-training.github.io/research-software-ai-tools/) addresses how you would work within Level 4. 
 
 
 
