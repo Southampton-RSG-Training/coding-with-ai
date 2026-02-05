@@ -255,7 +255,7 @@ At this point, the researcher should verify this claim independently by inspecti
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## AI as a Dubugging Assistant
+## AI as a Debugging Assistant
 
 The code below contains a different bug. Run the code, use AI to help you debug it, then apply the fix and verify that the code runs as expected. 
 
