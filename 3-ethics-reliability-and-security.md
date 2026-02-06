@@ -29,15 +29,12 @@ exercises: 2 # exercise time in minutes
 
 ## Overview 
 
-It can be helpful to critically evaluate the risks and implications of AI so that we can feel confident and safe using AI tools to assist with coding in appropriate ways.  In this episode, we'll briefly consider issues related to:
+Understanding the risks and implications of AI is critical to using AI tools for coding safely, effectively, and with confidence. In this episode, we’ll take a brief look at issues related to:
 
-- Accuracy and Reliability of AI-Generated Code
-- Data Privacy, Security Risks, and Confidentiality
-- Intellectual Property, Authorship, and Citation of AI-Generated Code and Text
-- Ethical Considerations in AI-Assisted Research
-- De-skilling and Overdependence on AI in Research Computing
-- Mitigating Risks: Best Practices for Responsible AI Use in Research
-
+- Errors, Biases and Security Issues in AI-Generated Code
+- Intellectual Property, Authorship, and Citation of AI-Generated Code
+- De-Skilling and Overdependence on AI in Research Computing
+- Best Practices for Responsible AI Use in Research
 
 
 ## Errors, Biases and Security Issues in AI-Generated Code
@@ -239,7 +236,7 @@ However, maintaining human judgement is especially important in research, where 
 Therefore, it's important that we avoid uncritical trust in AI and instead treat AI outputs as suggestions rather than solutions. Also, remember that you as the researcher need to take responsibility for any AI-generated code you use.
 
 
-## Mitigating Risks: Best Practices for Responsible AI Use in Research
+## Best Practices for Responsible AI Use in Research
 
 Responsible use of AI for coding assistance requires a combination of ethical awareness, technical safeguards, and disciplined research practice. Here are some examples of ethical best practices, practices to support research reproducibility and scientific validity, and some security measures that you may decide to put in place when using AI to assist with research coding.
 
