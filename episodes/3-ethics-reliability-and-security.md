@@ -31,21 +31,13 @@ exercises: 2 # exercise time in minutes
 
 Understanding the risks and implications of AI is critical to using AI tools for coding safely, effectively, and with confidence. In this episode, we’ll take a brief look at issues related to:
 
-- Errors, Biases and Security Issues in AI-Generated Code
-- Intellectual Property, Authorship, and Citation of AI-Generated Code
-- De-Skilling and Overdependence on AI in Research Computing
-- Best Practices for Responsible AI Use in Research
+- Errors, biases and security issues in AI-generated code
+- Intellectual property, authorship, and citation of AI-generated code
+- De-skilling and overdependence on AI in research computing
+- Best practices for responsible AI use in research
 
 
 ## Errors, Biases and Security Issues in AI-Generated Code
-
-::::::::::::::::::::::::::::::::::::: callout
-
-## AI as an Enthusiastic but Inexperienced Software Developer
-
-When using AI for coding assistance, you can imagine an AI tool as being like a fresh computer science graduate with so much enthusiasm they will never say ‘I can’t do it’, but no practical experience or broad understanding. 
-
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Errors
 
@@ -63,7 +55,7 @@ There are a few different reasons for errors occurring in AI-generated code.  Th
 
 - AI-generated code may be **outdated**. An AI model is trained on vast amounts of publicly available code, including code written many years ago. Furthermore, the AI model can only draw on information up to the date that it was pre-trained, which may be a year or more in the past. This means that AI may not produce code that follows the most up to date standards.  Sometimes this can be a problem.  For example, the AI might suggest a function from an open-source library that hasn't been well-maintained over the past few years. This could mean missing out on a better and more secure library that has been developed recently. Searching the documentation for the package online would make you aware of any potential problems.
 
-- Using AI to write your code without having a structured plan can lead to messy and confusing code that difficult to understand and maintain, increasing the risk of error.
+- Using AI to write your code without having a structured plan can lead to **messy and confusing code** that difficult to understand and maintain, increasing the risk of error.
 
 
 ::::::::::::::::::::::::::::::::::::: callout
@@ -126,9 +118,9 @@ Many AI tools offer code suggestions without explaining the reasoning behind the
 
 This lack of transparency also has implications for research reproducibility. If the logic behind AI-generated code is unclear, other researchers may be unable to replicate your methods or results, even if the code appears to run correctly. There may be subtle errors or undocumented assumptions embedded in AI-generated solutions, which can lead to inconsistencies across experiments or datasets.
 
-AI-generated code can contain undocumented assumptions that reflect biases in the model’s training data. These assumptions may lead to code or documentation that unintentionally favors certain demographic groups over others.
+AI-generated code can contain undocumented assumptions that reflect biases in the model’s training data. These assumptions may lead to code or documentation that unintentionally favours certain demographic groups over others.
 
-For example, if an AI tool is asked to generate code to validate a name on a user profile it may produce code that only allows Latin letters and Western capitalization patterns, implicitly assuming names are formatted as "First Last". These undocumented assumptions exclude valid names from many cultures (e.g., letters with accents, apostrophes, non-Latin scripts, or single-word names), reflecting biases in the model’s training data.
+For example, if an AI tool is asked to generate code to validate a name on a user profile, it may produce code that only allows Latin letters and Western capitalization patterns, implicitly assuming names are formatted as "First Last". These undocumented assumptions exclude valid names from many cultures (e.g., letters with accents, apostrophes, non-Latin scripts, or single-word names), reflecting biases in the model’s training data.
 
 ```python
 import re
@@ -196,7 +188,7 @@ Summarised from - Rana, N. K. (2025). Generative AI and academic research: A rev
 
 The outputs of AI aren't stable, they're likely to vary depending on prompt wording and the AI model version among other factors.  Therefore, they can't be reliably cited in the same way as you would cite a research paper or software package. 
 
-Several universities and libraries recommend citing the tool used including the version and date, describing how it was used and clearly distinguishing between AI and human contributions.  Many AI tools now allow chats to be shared through URLs, meaning that specific chats can be cited if that would be appropriate and helpful to readers of the research.
+Several universities and libraries recommend citing the tool used including the version and date, and describing how it was used.  Many AI tools now allow chats to be shared through URLs, meaning that specific chats can be cited if that would be appropriate and helpful to readers of the research.
 
 [Duke University Libraries](https://guides.library.duke.edu/citing/AI?utm_source=chatgpt.com) gives the following guidance on how to cite an AI Chat and AI Tool in several different referencing styles.  For example, the APA style would be:
 
@@ -213,7 +205,7 @@ AI Company Name. (Year). Tool Name/Model [Description: e.g., Large language mode
 Example: OpenAI. (2025). *ChatGPT* [Large language model]. https://chatgpt.com/
 
 
-## De-skilling and Overdependence on AI in Research Computing
+## De-Skilling and Overdependence on AI in Research Computing
 
 AI tools can significantly enhance productivity in research computing, but excessive reliance on them introduces risks to research quality, integrity, and long-term capability.
 
