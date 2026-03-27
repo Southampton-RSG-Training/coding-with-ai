@@ -5,7 +5,7 @@
 # ensuring that the author list and other fields remain accurate.
 
 cff-version: 1.2.0
-title: FIXME
+title: Coding with AI: Opportunities and Responsibilities for Researchers
 message: >-
   Please cite this lesson using the information in this file
   when you refer to it in publications, and/or if you
@@ -13,10 +13,12 @@ message: >-
   training material.
 type: dataset
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: Philippa
+    family-names: Broadbent
+  - given-names: Steve
+    family-names: Crouch
+  - given-names: Kamilla
+    family-names: Kopec-Harding
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  A practical introduction to using AI to support coding in research. This course will help researchers understand how to use AI to help them write code effectively and responsibly. This course is designed for researchers with little to no experience coding. The course provides clear, hands-on guidance for using AI to write, debug, and understand code, while addressing key ethical, security, and reliability considerations in research contexts.
 license: CC-BY-4.0
