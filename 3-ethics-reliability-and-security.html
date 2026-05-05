@@ -554,7 +554,7 @@ model’s training data.</p>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a><span class="co">    Returns True if the name is valid.</span></span>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="co">    A valid name contains only alphabetic characters and starts with a capital letter.</span></span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="co">    """</span></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a>    pattern <span class="op">=</span> <span class="vs">r"^[A-Z][a-z]+(?: [A-Z][a-z]+)*$"</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a>    pattern <span class="op">=</span> <span class="vs">r"</span><span class="dv">^</span><span class="pp">[A-Z][a-z]</span><span class="op">+</span>(?:<span class="vs"> </span><span class="pp">[A-Z][a-z]</span><span class="op">+</span>)<span class="op">*</span><span class="dv">$</span><span class="vs">"</span></span>
 <span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a>    <span class="cf">return</span> <span class="bu">bool</span>(re.match(pattern, name))</span></code></pre>
 </div>
 </div>
@@ -947,7 +947,7 @@ any links that you are not going to use.
   "identifier": "https://Southampton-RSG-Training.github.io/coding-with-ai/3-ethics-reliability-and-security.html",
   "dateCreated": "2026-09-01",
   "dateModified": "2026-02-06",
-  "datePublished": "2026-04-28"
+  "datePublished": "2026-05-05"
 }
 
   </script><script>

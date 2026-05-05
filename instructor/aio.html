@@ -514,14 +514,14 @@ each has strengths and limitations.</p>
 <col width="20%">
 <col width="21%">
 </colgroup>
-<thead><tr class="header">
+<thead><tr>
 <th><strong>AI System Type</strong></th>
 <th><strong>What the system does</strong></th>
 <th><strong>Strengths</strong></th>
 <th><strong>Limitations</strong></th>
 </tr></thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Rule-Based &amp; Decision Systems</strong></td>
 <td>Follows clearly defined rules to allow, block, or trigger
 actions</td>
@@ -529,7 +529,7 @@ actions</td>
 suited to safety-critical or regulated settings</td>
 <td>Cannot adapt to new situations or handle uncertainty</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Predictive &amp; Analytical Systems</strong></td>
 <td>Uses data to estimate categories, trends, or likelihoods</td>
 <td>Can analyse large datasets efficiently; supports consistent analysis
@@ -537,7 +537,7 @@ and forecasting</td>
 <td>Results depend on data quality; outputs are probabilities, not final
 answers</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Generative Systems</strong></td>
 <td>Creates new text, code, images, or other content</td>
 <td>Flexible and easy to interact with; useful for drafting, coding, and
@@ -901,60 +901,60 @@ at the data. You’ll see the variable names in the top row of the
 spreadsheet. Each row holds information for a single animal, and the
 columns represent:</p>
 <table class="table">
-<thead><tr class="header">
+<thead><tr>
 <th>Column</th>
 <th>Description</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>record_id</td>
 <td>Unique id for the observation</td>
 </tr>
-<tr class="even">
+<tr>
 <td>month</td>
 <td>month of observation</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>day</td>
 <td>day of observation</td>
 </tr>
-<tr class="even">
+<tr>
 <td>year</td>
 <td>year of observation</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>plot_id</td>
 <td>ID of a particular plot</td>
 </tr>
-<tr class="even">
+<tr>
 <td>species_id</td>
 <td>2-letter code</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>sex</td>
 <td>sex of animal (“M”, “F”)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>hindfoot_length</td>
 <td>length of the hindfoot in mm</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>weight</td>
 <td>weight of the animal in grams</td>
 </tr>
-<tr class="even">
+<tr>
 <td>genus</td>
 <td>genus of animal</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>species</td>
 <td>species of animal</td>
 </tr>
-<tr class="even">
+<tr>
 <td>taxon</td>
 <td>e.g. Rodent, Reptile, Bird, Rabbit</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>plot_type</td>
 <td>type of plot</td>
 </tr>
@@ -1903,7 +1903,7 @@ model’s training data.</p>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a><span class="co">    Returns True if the name is valid.</span></span>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="co">    A valid name contains only alphabetic characters and starts with a capital letter.</span></span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="co">    """</span></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a>    pattern <span class="op">=</span> <span class="vs">r"^[A-Z][a-z]+(?: [A-Z][a-z]+)*$"</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a>    pattern <span class="op">=</span> <span class="vs">r"</span><span class="dv">^</span><span class="pp">[A-Z][a-z]</span><span class="op">+</span>(?:<span class="vs"> </span><span class="pp">[A-Z][a-z]</span><span class="op">+</span>)<span class="op">*</span><span class="dv">$</span><span class="vs">"</span></span>
 <span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a>    <span class="cf">return</span> <span class="bu">bool</span>(re.match(pattern, name))</span></code></pre>
 </div>
 </div>
@@ -2322,8 +2322,8 @@ any links that you are not going to use.
   "url": "https://Southampton-RSG-Training.github.io/coding-with-ai/instructor/aio.html",
   "identifier": "https://Southampton-RSG-Training.github.io/coding-with-ai/instructor/aio.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-04-28",
-  "datePublished": "2026-04-28"
+  "dateModified": "2026-05-05",
+  "datePublished": "2026-05-05"
 }
 
   </script><script>
