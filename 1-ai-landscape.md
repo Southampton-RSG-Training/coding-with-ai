@@ -34,27 +34,13 @@ This workshop aims to:
 - Provide researchers with the knowledge and understanding to critically assess when it is appropriate to use AI for coding assistance.
 
 
-### Framing the Question: “What Do We Mean by AI?”
-
-*“Any sufficiently advanced technology is indistinguishable from magic.”* - Arthur C. Clarke, a British science fiction writer, futurist, and inventor (1962)
-
-![Arthur C. Clarke in 1965, ITU Pictures, CC BY 2.0, via Wikimedia Commons](fig/arthur_clarke.jpg){alt='photograph of Arthur C. Clarke in 1965'}
-
-Current AI tools, like ChatGPT and Copilot, can appear almost magical.  They can generate fluent text, write code and respond to conversations in a way that seems almost human. Arthur Clarke's observation is a reminder that this appearance of magic is not evidence of mystery or sentience but of technological complexity.  These systems are built on decades of research in mathematics, statistics and computer science. 
-
-The aim of this episode is to place AI tools in their historical and technical context, clarify what they can and cannot do, and demystify the 'magic' of AI. 
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## When you hear the term “artificial intelligence”, what comes to mind?
-
-Write your answer in the shared document.  There are no right or wrong answers!
-
-::::::::::::::::::::::::::::::::::::::::::::::::
+# What Do We Mean by AI?
 
 "Artificial intelligence (AI) is the capability of a machine or software system to perform tasks that would normally require human intelligence, such as learning from data, recognising patterns, making decisions, or generating outputs." - Merriam-Webster Dictionary.
 
-## History of AI
+::::::::::::::::::::::::::::::::::::: callout
+
+## Optional Section: A Very Brief History of AI
 
 Artificial intelligence is best understood not as a single capability or system, but as a broad collection of techniques and approaches for solving different kinds of problems. These techniques have been developed over the past 70 years.  Let's consider a timeline of major AI developments to put the current AI tools into historical context:
 
@@ -67,7 +53,6 @@ Rule-based chat AI systems existed.  An AI chatbot ELIZA was introduced in 1966 
 
 ![Public domain, via Wikimedia Commons](fig/ELIZA_conversation.png){alt='A conversation with the ELIZA chatbot.'}
 
-TODO:Add Deep Blue example
 
 ### Mid-1990s–2000s: Shift to Data-driven Machine Learning
 
@@ -90,10 +75,11 @@ Generative AI systems are designed to produce new outputs that resemble the data
 
 ![Jernej Furman from Slovenia, CC BY 2.0, via Wikimedia Commons](fig/smartphone_with_chatGPT.jpg){alt='Smartphone with ChatGPT on the US dollar banknotes background'}
 
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Current AI Landscape
 
-Rule-based, predictive, generative AI systems are all used today and each has strengths and limitations.
+We can roughly categorise AI systems into rule-based, predictive, generative AI systems.  They are all used for different purposes and each has strengths and limitations.
 
 
 | **AI System Type** | **What the system does** | **Strengths** | **Limitations** |
@@ -102,6 +88,15 @@ Rule-based, predictive, generative AI systems are all used today and each has st
 |  **Predictive & Analytical Systems** | Uses data to estimate categories, trends, or likelihoods | Can analyse large datasets efficiently; supports consistent analysis and forecasting | Results depend on data quality; outputs are probabilities, not final answers |
 | **Generative Systems** | Creates new text, code, images, or other content | Flexible and easy to interact with; useful for drafting, coding, and exploring ideas | Outputs can sound confident but be incomplete or wrong |
 
+::::::::::::::::::::::::::::::::::::: callout
+
+## ELIZA
+
+In the past, rule-based chat AI systems existed.  An AI chatbot ELIZA was introduced in 1966 and trained to act as a psychotherapist among other purposes.  ELIZA processes text inputs and gives a response based on the pre-programmed rules. However, ELIZA differs drastically from the generative AI chatbots we know today such as ChatGPT, because it did not have the capability to respond to any inputs outside of its pre-programmed rules.
+
+![Public domain, via Wikimedia Commons](fig/ELIZA_conversation.png){alt='A conversation with the ELIZA chatbot.'}
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 **Human Oversight Across AI Systems** 
 
@@ -109,7 +104,7 @@ Human responsibility increases from rule-based to predictive to generative syste
 
 - Rule-based systems behave exactly as specified and therefore the responsibility is mostly in system design, not in day-to-day interpretation.
 - Predictive systems give estimates, not decisions and the responsibility lies with humans for interpretation and validation.
-- Generative systems require the highest human responsibility at the point of use.  For example, when a researcher uses generative AI to draft text, summarise literature, or generate code, the responsibility for correctness remains entirely with the human.
+- Generative systems require the highest human responsibility at the point of use.  For example, when a researcher uses generative AI to draft text, summarise literature, or **generate code**, the responsibility for correctness remains entirely with the human.
 
 
 ## Demystifying Generative AI
@@ -128,7 +123,10 @@ GPT stands for Generative Pre-trained Transformer:
 - **Pre-trained**: it is trained on vast amounts of data before deployment.
 - **Transformer**: this refers to the internal design of the neural network that helps the system keep track of context across longer pieces of text.
 
-### Understanding Large Language Models
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## Optional Section: Understanding Large Language Models
 
 Systems like GPT belong to a group called Large Language Models (LLMs). An LLM is a program that learns how language works by analysing very large collections of text. It does not store facts in a database or follow pre-programmed rules. Instead, it learns patterns in how words, sentences, and ideas tend to appear together.
 
@@ -172,6 +170,8 @@ When you enter a prompt into GPT:
 
 ![](fig/model_training_process_cropped.png){alt='Diagram of the 6 steps for training a GPT model'}
 
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## Overview of AI tools that can support research coding
 
@@ -193,9 +193,9 @@ When you enter a prompt into GPT:
 
 ## Which tools are most commonly used by researchers?
 
-In a study of 868 scientists who code as part of their research, ChatGPT was by far the most common tool used to assist with research coding, used by 64% of participants, followed by GitHub Copilot, used by 12% of participants. 
+A 2025 study of 868 scientists who code as part of their research found that ChatGPT was by far the most common tool used to assist with research coding, used by 64% of participants, followed by GitHub Copilot, used by 12% of participants. 
 
-(O'Brien, G., Parker, A., Eisty, N., & Carver, J. (2025). More code, less validation: Risk factors for over-reliance on AI coding tools among scientists. arXiv preprint arXiv:2512.19644.)
+[(O'Brien, G., Parker, A., Eisty, N., & Carver, J. (2025). More code, less validation: Risk factors for over-reliance on AI coding tools among scientists. arXiv preprint arXiv:2512.19644.)](https://arxiv.org/pdf/2512.19644)
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -227,6 +227,8 @@ This workshop will stick to Level 1. The intermediate-level course [Developing R
 
 Which AI tools have you used to help with coding so far, if any? What are your current impressions of them?
 
+Write your experiences in the shared document.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -235,9 +237,6 @@ Which AI tools have you used to help with coding so far, if any? What are your c
 - Artificial intelligence is not as a single capability or system, but as a broad collection of techniques and approaches for solving different kinds of problems.
 - AI has evolved from early symbolic, rule-based systems (1950s–1970s), to data-driven machine learning, and deep learning, to modern large language models and generative AI (2017–present), culminating in tools like ChatGPT and AI-integrated software. 
 - AI can be grouped into 3 broad categories: Rule-Based and Decision Systems, Predictive and Analytical Systems, and Generative Systems
-- GPT (Generative Pre-trained Transformer) is a type of large language model built on transformer neural networks, which use attention to process entire sequences and capture context, enabling coherent, context-aware text or code generation.
-- GPT generates content one token at a time, predicting each new token based on all previous tokens to produce fluent, contextually relevant, and novel outputs.
-- GPT models are trained in stages: collecting large text datasets, designing the neural network, pre-training on broad data, fine-tuning on task-specific datasets, and iteratively evaluating and improving performance.
 - ChatGPT is a user-friendly application built on GPT models, while GPT itself is also integrated into other tools like Microsoft Copilot, search engines, and coding environments.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
