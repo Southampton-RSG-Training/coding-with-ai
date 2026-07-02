@@ -570,11 +570,6 @@ responsibility for correctness remains entirely with the human.</li>
 <p>The model of generative AI that has been widespread in recent years
 is GPT. GPT is an AI model that can produce coherent and context-aware
 text, such as explanations, summaries, or responses to questions.</p>
-<p>ChatGPT is an application built on top of GPT models. It provides a
-user-friendly, conversational interface to interact with the GPT model.
-ChatGPT is one of many tools that use GPT.</p>
-<p>GPT is also integrated into software products such as Microsoft’s
-Copilot, search engines, and coding environments.</p>
 <p>GPT stands for Generative Pre-trained Transformer:</p>
 <ul>
 <li>
@@ -589,6 +584,11 @@ before deployment.</li>
 the neural network that helps the system keep track of context across
 longer pieces of text.</li>
 </ul>
+<p>ChatGPT is an application built on top of GPT models. It provides a
+user-friendly, conversational interface to interact with the GPT model.
+ChatGPT is one of many tools that use GPT.</p>
+<p>GPT is also integrated into software products such as Microsoft’s
+Copilot, search engines, and coding environments.</p>
 <div id="optional-section-understanding-large-language-models" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -833,7 +833,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-2-ai-assisted-coding"><p>Content from <a href="2-ai-assisted-coding.html">AI-Assisted Coding Practical Skills</a></p>
 <hr>
-<p>Last updated on 2026-02-05 |
+<p>Last updated on 2026-07-02 |
 
         <a href="https://github.com/Southampton-RSG-Training/coding-with-ai/edit/main/episodes/2-ai-assisted-coding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -888,19 +888,15 @@ obscure understanding or introduce errors.</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="why-understanding-still-matters-the-limits-of-ai-driven-software-development">Why Understanding Still Matters: The Limits of AI-Driven Software
-Development<a class="anchor" aria-label="anchor" href="#why-understanding-still-matters-the-limits-of-ai-driven-software-development"></a>
-</h2>
-<hr class="half-width">
-<div class="section level3">
-<h3 id="scenario">Scenario<a class="anchor" aria-label="anchor" href="#scenario"></a>
-</h3>
-<p>Imagine, your research team has collected some data on the animal
-species found within plots of land at a study site.</p>
-<p>Download the data from here: <a href="../data/animals.csv">animals.csv</a></p>
-<p>The dataset is stored as a comma separated value (CSV) file. You can
-open the csv file in excel or a similar spreadsheet tool and have a look
-at the data. You’ll see the variable names in the top row of the
+<div class="section level1">
+<h1 id="scenario">Scenario<a class="anchor" aria-label="anchor" href="#scenario"></a>
+</h1>
+<p>Sally, a PhD student in Biology has just received from a colleague
+some data on the animal species found within plots of land at a desert
+study site in Arizona.</p>
+<p>The dataset is stored as a comma separated value (CSV) file. Sally
+opens the csv file in excel or a similar spreadsheet tool and has a look
+at the data. She sees the variable names in the top row of the
 spreadsheet. Each row holds information for a single animal, and the
 columns represent:</p>
 <table class="table">
@@ -982,29 +978,31 @@ suitable for computational training and learning exercises.</p>
 </div>
 </div>
 </div>
-<p>Your colleague wants some plots of the data as quickly as possible so
-that she can present them at an upcoming seminar. First, she has
-requested a plot of hindfoot length vs weight to explore whether these
-two variables are correlated, including only species with over 100
-observations. You know that Matplotlib is a plotting library in python
-but you’re not quite sure how to use it, so you decide to ask AI to make
-the plot for you.</p>
-<p>Open an AI chat interface (such as ChatGPT or Microsoft Copilot) and
-prompt the AI to:</p>
+<p>The email reads:</p>
+<p><em>Hi Sally,</em></p>
+<p><em>Here’s the data on animal species on the Portal site in
+Arizona.</em></p>
+<p><em>Please can you make a plot of the data as quickly as possible so
+that we can present them at the seminar tomorrow?</em></p>
+<p><em>I need a plot of hindfoot length vs weight to explore whether
+these two variables are correlated, including only species with over 100
+observations.</em></p>
+<p><em>I make all my plots using Matplotlib in Python so it would be
+great if you could make this plot using that library so that I can edit
+and add to the plot later.</em></p>
+<p><em>Thanks!</em></p>
+<p><em>David</em></p>
+<p>Sally knows that Matplotlib is a plotting library in Python but she’s
+not quite sure how to use it. She gets the impression that David needs
+this plot quickly and doesn’t think she has time to learn matplotlib
+fast enough, so she decides to ask AI to make the plot for her.</p>
+<p>She opens an AI chat interface (such as ChatGPT or Microsoft Copilot)
+and prompts the AI to:</p>
 <p>‘Generate some code to create a plot with weight on the x axis and
 hindfoot_length on the y axis, colour by species_id. Include only
 species with over 100 observations. The data is in a csv file called
 animals.csv. Use Python and Matplotlib.’</p>
-<ul>
-<li>Open anaconda navigator and launch jupyter notebooks.</li>
-<li>Create a new folder ‘animals_data_analysis’.</li>
-<li>Navigate to this folder.</li>
-<li>Drag and drop animals.csv into this folder.</li>
-<li>Create a new jupyter notebook in this folder called
-‘animals_plots’.</li>
-<li>Paste the AI-generated code into a code chunk in the Jupyter
-notebook and run the code.</li>
-</ul>
+<p>She then runs this code and produces the</p>
 <p>We could even go one step further and upload the dataset to the AI
 chat so that the analysis can actually be run within the AI tool
 (depending on the features that you have access to with your AI tool).
@@ -1106,7 +1104,6 @@ your inputs to train the model and improve its performance.</p>
 </div>
 </div>
 </div>
-</div>
 <div class="section level3">
 <h3 id="appropriate-roles-for-ai-when-writing-research-code">Appropriate Roles for AI when Writing Research Code<a class="anchor" aria-label="anchor" href="#appropriate-roles-for-ai-when-writing-research-code"></a>
 </h3>
@@ -1128,9 +1125,25 @@ prototype</li>
 <p>In the rest of this episode, we’ll walk through these ways that AI
 can assist you with coding.</p>
 </div>
-</section><section><h2 class="section-heading" id="using-ai-to-understand-code-and-technical-concepts">Using AI to Understand Code and Technical Concepts<a class="anchor" aria-label="anchor" href="#using-ai-to-understand-code-and-technical-concepts"></a>
+<div class="section level2">
+<h2 id="quick-overview-of-jupyter-notebooks">Quick Overview of Jupyter Notebooks<a class="anchor" aria-label="anchor" href="#quick-overview-of-jupyter-notebooks"></a>
 </h2>
-<hr class="half-width">
+<p>For this session, we’ll run code chunks using Jupyter Notebooks and
+use the data from the portal dataset.</p>
+<p>First, download the data from here: <a href="../data/animals.csv">animals.csv</a></p>
+<ul>
+<li>Open anaconda navigator and launch jupyter notebooks.</li>
+<li>Create a new folder ‘animals_data_analysis’.</li>
+<li>Navigate to this folder.</li>
+<li>Drag and drop animals.csv into this folder.</li>
+<li>Create a new jupyter notebook in this folder called
+‘animals_plots’.</li>
+<li>Check that you can run code in your jupyter notebook</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="using-ai-to-understand-code-and-technical-concepts">Using AI to Understand Code and Technical Concepts<a class="anchor" aria-label="anchor" href="#using-ai-to-understand-code-and-technical-concepts"></a>
+</h2>
 <p>AI tools like ChatGPT can serve as an interactive reference and
 tutor, helping you to understand unfamiliar coding constructs,
 libraries, or data analysis techniques. Unlike traditional search
@@ -1170,7 +1183,9 @@ weight vs hindfoot length plot, instead ask for a step-by-step
 explanation of how you would do it with your preferred technologies and
 packages. e.g. “Explain how to filter a DataFrame in Python to include
 only species with more than 100 observations, and then plot
-hindfoot_length vs weight colored by species using MatplotLib.”</p></li>
+hindfoot_length vs weight colored by species using MatplotLib.” Use this
+explanation to create the code for the plot and run it in your jupyter
+notebook.</p></li>
 <li><p>Take the code generated in the our example (plotting
 hindfoot_length vs weight) and ask AI: “Explain what each line of this
 Python code does and why it is needed.” Try iteratively refining
@@ -1180,9 +1195,10 @@ example, an analogy, or reference documentation.</p></li>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="debugging-and-error-analysis">Debugging and Error Analysis<a class="anchor" aria-label="anchor" href="#debugging-and-error-analysis"></a>
+</div>
+<div class="section level2">
+<h2 id="debugging-and-error-analysis">Debugging and Error Analysis<a class="anchor" aria-label="anchor" href="#debugging-and-error-analysis"></a>
 </h2>
-<hr class="half-width">
 <p><strong>Scenario</strong>: A researcher has written the following
 Python code to plot weight vs hindfoot length by species using
 Matplotlib. When they try to run it, the code fails with an error.</p>
@@ -1320,9 +1336,10 @@ path is incorrect, the file has not been created.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="code-generation">Code Generation<a class="anchor" aria-label="anchor" href="#code-generation"></a>
+</div>
+<div class="section level2">
+<h2 id="code-generation">Code Generation<a class="anchor" aria-label="anchor" href="#code-generation"></a>
 </h2>
-<hr class="half-width">
 <div class="section level3">
 <h3 id="boilerplate">Boilerplate<a class="anchor" aria-label="anchor" href="#boilerplate"></a>
 </h3>
@@ -1544,9 +1561,10 @@ development, which tasks would you use AI tools to assist with?</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="integrating-ai-tools-into-ides">Integrating AI Tools into IDEs<a class="anchor" aria-label="anchor" href="#integrating-ai-tools-into-ides"></a>
+</div>
+<div class="section level2">
+<h2 id="integrating-ai-tools-into-ides">Integrating AI Tools into IDEs<a class="anchor" aria-label="anchor" href="#integrating-ai-tools-into-ides"></a>
 </h2>
-<hr class="half-width">
 <p>In this episode, we have used separate interfaces to interact with AI
 and to run our code. As of 2025 this was the most common way that
 researchers interacted with AI for coding assistance. However, it is
@@ -1639,7 +1657,8 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
 </div>
-</section></section><section id="aio-3-ethics-reliability-and-security"><p>Content from <a href="3-ethics-reliability-and-security.html">Ethics, Reliability and Security Considerations</a></p>
+</div>
+</div></section><section id="aio-3-ethics-reliability-and-security"><p>Content from <a href="3-ethics-reliability-and-security.html">Ethics, Reliability and Security Considerations</a></p>
 <hr>
 <p>Last updated on 2026-02-06 |
 
@@ -2172,7 +2191,7 @@ guidelines</strong>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Your guidelines could include:</p>
 <ul>
