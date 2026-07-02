@@ -28,14 +28,11 @@ exercises: 2 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Why Understanding Still Matters: The Limits of AI-Driven Software Development
+# Scenario
 
-### Scenario 
-Imagine, your research team has collected some data on the animal species found within plots of land at a study site.  
+Sally, a PhD student in Biology has just received from a colleague some data on the animal species found within plots of land at a desert study site in Arizona.
 
-Download the data from here: [animals.csv](data/animals.csv)
-
-The dataset is stored as a comma separated value (CSV) file. You can open the csv file in excel or a similar spreadsheet tool and have a look at the data. You'll see the variable names in the top row of the spreadsheet.   Each row holds information for a single animal, and the columns represent:
+The dataset is stored as a comma separated value (CSV) file. Sally opens the csv file in excel or a similar spreadsheet tool and has a look at the data. She sees the variable names in the top row of the spreadsheet.   Each row holds information for a single animal, and the columns represent:
 
 
 | Column           | Description                        |
@@ -54,6 +51,7 @@ The dataset is stored as a comma separated value (CSV) file. You can open the cs
 | taxon            | e.g. Rodent, Reptile, Bird, Rabbit |
 | plot\_type       | type of plot                       |
 
+
 ::::::::::::::::::::::::::::::::::::: callout
 
 ## Where does the data come from?
@@ -64,18 +62,32 @@ For this scenario, we use a CSV file that is a subset of the teaching-focused Po
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-Your colleague wants some plots of the data as quickly as possible so that she can present them at an upcoming seminar.  First, she has requested a plot of hindfoot length vs weight to explore whether these two variables are correlated, including only species with over 100 observations.  You know that Matplotlib is a plotting library in python but you're not quite sure how to use it, so you decide to ask AI to make the plot for you. 
+The email reads:
 
-Open an AI chat interface (such as ChatGPT or Microsoft Copilot) and prompt the AI to:
+
+*Hi Sally,*
+
+*Here's the data on animal species on the Portal site in Arizona.*  
+
+*Please can you make a plot of the data as quickly as possible so that we can present them at the seminar tomorrow?*
+
+*I need a plot of hindfoot length vs weight to explore whether these two variables are correlated, including only species with over 100 observations.*  
+
+*I make all my plots using Matplotlib in Python so it would be great if you could make this plot using that library so that I can edit and add to the plot later.*
+
+*Thanks!*
+
+*David*
+
+
+
+Sally knows that Matplotlib is a plotting library in Python but she's not quite sure how to use it.  She gets the impression that David needs this plot quickly and doesn't think she has time to learn matplotlib fast enough, so she decides to ask AI to make the plot for her.
+
+She opens an AI chat interface (such as ChatGPT or Microsoft Copilot) and prompts the AI to:
 
 'Generate some code to create a plot with weight on the x axis and hindfoot_length on the y axis, colour by species_id. Include only species with over 100 observations. The data is in a csv file called animals.csv.  Use Python and Matplotlib.' 
 
-- Open anaconda navigator and launch jupyter notebooks. 
-- Create a new folder 'animals_data_analysis'.
-- Navigate to this folder.
-- Drag and drop animals.csv into this folder.
-- Create a new jupyter notebook in this folder called 'animals_plots'.
-- Paste the AI-generated code into a code chunk in the Jupyter notebook and run the code.
+She then runs this code and produces the 
 
 We could even go one step further and upload the dataset to the AI chat so that the analysis can actually be run within the AI tool (depending on the features that you have access to with your AI tool). **Note: we can only do this because this dataset is publicly available. Don't upload any private or sensitive data.**
 
@@ -142,6 +154,23 @@ Appropriate uses of AI include:
 
 In the rest of this episode, we'll walk through these ways that AI can assist you with coding. 
 
+## Quick Overview of Jupyter Notebooks
+
+For this session, we'll run code chunks using Jupyter Notebooks and use the data from the portal dataset.
+
+First, download the data from here: [animals.csv](data/animals.csv)
+
+- Open anaconda navigator and launch jupyter notebooks. 
+- Create a new folder 'animals_data_analysis'.
+- Navigate to this folder.
+- Drag and drop animals.csv into this folder.
+- Create a new jupyter notebook in this folder called 'animals_plots'.
+- Check that you can run code in your jupyter notebook 
+
+
+
+
+
 ## Using AI to Understand Code and Technical Concepts 
 
 AI tools like ChatGPT can serve as an interactive reference and tutor, helping you to understand unfamiliar coding constructs, libraries, or data analysis techniques. Unlike traditional search engines, AI can summarise and clarify technical information in context, tailored to your specific dataset, code, or research question.
@@ -159,7 +188,7 @@ AI tools like ChatGPT can serve as an interactive reference and tutor, helping y
 ## Up-skill rather than De-skill with AI
 
 1. Rather than asking AI to actually generate the code for the weight vs hindfoot length plot, instead ask for a step-by-step explanation of how you would do it with your preferred technologies and packages. 
-e.g. “Explain how to filter a DataFrame in Python to include only species with more than 100 observations, and then plot hindfoot_length vs weight colored by species using MatplotLib.”
+e.g. “Explain how to filter a DataFrame in Python to include only species with more than 100 observations, and then plot hindfoot_length vs weight colored by species using MatplotLib.” Use this explanation to create the code for the plot and run it in your jupyter notebook.
 
 2. Take the code generated in the our example (plotting hindfoot_length vs weight) and ask AI:
 “Explain what each line of this Python code does and why it is needed.”
