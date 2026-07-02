@@ -113,15 +113,15 @@ Human responsibility increases from rule-based to predictive to generative syste
 
 The model of generative AI that has been widespread in recent years is GPT. GPT is an AI model that can produce coherent and context-aware text, such as explanations, summaries, or responses to questions.
 
-ChatGPT is an application built on top of GPT models. It provides a user-friendly, conversational interface to interact with the GPT model. ChatGPT is one of many tools that use GPT. 
-
-GPT is also integrated into software products such as Microsoft’s Copilot, search engines, and coding environments. 
-
 GPT stands for Generative Pre-trained Transformer:
 
 - **Generative**: GPT is designed to generate new content. Rather than retrieving fixed answers from a database, it produces original outputs, such as text or code.
 - **Pre-trained**: it is trained on vast amounts of data before deployment.
 - **Transformer**: this refers to the internal design of the neural network that helps the system keep track of context across longer pieces of text.
+
+ChatGPT is an application built on top of GPT models. It provides a user-friendly, conversational interface to interact with the GPT model. ChatGPT is one of many tools that use GPT. 
+
+GPT is also integrated into software products such as Microsoft’s Copilot, search engines, and coding environments. 
 
 
 ::::::::::::::::::::::::::::::::::::: callout
