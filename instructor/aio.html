@@ -833,7 +833,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-2-ai-assisted-coding"><p>Content from <a href="2-ai-assisted-coding.html">AI-Assisted Coding Practical Skills</a></p>
 <hr>
-<p>Last updated on 2026-07-02 |
+<p>Last updated on 2026-07-03 |
 
         <a href="https://github.com/Southampton-RSG-Training/coding-with-ai/edit/main/episodes/2-ai-assisted-coding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -996,18 +996,19 @@ and add to the plot later.</em></p>
 not quite sure how to use it. She gets the impression that David needs
 this plot quickly and doesn’t think she has time to learn matplotlib
 fast enough, so she decides to ask AI to make the plot for her.</p>
-<p>She opens an AI chat interface (such as ChatGPT or Microsoft Copilot)
-and prompts the AI to:</p>
+<p>She opens an AI chat interface (such as ChatGPT, Microsoft Copilot or
+Claude) and prompts the AI to:</p>
 <p>‘Generate some code to create a plot with weight on the x axis and
 hindfoot_length on the y axis, colour by species_id. Include only
 species with over 100 observations. The data is in a csv file called
 animals.csv. Use Python and Matplotlib.’</p>
-<p>She then runs this code and produces the</p>
-<p>We could even go one step further and upload the dataset to the AI
-chat so that the analysis can actually be run within the AI tool
-(depending on the features that you have access to with your AI tool).
-<strong>Note: we can only do this because this dataset is publicly
-available. Don’t upload any private or sensitive data.</strong></p>
+<figure><img src="../fig/animals_plot_code_chatgpt.png" alt="Screenshot of chatGPT prompt and generated code" class="figure mx-auto d-block"></figure><p>She could then run this code and produce the plot.</p>
+<p>However, she realises she could go one step further and upload the
+dataset to the AI chat so that the analysis can actually be run within
+the AI tool (depending on the features that you have access to with your
+AI tool). <strong>Note: we can only do this because this dataset is
+publicly available. Don’t upload any private or sensitive
+data.</strong></p>
 <figure><img src="../fig/animals_plot_chatgpt.png" alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot" class="figure mx-auto d-block"></figure><div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1034,7 +1035,7 @@ the code?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Artificial intelligence tools can generate code quickly and often
 convincingly. For researchers who are new to programming, this can be
@@ -1104,9 +1105,10 @@ your inputs to train the model and improve its performance.</p>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="appropriate-roles-for-ai-when-writing-research-code">Appropriate Roles for AI when Writing Research Code<a class="anchor" aria-label="anchor" href="#appropriate-roles-for-ai-when-writing-research-code"></a>
-</h3>
+</div>
+<div class="section level1">
+<h1 id="appropriate-roles-for-ai-when-writing-research-code">Appropriate Roles for AI when Writing Research Code<a class="anchor" aria-label="anchor" href="#appropriate-roles-for-ai-when-writing-research-code"></a>
+</h1>
 <p>AI tools can be highly valuable when used correctly, as a tool to
 assist you with your research. The key principle is that they should
 function as assistants, not autonomous developers.</p>
@@ -1123,22 +1125,92 @@ etc.)</li>
 prototype</li>
 </ul>
 <p>In the rest of this episode, we’ll walk through these ways that AI
-can assist you with coding.</p>
-</div>
+can assist you with coding. We’ll work with the animals data Sally
+plotted and we’ll run the code using Jupyter notebooks.</p>
 <div class="section level2">
-<h2 id="quick-overview-of-jupyter-notebooks">Quick Overview of Jupyter Notebooks<a class="anchor" aria-label="anchor" href="#quick-overview-of-jupyter-notebooks"></a>
+<h2 id="setting-up-data-download-and-walkthrough-of-jupyter-notebooks">Setting up: Data Download and Walkthrough of Jupyter Notebooks<a class="anchor" aria-label="anchor" href="#setting-up-data-download-and-walkthrough-of-jupyter-notebooks"></a>
 </h2>
-<p>For this session, we’ll run code chunks using Jupyter Notebooks and
-use the data from the portal dataset.</p>
-<p>First, download the data from here: <a href="../data/animals.csv">animals.csv</a></p>
+<p>First, download the data from here: <a href="../data/animals.csv">animals.csv</a>.</p>
+<p>For this session, we’ll run code chunks using Jupyter notebooks.</p>
+<p>A Jupyter notebook is an interactive, web-based document that lets
+you run chunks of code, view their output, and mix in text and
+visualisations.</p>
+<p>You should have already installed Anaconda Navigator which includes a
+Jupyter Notebooks installation.</p>
 <ul>
-<li>Open anaconda navigator and launch jupyter notebooks.</li>
-<li>Create a new folder ‘animals_data_analysis’.</li>
-<li>Navigate to this folder.</li>
-<li>Drag and drop animals.csv into this folder.</li>
-<li>Create a new jupyter notebook in this folder called
-‘animals_plots’.</li>
-<li>Check that you can run code in your jupyter notebook</li>
+<li>Type ‘Jupyter Notebook’ into the search bar and click on the Jupyter
+Notebooks app to open it. (Alternatively, open Anaconda Navigator and
+open Jupyter Notebooks from there).<br>
+</li>
+<li>Let’s first have a look at the engine running Jupyter Notebooks.
+Click <strong>New</strong> –&gt; <strong>Terminal</strong>
+</li>
+</ul>
+<p>From the terminal you can check the version of python that your
+jupyter notebook will use:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">python</span> <span class="at">--version</span></span></code></pre>
+</div>
+<p>You can also check which python packages are installed by
+default:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">pip</span> list</span></code></pre>
+</div>
+<ul>
+<li>Head back to the <strong>Home</strong> tab and create a new folder
+‘animals_data_analysis’: <strong>New</strong> –&gt; <strong>New
+Folder</strong> Select the new Untitled folder, click
+<strong>Rename</strong> and change the name to
+animals_data_analysis.</li>
+<li>Click on the animals_data_analysis folder to open it (it will
+currently be empty).</li>
+<li>Drag and drop animals.csv from your file explorer downloads into
+this folder. Check the file is called ‘animals.csv’ exactly, rename the
+file if needed (e.g. if you’ve downloaded it more than once and it’s
+called animals(1).csv).</li>
+<li>Create a new Jupyter notebook in this folder called ‘animals_plots’:
+<strong>New</strong> –&gt; <strong>Python 3 (ipykernel)</strong> A new
+Jupyter notebook called ‘Untitled’ will open automatically, click on the
+name ‘Untitled’ to rename the file to ‘animals_plots’. The file should
+have the file extension .ipynb which indicates it’s a file of type
+Jupyter notebook.</li>
+</ul>
+<figure><img src="../fig/empty_jupyter_notebook.png" alt="screenshot of an empty jupyter notebook" class="figure mx-auto d-block"></figure><ul>
+<li>A Jupyter notebook consists of a sequence of cells. These can be
+<strong>code</strong>, <strong>markdown</strong> (a plain-text
+formatting syntax that allows you to add elements like headers, bold
+text, and lists without using complex HTML code) or <strong>raw</strong>
+(displays content exactly as typed). Check that the cell type dropdown
+is set to code and type the code below in the cell.</li>
+</ul>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="bu">print</span>(<span class="st">'Hello World'</span>)</span></code></pre>
+</div>
+<ul>
+<li>Press the triangle in the header menu to run the code in the
+cell</li>
+<li>A new cell will usually be created when you run the previous one. To
+add another cell manually click the plus sign in the header menu. To
+remove a cell, click the rubbish bin on the far right of the cell.</li>
+<li>Let’s create a title for our Jupyter notebook using a markdown cell.
+Click on your new empty cell and select <strong>Markdown</strong> from
+the cell types dropdown. Type in the markdown cell:
+<code># Animals Data Analysis</code>. (the <code>#</code> formats the
+text as a heading in markdown).</li>
+<li>We probably want our title at the top of the Jupyter notebook. Click
+the up arrow in the cell containing <code># Animals Data Analysis</code>
+to move it to the top of the document. With your cursor still in this
+cell click the run button to render the markdown text as a heading.</li>
+<li>Move your cursor back to the cell containing
+<code>print('Hello World!')</code> and click the plus sign in the header
+bar to create a new cell underneath of type ‘code’. This is where we
+will start typing and running the animals code.</li>
 </ul>
 </div>
 <div class="section level2">
@@ -1184,8 +1256,8 @@ explanation of how you would do it with your preferred technologies and
 packages. e.g. “Explain how to filter a DataFrame in Python to include
 only species with more than 100 observations, and then plot
 hindfoot_length vs weight colored by species using MatplotLib.” Use this
-explanation to create the code for the plot and run it in your jupyter
-notebook.</p></li>
+explanation to create the code for the plot and run it in the empty code
+cell of your jupyter notebook.</p></li>
 <li><p>Take the code generated in the our example (plotting
 hindfoot_length vs weight) and ask AI: “Explain what each line of this
 Python code does and why it is needed.” Try iteratively refining
@@ -1202,39 +1274,39 @@ example, an analogy, or reference documentation.</p></li>
 <p><strong>Scenario</strong>: A researcher has written the following
 Python code to plot weight vs hindfoot length by species using
 Matplotlib. When they try to run it, the code fails with an error.</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="co"># Load the data</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="co"># Count observations per species</span></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a>species_counts <span class="op">=</span> df[<span class="st">"species_id"</span>].value_counts()</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1" aria-label="code-block-1-10"></a><span class="co"># Keep only species with &gt;100 observations</span></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1" aria-label="code-block-1-11"></a>valid_species <span class="op">=</span> species_counts[species_counts <span class="op">&gt;</span> <span class="dv">100</span>].index</span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1" aria-label="code-block-1-12"></a>df_filtered <span class="op">=</span> df[df[<span class="st">"species_id"</span>].isin(valid_species)]</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1" aria-label="code-block-1-13"></a></span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1" aria-label="code-block-1-14"></a><span class="co"># Create the plot</span></span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1" aria-label="code-block-1-15"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1" aria-label="code-block-1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17" tabindex="-1" aria-label="code-block-1-17"></a><span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(<span class="st">"species_id"</span>):</span>
-<span id="cb1-18"><a href="#cb1-18" tabindex="-1" aria-label="code-block-1-18"></a>    plt.scatter(</span>
-<span id="cb1-19"><a href="#cb1-19" tabindex="-1" aria-label="code-block-1-19"></a>        group[<span class="st">"weight"</span>],</span>
-<span id="cb1-20"><a href="#cb1-20" tabindex="-1" aria-label="code-block-1-20"></a>        group[<span class="st">"hindfoot_lenght"</span>],</span>
-<span id="cb1-21"><a href="#cb1-21" tabindex="-1" aria-label="code-block-1-21"></a>        label<span class="op">=</span>species,</span>
-<span id="cb1-22"><a href="#cb1-22" tabindex="-1" aria-label="code-block-1-22"></a>        alpha<span class="op">=</span><span class="fl">0.7</span></span>
-<span id="cb1-23"><a href="#cb1-23" tabindex="-1" aria-label="code-block-1-23"></a>    )</span>
-<span id="cb1-24"><a href="#cb1-24" tabindex="-1" aria-label="code-block-1-24"></a></span>
-<span id="cb1-25"><a href="#cb1-25" tabindex="-1" aria-label="code-block-1-25"></a>plt.xlabel(<span class="st">"Weight"</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" tabindex="-1" aria-label="code-block-1-26"></a>plt.ylabel(<span class="st">"Hindfoot Length"</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" tabindex="-1" aria-label="code-block-1-27"></a>plt.title(<span class="st">"Hindfoot Length vs Weight (Species with &gt;100 Observations)"</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" tabindex="-1" aria-label="code-block-1-28"></a>plt.legend(title<span class="op">=</span><span class="st">"Species ID"</span>)</span>
-<span id="cb1-29"><a href="#cb1-29" tabindex="-1" aria-label="code-block-1-29"></a>plt.tight_layout()</span>
-<span id="cb1-30"><a href="#cb1-30" tabindex="-1" aria-label="code-block-1-30"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="co"># Load the data</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a><span class="co"># Count observations per species</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a>species_counts <span class="op">=</span> df[<span class="st">"species_id"</span>].value_counts()</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a><span class="co"># Keep only species with &gt;100 observations</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a>valid_species <span class="op">=</span> species_counts[species_counts <span class="op">&gt;</span> <span class="dv">100</span>].index</span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1" aria-label="code-block-4-12"></a>df_filtered <span class="op">=</span> df[df[<span class="st">"species_id"</span>].isin(valid_species)]</span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1" aria-label="code-block-4-13"></a></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1" aria-label="code-block-4-14"></a><span class="co"># Create the plot</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1" aria-label="code-block-4-15"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1" aria-label="code-block-4-16"></a></span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1" aria-label="code-block-4-17"></a><span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(<span class="st">"species_id"</span>):</span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1" aria-label="code-block-4-18"></a>    plt.scatter(</span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1" aria-label="code-block-4-19"></a>        group[<span class="st">"weight"</span>],</span>
+<span id="cb4-20"><a href="#cb4-20" tabindex="-1" aria-label="code-block-4-20"></a>        group[<span class="st">"hindfoot_lenght"</span>],</span>
+<span id="cb4-21"><a href="#cb4-21" tabindex="-1" aria-label="code-block-4-21"></a>        label<span class="op">=</span>species,</span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1" aria-label="code-block-4-22"></a>        alpha<span class="op">=</span><span class="fl">0.7</span></span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1" aria-label="code-block-4-23"></a>    )</span>
+<span id="cb4-24"><a href="#cb4-24" tabindex="-1" aria-label="code-block-4-24"></a></span>
+<span id="cb4-25"><a href="#cb4-25" tabindex="-1" aria-label="code-block-4-25"></a>plt.xlabel(<span class="st">"Weight"</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" tabindex="-1" aria-label="code-block-4-26"></a>plt.ylabel(<span class="st">"Hindfoot Length"</span>)</span>
+<span id="cb4-27"><a href="#cb4-27" tabindex="-1" aria-label="code-block-4-27"></a>plt.title(<span class="st">"Hindfoot Length vs Weight (Species with &gt;100 Observations)"</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" tabindex="-1" aria-label="code-block-4-28"></a>plt.legend(title<span class="op">=</span><span class="st">"Species ID"</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" tabindex="-1" aria-label="code-block-4-29"></a>plt.tight_layout()</span>
+<span id="cb4-30"><a href="#cb4-30" tabindex="-1" aria-label="code-block-4-30"></a>plt.show()</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1273,39 +1345,39 @@ inconsistencies.</p>
 <p>The code below contains a different bug. Run the code, use AI to help
 you debug it, then apply the fix and verify that the code runs as
 expected.</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a><span class="co"># Load the data</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animal.csv"</span>)</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a><span class="co"># Count observations per species</span></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a>species_counts <span class="op">=</span> df[<span class="st">"species_id"</span>].value_counts()</span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1" aria-label="code-block-3-9"></a></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1" aria-label="code-block-3-10"></a><span class="co"># Keep only species with &gt;100 observations</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1" aria-label="code-block-3-11"></a>valid_species <span class="op">=</span> species_counts[species_counts <span class="op">&gt;</span> <span class="dv">100</span>].index</span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1" aria-label="code-block-3-12"></a>df_filtered <span class="op">=</span> df[df[<span class="st">"species_id"</span>].isin(valid_species)]</span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1" aria-label="code-block-3-13"></a></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1" aria-label="code-block-3-14"></a><span class="co"># Create the plot</span></span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1" aria-label="code-block-3-15"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1" aria-label="code-block-3-16"></a></span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1" aria-label="code-block-3-17"></a><span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(<span class="st">"species_id"</span>):</span>
-<span id="cb3-18"><a href="#cb3-18" tabindex="-1" aria-label="code-block-3-18"></a>    plt.scatter(</span>
-<span id="cb3-19"><a href="#cb3-19" tabindex="-1" aria-label="code-block-3-19"></a>        group[<span class="st">"weight"</span>],</span>
-<span id="cb3-20"><a href="#cb3-20" tabindex="-1" aria-label="code-block-3-20"></a>        group[<span class="st">"hindfoot_length"</span>],</span>
-<span id="cb3-21"><a href="#cb3-21" tabindex="-1" aria-label="code-block-3-21"></a>        label<span class="op">=</span>species,</span>
-<span id="cb3-22"><a href="#cb3-22" tabindex="-1" aria-label="code-block-3-22"></a>        alpha<span class="op">=</span><span class="fl">0.7</span></span>
-<span id="cb3-23"><a href="#cb3-23" tabindex="-1" aria-label="code-block-3-23"></a>    )</span>
-<span id="cb3-24"><a href="#cb3-24" tabindex="-1" aria-label="code-block-3-24"></a></span>
-<span id="cb3-25"><a href="#cb3-25" tabindex="-1" aria-label="code-block-3-25"></a>plt.xlabel(<span class="st">"Weight"</span>)</span>
-<span id="cb3-26"><a href="#cb3-26" tabindex="-1" aria-label="code-block-3-26"></a>plt.ylabel(<span class="st">"Hindfoot Length"</span>)</span>
-<span id="cb3-27"><a href="#cb3-27" tabindex="-1" aria-label="code-block-3-27"></a>plt.title(<span class="st">"Hindfoot Length vs Weight (Species with &gt;100 Observations)"</span>)</span>
-<span id="cb3-28"><a href="#cb3-28" tabindex="-1" aria-label="code-block-3-28"></a>plt.legend(title<span class="op">=</span><span class="st">"Species ID"</span>)</span>
-<span id="cb3-29"><a href="#cb3-29" tabindex="-1" aria-label="code-block-3-29"></a>plt.tight_layout()</span>
-<span id="cb3-30"><a href="#cb3-30" tabindex="-1" aria-label="code-block-3-30"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a><span class="co"># Load the data</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animal.csv"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1" aria-label="code-block-6-7"></a><span class="co"># Count observations per species</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1" aria-label="code-block-6-8"></a>species_counts <span class="op">=</span> df[<span class="st">"species_id"</span>].value_counts()</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1" aria-label="code-block-6-9"></a></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1" aria-label="code-block-6-10"></a><span class="co"># Keep only species with &gt;100 observations</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1" aria-label="code-block-6-11"></a>valid_species <span class="op">=</span> species_counts[species_counts <span class="op">&gt;</span> <span class="dv">100</span>].index</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1" aria-label="code-block-6-12"></a>df_filtered <span class="op">=</span> df[df[<span class="st">"species_id"</span>].isin(valid_species)]</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1" aria-label="code-block-6-13"></a></span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1" aria-label="code-block-6-14"></a><span class="co"># Create the plot</span></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1" aria-label="code-block-6-15"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1" aria-label="code-block-6-16"></a></span>
+<span id="cb6-17"><a href="#cb6-17" tabindex="-1" aria-label="code-block-6-17"></a><span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(<span class="st">"species_id"</span>):</span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1" aria-label="code-block-6-18"></a>    plt.scatter(</span>
+<span id="cb6-19"><a href="#cb6-19" tabindex="-1" aria-label="code-block-6-19"></a>        group[<span class="st">"weight"</span>],</span>
+<span id="cb6-20"><a href="#cb6-20" tabindex="-1" aria-label="code-block-6-20"></a>        group[<span class="st">"hindfoot_length"</span>],</span>
+<span id="cb6-21"><a href="#cb6-21" tabindex="-1" aria-label="code-block-6-21"></a>        label<span class="op">=</span>species,</span>
+<span id="cb6-22"><a href="#cb6-22" tabindex="-1" aria-label="code-block-6-22"></a>        alpha<span class="op">=</span><span class="fl">0.7</span></span>
+<span id="cb6-23"><a href="#cb6-23" tabindex="-1" aria-label="code-block-6-23"></a>    )</span>
+<span id="cb6-24"><a href="#cb6-24" tabindex="-1" aria-label="code-block-6-24"></a></span>
+<span id="cb6-25"><a href="#cb6-25" tabindex="-1" aria-label="code-block-6-25"></a>plt.xlabel(<span class="st">"Weight"</span>)</span>
+<span id="cb6-26"><a href="#cb6-26" tabindex="-1" aria-label="code-block-6-26"></a>plt.ylabel(<span class="st">"Hindfoot Length"</span>)</span>
+<span id="cb6-27"><a href="#cb6-27" tabindex="-1" aria-label="code-block-6-27"></a>plt.title(<span class="st">"Hindfoot Length vs Weight (Species with &gt;100 Observations)"</span>)</span>
+<span id="cb6-28"><a href="#cb6-28" tabindex="-1" aria-label="code-block-6-28"></a>plt.legend(title<span class="op">=</span><span class="st">"Species ID"</span>)</span>
+<span id="cb6-29"><a href="#cb6-29" tabindex="-1" aria-label="code-block-6-29"></a>plt.tight_layout()</span>
+<span id="cb6-30"><a href="#cb6-30" tabindex="-1" aria-label="code-block-6-30"></a>plt.show()</span></code></pre>
 </div>
 </div>
 </div>
@@ -1315,7 +1387,7 @@ expected.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1358,23 +1430,23 @@ risk, allowing you to spend your time and effort focusing on the intent
 of the analysis rather than the programming language’s syntax.</p>
 <p>For example let’s try entering the prompt: “Generate boilerplate code
 to load a csv file and create a histogram of one column”</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a><span class="co"># Load the CSV file</span></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data.csv"</span>)</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1" aria-label="code-block-5-7"></a><span class="co"># Create a histogram for a single column</span></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1" aria-label="code-block-5-8"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1" aria-label="code-block-5-9"></a>plt.hist(df[<span class="st">"column_name"</span>], bins<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a>plt.xlabel(<span class="st">"Column Values"</span>)</span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a>plt.ylabel(<span class="st">"Frequency"</span>)</span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1" aria-label="code-block-5-12"></a>plt.title(<span class="st">"Histogram of Column Name"</span>)</span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1" aria-label="code-block-5-13"></a>plt.tight_layout()</span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1" aria-label="code-block-5-14"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a><span class="co"># Load the CSV file</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data.csv"</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1" aria-label="code-block-8-7"></a><span class="co"># Create a histogram for a single column</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1" aria-label="code-block-8-8"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1" aria-label="code-block-8-9"></a>plt.hist(df[<span class="st">"column_name"</span>], bins<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1" aria-label="code-block-8-10"></a>plt.xlabel(<span class="st">"Column Values"</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1" aria-label="code-block-8-11"></a>plt.ylabel(<span class="st">"Frequency"</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1" aria-label="code-block-8-12"></a>plt.title(<span class="st">"Histogram of Column Name"</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1" aria-label="code-block-8-13"></a>plt.tight_layout()</span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1" aria-label="code-block-8-14"></a>plt.show()</span></code></pre>
 </div>
 <p>When you have the boilerplate code, you can edit it to give the
 desired outcome. For example, to produce a histogram of weight:</p>
@@ -1387,23 +1459,23 @@ you expect</li>
 <li>Change the column_name to <code>weight</code>
 </li>
 </ul>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a><span class="co"># Load the CSV file</span></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1" aria-label="code-block-6-7"></a><span class="co"># Create a histogram for a single column</span></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1" aria-label="code-block-6-8"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1" aria-label="code-block-6-9"></a>plt.hist(df[<span class="st">"weight"</span>], bins<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1" aria-label="code-block-6-10"></a>plt.xlabel(<span class="st">"Column Values"</span>)</span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1" aria-label="code-block-6-11"></a>plt.ylabel(<span class="st">"Frequency"</span>)</span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1" aria-label="code-block-6-12"></a>plt.title(<span class="st">"Histogram of Column Name"</span>)</span>
-<span id="cb6-13"><a href="#cb6-13" tabindex="-1" aria-label="code-block-6-13"></a>plt.tight_layout()</span>
-<span id="cb6-14"><a href="#cb6-14" tabindex="-1" aria-label="code-block-6-14"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="co"># Load the CSV file</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"animals.csv"</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1" aria-label="code-block-9-7"></a><span class="co"># Create a histogram for a single column</span></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1" aria-label="code-block-9-8"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1" aria-label="code-block-9-9"></a>plt.hist(df[<span class="st">"weight"</span>], bins<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1" aria-label="code-block-9-10"></a>plt.xlabel(<span class="st">"Column Values"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1" aria-label="code-block-9-11"></a>plt.ylabel(<span class="st">"Frequency"</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1" aria-label="code-block-9-12"></a>plt.title(<span class="st">"Histogram of Column Name"</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1" aria-label="code-block-9-13"></a>plt.tight_layout()</span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1" aria-label="code-block-9-14"></a>plt.show()</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1423,28 +1495,28 @@ inputs the function takes, and what the function outputs.</p>
 Google style , Sphinx style , NumPy style , and Epytext style. If the
 code you’re working with follows a particular style, you can specify the
 style of docstring in your prompt.</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="kw">def</span> plot_species_scatter(df, species_col<span class="op">=</span><span class="st">"species_id"</span>, x_col<span class="op">=</span><span class="st">"weight"</span>, y_col<span class="op">=</span><span class="st">"hindfoot_length"</span>, min_count<span class="op">=</span><span class="dv">100</span>):</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>    df_filtered <span class="op">=</span> filter_species_by_count(df, species_col, min_count)</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a>    </span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a>    </span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a>    <span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(species_col):</span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1" aria-label="code-block-7-7"></a>        plt.scatter(</span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1" aria-label="code-block-7-8"></a>            group[x_col],</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1" aria-label="code-block-7-9"></a>            group[y_col],</span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1" aria-label="code-block-7-10"></a>            label<span class="op">=</span>species,</span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1" aria-label="code-block-7-11"></a>            alpha<span class="op">=</span><span class="fl">0.7</span></span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1" aria-label="code-block-7-12"></a>        )</span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1" aria-label="code-block-7-13"></a>    </span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1" aria-label="code-block-7-14"></a>    plt.xlabel(x_col.capitalize())</span>
-<span id="cb7-15"><a href="#cb7-15" tabindex="-1" aria-label="code-block-7-15"></a>    plt.ylabel(y_col.replace(<span class="st">"_"</span>, <span class="st">" "</span>).capitalize())</span>
-<span id="cb7-16"><a href="#cb7-16" tabindex="-1" aria-label="code-block-7-16"></a>    plt.title(<span class="ss">f"</span><span class="sc">{</span>y_col<span class="sc">.</span>replace(<span class="st">'_'</span>, <span class="st">' '</span>)<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>x_col<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> (Species with &gt;</span><span class="sc">{</span>min_count<span class="sc">}</span><span class="ss"> Observations)"</span>)</span>
-<span id="cb7-17"><a href="#cb7-17" tabindex="-1" aria-label="code-block-7-17"></a>    plt.legend(title<span class="op">=</span>species_col)</span>
-<span id="cb7-18"><a href="#cb7-18" tabindex="-1" aria-label="code-block-7-18"></a>    plt.tight_layout()</span>
-<span id="cb7-19"><a href="#cb7-19" tabindex="-1" aria-label="code-block-7-19"></a>    plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="kw">def</span> plot_species_scatter(df, species_col<span class="op">=</span><span class="st">"species_id"</span>, x_col<span class="op">=</span><span class="st">"weight"</span>, y_col<span class="op">=</span><span class="st">"hindfoot_length"</span>, min_count<span class="op">=</span><span class="dv">100</span>):</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a>    df_filtered <span class="op">=</span> filter_species_by_count(df, species_col, min_count)</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>    </span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a>    </span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a>    <span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(species_col):</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1" aria-label="code-block-10-7"></a>        plt.scatter(</span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1" aria-label="code-block-10-8"></a>            group[x_col],</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1" aria-label="code-block-10-9"></a>            group[y_col],</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1" aria-label="code-block-10-10"></a>            label<span class="op">=</span>species,</span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1" aria-label="code-block-10-11"></a>            alpha<span class="op">=</span><span class="fl">0.7</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1" aria-label="code-block-10-12"></a>        )</span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1" aria-label="code-block-10-13"></a>    </span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1" aria-label="code-block-10-14"></a>    plt.xlabel(x_col.capitalize())</span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1" aria-label="code-block-10-15"></a>    plt.ylabel(y_col.replace(<span class="st">"_"</span>, <span class="st">" "</span>).capitalize())</span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1" aria-label="code-block-10-16"></a>    plt.title(<span class="ss">f"</span><span class="sc">{</span>y_col<span class="sc">.</span>replace(<span class="st">'_'</span>, <span class="st">' '</span>)<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>x_col<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> (Species with &gt;</span><span class="sc">{</span>min_count<span class="sc">}</span><span class="ss"> Observations)"</span>)</span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1" aria-label="code-block-10-17"></a>    plt.legend(title<span class="op">=</span>species_col)</span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1" aria-label="code-block-10-18"></a>    plt.tight_layout()</span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1" aria-label="code-block-10-19"></a>    plt.show()</span></code></pre>
 </div>
 <div id="generate-a-docstring" class="callout challenge">
 <div class="callout-square">
@@ -1471,55 +1543,55 @@ help you understand what the function does.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Prompt: Generate a docstring for the following function:</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="kw">def</span> plot_species_scatter(df, species_col<span class="op">=</span><span class="st">"species_id"</span>, x_col<span class="op">=</span><span class="st">"weight"</span>, y_col<span class="op">=</span><span class="st">"hindfoot_length"</span>, min_count<span class="op">=</span><span class="dv">100</span>):</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a>    df_filtered <span class="op">=</span> filter_species_by_count(df, species_col, min_count)</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a>    </span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a>    </span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a>    <span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(species_col):</span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1" aria-label="code-block-8-7"></a>        plt.scatter(</span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1" aria-label="code-block-8-8"></a>            group[x_col],</span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1" aria-label="code-block-8-9"></a>            group[y_col],</span>
-<span id="cb8-10"><a href="#cb8-10" tabindex="-1" aria-label="code-block-8-10"></a>            label<span class="op">=</span>species,</span>
-<span id="cb8-11"><a href="#cb8-11" tabindex="-1" aria-label="code-block-8-11"></a>            alpha<span class="op">=</span><span class="fl">0.7</span></span>
-<span id="cb8-12"><a href="#cb8-12" tabindex="-1" aria-label="code-block-8-12"></a>        )</span>
-<span id="cb8-13"><a href="#cb8-13" tabindex="-1" aria-label="code-block-8-13"></a>    </span>
-<span id="cb8-14"><a href="#cb8-14" tabindex="-1" aria-label="code-block-8-14"></a>    plt.xlabel(x_col.capitalize())</span>
-<span id="cb8-15"><a href="#cb8-15" tabindex="-1" aria-label="code-block-8-15"></a>    plt.ylabel(y_col.replace(<span class="st">"_"</span>, <span class="st">" "</span>).capitalize())</span>
-<span id="cb8-16"><a href="#cb8-16" tabindex="-1" aria-label="code-block-8-16"></a>    plt.title(<span class="ss">f"</span><span class="sc">{</span>y_col<span class="sc">.</span>replace(<span class="st">'_'</span>, <span class="st">' '</span>)<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>x_col<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> (Species with &gt;</span><span class="sc">{</span>min_count<span class="sc">}</span><span class="ss"> Observations)"</span>)</span>
-<span id="cb8-17"><a href="#cb8-17" tabindex="-1" aria-label="code-block-8-17"></a>    plt.legend(title<span class="op">=</span>species_col)</span>
-<span id="cb8-18"><a href="#cb8-18" tabindex="-1" aria-label="code-block-8-18"></a>    plt.tight_layout()</span>
-<span id="cb8-19"><a href="#cb8-19" tabindex="-1" aria-label="code-block-8-19"></a>    plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="kw">def</span> plot_species_scatter(df, species_col<span class="op">=</span><span class="st">"species_id"</span>, x_col<span class="op">=</span><span class="st">"weight"</span>, y_col<span class="op">=</span><span class="st">"hindfoot_length"</span>, min_count<span class="op">=</span><span class="dv">100</span>):</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a>    df_filtered <span class="op">=</span> filter_species_by_count(df, species_col, min_count)</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a>    </span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1" aria-label="code-block-11-4"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1" aria-label="code-block-11-5"></a>    </span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1" aria-label="code-block-11-6"></a>    <span class="cf">for</span> species, group <span class="kw">in</span> df_filtered.groupby(species_col):</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1" aria-label="code-block-11-7"></a>        plt.scatter(</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1" aria-label="code-block-11-8"></a>            group[x_col],</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1" aria-label="code-block-11-9"></a>            group[y_col],</span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1" aria-label="code-block-11-10"></a>            label<span class="op">=</span>species,</span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1" aria-label="code-block-11-11"></a>            alpha<span class="op">=</span><span class="fl">0.7</span></span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1" aria-label="code-block-11-12"></a>        )</span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1" aria-label="code-block-11-13"></a>    </span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1" aria-label="code-block-11-14"></a>    plt.xlabel(x_col.capitalize())</span>
+<span id="cb11-15"><a href="#cb11-15" tabindex="-1" aria-label="code-block-11-15"></a>    plt.ylabel(y_col.replace(<span class="st">"_"</span>, <span class="st">" "</span>).capitalize())</span>
+<span id="cb11-16"><a href="#cb11-16" tabindex="-1" aria-label="code-block-11-16"></a>    plt.title(<span class="ss">f"</span><span class="sc">{</span>y_col<span class="sc">.</span>replace(<span class="st">'_'</span>, <span class="st">' '</span>)<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>x_col<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> (Species with &gt;</span><span class="sc">{</span>min_count<span class="sc">}</span><span class="ss"> Observations)"</span>)</span>
+<span id="cb11-17"><a href="#cb11-17" tabindex="-1" aria-label="code-block-11-17"></a>    plt.legend(title<span class="op">=</span>species_col)</span>
+<span id="cb11-18"><a href="#cb11-18" tabindex="-1" aria-label="code-block-11-18"></a>    plt.tight_layout()</span>
+<span id="cb11-19"><a href="#cb11-19" tabindex="-1" aria-label="code-block-11-19"></a>    plt.show()</span></code></pre>
 </div>
 <p>Example AI - generated docstring:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a>    <span class="co">"""</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="co">    Creates a scatter plot of two numerical variables for species with a minimum number of observations.</span></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a><span class="co">    </span></span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="co">    The function filters the input DataFrame to include only species that have more than `min_count`</span></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a><span class="co">    observations, then plots `x_col` vs `y_col` for each species as separate scatter points with a legend.</span></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a></span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1" aria-label="code-block-9-7"></a><span class="co">    Parameters:</span></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1" aria-label="code-block-9-8"></a><span class="co">        df (pd.DataFrame): The input DataFrame containing the data.</span></span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1" aria-label="code-block-9-9"></a><span class="co">        species_col (str, optional): Column name representing species IDs. Defaults to "species_id".</span></span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1" aria-label="code-block-9-10"></a><span class="co">        x_col (str, optional): Column name for the x-axis values. Defaults to "weight".</span></span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1" aria-label="code-block-9-11"></a><span class="co">        y_col (str, optional): Column name for the y-axis values. Defaults to "hindfoot_length".</span></span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1" aria-label="code-block-9-12"></a><span class="co">        min_count (int, optional): Minimum number of observations required for a species to be included. Defaults to 100.</span></span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1" aria-label="code-block-9-13"></a></span>
-<span id="cb9-14"><a href="#cb9-14" tabindex="-1" aria-label="code-block-9-14"></a><span class="co">    Returns:</span></span>
-<span id="cb9-15"><a href="#cb9-15" tabindex="-1" aria-label="code-block-9-15"></a><span class="co">        None. Displays a matplotlib scatter plot.</span></span>
-<span id="cb9-16"><a href="#cb9-16" tabindex="-1" aria-label="code-block-9-16"></a><span class="co">    </span></span>
-<span id="cb9-17"><a href="#cb9-17" tabindex="-1" aria-label="code-block-9-17"></a><span class="co">    Example:</span></span>
-<span id="cb9-18"><a href="#cb9-18" tabindex="-1" aria-label="code-block-9-18"></a><span class="co">        &gt;&gt;&gt; plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hindfoot_length", min_count=50)</span></span>
-<span id="cb9-19"><a href="#cb9-19" tabindex="-1" aria-label="code-block-9-19"></a><span class="co">    """</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a>    <span class="co">"""</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a><span class="co">    Creates a scatter plot of two numerical variables for species with a minimum number of observations.</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a><span class="co">    </span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1" aria-label="code-block-12-4"></a><span class="co">    The function filters the input DataFrame to include only species that have more than `min_count`</span></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1" aria-label="code-block-12-5"></a><span class="co">    observations, then plots `x_col` vs `y_col` for each species as separate scatter points with a legend.</span></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1" aria-label="code-block-12-6"></a></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1" aria-label="code-block-12-7"></a><span class="co">    Parameters:</span></span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1" aria-label="code-block-12-8"></a><span class="co">        df (pd.DataFrame): The input DataFrame containing the data.</span></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1" aria-label="code-block-12-9"></a><span class="co">        species_col (str, optional): Column name representing species IDs. Defaults to "species_id".</span></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1" aria-label="code-block-12-10"></a><span class="co">        x_col (str, optional): Column name for the x-axis values. Defaults to "weight".</span></span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1" aria-label="code-block-12-11"></a><span class="co">        y_col (str, optional): Column name for the y-axis values. Defaults to "hindfoot_length".</span></span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1" aria-label="code-block-12-12"></a><span class="co">        min_count (int, optional): Minimum number of observations required for a species to be included. Defaults to 100.</span></span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1" aria-label="code-block-12-13"></a></span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1" aria-label="code-block-12-14"></a><span class="co">    Returns:</span></span>
+<span id="cb12-15"><a href="#cb12-15" tabindex="-1" aria-label="code-block-12-15"></a><span class="co">        None. Displays a matplotlib scatter plot.</span></span>
+<span id="cb12-16"><a href="#cb12-16" tabindex="-1" aria-label="code-block-12-16"></a><span class="co">    </span></span>
+<span id="cb12-17"><a href="#cb12-17" tabindex="-1" aria-label="code-block-12-17"></a><span class="co">    Example:</span></span>
+<span id="cb12-18"><a href="#cb12-18" tabindex="-1" aria-label="code-block-12-18"></a><span class="co">        &gt;&gt;&gt; plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hindfoot_length", min_count=50)</span></span>
+<span id="cb12-19"><a href="#cb12-19" tabindex="-1" aria-label="code-block-12-19"></a><span class="co">    """</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -2191,7 +2263,7 @@ guidelines</strong>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Your guidelines could include:</p>
 <ul>
@@ -2344,8 +2416,8 @@ any links that you are not going to use.
   "url": "https://Southampton-RSG-Training.github.io/coding-with-ai/instructor/aio.html",
   "identifier": "https://Southampton-RSG-Training.github.io/coding-with-ai/instructor/aio.html",
   "dateCreated": "2026-09-01",
-  "dateModified": "2026-07-02",
-  "datePublished": "2026-07-02"
+  "dateModified": "2026-07-03",
+  "datePublished": "2026-07-03"
 }
 
   </script><script>
