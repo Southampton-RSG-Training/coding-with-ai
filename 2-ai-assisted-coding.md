@@ -491,7 +491,7 @@ def plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hi
 
 Copy and paste `plot_species_scatter` function from above into your AI tool and ask the AI to generate a docstring for the function.
 
-If you know Python, verify that the docstring accurately represents what the code does.  More specifically, you could check that the listed parameters match the function’s arguments and confirm that any descriptions of functionality align with the actual code logic.  
+If you know Python, verify that the docstring accurately represents what the code does.  More specifically, check that the listed parameters match the function’s arguments and confirm that any descriptions of functionality align with the actual code logic.  
 
 If you don't know Python, read through the docstring and use it to help you understand what the function does. 
 
@@ -592,11 +592,9 @@ For training on IDE-integrated AI assistants see [Developing Research Software w
 ::::::::::::::::::::::::::::::::::::: keypoints 
 - Delegating full software development to AI without understanding the code introduces technical, ethical, and reliability risks.  
 - AI tools should function as assistants, not autonomous developers, supporting learning, debugging, and code generation.  
-- AI can be used as a reference tool to locate, summarise, and clarify technical information more efficiently than traditional search.  
 - Researchers can use AI to explain unfamiliar code line by line, helping them understand programming constructs and libraries.  
 - AI can assist with debugging by explaining errors and suggesting possible fixes, but researchers should independently verify solutions.  
 - AI is useful for generating boilerplate code, performing basic refactoring, and drafting technical documentation, saving time on repetitive tasks.  
-- AI can translate code between programming languages, but outputs must be reviewed for correctness, compatibility, and reproducibility.  
 - Integrating AI into IDEs offers contextual suggestions and autocompletion, but carries risks of over-reliance, limited explanation, and potential privacy concerns.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
