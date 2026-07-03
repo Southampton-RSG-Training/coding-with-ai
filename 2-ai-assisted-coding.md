@@ -87,11 +87,49 @@ She opens an AI chat interface (such as ChatGPT, Microsoft Copilot or Claude) an
 
 'Generate some code to create a plot with weight on the x axis and hindfoot_length on the y axis, colour by species_id. Include only species with over 100 observations. The data is in a csv file called animals.csv.  Use Python and Matplotlib.' 
 
-![](fig/animals_plot_code_chatgpt.png){alt="Screenshot of chatGPT prompt and generated code"}
+
+Sally's AI-generated code:
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load data
+df = pd.read_csv("animals.csv")
+
+# Drop rows with missing values in relevant columns
+df = df.dropna(subset=["weight", "hindfoot_length", "species_id"])
+
+# Keep only species with > 100 observations
+species_counts = df["species_id"].value_counts()
+valid_species = species_counts[species_counts > 100].index
+df_filtered = df[df["species_id"].isin(valid_species)]
+
+# Create plot
+plt.figure(figsize=(10, 6))
+
+for species in df_filtered["species_id"].unique():
+    subset = df_filtered[df_filtered["species_id"] == species]
+    plt.scatter(
+        subset["weight"],
+        subset["hindfoot_length"],
+        s=10,
+        alpha=0.5,
+        label=str(species)
+    )
+
+plt.xlabel("Weight")
+plt.ylabel("Hindfoot length")
+plt.title("Weight vs Hindfoot Length by Species (n > 100)")
+plt.legend(title="Species ID", bbox_to_anchor=(1.05, 1), loc="upper left")
+plt.tight_layout()
+
+plt.show()
+```
 
 She could then run this code and produce the plot.
 
-However, she realises she could go one step further and upload the dataset to the AI chat so that the analysis can actually be run within the AI tool (depending on the features that you have access to with your AI tool). **Note: we can only do this because this dataset is publicly available. Don't upload any private or sensitive data.**
+She then realises she could go one step further and upload the dataset to the AI chat so that the analysis can actually be run within the AI tool (depending on the features that you have access to with your AI tool). **Note: we can only do this because this dataset is publicly available. Don't upload any private or sensitive data.**
 
 ![](fig/animals_plot_chatgpt.png){alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot"}
 
@@ -213,12 +251,13 @@ AI tools like ChatGPT can serve as an interactive reference and tutor, helping y
 
 ## Up-skill rather than De-skill with AI
 
-1. Rather than asking AI to actually generate the code for the weight vs hindfoot length plot, instead ask for a step-by-step explanation of how you would do it with your preferred technologies and packages. 
-e.g. “Explain how to filter a DataFrame in Python to include only species with more than 100 observations, and then plot hindfoot_length vs weight colored by species using MatplotLib.” Use this explanation to create the code for the plot and run it in the empty code cell of your jupyter notebook.
+Rather than asking AI to actually generate the code for the weight vs hindfoot length plot, instead ask for a step-by-step explanation of how you would do it with your preferred technologies and packages. 
 
-2. Take the code generated in the our example (plotting hindfoot_length vs weight) and ask AI:
-“Explain what each line of this Python code does and why it is needed.”
-Try iteratively refining questions: if a term or method is still unclear, ask AI to provide an example, an analogy, or reference documentation.
+e.g. *“Explain how to filter a DataFrame in Python to include only species with more than 100 observations, and then plot hindfoot_length vs weight coloured by species using MatplotLib.”* 
+
+Use this explanation to create the code for the plot and run it in the empty code cell of your jupyter notebook. 
+
+Hint: To help you understand what the code does, ask AI to explain it to you line by line and ask follow up questions if anything is unclear. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -226,7 +265,7 @@ Try iteratively refining questions: if a term or method is still unclear, ask AI
 ## Debugging and Error Analysis
 
 **Scenario**:
-A researcher has written the following Python code to plot weight vs hindfoot length by species using Matplotlib. When they try to run it, the code fails with an error. 
+Sally has realised it's better long-term if she learns to code herself.  She's written the following Python code to plot weight vs hindfoot length by species using Matplotlib, but when she tries to run it, the code fails with an error. 
 
 ```python
 import pandas as pd
@@ -268,11 +307,11 @@ KeyError: 'hindfoot_lenght'
 
 Try running the code above to check you get the same error.
 
-Rather than asking AI to “fix the code,” the researcher could use it as a debugging assistant. 
+Rather than asking AI to “fix the code,” Sally decides to use it as a debugging assistant to help her understand the error properly. 
 
-For example, the researcher could enter the prompt “I am getting a KeyError: 'hindfoot_lenght' when running the following Python code that uses pandas and matplotlib. Can you help me understand what this error means and how to diagnose it?” 
+She enters the prompt “I am getting a KeyError: 'hindfoot_lenght' when running the following Python code that uses pandas and matplotlib. Can you help me understand what this error means and how to diagnose it?” 
 
-This wording of the prompt will result in explanation rather than just a correction and substitution of the code and will help the researcher learn how to diagnose similar problems in future rather than becoming reliant on AI. 
+This wording of the prompt will result in explanation rather than just a correction and substitution of the code and will help Sally learn how to diagnose similar problems in future rather than becoming reliant on AI. 
 
 Try it out using your AI tool.
 
@@ -281,7 +320,7 @@ In this example, AI might explain that:
 - A KeyError in pandas means a column name does not exist
 - The issue is likely a mismatch between the dataset’s column names and those referenced in the code
 
-At this point, the researcher should verify this claim independently by inspecting the dataset's column names and checking for spelling inconsistencies.
+At this point, Sally verifies this claim independently by inspecting the dataset's column names and checking for spelling inconsistencies.
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -346,7 +385,7 @@ In this case the filename is misspelled as 'animal.csv' rather than 'animals.csv
 
 ### Boilerplate
 
-AI can be particularly useful for some coding tasks that are tedious and repetitive such as writing boilerplate code.
+AI can be particularly useful for some coding tasks that are tedious or repetitive such as writing boilerplate code.
 
 Boilerplate code is a term used to describe standard code structures that are repeated in multiple places with little variation. Examples of boilerplate code across a few different contexts include:
 
@@ -376,12 +415,22 @@ plt.tight_layout()
 plt.show()
 ```
 
-When you have the boilerplate code, you can edit it to give the desired outcome. For example, to produce a histogram of weight:
 
-- Copy and paste the boilerplate into your jupyter notebook
+When you have the boilerplate code, you can edit it to give the desired outcome. 
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Edit AI-Generated Boilerplate Code
+
+Edit the AI-generated boilerplate code above to produce a histogram of weight:
+
+- Copy and paste the boilerplate into a new code cell of your Jupyter notebook
 - Read through the generated boilerplate to make sure it's doing what you expect
 - Change the csv file name to `animals.csv`
 - Change the column_name to `weight`
+- Run the code to produce the histogram
+
+:::::::::::::::::::::::: solution 
 
 ```python
 import pandas as pd
@@ -399,16 +448,17 @@ plt.title("Histogram of Column Name")
 plt.tight_layout()
 plt.show()
 ```
-
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ### Documentation
 
-Writing thorough code documentation can be time-consuming, which is why many scripts are left undocumented and can be hard to understand later, either by others or by yourself. AI can help by generating documentation automatically, making it faster to produce clear, understandable explanations of your code.
+Writing thorough code documentation can be time-consuming.  This is a major reason why many scripts are left undocumented and are difficult to understand later, either by others or by yourself. AI can help by generating documentation automatically, making it faster to produce clear, understandable explanations of your code.
 
 For example, if we extract plotting code into a function like `plot_species_scatter`, we can use AI to generate a docstring for the function. A **docstring** in Python is a short note written at the start of a function that explains what it does, what inputs the function takes, and what the function outputs.
 
-Note that there are a few different styles of docstring for python: Google style , Sphinx style , NumPy style , and Epytext style. If the code you're working with follows a particular style, you can specify the style of docstring in your prompt.
+Note that there are a few different styles of docstring for python: Google style , Sphinx style , NumPy style, and Epytext style. If the code you're working with follows a particular style, you can specify the style of docstring in your prompt.
 
 
 ```python
