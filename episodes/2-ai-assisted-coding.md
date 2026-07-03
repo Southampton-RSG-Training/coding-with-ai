@@ -83,13 +83,15 @@ The email reads:
 
 Sally knows that Matplotlib is a plotting library in Python but she's not quite sure how to use it.  She gets the impression that David needs this plot quickly and doesn't think she has time to learn matplotlib fast enough, so she decides to ask AI to make the plot for her.
 
-She opens an AI chat interface (such as ChatGPT or Microsoft Copilot) and prompts the AI to:
+She opens an AI chat interface (such as ChatGPT, Microsoft Copilot or Claude) and prompts the AI to:
 
 'Generate some code to create a plot with weight on the x axis and hindfoot_length on the y axis, colour by species_id. Include only species with over 100 observations. The data is in a csv file called animals.csv.  Use Python and Matplotlib.' 
 
-She then runs this code and produces the 
+![](fig/animals_plot_code_chatgpt.png){alt="Screenshot of chatGPT prompt and generated code"}
 
-We could even go one step further and upload the dataset to the AI chat so that the analysis can actually be run within the AI tool (depending on the features that you have access to with your AI tool). **Note: we can only do this because this dataset is publicly available. Don't upload any private or sensitive data.**
+She could then run this code and produce the plot.
+
+However, she realises she could go one step further and upload the dataset to the AI chat so that the analysis can actually be run within the AI tool (depending on the features that you have access to with your AI tool). **Note: we can only do this because this dataset is publicly available. Don't upload any private or sensitive data.**
 
 ![](fig/animals_plot_chatgpt.png){alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot"}
 
@@ -140,7 +142,7 @@ To turn this off, click on your username in the lower left corner -> Settings ->
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-### Appropriate Roles for AI when Writing Research Code
+# Appropriate Roles for AI when Writing Research Code
 
 AI tools can be highly valuable when used correctly, as a tool to assist you with your research. The key principle is that they should function as assistants, not autonomous developers.
 
@@ -152,23 +154,47 @@ Appropriate uses of AI include:
 - Supporting you to write technical documentation. 
 - Helping to translate ideas into a starting implementation or prototype
 
-In the rest of this episode, we'll walk through these ways that AI can assist you with coding. 
+In the rest of this episode, we'll walk through these ways that AI can assist you with coding.  We'll work with the animals data Sally plotted and we'll run the code using Jupyter notebooks.  
 
-## Quick Overview of Jupyter Notebooks
+## Setting up: Data Download and Walkthrough of Jupyter Notebooks
 
-For this session, we'll run code chunks using Jupyter Notebooks and use the data from the portal dataset.
+First, download the data from here: [animals.csv](data/animals.csv).  
 
-First, download the data from here: [animals.csv](data/animals.csv)
+For this session, we'll run code chunks using Jupyter notebooks.
 
-- Open anaconda navigator and launch jupyter notebooks. 
-- Create a new folder 'animals_data_analysis'.
-- Navigate to this folder.
-- Drag and drop animals.csv into this folder.
-- Create a new jupyter notebook in this folder called 'animals_plots'.
-- Check that you can run code in your jupyter notebook 
+A Jupyter notebook is an interactive, web-based document that lets you run chunks of code, view their output, and mix in text and visualisations.
 
+You should have already installed Anaconda Navigator which includes a Jupyter Notebooks installation. 
 
+- Type 'Jupyter Notebook' into the search bar and click on the Jupyter Notebooks app to open it. (Alternatively, open Anaconda Navigator and open Jupyter Notebooks from there).  
+- Let's first have a look at the engine running Jupyter Notebooks.  Click **New** --> **Terminal**
 
+From the terminal you can check the version of python that your jupyter notebook will use:
+```bash
+python --version
+```
+
+You can also check which python packages are installed by default:
+```bash
+pip list
+```
+- Head back to the **Home** tab and create a new folder 'animals_data_analysis': **New** --> **New Folder** Select the new Untitled folder, click **Rename** and change the name to animals_data_analysis.
+- Click on the animals_data_analysis folder to open it (it will currently be empty).
+- Drag and drop animals.csv from your file explorer downloads into this folder.  Check the file is called 'animals.csv' exactly, rename the file if needed (e.g. if you've downloaded it more than once and it's called animals(1).csv).
+- Create a new Jupyter notebook in this folder called 'animals_plots': **New** --> **Python 3 (ipykernel)** A new Jupyter notebook called 'Untitled' will open automatically, click on the name 'Untitled' to rename the file to 'animals_plots'.  The file should have the file extension .ipynb which indicates it's a file of type Jupyter notebook.
+
+![](fig/empty_jupyter_notebook.png){alt="screenshot of an empty jupyter notebook"}
+
+- A Jupyter notebook consists of a sequence of cells.  These can be **code**, **markdown** (a plain-text formatting syntax that allows you to add elements like headers, bold text, and lists without using complex HTML code) or **raw** (displays content exactly as typed). Check that the cell type dropdown is set to code and type the code below in the cell.
+
+```python
+print('Hello World')
+```
+- Press the triangle in the header menu to run the code in the cell
+- A new cell will usually be created when you run the previous one. To add another cell manually click the plus sign in the header menu. To remove a cell, click the rubbish bin on the far right of the cell.
+- Let's create a title for our Jupyter notebook using a markdown cell. Click on your new empty cell and select **Markdown** from the cell types dropdown. Type in the markdown cell: `# Animals Data Analysis`. (the `#` formats the text as a heading in markdown).
+- We probably want our title at the top of the Jupyter notebook.  Click the up arrow in the cell containing `# Animals Data Analysis` to move it to the top of the document. With your cursor still in this cell click the run button to render the markdown text as a heading. 
+- Move your cursor back to the cell containing `print('Hello World!')` and click the plus sign in the header bar to create a new cell underneath of type 'code'.  This is where we will start typing and running the animals code.
 
 
 ## Using AI to Understand Code and Technical Concepts 
@@ -188,7 +214,7 @@ AI tools like ChatGPT can serve as an interactive reference and tutor, helping y
 ## Up-skill rather than De-skill with AI
 
 1. Rather than asking AI to actually generate the code for the weight vs hindfoot length plot, instead ask for a step-by-step explanation of how you would do it with your preferred technologies and packages. 
-e.g. “Explain how to filter a DataFrame in Python to include only species with more than 100 observations, and then plot hindfoot_length vs weight colored by species using MatplotLib.” Use this explanation to create the code for the plot and run it in your jupyter notebook.
+e.g. “Explain how to filter a DataFrame in Python to include only species with more than 100 observations, and then plot hindfoot_length vs weight colored by species using MatplotLib.” Use this explanation to create the code for the plot and run it in the empty code cell of your jupyter notebook.
 
 2. Take the code generated in the our example (plotting hindfoot_length vs weight) and ask AI:
 “Explain what each line of this Python code does and why it is needed.”
