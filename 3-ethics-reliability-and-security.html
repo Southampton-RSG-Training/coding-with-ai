@@ -217,24 +217,12 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         3. Ethics, Reliability and Security Considerations
         </span>
-      </button>
+      
     </div><!--/div.accordion-header-->
-
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
-      <div class="accordion-body">
-        <ul><li><a href="#overview">Overview</a></li>
-<li><a href="#errors-biases-and-security-issues-in-ai-generated-code">Errors, Biases and Security Issues in AI-Generated Code</a></li>
-<li><a href="#intellectual-property-of-ai-generated-code">Intellectual Property of AI-Generated Code</a></li>
-<li><a href="#de-skilling-and-overdependence-on-ai-in-research-computing">De-Skilling and Overdependence on AI in Research Computing</a></li>
-<li><a href="#best-practices-for-responsible-ai-use-in-research">Best Practices for Responsible AI Use in Research</a></li>
-<li><a href="#references">References</a></li>
-        </ul></div><!--/div.accordion-body-->
-    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -354,22 +342,20 @@ ethical AI use in coding and data analysis workflows.</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a></h2>
-<hr class="half-width"><p>Understanding the risks and implications of AI is critical to using
+<div class="section level1">
+<h1 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a></h1>
+<p>Understanding the risks and implications of AI is critical to using
 AI tools for coding safely, effectively, and with confidence. In this
 episode, we’ll take a brief look at issues related to:</p>
 <ul><li>Errors, biases and security issues in AI-generated code</li>
-<li>Intellectual property, authorship, and citation of AI-generated
-code</li>
+<li>Intellectual property of AI-generated code</li>
 <li>De-skilling and overdependence on AI in research computing</li>
 <li>Best practices for responsible AI use in research</li>
-</ul></section><section><h2 class="section-heading" id="errors-biases-and-security-issues-in-ai-generated-code">Errors, Biases and Security Issues in AI-Generated Code<a class="anchor" aria-label="anchor" href="#errors-biases-and-security-issues-in-ai-generated-code"></a></h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="errors">Errors<a class="anchor" aria-label="anchor" href="#errors"></a></h3>
-<p>For researchers, relying on AI-generated code carries significant
-risks. Incorrect code can lead to flawed results, which may compromise
-the validity of your research, damage your professional reputation, and
-even necessitate a paper retraction.</p>
+</ul></div>
+<div class="section level1">
+<h1 id="errors-security-issues-and-biases-in-ai-generated-code">Errors, Security Issues and Biases in AI-Generated Code<a class="anchor" aria-label="anchor" href="#errors-security-issues-and-biases-in-ai-generated-code"></a></h1>
+<div class="section level2">
+<h2 id="errors">Errors<a class="anchor" aria-label="anchor" href="#errors"></a></h2>
 <p>AI coding assistants can produce both random and systematic errors,
 threatening the reliability and reproducibility of your work. For
 instance, a <a href="https://arxiv.org/pdf/2304.10778" class="external-link">2023 study
@@ -396,15 +382,12 @@ that are plausible but incorrect, a phenomenon often called a
 <strong>hallucination</strong>.</p></li>
 <li><p>AI-generated code may be <strong>outdated</strong>. An AI model
 is trained on vast amounts of publicly available code, including code
-written many years ago. Furthermore, the AI model can only draw on
-information up to the date that it was pre-trained, which may be a year
-or more in the past. This means that AI may not produce code that
-follows the most up to date standards. Sometimes this can be a problem.
-For example, the AI might suggest a function from an open-source library
-that hasn’t been well-maintained over the past few years. This could
-mean missing out on a better and more secure library that has been
-developed recently. Searching the documentation for the package online
-would make you aware of any potential problems.</p></li>
+written many years ago, and is only aware of information up to the date
+that it was pre-trained, which may be several months in the past.
+Therefore, the AI may not produce code that follows the most up to date
+standards. For example, the AI might suggest a function from an
+open-source library that hasn’t been well-maintained over the past few
+years.</p></li>
 <li><p>Using AI to write your code without having a structured plan can
 lead to <strong>messy and confusing code</strong> that difficult to
 understand and maintain, increasing the risk of error.</p></li>
@@ -445,17 +428,30 @@ them more time-consuming and costly to fix.</li>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="security-issues">Security Issues<a class="anchor" aria-label="anchor" href="#security-issues"></a></h3>
+<div class="section level2">
+<h2 id="security-issues">Security Issues<a class="anchor" aria-label="anchor" href="#security-issues"></a></h2>
+</div>
+<div class="section level2">
+<h2 id="data-privacy-and-confidentiality">Data Privacy and Confidentiality<a class="anchor" aria-label="anchor" href="#data-privacy-and-confidentiality"></a></h2>
+<p>It’s really important to be cautious that you don’t accidentally
+share confidential code, sensitive datasets or proprietary research
+methods with an AI tool. Depending on the settings of your AI tool, the
+information you enter may be reused to improve the AI model and/or could
+resurface in future outputs, creating risks around intellectual property
+leakage, confidentiality breaches, or non-compliance with data
+protection regulations.</p>
+</div>
+<div class="section level2">
+<h2 id="security-risks-in-ai-generated-code">Security Risks in AI-Generated Code<a class="anchor" aria-label="anchor" href="#security-risks-in-ai-generated-code"></a></h2>
 <p>Some of the errors in AI-generated code can pose security risks for
 your software.</p>
-<p>For example, ChatGPT sometimes hallucinates non-existent coding
-libraries in its outputs. A <a href="https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/" class="external-link">study
+<p>For example, AI tools sometimes hallucinate non-existent coding
+packages in their outputs. A <a href="https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/" class="external-link">study
 by the security company Vulcan</a> identified a cyberattack technique
-where criminals could hijack these fake libraries by publishing a
-malicious package under the name of the non-existent library and hoping
-developers would install the infected library based on the AI tool’s
-recommendation.</p>
+where criminals would publish a malicious package under the name of the
+hallucinated package, hoping that AI would suggest the same package to
+other users, who would then install the cyber criminals’ malicious
+package based on the AI tool’s recommendation.</p>
 <p>This practice has become known as ‘slopsquatting’, a combination of
 ‘AI Slop’ and ‘typosquatting’ (the practice of registering domain names
 or software package names that are slightly misspelled versions of
@@ -496,37 +492,9 @@ in developing research software.</p>
 </div>
 </div>
 </div>
-<div id="data-privacy-and-confidentiality" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
 </div>
-<span class="callout-header">Callout</span>
-<div id="data-privacy-and-confidentiality" class="callout-inner">
-<h3 class="callout-title">Data Privacy and Confidentiality</h3>
-<div class="callout-content">
-<p>It’s really important to be cautious that you don’t accidentally
-share confidential code, sensitive datasets or proprietary research
-methods with an AI tool. Depending on the settings of your AI tool, the
-information you enter may be reused to improve the AI model and/or could
-resurface in future outputs, creating risks around intellectual property
-leakage, confidentiality breaches, or non-compliance with data
-protection regulations.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="transparency-explainability-and-bias">Transparency, Explainability, and Bias<a class="anchor" aria-label="anchor" href="#transparency-explainability-and-bias"></a></h3>
-<p>Many AI tools offer code suggestions without explaining the reasoning
-behind them, making it difficult to verify the proposed solutions. Not
-being able to fully verify code increases the risk of undetected errors
-influencing your experimental results.</p>
-<p>This lack of transparency also has implications for research
-reproducibility. If the logic behind AI-generated code is unclear, other
-researchers may be unable to replicate your methods or results, even if
-the code appears to run correctly. There may be subtle errors or
-undocumented assumptions embedded in AI-generated solutions, which can
-lead to inconsistencies across experiments or datasets.</p>
+<div class="section level2">
+<h2 id="bias">Bias<a class="anchor" aria-label="anchor" href="#bias"></a></h2>
 <p>AI-generated code can contain undocumented assumptions that reflect
 biases in the model’s training data. These assumptions may lead to code
 or documentation that unintentionally favours certain demographic groups
@@ -582,9 +550,9 @@ single-word names), reflecting biases in the model’s training data.</li>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="intellectual-property-of-ai-generated-code">Intellectual Property of AI-Generated Code<a class="anchor" aria-label="anchor" href="#intellectual-property-of-ai-generated-code"></a></h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="intellectual-property-and-ownership">Intellectual Property and Ownership<a class="anchor" aria-label="anchor" href="#intellectual-property-and-ownership"></a></h3>
+</div>
+<div class="section level1">
+<h1 id="intellectual-property-of-ai-generated-code">Intellectual Property of AI-Generated Code<a class="anchor" aria-label="anchor" href="#intellectual-property-of-ai-generated-code"></a></h1>
 <p>Intellectual property rights for AI-generated code are currently
 evolving.</p>
 <p>Currently in the UK, if a person creates some work using AI, the
@@ -599,17 +567,16 @@ current AI models.</p>
 terms, such as employment contracts or AI tool terms of service, which
 may assign rights to an employer or platform rather than the individual
 user.</p>
-</div>
-<div class="section level3">
-<h3 id="ai-generated-code-in-open-source-projects">AI-Generated Code in Open-Source Projects<a class="anchor" aria-label="anchor" href="#ai-generated-code-in-open-source-projects"></a></h3>
+<div class="section level2">
+<h2 id="ai-generated-code-may-contain-copyrighted-material">AI-Generated Code May Contain Copyrighted Material<a class="anchor" aria-label="anchor" href="#ai-generated-code-may-contain-copyrighted-material"></a></h2>
 <p>AI models are trained on a vast amount of data that may include
 copyrighted material. Therefore, there’s a risk that AI-generated code
-may closely resemble the copyrighted code from its training data. If you
-add AI-generated code to an open-source project, you may unintentionally
-introduce a licensing conflict if the AI-generated patterns or
-structures of the code originate from software under incompatible
-licences. This could lead to the open-source project facing copyright
-infringement claims.</p>
+may closely resemble the copyrighted code from its training data.</p>
+<p>If you add AI-generated code to an open-source project, you may
+unintentionally introduce a licensing conflict if the AI-generated
+patterns or structures of the code originate from software under
+incompatible licences. This could lead to the open-source project facing
+copyright infringement claims.</p>
 <div id="no-ai-generated-code-policy-for-open-source-project-cloud-hypervisor" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -622,28 +589,28 @@ Project Cloud Hypervisor</h3>
 <p>Cloud Hypervisor is an open-source software project that helps large
 computing systems run multiple programs safely and efficiently at the
 same time, which is a common requirement in cloud services (services
-provided over the internet rather than from a local computer). It is
-maintained by a community of organisations and developers and is made
-freely available under an open licence. In 2025, the project’s
-maintainers implemented a no AI-generated code policy for contributions,
-out of concern that such code might unintentionally include material
-derived from other software with incompatible licences, creating legal
-risks for the project and its users.</p>
+provided over the internet rather than from a local computer). In 2025,
+the project’s maintainers implemented a no AI-generated code policy for
+contributions, out of concern that such code might unintentionally
+include material derived from other software with incompatible licences,
+creating legal risks for the project and its users.</p>
 <p>In a <a href="https://github.com/cloud-hypervisor/cloud-hypervisor/blob/v48.0/CONTRIBUTING.md" class="external-link">post
-on GitHub</a>, Cloud Hypervisor’s maintainers said: ‘Our policy is to
-decline any contributions known to contain contents generated or derived
-from using Large Language Models (LLMs). This includes ChatGPT, Gemini,
-Claude, Copilot and similar tools.’</p>
+on GitHub</a>, Cloud Hypervisor’s maintainers said: <em>‘Our policy is
+to decline any contributions known to contain contents generated or
+derived from using Large Language Models (LLMs). This includes ChatGPT,
+Gemini, Claude, Copilot and similar tools.’</em></p>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="de-skilling-and-overdependence-on-ai-in-research-computing">De-Skilling and Overdependence on AI in Research Computing<a class="anchor" aria-label="anchor" href="#de-skilling-and-overdependence-on-ai-in-research-computing"></a></h2>
-<hr class="half-width"><p>AI tools can significantly enhance productivity in research
+</div>
+<div class="section level1">
+<h1 id="de-skilling-and-overdependence-on-ai-in-research-computing">De-Skilling and Overdependence on AI in Research Computing<a class="anchor" aria-label="anchor" href="#de-skilling-and-overdependence-on-ai-in-research-computing"></a></h1>
+<p>AI tools can significantly enhance productivity in research
 computing, but excessive reliance on them introduces risks to research
 quality, integrity, and long-term capability.</p>
-<div class="section level3">
-<h3 id="risks-of-de-skilling">Risks of De-Skilling<a class="anchor" aria-label="anchor" href="#risks-of-de-skilling"></a></h3>
+<div class="section level2">
+<h2 id="risks-of-de-skilling">Risks of De-Skilling<a class="anchor" aria-label="anchor" href="#risks-of-de-skilling"></a></h2>
 <p>Over-reliance on AI for coding can prevent researchers from
 developing essential skills in research software development and data
 analysis. Without a solid understanding of the code you use, you can’t
@@ -659,8 +626,8 @@ needs.</p>
 handle it, this is precisely the time to strengthen your research
 computing skills.</p>
 </div>
-<div class="section level3">
-<h3 id="preserving-critical-thinking-in-the-age-of-ai">Preserving Critical Thinking in the Age of AI<a class="anchor" aria-label="anchor" href="#preserving-critical-thinking-in-the-age-of-ai"></a></h3>
+<div class="section level2">
+<h2 id="preserving-critical-thinking-in-the-age-of-ai">Preserving Critical Thinking in the Age of AI<a class="anchor" aria-label="anchor" href="#preserving-critical-thinking-in-the-age-of-ai"></a></h2>
 <p>A common bias among AI users is the tendency to over-value
 AI-generated outputs. Outputs from GPT systems often have an
 authoritative tone, which can make us inclined to accept the output
@@ -673,15 +640,17 @@ instead treat AI outputs as suggestions rather than solutions. Also,
 remember that you as the researcher need to take responsibility for any
 AI-generated code you use.</p>
 </div>
-</section><section><h2 class="section-heading" id="best-practices-for-responsible-ai-use-in-research">Best Practices for Responsible AI Use in Research<a class="anchor" aria-label="anchor" href="#best-practices-for-responsible-ai-use-in-research"></a></h2>
-<hr class="half-width"><p>Responsible use of AI for coding assistance requires a combination of
+</div>
+<div class="section level1">
+<h1 id="best-practices-for-responsible-ai-use-in-research">Best Practices for Responsible AI Use in Research<a class="anchor" aria-label="anchor" href="#best-practices-for-responsible-ai-use-in-research"></a></h1>
+<p>Responsible use of AI for coding assistance requires a combination of
 ethical awareness, technical safeguards, and disciplined research
 practice. Here are some examples of ethical best practices, practices to
 support research reproducibility and scientific validity, and some
 security measures that you may decide to put in place when using AI to
 assist with research coding.</p>
-<div class="section level3">
-<h3 id="ethical-best-practices">Ethical Best Practices<a class="anchor" aria-label="anchor" href="#ethical-best-practices"></a></h3>
+<div class="section level2">
+<h2 id="ethical-best-practices">Ethical Best Practices<a class="anchor" aria-label="anchor" href="#ethical-best-practices"></a></h2>
 <ul><li>
 <strong>Maintain human oversight:</strong> Researchers must
 critically evaluate all AI-generated outputs, remaining alert to
@@ -705,8 +674,8 @@ recognised frameworks such as the <a href="https://www.acm.org/code-of-ethics" c
 Commission’s Ethical Guidelines on AI</a>
 </li>
 </ul></div>
-<div class="section level3">
-<h3 id="practices-supporting-reproducibility-and-scientific-validity">Practices Supporting Reproducibility and Scientific Validity<a class="anchor" aria-label="anchor" href="#practices-supporting-reproducibility-and-scientific-validity"></a></h3>
+<div class="section level2">
+<h2 id="practices-supporting-reproducibility-and-scientific-validity">Practices Supporting Reproducibility and Scientific Validity<a class="anchor" aria-label="anchor" href="#practices-supporting-reproducibility-and-scientific-validity"></a></h2>
 <p>To maintain transparency, reproducibility, and scientific validity
 when using AI tools, researchers should:</p>
 <ul><li>
@@ -721,8 +690,8 @@ integration.</li>
 human judgement and subject-matter knowledge, rather than replacing
 them.</li>
 </ul></div>
-<div class="section level3">
-<h3 id="security-measures">Security Measures<a class="anchor" aria-label="anchor" href="#security-measures"></a></h3>
+<div class="section level2">
+<h2 id="security-measures">Security Measures<a class="anchor" aria-label="anchor" href="#security-measures"></a></h2>
 <ul><li>
 <strong>Code review:</strong> Review all AI-generated code, ideally
 using standard code review processes, to identify vulnerabilities, logic
@@ -775,8 +744,8 @@ proprietary code to cloud-based AI services.<br></li>
 <li>AI may suggest insecure or outdated coding practices. To mitigate
 the risk you could embed security expectations in prompts and review
 outputs critically.<br></li>
-<li>Be aware of the evolving issues surrounding intellectual property,
-authorship, and citation of AI-generated code.<br></li>
+<li>Be aware of the evolving issues surrounding intellectual property of
+AI-generated code.<br></li>
 <li>Over-reliance on AI can lead to de-skilling, reducing researchers’
 coding proficiency, critical thinking, and long-term ability to maintain
 software.<br></li>
@@ -789,8 +758,9 @@ team-level AI ethics and security policies.</li>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-<hr class="half-width"><ul><li><a href="https://carpentries-incubator.github.io/gen-ai-coding/3-ethical-and-security-considerations.html" class="external-link">AI-Assisted
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<ul><li><a href="https://carpentries-incubator.github.io/gen-ai-coding/3-ethical-and-security-considerations.html" class="external-link">AI-Assisted
 Coding with Codium, Ethical and Security Considerations</a></li>
 <li><a href="https://arxiv.org/pdf/2211.03622" class="external-link">Perry, N., Srivastava,
 M., Kumar, D., &amp; Boneh, D. (2023, November). Do users write more
@@ -829,7 +799,12 @@ Packages</a></li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></div> <!-- / div.lesson-content -->
+ --></div>
+</div>
+
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="2-ai-assisted-coding.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
