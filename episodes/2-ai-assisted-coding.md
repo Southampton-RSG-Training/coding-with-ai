@@ -32,7 +32,7 @@ exercises: 2 # exercise time in minutes
 
 Sally, a PhD student in Biology has just received from a colleague some data on the animal species found within plots of land at a desert study site in Arizona.
 
-The dataset is stored as a comma separated value (CSV) file. Sally opens the csv file in excel or a similar spreadsheet tool and has a look at the data. She sees the variable names in the top row of the spreadsheet.   Each row holds information for a single animal, and the columns represent:
+The dataset is stored as a comma separated value (CSV) file. Sally opens the csv file in Excel  and has a look at the data. She sees the variable names in the top row of the spreadsheet.   Each row holds information for a single animal, and the columns represent:
 
 
 | Column           | Description                        |
@@ -81,7 +81,7 @@ The email reads:
 
 
 
-Sally knows that Matplotlib is a plotting library in Python but she's not quite sure how to use it.  She gets the impression that David needs this plot quickly and doesn't think she has time to learn matplotlib fast enough, so she decides to ask AI to make the plot for her.
+Sally knows that Matplotlib is a plotting library in Python but she's not quite sure how to use it.  She gets the impression that David needs this plot quickly and doesn't think she has time to learn Matplotlib fast enough, so she decides to ask AI to make the plot for her.
 
 She opens an AI chat interface (such as ChatGPT, Microsoft Copilot or Claude) and prompts the AI to:
 
@@ -135,6 +135,8 @@ She then realises she could go one step further and upload the dataset to the AI
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
+## Why Not Just Use AI?
+
 What are the problems with getting an AI tool to write your research code for you? Consider:
 
 - Technical risks
@@ -180,7 +182,7 @@ To turn this off, click on your username in the lower left corner -> Settings ->
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-# Appropriate Roles for AI when Writing Research Code
+# Roles for AI in Research Coding
 
 AI tools can be highly valuable when used correctly, as a tool to assist you with your research. The key principle is that they should function as assistants, not autonomous developers.
 
@@ -305,15 +307,12 @@ plt.show()
 KeyError: 'hindfoot_lenght'
 ```
 
-Try running the code above to check you get the same error.
 
 Rather than asking AI to “fix the code,” Sally decides to use it as a debugging assistant to help her understand the error properly. 
 
 She enters the prompt “I am getting a KeyError: 'hindfoot_lenght' when running the following Python code that uses pandas and matplotlib. Can you help me understand what this error means and how to diagnose it?” 
 
 This wording of the prompt will result in explanation rather than just a correction and substitution of the code and will help Sally learn how to diagnose similar problems in future rather than becoming reliant on AI. 
-
-Try it out using your AI tool.
 
 In this example, AI might explain that:
 
@@ -564,7 +563,7 @@ Example AI - generated docstring:
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Discussion: Which coding tasks could AI help you with?
+## Which coding tasks could AI help you with?
 
 When you next have to write some code for data analysis or software development, which tasks would you use AI tools to assist with? 
 
