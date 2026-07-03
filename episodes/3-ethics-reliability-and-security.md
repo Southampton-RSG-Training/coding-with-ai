@@ -27,19 +27,19 @@ exercises: 2 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Overview 
+# Overview 
 
 Understanding the risks and implications of AI is critical to using AI tools for coding safely, effectively, and with confidence. In this episode, we’ll take a brief look at issues related to:
 
 - Errors, biases and security issues in AI-generated code
-- Intellectual property, authorship, and citation of AI-generated code
+- Intellectual property of AI-generated code
 - De-skilling and overdependence on AI in research computing
 - Best practices for responsible AI use in research
 
 
-## Errors, Biases and Security Issues in AI-Generated Code
+# Errors, Biases and Security Issues in AI-Generated Code
 
-### Errors
+## Errors
 
 For researchers, relying on AI-generated code carries significant risks. Incorrect code can lead to flawed results, which may compromise the validity of your research, damage your professional reputation, and even necessitate a paper retraction.
 
@@ -76,7 +76,7 @@ This can be fantastic for developing a quite prototype or trying out an idea. Ho
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Security Issues
+## Security Issues
 
 Some of the errors in AI-generated code can pose security risks for your software. 
 
@@ -112,11 +112,7 @@ It's really important to be cautious that you don't accidentally share confident
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Transparency, Explainability, and Bias
-
-Many AI tools offer code suggestions without explaining the reasoning behind them, making it difficult to verify the proposed solutions.  Not being able to fully verify code increases the risk of undetected errors influencing your experimental results.
-
-This lack of transparency also has implications for research reproducibility. If the logic behind AI-generated code is unclear, other researchers may be unable to replicate your methods or results, even if the code appears to run correctly. There may be subtle errors or undocumented assumptions embedded in AI-generated solutions, which can lead to inconsistencies across experiments or datasets.
+## Bias
 
 AI-generated code can contain undocumented assumptions that reflect biases in the model’s training data. These assumptions may lead to code or documentation that unintentionally favours certain demographic groups over others.
 
@@ -152,9 +148,7 @@ def is_valid_name(name: str) -> bool:
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Intellectual Property of AI-Generated Code
-
-### Intellectual Property and Ownership
+# Intellectual Property of AI-Generated Code
 
 Intellectual property rights for AI-generated code are currently evolving. 
 
@@ -164,9 +158,11 @@ However, there's ongoing debate about how this practically applies to many forms
 
 It's also worth considering that ownership can depend on contractual terms, such as employment contracts or AI tool terms of service, which may assign rights to an employer or platform rather than the individual user.
 
-### AI-Generated Code in Open-Source Projects
+## AI-Generated Code May Contain Copyrighted Material
 
-AI models are trained on a vast amount of data that may include copyrighted material.  Therefore, there's a risk that AI-generated code may closely resemble the copyrighted code from its training data. If you add AI-generated code to an open-source project, you may unintentionally introduce a licensing conflict if the AI-generated patterns or structures of the code originate from software under incompatible licences.  This could lead to the open-source project facing copyright infringement claims.
+AI models are trained on a vast amount of data that may include copyrighted material.  Therefore, there's a risk that AI-generated code may closely resemble the copyrighted code from its training data. 
+
+If you add AI-generated code to an open-source project, you may unintentionally introduce a licensing conflict if the AI-generated patterns or structures of the code originate from software under incompatible licences.  This could lead to the open-source project facing copyright infringement claims.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -179,12 +175,12 @@ In a [post on GitHub](https://github.com/cloud-hypervisor/cloud-hypervisor/blob/
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## De-Skilling and Overdependence on AI in Research Computing
+# De-Skilling and Overdependence on AI in Research Computing
 
 AI tools can significantly enhance productivity in research computing, but excessive reliance on them introduces risks to research quality, integrity, and long-term capability.
 
 
-### Risks of De-Skilling
+## Risks of De-Skilling
 
 Over-reliance on AI for coding can prevent researchers from developing essential skills in research software development and data analysis. Without a solid understanding of the code you use, you can't reliably verify whether your research results are correct, reducing confidence in the validity of any results you publish. 
 
@@ -193,7 +189,7 @@ There are also long-term implications for the research community. If researchers
 Therefore, rather than skipping learning to code because AI can handle it, this is precisely the time to strengthen your research computing skills.
 
 
-### Preserving Critical Thinking in the Age of AI
+## Preserving Critical Thinking in the Age of AI
 
 A common bias among AI users is the tendency to over-value AI-generated outputs. Outputs from GPT systems often have an authoritative tone, which can make us inclined to accept the output without critically evaluating it. 
 
@@ -202,18 +198,18 @@ However, maintaining human judgement is especially important in research, where 
 Therefore, it's important that we avoid uncritical trust in AI and instead treat AI outputs as suggestions rather than solutions. Also, remember that you as the researcher need to take responsibility for any AI-generated code you use.
 
 
-## Best Practices for Responsible AI Use in Research
+# Best Practices for Responsible AI Use in Research
 
 Responsible use of AI for coding assistance requires a combination of ethical awareness, technical safeguards, and disciplined research practice. Here are some examples of ethical best practices, practices to support research reproducibility and scientific validity, and some security measures that you may decide to put in place when using AI to assist with research coding.
 
-### Ethical Best Practices
+## Ethical Best Practices
 
 - **Maintain human oversight:** Researchers must critically evaluate all AI-generated outputs, remaining alert to potential bias, errors, or inappropriate assumptions.
 - **Test and validate rigorously:** AI-generated code should be treated as untrusted by default. Apply thorough testing and validation to ensure correctness, reliability, and fitness for purpose.
 - **Protect sensitive data:** Avoid submitting proprietary code, confidential data, or sensitive research materials to online AI tools. If you use these materials for your research and have decided to use AI, you may want to investigate locally hosted or offline AI assistants to reduce data exposure risks.
 - **Define clear usage guidelines:** Establish and follow explicit policies for AI use in research computing. These may draw on recognised frameworks such as the [ACM Code of Ethics](https://www.acm.org/code-of-ethics) or the [European Commission’s Ethical Guidelines on AI](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai)
 
-### Practices Supporting Reproducibility and Scientific Validity
+## Practices Supporting Reproducibility and Scientific Validity
 
 To maintain transparency, reproducibility, and scientific validity when using AI tools, researchers should:
 
@@ -221,7 +217,7 @@ To maintain transparency, reproducibility, and scientific validity when using AI
 - **Validate against known results:** Test AI-generated code using benchmarks, reference datasets, or established methods before integration.
 - **Combine AI with domain expertise:** Use AI to support human judgement and subject-matter knowledge, rather than replacing them.
 
-### Security Measures
+## Security Measures
 
 - **Code review:** Review all AI-generated code, ideally using standard code review processes, to identify vulnerabilities, logic errors, or unsafe practices.
 - **Secure development practices:** If you're working on a larger piece of research software, integrate security testing tools into development workflows and ensure researchers are trained in secure coding principles.
@@ -246,7 +242,7 @@ e.g. Sally's personal ethics and security policy for using AI tools for research
 - Vibe coding (AI-assisted coding without planning) can produce messy, error-prone programs. Structured development and verification remain essential. 
 - Using AI tools can create data privacy, confidentiality, and security risks, especially when submitting sensitive datasets or proprietary code to cloud-based AI services.  
 - AI may suggest insecure or outdated coding practices. To mitigate the risk you could embed security expectations in prompts and review outputs critically.  
-- Be aware of the evolving issues surrounding intellectual property, authorship, and citation of AI-generated code.   
+- Be aware of the evolving issues surrounding intellectual property of AI-generated code.   
 - Over-reliance on AI can lead to de-skilling, reducing researchers’ coding proficiency, critical thinking, and long-term ability to maintain software.  
 - Ethical AI use requires human oversight, responsible data practices, defined boundaries, transparency, and validation of AI-generated outputs.  
 - It could be helpful for researchers to develop personal or team-level AI ethics and security policies.
