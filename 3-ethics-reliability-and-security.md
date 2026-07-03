@@ -76,19 +76,19 @@ This can be fantastic for developing a quite prototype or trying out an idea. Ho
 
 ## Security Issues
 
-## Data Privacy and Confidentiality
+### Data Privacy and Confidentiality
 
 It's really important to be cautious that you don't accidentally share confidential code, sensitive datasets or proprietary research methods with an AI tool. Depending on the settings of your AI tool, the information you enter may be reused to improve the AI model and/or could resurface in future outputs, creating risks around intellectual property leakage, confidentiality breaches, or non-compliance with data protection regulations.
 
-## Security Risks in AI-Generated Code 
+### Security Risks in AI-Generated Code 
+
+A [2023 Stanford University study](https://arxiv.org/pdf/2211.03622) found that programmers who used AI assistants often produced less secure code but at the same time, felt more confident that it was secure - a risky combination!
 
 Some of the errors in AI-generated code can pose security risks for your software. 
 
 For example, AI tools sometimes hallucinate non-existent coding packages in their outputs. A [study by the security company Vulcan](https://www.securityweek.com/chatgpt-hallucinations-can-be-exploited-to-distribute-malicious-code-packages/) identified a cyberattack technique where criminals would publish a malicious package under the name of the hallucinated package, hoping that AI would suggest the same package to other users, who would then install the cyber criminals' malicious package based on the AI tool’s recommendation.
 
 This practice has become known as 'slopsquatting', a combination of 'AI Slop' and 'typosquatting' (the practice of registering domain names or software package names that are slightly misspelled versions of popular ones to trick users into visiting them or downloading malicious content).
-
-A [2023 Stanford University study](https://arxiv.org/pdf/2211.03622) found that programmers who used AI assistants often produced less secure code but at the same time, felt more confident that it was secure - a risky combination!
 
 ::::::::::::::::::::::::::::::::::::: callout
 
