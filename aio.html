@@ -891,10 +891,9 @@ obscure understanding or introduce errors.</li>
 some data on the animal species found within plots of land at a desert
 study site in Arizona.</p>
 <p>The dataset is stored as a comma separated value (CSV) file. Sally
-opens the csv file in excel or a similar spreadsheet tool and has a look
-at the data. She sees the variable names in the top row of the
-spreadsheet. Each row holds information for a single animal, and the
-columns represent:</p>
+opens the csv file in Excel and has a look at the data. She sees the
+variable names in the top row of the spreadsheet. Each row holds
+information for a single animal, and the columns represent:</p>
 <table class="table">
 <thead><tr>
 <th>Column</th>
@@ -990,7 +989,7 @@ and add to the plot later.</em></p>
 <p><em>David</em></p>
 <p>Sally knows that Matplotlib is a plotting library in Python but she’s
 not quite sure how to use it. She gets the impression that David needs
-this plot quickly and doesn’t think she has time to learn matplotlib
+this plot quickly and doesn’t think she has time to learn Matplotlib
 fast enough, so she decides to ask AI to make the plot for her.</p>
 <p>She opens an AI chat interface (such as ChatGPT, Microsoft Copilot or
 Claude) and prompts the AI to:</p>
@@ -1044,13 +1043,13 @@ the AI tool (depending on the features that you have access to with your
 AI tool). <strong>Note: we can only do this because this dataset is
 publicly available. Don’t upload any private or sensitive
 data.</strong></p>
-<figure><img src="fig/animals_plot_chatgpt.png" alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot" class="figure mx-auto d-block"></figure><div id="challenge1" class="callout challenge">
+<figure><img src="fig/animals_plot_chatgpt.png" alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot" class="figure mx-auto d-block"></figure><div id="why-not-just-use-ai" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
+<div id="why-not-just-use-ai" class="callout-inner">
+<h3 class="callout-title">Why Not Just Use AI?</h3>
 <div class="callout-content">
 <p>What are the problems with getting an AI tool to write your research
 code for you? Consider:</p>
@@ -1142,7 +1141,7 @@ your inputs to train the model and improve its performance.</p>
 </div>
 </div>
 <div class="section level1">
-<h1 id="appropriate-roles-for-ai-when-writing-research-code">Appropriate Roles for AI when Writing Research Code<a class="anchor" aria-label="anchor" href="#appropriate-roles-for-ai-when-writing-research-code"></a>
+<h1 id="roles-for-ai-in-research-coding">Roles for AI in Research Coding<a class="anchor" aria-label="anchor" href="#roles-for-ai-in-research-coding"></a>
 </h1>
 <p>AI tools can be highly valuable when used correctly, as a tool to
 assist you with your research. The key principle is that they should
@@ -1345,7 +1344,6 @@ she tries to run it, the code fails with an error.</p>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="va">KeyError</span><span class="op">:</span> <span class="st">'hindfoot_lenght'</span></span></code></pre>
 </div>
-<p>Try running the code above to check you get the same error.</p>
 <p>Rather than asking AI to “fix the code,” Sally decides to use it as a
 debugging assistant to help her understand the error properly.</p>
 <p>She enters the prompt “I am getting a KeyError: ‘hindfoot_lenght’
@@ -1356,7 +1354,6 @@ it?”</p>
 just a correction and substitution of the code and will help Sally learn
 how to diagnose similar problems in future rather than becoming reliant
 on AI.</p>
-<p>Try it out using your AI tool.</p>
 <p>In this example, AI might explain that:</p>
 <ul>
 <li>A KeyError in pandas means a column name does not exist</li>
@@ -1676,14 +1673,14 @@ adapt it safely for future analyses!)</li>
 </div>
 </div>
 </div>
-<div id="discussion-which-coding-tasks-could-ai-help-you-with" class="callout discussion">
+<div id="which-coding-tasks-could-ai-help-you-with" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="discussion-which-coding-tasks-could-ai-help-you-with" class="callout-inner">
-<h3 class="callout-title">Discussion: Which coding tasks could AI help
-you with?</h3>
+<div id="which-coding-tasks-could-ai-help-you-with" class="callout-inner">
+<h3 class="callout-title">Which coding tasks could AI help you
+with?</h3>
 <div class="callout-content">
 <p>When you next have to write some code for data analysis or software
 development, which tasks would you use AI tools to assist with?</p>
@@ -1936,10 +1933,9 @@ them more time-consuming and costly to fix.</li>
 <div class="section level2">
 <h2 id="security-issues">Security Issues<a class="anchor" aria-label="anchor" href="#security-issues"></a>
 </h2>
-</div>
-<div class="section level2">
-<h2 id="data-privacy-and-confidentiality">Data Privacy and Confidentiality<a class="anchor" aria-label="anchor" href="#data-privacy-and-confidentiality"></a>
-</h2>
+<div class="section level3">
+<h3 id="data-privacy-and-confidentiality">Data Privacy and Confidentiality<a class="anchor" aria-label="anchor" href="#data-privacy-and-confidentiality"></a>
+</h3>
 <p>It’s really important to be cautious that you don’t accidentally
 share confidential code, sensitive datasets or proprietary research
 methods with an AI tool. Depending on the settings of your AI tool, the
@@ -1948,9 +1944,13 @@ resurface in future outputs, creating risks around intellectual property
 leakage, confidentiality breaches, or non-compliance with data
 protection regulations.</p>
 </div>
-<div class="section level2">
-<h2 id="security-risks-in-ai-generated-code">Security Risks in AI-Generated Code<a class="anchor" aria-label="anchor" href="#security-risks-in-ai-generated-code"></a>
-</h2>
+<div class="section level3">
+<h3 id="security-risks-in-ai-generated-code">Security Risks in AI-Generated Code<a class="anchor" aria-label="anchor" href="#security-risks-in-ai-generated-code"></a>
+</h3>
+<p>A <a href="https://arxiv.org/pdf/2211.03622" class="external-link">2023 Stanford University
+study</a> found that programmers who used AI assistants often produced
+less secure code but at the same time, felt more confident that it was
+secure - a risky combination!</p>
 <p>Some of the errors in AI-generated code can pose security risks for
 your software.</p>
 <p>For example, AI tools sometimes hallucinate non-existent coding
@@ -1965,10 +1965,6 @@ package based on the AI tool’s recommendation.</p>
 or software package names that are slightly misspelled versions of
 popular ones to trick users into visiting them or downloading malicious
 content).</p>
-<p>A <a href="https://arxiv.org/pdf/2211.03622" class="external-link">2023 Stanford University
-study</a> found that programmers who used AI assistants often produced
-less secure code but at the same time, felt more confident that it was
-secure - a risky combination!</p>
 <div id="embed-a-security-conscience-into-the-ai" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1999,6 +1995,7 @@ frameworks</li>
 of relevant software security practices, so is outside the scope of this
 novice course. However, it’s worth bearing in mind if you’re interested
 in developing research software.</p>
+</div>
 </div>
 </div>
 </div>
