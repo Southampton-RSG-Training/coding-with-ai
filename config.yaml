@@ -21,14 +21,14 @@ carpentry_description: 'Lesson Description'
 title: 'Coding with AI: Opportunities and Responsibilities for Researchers'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 2026-09-01
+created: 2026-01-09
 
 # Comma-separated list of keywords for the lesson
 keywords: 'AI, GPT, LLM, software'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha'
+life_cycle: 'beta'
 
 # License of the lesson
 license: 'CC-BY 4.0'
