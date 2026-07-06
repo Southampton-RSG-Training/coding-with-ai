@@ -1,7 +1,7 @@
 ---
 title: "Ethics, Reliability and Security Considerations"
-teaching: 10 # teaching time in minutes
-exercises: 2 # exercise time in minutes
+teaching: 45 # teaching time in minutes
+exercises: 15 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 

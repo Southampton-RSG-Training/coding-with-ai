@@ -1,7 +1,7 @@
 ---
 title: "The AI Landscape"
-teaching: 10 # teaching time in minutes
-exercises: 2 # exercise time in minutes
+teaching: 25 # teaching time in minutes
+exercises: 5 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -36,7 +36,7 @@ This workshop aims to:
 
 # What Do We Mean by AI?
 
-"Artificial intelligence (AI) is the capability of a machine or software system to perform tasks that would normally require human intelligence, such as learning from data, recognising patterns, making decisions, or generating outputs." - Merriam-Webster Dictionary.
+*"Artificial intelligence (AI) is the capability of a machine or software system to perform tasks that would normally require human intelligence, such as learning from data, recognising patterns, making decisions, or generating outputs."* - Merriam-Webster Dictionary.
 
 ::::::::::::::::::::::::::::::::::::: callout
 

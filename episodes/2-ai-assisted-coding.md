@@ -1,7 +1,7 @@
 ---
 title: "AI-Assisted Coding Practical Skills"
-teaching: 10 # teaching time in minutes
-exercises: 2 # exercise time in minutes
+teaching: 60 # teaching time in minutes
+exercises: 50 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
