@@ -285,7 +285,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Ethics, Reliability and Security Considerations</h1>
-        <p>Last updated on 2026-07-06 |
+        <p>Last updated on 2026-07-09 |
 
         <a href="https://github.com/Southampton-RSG-Training/coding-with-ai/edit/main/episodes/3-ethics-reliability-and-security.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -538,7 +538,7 @@ understand what the function does.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul><li>The code that only allows Latin letters and Western capitalization
 patterns, implicitly assuming names are formatted as “First Last”.</li>
@@ -639,83 +639,29 @@ more than speed.</p>
 instead treat AI outputs as suggestions rather than solutions. Also,
 remember that you as the researcher need to take responsibility for any
 AI-generated code you use.</p>
-</div>
-</div>
-<div class="section level1">
-<h1 id="best-practices-for-responsible-ai-use-in-research">Best Practices for Responsible AI Use in Research<a class="anchor" aria-label="anchor" href="#best-practices-for-responsible-ai-use-in-research"></a></h1>
-<p>Responsible use of AI for coding assistance requires a combination of
-ethical awareness, technical safeguards, and disciplined research
-practice. Here are some examples of ethical best practices, practices to
-support research reproducibility and scientific validity, and some
-security measures that you may decide to put in place when using AI to
-assist with research coding.</p>
-<div class="section level2">
-<h2 id="ethical-best-practices">Ethical Best Practices<a class="anchor" aria-label="anchor" href="#ethical-best-practices"></a></h2>
-<ul><li>
-<strong>Maintain human oversight:</strong> Researchers must
-critically evaluate all AI-generated outputs, remaining alert to
-potential bias, errors, or inappropriate assumptions.</li>
-<li>
-<strong>Test and validate rigorously:</strong> AI-generated code
-should be treated as untrusted by default. Apply thorough testing and
-validation to ensure correctness, reliability, and fitness for
-purpose.</li>
-<li>
-<strong>Protect sensitive data:</strong> Avoid submitting
-proprietary code, confidential data, or sensitive research materials to
-online AI tools. If you use these materials for your research and have
-decided to use AI, you may want to investigate locally hosted or offline
-AI assistants to reduce data exposure risks.</li>
-<li>
-<strong>Define clear usage guidelines:</strong> Establish and follow
-explicit policies for AI use in research computing. These may draw on
-recognised frameworks such as the <a href="https://www.acm.org/code-of-ethics" class="external-link">ACM Code of Ethics</a> or the
-<a href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai" class="external-link">European
-Commission’s Ethical Guidelines on AI</a>
-</li>
-</ul></div>
-<div class="section level2">
-<h2 id="practices-supporting-reproducibility-and-scientific-validity">Practices Supporting Reproducibility and Scientific Validity<a class="anchor" aria-label="anchor" href="#practices-supporting-reproducibility-and-scientific-validity"></a></h2>
-<p>To maintain transparency, reproducibility, and scientific validity
-when using AI tools, researchers should:</p>
-<ul><li>
-<strong>Document AI involvement:</strong> Record when, how, and why
-AI-generated suggestions were used or modified.</li>
-<li>
-<strong>Validate against known results:</strong> Test AI-generated
-code using benchmarks, reference datasets, or established methods before
-integration.</li>
-<li>
-<strong>Combine AI with domain expertise:</strong> Use AI to support
-human judgement and subject-matter knowledge, rather than replacing
-them.</li>
-</ul></div>
-<div class="section level2">
-<h2 id="security-measures">Security Measures<a class="anchor" aria-label="anchor" href="#security-measures"></a></h2>
-<ul><li>
-<strong>Code review:</strong> Review all AI-generated code, ideally
-using standard code review processes, to identify vulnerabilities, logic
-errors, or unsafe practices.</li>
-<li>
-<strong>Secure development practices:</strong> If you’re working on
-a larger piece of research software, integrate security testing tools
-into development workflows and ensure researchers are trained in secure
-coding principles.</li>
-<li>
-<strong>Protect access and data:</strong> Use access controls and
-encryption to safeguard codebases and datasets from unauthorised access
-by AI tools.</li>
-</ul><div id="personal-ethics-and-security-policy" class="callout discussion">
+<div id="personal-ethics-and-security-policy" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<span class="callout-header">Discussion</span>
+<span class="callout-header">Challenge</span>
 <div id="personal-ethics-and-security-policy" class="callout-inner">
 <h3 class="callout-title">Personal Ethics and Security Policy</h3>
 <div class="callout-content">
-<p>Write a short personal policy outlining how you will use AI tools
-responsibly to assist with coding. e.g. Sally’s personal ethics and
-security policy for using AI tools for research coding is:</p>
+<p>Bearing in mind the ethical, reliability and security considerations
+from this episode, write yourself some guidelines for how you will use
+AI tools responsibly to assist with coding.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>e.g. Sally’s personal ethics and security policy for using AI tools
+for research coding is:</p>
 <ul><li>Make sure I understand any code generated by AI before using it for
 my research.</li>
 <li>Never input sensitive, personal, or proprietary data into AI
@@ -723,6 +669,7 @@ systems.</li>
 <li>Maintain my critical thinking and decision making skills, never
 allow AI to do these things for me.</li>
 </ul></div>
+</div>
 </div>
 </div>
 <div id="keypoints1" class="callout keypoints">
@@ -864,8 +811,8 @@ any links that you are not going to use.
   "url": "https://Southampton-RSG-Training.github.io/coding-with-ai/3-ethics-reliability-and-security.html",
   "identifier": "https://Southampton-RSG-Training.github.io/coding-with-ai/3-ethics-reliability-and-security.html",
   "dateCreated": "2026-01-09",
-  "dateModified": "2026-07-06",
-  "datePublished": "2026-07-07"
+  "dateModified": "2026-07-09",
+  "datePublished": "2026-07-09"
 }
 
   </script><script>
