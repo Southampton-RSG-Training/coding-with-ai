@@ -216,7 +216,7 @@ python --version
 
 You can also check which python packages are installed by default:
 ```bash
-pip list
+python -m pip list
 ```
 - Head back to the **Home** tab and create a new folder 'animals_data_analysis': **New** --> **New Folder** Select the new Untitled folder, click **Rename** and change the name to animals_data_analysis.
 - Click on the animals_data_analysis folder to open it (it will currently be empty).
@@ -253,13 +253,9 @@ AI tools like ChatGPT can serve as an interactive reference and tutor, helping y
 
 ## Up-skill rather than De-skill with AI
 
-Rather than asking AI to actually generate the code for the weight vs hindfoot length plot, instead ask for a step-by-step explanation of how you would do it with your preferred technologies and packages. 
+Paste Sally's code into your AI tool and ask it to explain the code to you.  For a more personalised explanation, include in the prompt your current level of python knowledge (beginner, intermediate etc.)
 
-e.g. *“Explain how to filter a DataFrame in Python to include only species with more than 100 observations, and then plot hindfoot_length vs weight coloured by species using MatplotLib.”* 
-
-Use this explanation to create the code for the plot and run it in the empty code cell of your jupyter notebook. 
-
-Hint: To help you understand what the code does, ask AI to explain it to you line by line and ask follow up questions if anything is unclear. 
+Ask follow up questions if anything is unclear.  For example, you could ask for a particular line to be explained or investigate some of the functions or syntax. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
