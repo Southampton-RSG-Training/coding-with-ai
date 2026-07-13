@@ -26,7 +26,7 @@ Current maintainers of this lesson are:
 
 ## Contact
 
-Please get in touch with [Philippa Broadbent](p.k.broadbent@soton.ac.uk) with any questions about this lesson.
+Please get in touch with [Philippa Broadbent](pkb1r22@soton.ac.uk) with any questions about this lesson.
 
 
 ## Acknowledgements
