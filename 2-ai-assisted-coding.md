@@ -438,9 +438,9 @@ df = pd.read_csv("animals.csv")
 # Create a histogram for a single column
 plt.figure(figsize=(8, 6))
 plt.hist(df["weight"], bins=30)
-plt.xlabel("Column Values")
+plt.xlabel("Weight")
 plt.ylabel("Frequency")
-plt.title("Histogram of Column Name")
+plt.title("Histogram of Weight")
 plt.tight_layout()
 plt.show()
 ```
