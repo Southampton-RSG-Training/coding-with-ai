@@ -458,11 +458,22 @@ Note that there are a few different styles of docstring for python: Google style
 
 
 ```python
-def plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hindfoot_length", min_count=100):
-    df_filtered = filter_species_by_count(df, species_col, min_count)
-    
+def plot_species_scatter(
+    df,
+    species_col="species_id",
+    x_col="weight",
+    y_col="hindfoot_length",
+    min_count=100
+):
+
+    species_counts = df[species_col].value_counts()
+
+    species_to_keep = species_counts[species_counts > min_count].index
+
+    df_filtered = df[df[species_col].isin(species_to_keep)]
+
     plt.figure(figsize=(10, 6))
-    
+
     for species, group in df_filtered.groupby(species_col):
         plt.scatter(
             group[x_col],
@@ -470,10 +481,14 @@ def plot_species_scatter(df, species_col="species_id", x_col="weight", y_col="hi
             label=species,
             alpha=0.7
         )
-    
+
     plt.xlabel(x_col.capitalize())
     plt.ylabel(y_col.replace("_", " ").capitalize())
-    plt.title(f"{y_col.replace('_', ' ').capitalize()} vs {x_col.capitalize()} (Species with >{min_count} Observations)")
+    plt.title(
+        f"{y_col.replace('_', ' ').capitalize()} vs "
+        f"{x_col.capitalize()} "
+        f"(Species with >{min_count} Observations)"
+    )
     plt.legend(title=species_col)
     plt.tight_layout()
     plt.show()
@@ -490,6 +505,14 @@ Copy and paste `plot_species_scatter` function from above into your AI tool and 
 If you know Python, verify that the docstring accurately represents what the code does.  More specifically, check that the listed parameters match the function’s arguments and confirm that any descriptions of functionality align with the actual code logic.  
 
 If you don't know Python, read through the docstring and use it to help you understand what the function does. 
+
+*Note: running the code above will not produce any output because it is only creating the scatter plot function.  To produce the scatterplot you will also need to call the function:*
+
+```python
+df = pd.read_csv("animals.csv")
+
+plot_species_scatter(df)
+```
 
 :::::::::::::::::::::::: solution 
 
