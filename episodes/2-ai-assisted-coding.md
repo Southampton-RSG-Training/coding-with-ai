@@ -235,6 +235,7 @@ print('Hello World')
 - Let's create a title for our Jupyter notebook using a markdown cell. Click on your new empty cell and select **Markdown** from the cell types dropdown. Type in the markdown cell: `# Animals Data Analysis`. (the `#` formats the text as a heading in markdown).
 - We probably want our title at the top of the Jupyter notebook.  Click the up arrow in the cell containing `# Animals Data Analysis` to move it to the top of the document. With your cursor still in this cell click the run button to render the markdown text as a heading. 
 - Move your cursor back to the cell containing `print('Hello World!')` and click the plus sign in the header bar to create a new cell underneath of type 'code'.  This is where we will start typing and running the animals code.
+- Copy Sally's AI-generated code, paste it into the new code cell and execute the code.
 
 
 ## Using AI to Understand Code and Technical Concepts 
