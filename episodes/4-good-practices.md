@@ -150,7 +150,7 @@ https://www.fsf.org/licensing/copilot/on-the-nature-of-ai-code-copilots.
    the development process more transparent and potentially easier to reproduce.
     - Record which AI tool/model was used, where practical. For example, you can
         use [AI Declaration Format](https://ai-declaration.org/).
-
+- Depending on your research process, you can also increase transparency by citing the specific AI chat that you used.  [Duke University Libraries guide to citing AI](https://guides.library.duke.edu/citing/AI) has a useful guide for citing AI tools and chats in a variety of styles.
 7. Prompting Strategy:
     - Continuously refine prompts and instructions to improve output quality.
     - Regenerate code with a different prompt, or a different AI tool entirely,
