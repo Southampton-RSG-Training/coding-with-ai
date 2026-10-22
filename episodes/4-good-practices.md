@@ -132,7 +132,7 @@ More information about copyright in EU and US:
     _"[...] it seems unlikely that purely AI-generated outputs with no or very little
     human intervention could lead to copyright protection, let alone AI tools
     themselves possessing copyright over any works."_
-
+ In the UK, ownership of AI-generated code is slightly stronger. Section 9(3) of the Copyright, Designs and Patents Act 1988 recognises computer-generated works and names the person who made the necessary arrangements for the work as the author. That provision gives some protection to AI-written code, but courts have never applied it to large language models.  For more details see the [March 2026 Report on Copyright and Artificial Intelligence ](https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence)
 There’s also the question of third-party code. Some tools can flag similarities
 with existing code, but there is no generally reliable automated way to
 determine where AI-generated code comes from or whether additional licensing
