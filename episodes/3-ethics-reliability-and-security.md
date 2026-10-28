@@ -66,7 +66,7 @@ Vibe Coding is a term used to describe AI-assisted coding without a structured p
 
 “When I get error messages I just copy [and] paste them in with no comment, usually that fixes it … I’m building a project or web app, but it’s not really coding – I just see stuff, say stuff, run stuff, and copy paste stuff, and it mostly works.”
 
-This can be fantastic for developing a quite prototype or trying out an idea. However, coding in this way can also lead to some major problems:
+This can be fantastic for developing a quick prototype or trying out an idea. However, coding in this way can also lead to some major problems:
 
 - Without planning the structure of your code at the start, programs are likely to become messy and confusing, and this can introduce mistakes into the code.
 - Outputs are likely to appear mostly correct and, while obvious errors are usually caught, the subtle mistakes are easy to miss.
