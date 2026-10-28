@@ -173,11 +173,13 @@ Artificial intelligence tools can generate code quickly and often convincingly. 
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-## Reduce the Risk of your Data being Reused
+## Check how your content is used
 
-By default, generative AI platforms such as ChatGPT will often use your inputs to train the model and improve its performance.  
+Generative AI platforms may use the content you provide to train their models, depending on the platform, product, and your settings. This can include anything you enter or upload, such as names, CSV data, code, links, or other information. Keep in mind that not using your content for training does not necessarily mean that the platform does not store it. If you are unsure how your data is handled, avoid entering sensitive or private information and check the platform’s privacy and data-use documentation first.
 
-To turn this off, click on your username in the lower left corner -> Settings -> Data Controls -> Improve the model for everyone -> Switch off
+Often, there are settings you can adjust to limit the ways the AI platform uses your data. For example, in ChatGPT your data will be used to train future models by default but you can turn this off: 
+
+Click on your username in the lower left corner -> Settings -> Data Controls -> Improve the model for everyone -> Switch off
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
