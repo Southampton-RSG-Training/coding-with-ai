@@ -95,9 +95,8 @@ licensing, research integrity, and data protection:
    provenance may not be obvious. This is not fundamentally different from a
    researcher finding and reusing code online, but AI can make the source less
    apparent:
-    - Pay attention to copyright and software licenses. Read more about software
-    license
-    [here](https://esciencecenter-digital-skills.github.io/research-software-support/modules/licenses/info).
+    - Pay attention to copyright and software licenses. [Read more about software
+    licenses from Research Software Support at The Netherlands eScience Center](https://esciencecenter-digital-skills.github.io/research-software-support/modules/licenses/info).
     - Do not assume that modifying code removes the obligations associated with its original license.
     - Preserve required copyright notices, attribution, or other license requirements.
     - For substantial AI-generated code blocks, do a quick search for
